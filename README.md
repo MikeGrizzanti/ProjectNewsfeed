@@ -1,1 +1,5 @@
 # ProjectNeewsfeed
+
+DE
+
+Informationen (Nachrichten) werden aus gewählten Newsportalen durch RSS-Feeds hergeholt. Die Benutzer können sich die Quelle der Informationen suchen und Nachrichten speichern. Diese Newsportale sind für jede Sprache (DE, IT, EN) verschieden. Benutzer der Seite haben die Möglichkeit Profile anzulegen in denen Interessen und grundsätzliche Informationen jeweils zu den nachrichten und zur Person stehen. Je nach Interesse werden Nachrichten gefiltert und also dynamisch den Benutzer angezeigt. Sollte jemand hingegen kein Profil wollen werden die dynamischen-Nachrichten zufällig und ohne Filter für Kategorie angezeigt; nur die Sprache kann ausgewählt werden. Ein fundamentales Merkmal der Seite ist die Möglichkeit für Eingeschriebene Chats über einem Thema (Nachricht) beizutreten. Die Chatrooms sind auf 6 Personen beschränkt. Dies soll einen guten Gedankenaustausch gewährleisten. Die Informationen können mit einem “Like” versehen werden; die Quelle, die Uhrzeit, der Titel und ein Button zum Chatstart sind die Rahmeneigenschaften der Nachrichten. 
