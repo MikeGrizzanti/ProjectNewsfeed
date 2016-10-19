@@ -1,0 +1,69 @@
+body {
+
+}
+
+#header {
+    height: 10em;
+    width: 100%;
+    background-color: #000000;
+    position: absolute;
+    left: 0; right: 0; top: 0; bottom: 0; 
+}
+
+#main_logo {
+    display: block;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+#top_nav {
+    position: absolute;
+    margin: 0 auto;
+    align-content: center;
+    position: relative;
+}
+
+#search {
+    margin-left: 42em;
+    margin-top: 3rem;
+    width: 50rem;
+    height: 1.5rem;
+    border-radius: 18px;
+    
+}
+
+#top_icon1 {
+    position: relative;
+    display: inline;
+    margin-left: 15em;
+}
+
+#top_icon2 {
+    position: relative;
+    display: inline;
+    margin-left: 3rem;
+}
+
+
+
+
+.sidebar {
+    position: absolute;
+    width: 20rem;
+    height: 100%;
+    left: 0; right: 0; top: 10em;
+    background-color: slategray;
+    float: left;
+
+}
+
+
+
+
+
+#main_page {
+    position: absolute;
+    background-color: red;
+    top: 10em; right: 0; bottom: 0; left: 20rem;
+    float: right;
+}
