@@ -52,18 +52,24 @@ body {
     width: 20rem;
     height: 100%;
     left: 0; right: 0; top: 10em;
-    background-color: slategray;
+    background-color: coral;
     float: left;
 
 }
 
 
 
-
-
-#main_page {
+.main_page {
     position: absolute;
-    background-color: red;
+    height: auto;
+    left: 20rem; right: 0; top: 10em;
     top: 10em; right: 0; bottom: 0; left: 20rem;
-    float: right;
+    float: left;
+    margin-left: 2em;
+}
+
+#sidebar_list {
+    font-size: 3em;
+    list-style-type: none;
+    font-family: sans-serif;
 }
