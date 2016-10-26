@@ -1,8 +1,5 @@
-body {
-
-}
-
-#header {
+/* Head-Part */
+.header {
     height: 10em;
     width: 100%;
     background-color: #000000;
@@ -35,10 +32,16 @@ body {
 #top_icon1 {
     position: relative;
     display: inline;
-    margin-left: 15em;
+    margin-left: 2.5em;
 }
 
 #top_icon2 {
+    position: relative;
+    display: inline;
+    margin-left: 15em;
+}
+
+#top_icon3 {
     position: relative;
     display: inline;
     margin-left: 3rem;
@@ -47,17 +50,65 @@ body {
 
 
 
+/* Sidebar-Part */
+
 .sidebar {
     position: absolute;
     width: 20rem;
     height: 100%;
     left: 0; right: 0; top: 10em;
-    background-color: coral;
+    background-color: darkgray;
     float: left;
+}
 
+#sidebar_list_user_interests {
+    font-size: 2.5em;
+    list-style-type: none;
+    color: #ffffff; 
+}
+
+.user_interest {
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 150;
+    text-decoration: none;
+}
+
+#social_media_icons_div {
+    margin-left: 1.4em;
+}
+
+.social_media_icon {
+    margin: 1.3em;
+}
+
+#sidebar_footer {
+    position: absolute;
+    height: auto;
+    width: 100%;
+    margin-top: auto;
+    margin-bottom: 0;
+    
+}
+
+#sidebar_list_footer{
+    font-size: 1.5em;
+    list-style-type: none;
+    
+}
+
+.sidebar_footer {
+    color: #000;
+    text-decoration: none;
+    list-style-type: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
 }
 
 
+
+
+/* MainPage-Part */
 
 .main_page {
     position: absolute;
@@ -68,8 +119,3 @@ body {
     margin-left: 2em;
 }
 
-#sidebar_list {
-    font-size: 3em;
-    list-style-type: none;
-    font-family: sans-serif;
-}
