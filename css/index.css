@@ -1,8 +1,8 @@
 /* Head-Part */
 .header {
-    height: 10em;
+    height: 15em;
     width: 100%;
-    background-color: #000000;
+    background-color: #000;
     position: absolute;
     left: 0; right: 0; top: 0; bottom: 0; 
 }
@@ -13,42 +13,46 @@ a:hover {
 
 #main_logo {
     display: block;
-    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 2rem;
+    height: 6rem;
 }
 
 #top_nav {
     position: absolute;
-    margin: 0 auto;
-    align-content: center;
-    position: relative;
+    margin-top: 0.8rem;
+    margin-left: 10.5rem;
+    height: 2rem;
 }
 
 #search {
-    margin-left: 40em;
-    margin-top: 3rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
     width: 50rem;
     height: 1.5rem;
     border-radius: 18px;
     
 }
 
-#top_icon1 {
-    position: relative;
+#top_icon1.1 {
     display: inline;
-    margin-left: 2.5em;
+}
+
+#top_icon1.2 {
+    display: inline;
 }
 
 #top_icon2 {
-    position: relative;
     display: inline;
-    margin-left: 15em;
+    margin-left: 50em;
 }
 
 #top_icon3 {
-    position: relative;
     display: inline;
-    margin-left: 3rem;
+    margin-left: 1.5rem;
 }
 
 
@@ -59,13 +63,18 @@ a:hover {
 .sidebar {
     position: absolute;
     width: 20rem;
-    height: 88.4%;
-    left: 0; right: 0; top: 10em; bottom: 0;
-    background-color: darkgray;
+    height: 60%;
+    left: 0; right: 0; top: 15em; bottom: 0;
+    background-color: orange;
     float: left;
+    margin-left: 2em;
+    margin-top: 1.5em;
+    border-radius: 20px;
+    
 }
 
 #sidebar_list_user_interests {
+    position: relative;
     font-size: 2.5em;
     list-style-type: none;
     color: #ffffff; 
@@ -79,20 +88,18 @@ a:hover {
 }
 
 #social_media_icons_div {
-    margin-left: 1.4em;
+    position: relative;
 }
 
 .social_media_icon {
-    margin: 1.3em;
+    
 }
 
 #sidebar_footer {
-    position: absolute;
+    position: relative;
     height: auto;
     width: 100%;
-    position:absolute;
     bottom:0;
-    
 }
 
 #sidebar_list_footer{
@@ -116,11 +123,21 @@ a:hover {
 /* MainPage-Part */
 
 .main_page {
-    position: absolute;
+    position: relative;
     height: auto;
-    left: 20rem; right: 0; top: 10em;
-    top: 10em; right: 0; bottom: 0; left: 20rem;
-    float: left;
-    margin-left: 2em;
+    top: 15em; right: 0; bottom: 0;
 }
 
+.news_div {
+    width: 15em;
+    height: 22em;
+    border-radius: 25px;
+    border: 3px solid #000;
+}
+
+#news_div_image_space {
+    
+}
+#news_div_text_space {
+    
+}
