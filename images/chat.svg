@@ -2,10 +2,8 @@
 <!-- Generator: Adobe Illustrator 16.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="Ebene_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="49.725px" height="29.044px" viewBox="0 0 49.725 29.044" enable-background="new 0 0 49.725 29.044" xml:space="preserve">
-<g>
-	<path fill="#FFFFFF" d="M14.604,17.015C12.194,23.224,6.761,27.868,0,29.044c6.393-0.105,15.536-0.912,23.736-4.006
-		C19.368,23.411,16.025,20.519,14.604,17.015z"/>
-	<ellipse fill="#FFFFFF" cx="31.724" cy="13.228" rx="18.001" ry="13.229"/>
-</g>
+	 width="49.725px" height="29.043px" viewBox="0 0 49.725 29.043" enable-background="new 0 0 49.725 29.043" xml:space="preserve">
+<path fill="#FFFFFF" d="M31.724,0C21.78,0,13.723,5.922,13.723,13.227c0,1.375,0.285,2.699,0.814,3.945
+	C12.098,23.301,6.703,27.877,0,29.043c6.381-0.104,15.503-0.91,23.692-3.99c2.42,0.891,5.141,1.402,8.031,1.402
+	c9.942,0,18.001-5.922,18.001-13.229C49.725,5.922,41.666,0,31.724,0z"/>
 </svg>
