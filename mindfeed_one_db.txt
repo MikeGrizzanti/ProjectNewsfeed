@@ -1,0 +1,38 @@
+CREATE TABLE tb_user (
+	user_id SERIAL AUTO_INCREMENT,
+	user_firstName VARCHAR(50) NOT NULL,
+	user_lastName VARCHAR(50) NOT NULL,
+	user_nickName VARCHAR(255) UNIQUE NOT NULL,
+	user_eMail VARCHAR(255) UNIQUE NOT NULL,
+	user_birthDate DATE NOT NULL,
+	PRIMARY KEY (user_id)
+);
+
+CREATE TABLE tb_user_interests (
+	user_interests_id SERIAL AUTO_INCREMENT,
+	fk_user_id SERIAL REFERENCES tb_user(user_id),
+	fk_interests_id SERIAL REFERENCES tb_interests(interests_id)
+);
+
+CREATE TABLE tb_interests (
+	interests_id SERIAL AUTO_INCREMENT,
+	fk_category_id SERIAL REFERENCES tb_category (category_id) 
+);
+
+CREATE TABLE tb_category (
+	category_id SERIAL AUTO_INCREMENT,
+	category_name VARCHAR(255) UNIQUE NOT NULL
+);
+
+CREATE TABLE tb_chat (
+	chat_id SERIAL AUTO_INCREMENT,
+	chat_name VARCHAR(255) NOT NULL,
+	fk_user_id SERIAL REFERENCES tb_user(user_id),
+	chat_partecipantsNumber TINYINT
+);
+
+CREATE TABLE tb_feed (
+	feed_id SERIAL AUTO_INCREMENT,
+	feed_title VARCHAR(255),
+	feed_content BLOB	
+);
