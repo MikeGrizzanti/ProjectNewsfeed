@@ -11,6 +11,7 @@ CREATE TABLE tb_user (
 CREATE TABLE tb_user_interests (
 	fk_user_id BIGINT UNSIGNED REFERENCES tb_user(user_id),
 	fk_interests_id BIGINT UNSIGNED REFERENCES tb_interests(interests_id)
+	PRIMARY KEY(fk_user_id, fk_user_id)
 );
 
 CREATE TABLE tb_category (
@@ -48,5 +49,6 @@ CREATE TABLE tb_groupChat (
 CREATE TABLE tb_groupChatPartecipants (
 	fk_group_chat_id BIGINT UNSIGNED REFERENCES tb_groupChat(groupChat_id),
 	fk_user_id BIGINT UNSIGNED REFERENCES tb_user(user_id)
+	PRIMARY (fk_group_chat_id, fk_user_id)
 
 );
