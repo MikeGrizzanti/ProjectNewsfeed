@@ -105,8 +105,6 @@ a:hover {
 #sidebar_list_footer{
     font-size: 1.5em;
     list-style-type: none;
-    margin: 1em;
-    
 }
 
 .sidebar_footer_point {
@@ -123,21 +121,45 @@ a:hover {
 /* MainPage-Part */
 
 .main_page {
-    position: relative;
+    background-color: #FAFAFA;
+    position: fixed;
     height: auto;
-    top: 15em; right: 0; bottom: 0;
+    top: 15em; right: 0; bottom: 0;left: 0;
 }
 
-.news_div {
+.news_card {
+    margin: 2em;
     width: 15em;
     height: 22em;
-    border-radius: 25px;
-    border: 3px solid #000;
+    background-color: rgba(255,255,255,0.85);
+    -webkit-box-shadow: 0px 0px 15px 3px rgba(0,0,0,0.4);
+    -moz-box-shadow: 0px 0px 15px 3px rgba(0,0,0,0.4);
+    box-shadow: 0px 0px 15px 3px rgba(0,0,0,0.4);
+}
+.news_card :hover {
+    
 }
 
-#news_div_image_space {
-    
+#news_card_image_space {
+    top: 0; left: 0; bottom: 0; right: 0;
 }
-#news_div_text_space {
-    
+
+.news_card_img {
+    height: 15em;
+    width: 15em;
+}
+
+#news_card_text_space {
+    font-family: 'Open Sans';
+    width: 15em;
+    padding-left: 0.5em
+}
+
+.news_card_title {
+    white-space: normal;
+    margin: 0;
+}
+.news_card_text {
+    white-space: normal;
+    margin-top: 0;
 }
