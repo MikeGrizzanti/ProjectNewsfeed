@@ -1,5 +1,5 @@
 CREATE TABLE tb_user (
-	user_id SERIAL AUTO_INCREMENT,
+	user_id SERIAL,
 	user_firstName VARCHAR(50) NOT NULL,
 	user_lastName VARCHAR(50) NOT NULL,
 	user_nickName VARCHAR(255) UNIQUE NOT NULL,
@@ -9,35 +9,46 @@ CREATE TABLE tb_user (
 );
 
 CREATE TABLE tb_user_interests (
-	user_interests_id SERIAL AUTO_INCREMENT,
-	fk_user_id SERIAL REFERENCES tb_user(user_id),
-	PRIMARY KEY (user_interests_id), 
-	fk_interests_id SERIAL REFERENCES tb_interests(interests_id)
-);
-
-CREATE TABLE tb_interests (
-	interests_id SERIAL AUTO_INCREMENT,
-	PRIMARY KEY (interests_id),
-	fk_category_id SERIAL REFERENCES tb_category (category_id) 
+	fk_user_id BIGINT UNSIGNED REFERENCES tb_user(user_id),
+	fk_interests_id BIGINT UNSIGNED REFERENCES tb_interests(interests_id)
+	PRIMARY KEY(fk_user_id, fk_user_id)
 );
 
 CREATE TABLE tb_category (
-	category_id SERIAL AUTO_INCREMENT,
+	category_id SERIAL,
 	PRIMARY KEY (category_id),
-	category_name VARCHAR(255) UNIQUE NOT NULL
-);
-
-CREATE TABLE tb_chat (
-	chat_id SERIAL AUTO_INCREMENT,
-	chat_name VARCHAR(255) NOT NULL,
-	fk_user_id SERIAL REFERENCES tb_user(user_id),
-	chat_partecipantsNumber TINYINT,
-	PRIMARY KEY (chat_id )
+	category_name VARCHAR(255)
 );
 
 CREATE TABLE tb_feed (
-	feed_id SERIAL AUTO_INCREMENT,
-	feed_title VARCHAR(255),
+	feed_id SERIAL,
+	PRIMARY KEY (feed_id),
+	feed_title TEXT,
 	feed_content BLOB,
-	feed_img_path TEXT 	
+	feed_img_path TEXT,
+	fk_category_id BIGINT UNSIGNED REFERENCES tb_category(category_id) 	
+);
+
+CREATE TABLE tb_message (
+	message_id SERIAL,
+	PRIMARY KEY (message_id),
+	message_timestamp TIMESTAMP,
+	fk_message_user_id BIGINT UNSIGNED REFERENCES tb_user(user_id),
+	message_text BLOB,
+	fk_groupChat_id BIGINT UNSIGNED REFERENCES tb_groupChat(groupChat_id)
+);
+
+CREATE TABLE tb_groupChat (
+	groupChat_id SERIAL,
+	PRIMARY KEY (groupChat_id),
+	groupChat_name VARCHAR(255),
+	groupChat_timestamp TIMESTAMP,
+	groupChat_maxPartecipants TINYINT
+);
+
+CREATE TABLE tb_groupChatPartecipants (
+	fk_group_chat_id BIGINT UNSIGNED REFERENCES tb_groupChat(groupChat_id),
+	fk_user_id BIGINT UNSIGNED REFERENCES tb_user(user_id)
+	PRIMARY (fk_group_chat_id, fk_user_id)
+
 );
