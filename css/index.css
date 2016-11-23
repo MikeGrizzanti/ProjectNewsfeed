@@ -64,28 +64,54 @@ a:hover {
 .sidebar {
     position: absolute;
     width: 20rem;
-    height: 60%;
+    height: 35em;
     left: 0; right: 0; top: 15em; bottom: 0;
     background-color: orange;
     float: left;
     margin-left: 2em;
     margin-top: 1.5em;
     border-radius: 20px;
-    
+    text-transform: uppercase;
+}
+
+#sidebar_header {
+    font-family: 'Roboto', sans-serif;
+    color: #fafafa;
+    font-weight: 120;
+    font-size: 1.4rem;
+    margin-top: 0.5em;
+    margin-bottom: 0.2em;
+    margin-left: 1.5em;
+    font-size: 1em;
+}
+
+#add_point {
+    font-family: 'Roboto', sans-serif;
+    margin-left: 1em;
+    color: #fafafa;
+    margin-left: 1.5em;
+    font-weight: bold;
 }
 
 #sidebar_list_user_interests {
-    position: relative;
-    font-size: 2.5em;
+    margin-top: 0.5em;
+    padding: 0;
+    margin-left: 1.7em;
+    font-size: 0.9em;
     list-style-type: none;
-    color: #ffffff; 
+    color: #fafafa; 
+    height: auto;
+    margin-bottom: auto;
+    font-weight: 120;
+    height: 24em;
 }
 
 .user_interest {
-    color: #fff;
+    color: #fafafa;
     font-family: 'Roboto', sans-serif;
-    font-weight: 150;
+    font-weight: bold;
     text-decoration: none;
+    
 }
 
 #social_media_icons_div {
@@ -101,21 +127,29 @@ a:hover {
     height: auto;
     width: 100%;
     bottom:0;
+    height: auto;
 }
 
 #sidebar_list_footer{
-    font-size: 1.5em;
+    font-size: 1em;
     list-style-type: none;
 }
 
 .sidebar_footer_point {
-    color: #000;
+    color: #fafafa;
     text-decoration: none;
     list-style-type: none;
     font-family: 'Roboto', sans-serif;
-    font-weight: 100;
+    font-size: 1em;
+    font-weight: 0;
+    margin-left: 1.5rem;
+    
+    text-transform: lowercase;
 }
 
+hr {
+    width: 17em;
+}
 
 
 
@@ -136,6 +170,12 @@ a:hover {
     -webkit-box-shadow: 0px 0px 15px 3px rgba(0,0,0,0.4);
     -moz-box-shadow: 0px 0px 15px 3px rgba(0,0,0,0.4);
     box-shadow: 0px 0px 15px 3px rgba(0,0,0,0.4);
+}
+
+.news_card :hover {
+    -webkit-box-shadow: 0px 0px 15px 3px rgba(0,0,0,0.8);
+    -moz-box-shadow: 0px 0px 15px 3px rgba(0,0,0,0.8);
+    box-shadow: 0px 0px 15px 3px rgba(0,0,0,0.8);
 }
 
 #news_card_image_space {
