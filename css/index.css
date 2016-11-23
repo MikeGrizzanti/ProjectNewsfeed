@@ -62,7 +62,7 @@ a:hover {
 /* Sidebar-Part */
 
 .sidebar {
-    position: absolute;
+    position: fixed;
     width: 20rem;
     height: 35em;
     left: 0; right: 0; top: 15em; bottom: 0;
@@ -119,7 +119,10 @@ a:hover {
 }
 
 .social_media_icon {
-    
+    height: 2em;
+}
+#first_icon {
+    margin-left: 1.5em; 
 }
 
 #sidebar_footer {
@@ -144,7 +147,7 @@ a:hover {
     font-weight: 0;
     margin-left: 1.5rem;
     
-    text-transform: lowercase;
+    text-transform: none;
 }
 
 hr {
