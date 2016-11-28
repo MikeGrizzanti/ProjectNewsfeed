@@ -68,7 +68,7 @@ a:hover {
     left: 0; right: 0; top: 15em; bottom: 0;
     background-color: orange;
     float: left;
-    margin-left: 2em;
+    margin-left: 1.5em;
     margin-top: 1.5em;
     border-radius: 20px;
     text-transform: uppercase;
@@ -166,6 +166,9 @@ hr {
 }
 
 .news_card {
+    position: relative;
+    display: inline-block;
+    color: #000;
     margin: 2em;
     width: 15em;
     height: 22em;
@@ -173,12 +176,11 @@ hr {
     -webkit-box-shadow: 0px 0px 15px 3px rgba(0,0,0,0.4);
     -moz-box-shadow: 0px 0px 15px 3px rgba(0,0,0,0.4);
     box-shadow: 0px 0px 15px 3px rgba(0,0,0,0.4);
+    text-decoration: none;
 }
 
-.news_card :hover {
-    -webkit-box-shadow: 0px 0px 15px 3px rgba(0,0,0,0.8);
-    -moz-box-shadow: 0px 0px 15px 3px rgba(0,0,0,0.8);
-    box-shadow: 0px 0px 15px 3px rgba(0,0,0,0.8);
+#news_card_link {
+    text-decoration: none;
 }
 
 #news_card_image_space {
