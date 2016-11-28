@@ -34,7 +34,6 @@ a:hover {
     width: 50rem;
     height: 1.5rem;
     border-radius: 18px;
-    
 }
 
 #top_icon1a {
@@ -56,7 +55,31 @@ a:hover {
     margin-left: 1.5rem;
 }
 
+#login_register_button {
+    position: relative;
+    text-decoration: underline;
+    display: inline;
+    text-align: center;
+    height: 2.5em;
+    width: 13em;
+    font-family: "Roboto",sans-serif;
+    font-weight: bold;
+    color: #fafafa;
+    background-color: #FBB040;
+    border-color: #FBB040;
+    font-weight: 150;
+    letter-spacing: 0.1em;
+    margin-left: 70em;
+    
+}
 
+#login_register_button, #search:focus{
+    outline: none;
+}
+#login_register_button:visited{
+    text-decoration: none;
+    color: #fafafa
+}
 
 
 /* Sidebar-Part */
@@ -66,7 +89,7 @@ a:hover {
     width: 20rem;
     height: 35em;
     left: 0; right: 0; top: 15em; bottom: 0;
-    background-color: orange;
+    background-color: #fbb040;
     float: left;
     margin-left: 1.5em;
     margin-top: 1.5em;
@@ -210,7 +233,7 @@ hr {
 .theme_container {
     position: absolute;
     font-size: 0.8em;
-    font-family: 'Open Sans',sans-serif;
+    font-family: 'Roboto',sans-serif;
     margin-left: 0.5rem;
     margin-top: 0.5rem;
     background-color: #BDBDBD;
