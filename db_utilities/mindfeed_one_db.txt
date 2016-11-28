@@ -1,54 +1,129 @@
-CREATE TABLE tb_user (
-	user_id SERIAL,
-	user_firstName VARCHAR(50) NOT NULL,
-	user_lastName VARCHAR(50) NOT NULL,
-	user_nickName VARCHAR(255) UNIQUE NOT NULL,
-	user_eMail VARCHAR(255) UNIQUE NOT NULL,
-	user_birthDate DATE NOT NULL,
-	PRIMARY KEY (user_id)
-);
+-- phpMyAdmin SQL Dump
+-- version 3.5.8.1
+-- http://www.phpmyadmin.net
+--
+-- Host: mindfeed.one.mysql:3306
+-- Generation Time: Nov 28, 2016 at 07:23 AM
+-- Server version: 5.5.53-MariaDB-1~wheezy
+-- PHP Version: 5.4.45-0+deb7u5
 
-CREATE TABLE tb_user_interests (
-	fk_user_id BIGINT UNSIGNED REFERENCES tb_user(user_id),
-	fk_interests_id BIGINT UNSIGNED REFERENCES tb_interests(interests_id)
-	PRIMARY KEY(fk_user_id, fk_user_id)
-);
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
 
-CREATE TABLE tb_category (
-	category_id SERIAL,
-	PRIMARY KEY (category_id),
-	category_name VARCHAR(255)
-);
 
-CREATE TABLE tb_feed (
-	feed_id SERIAL,
-	PRIMARY KEY (feed_id),
-	feed_title TEXT,
-	feed_content BLOB,
-	feed_img_path TEXT,
-	fk_category_id BIGINT UNSIGNED REFERENCES tb_category(category_id) 	
-);
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
 
-CREATE TABLE tb_message (
-	message_id SERIAL,
-	PRIMARY KEY (message_id),
-	message_timestamp TIMESTAMP,
-	fk_message_user_id BIGINT UNSIGNED REFERENCES tb_user(user_id),
-	message_text BLOB,
-	fk_groupChat_id BIGINT UNSIGNED REFERENCES tb_groupChat(groupChat_id)
-);
+--
+-- Database: `mindfeed_one`
+--
 
-CREATE TABLE tb_groupChat (
-	groupChat_id SERIAL,
-	PRIMARY KEY (groupChat_id),
-	groupChat_name VARCHAR(255),
-	groupChat_timestamp TIMESTAMP,
-	groupChat_maxPartecipants TINYINT
-);
+-- --------------------------------------------------------
 
-CREATE TABLE tb_groupChatPartecipants (
-	fk_group_chat_id BIGINT UNSIGNED REFERENCES tb_groupChat(groupChat_id),
-	fk_user_id BIGINT UNSIGNED REFERENCES tb_user(user_id)
-	PRIMARY (fk_group_chat_id, fk_user_id)
+--
+-- Table structure for table `tb_category`
+--
 
-);
+CREATE TABLE IF NOT EXISTS `tb_category` (
+  `category_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `category_name` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`category_id`),
+  UNIQUE KEY `category_id` (`category_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tb_feed`
+--
+
+CREATE TABLE IF NOT EXISTS `tb_feed` (
+  `feed_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `feed_title` text,
+  `feed_content` blob,
+  `feed_img_path` text,
+  `fk_category_id` bigint(20) unsigned DEFAULT NULL,
+  PRIMARY KEY (`feed_id`),
+  UNIQUE KEY `feed_id` (`feed_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tb_groupChat`
+--
+
+CREATE TABLE IF NOT EXISTS `tb_groupChat` (
+  `groupChat_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `groupChat_name` varchar(255) DEFAULT NULL,
+  `groupChat_timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `groupChat_maxPartecipants` tinyint(4) DEFAULT NULL,
+  PRIMARY KEY (`groupChat_id`),
+  UNIQUE KEY `groupChat_id` (`groupChat_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tb_groupChatPartecipants`
+--
+
+CREATE TABLE IF NOT EXISTS `tb_groupChatPartecipants` (
+  `fk_group_chat_id` bigint(20) unsigned NOT NULL DEFAULT '0',
+  `fk_gcp_user_id` bigint(20) unsigned NOT NULL DEFAULT '0',
+  PRIMARY KEY (`fk_group_chat_id`,`fk_gcp_user_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tb_message`
+--
+
+CREATE TABLE IF NOT EXISTS `tb_message` (
+  `message_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `message_timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `fk_message_user_id` bigint(20) unsigned DEFAULT NULL,
+  `message_text` blob,
+  `fk_groupChat_id` bigint(20) unsigned DEFAULT NULL,
+  PRIMARY KEY (`message_id`),
+  UNIQUE KEY `message_id` (`message_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tb_user`
+--
+
+CREATE TABLE IF NOT EXISTS `tb_user` (
+  `user_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `user_firstName` varchar(50) NOT NULL,
+  `user_lastName` varchar(50) NOT NULL,
+  `user_nickName` varchar(255) NOT NULL,
+  `user_password` varchar(255) NOT NULL,
+  `user_eMail` varchar(255) NOT NULL,
+  `user_birthDate` date NOT NULL,
+  PRIMARY KEY (`user_id`),
+  UNIQUE KEY `user_id` (`user_id`),
+  UNIQUE KEY `user_nickName` (`user_nickName`),
+  UNIQUE KEY `user_eMail` (`user_eMail`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tb_user_interests`
+--
+
+CREATE TABLE IF NOT EXISTS `tb_user_interests` (
+  `fk_user_id` bigint(20) unsigned NOT NULL DEFAULT '0',
+  `fk_interests_id` bigint(20) unsigned NOT NULL DEFAULT '0',
+  PRIMARY KEY (`fk_user_id`,`fk_interests_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
