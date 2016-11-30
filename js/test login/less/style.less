@@ -1,0 +1,432 @@
+/// Hey, listen up before you dig into the code! This widget (or whatever you want to call it), is based on Bootstrap 3+. This means that most of the bootstrap mixins listed below, are already included in the "less" files that come along when downloading Bootstrap(source). However, the custom mixins are new and are required for this widget to work.
+
+// HELPFUL MIXINS
+// Bootstrap mixins:
+
+.translate(@x; @y) {
+  -webkit-transform: translate(@x, @y);
+     -moz-transform: translate(@x, @y);
+      -ms-transform: translate(@x, @y);
+          transform: translate(@x, @y);
+}
+
+.animation(@animation) {
+  -webkit-animation: @animation;
+     -moz-animation: @animation;
+       -ms-animation: @animation;
+          animation: @animation;
+}
+
+.animation-delay(@delay) {
+  -webkit-animation-delay: @delay;
+     -moz-animation-delay: @delay;
+      -ms-animation-delay: @delay;
+          animation-delay: @delay;
+}
+
+.backface-visibility(@visibility){
+  -webkit-backface-visibility: @visibility;
+     -moz-backface-visibility: @visibility;
+      -ms-backface-visibility: @visibility;
+          backface-visibility: @visibility;
+          
+}
+
+.transition(@transition) {
+  -webkit-transition: @transition;
+     -moz-transition: @transition;
+      -ms-transition: @transition;
+          transition: @transition;
+}
+
+.box-shadow(@shadow) {
+  -webkit-box-shadow: @shadow;
+     -moz-box-shadow: @shadow;
+      -ms-box-shadow: @shadow;
+          box-shadow: @shadow;
+}
+
+
+// Custom mixins
+.effect(@name; @arguments){
+    @-webkit-keyframes @name { @arguments();}
+    @-moz-keyframes @name { @arguments();}
+    @keyframes @name { @arguments();}
+}
+    
+.generate-paddings(5);
+.generate-paddings(@n, @i: 1) when (@i =< @n) {
+    @x : (@i*20);
+    .pad-top-@{x} {
+        padding-top: (@i * 20px);
+    }
+    .pad-btm-@{x} {
+        padding-bottom: (@i * 20px);
+    }
+    .pad-sep-@{x} {
+        padding-top: (@i * 20px);
+        padding-bottom: (@i * 20px);
+    }
+    .generate-paddings(@n, (@i + 1));
+}
+    
+.perspective(@perspective){
+    -webkit-perspective: @perspective;
+       -moz-perspective: @perspective;
+        -ms-perspective: @perspective;
+         -o-perspective: @perspective;
+            perspective: @perspective;
+}
+
+.transform(@string){
+	-webkit-transform: @string;
+	   -moz-transform: @string;
+	    -ms-transform: @string;
+	     -o-transform: @string;
+}
+
+// Helpful variables
+    
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100);
+
+// Bootstrap standard variables:
+@body-bg: #222;
+@text-color: #fff;
+@font-family-sans-serif: 'Roboto', Helvetica, Arial, sans-serif;
+@font-size-base: 14px;
+@headings-font-weight: 300;
+
+@brand-primary: #22A7F0;
+@brand-success: #00B16A;
+@brand-warning: #F39C12;
+@brand-danger: #E74C3C;
+
+// Custom variables:
+@dialog-bg: #fff;
+@dialog-color: #222;
+@dialog-width: 300px;
+@dialog-padding: 20px 25px;
+@dialog-input-border: 2px solid #222;
+@dialog-input-bg: transparent;
+@dialog-checkbox: 20px;
+
+// Custom variables that modify the way "btn-default" looks and feels.
+@dialog-btn-primary-bg: #446CB3; //darken(@dialog-bg,10%);
+@dialog-btn-primary-color: #fff; //@dialog-color;
+
+@dialog-btn-primary-bg-hover: @dialog-color;
+@dialog-btn-primary-color-hover: @dialog-bg;
+
+// Basic styling
+html,body {
+  height:100%;  
+}
+
+body {
+  margin: 0;
+  padding:0;
+  color:@text-color;
+  overflow:hidden;
+  background-color:@body-bg;
+  font-size: @font-size-base;
+  position:relative;
+  font-family: @font-family-sans-serif;
+}
+
+h1,.h1,h2,.h2,h3,.h3 {
+  font-weight:@headings-font-weight;
+  color:@brand-primary;
+}
+
+.fix-middle {
+    position: absolute;
+    padding:10px;
+    top:50%;
+    left:50%;
+    .translate(-50%; -50%);
+    z-index:3;
+}
+
+// LOGIN/REGISTER WIDGET STYLING STARTS HERE:
+
+.dialog{
+    color:@dialog-color;
+    .perspective(1200px);
+    z-index:1000;
+    opacity:1;
+    visibility: visible;
+  -webkit-transition: opacity .2s cubic-bezier(.25,.5,.5,.9),visibility .2s cubic-bezier(.25,.5,.5,.9);
+     -moz-transition: opacity .2s cubic-bezier(.25,.5,.5,.9),visibility .2s cubic-bezier(.25,.5,.5,.9);
+      -ms-transition: opacity .2s cubic-bezier(.25,.5,.5,.9),visibility .2s cubic-bezier(.25,.5,.5,.9);
+          transition: opacity .2s cubic-bezier(.25,.5,.5,.9),visibility .2s cubic-bezier(.25,.5,.5,.9);
+  &, & .dialog-front, & .dialog-back {
+    width:auto;
+    position:absolute;
+    top:50%;
+    left:50%;
+    padding:0;
+    margin:0;
+    .translate(-50%;-50%);
+  }
+  &.dialog-effect-in{
+    .animation(showDialog 1000ms linear both);
+  }  
+  &.shakeit {
+    .animation(shakeDialog 300ms linear both);
+  }
+  .dialog-content {
+    width:@dialog-width;
+    background: @dialog-bg; /* Old browsers */
+    background: -moz-radial-gradient(center, ellipse cover,  #ffffff 59%, #e5e5e5 100%); /* FF3.6+ */
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(59%,#ffffff), color-stop(100%,#e5e5e5)); /* Chrome,Safari4+ */
+    background: -webkit-radial-gradient(center, ellipse cover,  #ffffff 59%,#e5e5e5 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-radial-gradient(center, ellipse cover,  #ffffff 59%,#e5e5e5 100%); /* Opera 12+ */
+    background: -ms-radial-gradient(center, ellipse cover,  #ffffff 59%,#e5e5e5 100%); /* IE10+ */
+    background: radial-gradient(ellipse at center,  #ffffff 59%,#e5e5e5 100%); /* W3C */
+    border-radius:6px;
+    .box-shadow(0 2px 12px -3px rgba(0,0,0,.6));
+    padding:@dialog-padding;
+  }
+  
+  .dialog-front,.dialog-back{
+      -webkit-transform-style: preserve-3d;
+      -moz-transform-style: preserve-3d;
+      .backface-visibility(hidden);
+      .transition(all .4s cubic-bezier(.25,.5,.5,.9));
+  }
+  .dialog-front{
+    .transform(translate(-50%,-50%) rotateX(0deg) rotateY(0deg));
+    z-index: 900;
+    
+  }
+  .dialog-back {
+    .transform(translate(-50%,-50%) rotateY(-180deg));
+    z-index: 800;
+  }  
+  &.flip {
+    .dialog-front{
+      z-index: 800;
+      visibility:hidden;
+      .transform(translate(-50%,-50%) rotateY(180deg));      
+    }
+    .dialog-back {
+      z-index: 900;
+      visibility:visible;
+      .transform(translate(-50%,-50%) rotateX(0deg) rotateY(0deg)); 
+    }
+  }
+  &.dialog-effect-out {
+    z-index:1;
+    opacity:0; 
+    visibility: hidden;
+    .dialog-front{
+         .transform(translate(-50%,-20%) rotateX(-30deg)); 
+    }
+    .dialog-back {
+         .transform(translate(-50%,-20%) rotateX(-30deg) rotateY(-180deg)); 
+    }
+    &.flip {
+      .dialog-front{
+          .transform(translate(-50%,-20%) rotateX(-30deg) rotateY(180deg));
+      }
+      .dialog-back {
+          .transform(translate(-50%,-20%) rotateX(-30deg) rotateY(0deg));
+      }
+    }
+    .dialog-content {
+      background:@brand-success;
+      .dialog-form {
+        visibility:hidden;
+      }
+    }
+  }
+  .dialog-form {
+    .animation(swooshUp30 300ms linear both);
+    .animation-delay(300ms);
+    legend {
+        margin-bottom: 40px;
+        font-size: 26px;
+        font-weight:@headings-font-weight;
+        color: @dialog-color;
+        border-bottom: none;
+    }
+  .form-group {
+    margin-bottom: 20px;
+    position:relative;
+    .form-control {
+      color: @dialog-color;
+      background-color: @dialog-input-bg;
+      border: none;
+      border-bottom:@dialog-input-border;
+      border-radius:0;
+      .box-shadow(none);      
+    }
+    label {
+      display: inline-block;
+      max-width: 100%;
+      margin-bottom: 5px;
+      font-weight: 700;
+    }
+    &.has-error {
+      .error-msg {
+        display:block;
+      }
+      label {
+        color: @brand-danger;
+      }
+      .form-control {
+        border-color: @brand-danger;
+      } 
+    }
+    .checkbox {
+      label {
+        padding-left:40px;
+      }
+      input[type="checkbox"] {
+        width: @dialog-checkbox;
+        height: @dialog-checkbox;
+        background:none;
+        border:@dialog-input-border;
+        margin-left:(-20px + @dialog-checkbox*-1);
+        -webkit-appearance:none;
+        appearance:none;
+        &:hover {
+          background-color:darken(@dialog-bg,10%);
+        }
+        &:checked {
+          background-color:@dialog-color;
+        }
+        &:disabled {
+          background-color:lighten(@dialog-color,30%);
+          border-color:lighten(@dialog-color,20%);
+        }
+      }
+    }
+  }
+  .error-msg {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: auto;
+        background-color: @brand-danger;
+        color:@dialog-bg;
+        padding: 10px;
+        z-index: 3;      
+        max-width: (@dialog-width/2);
+        border-radius:3px;
+        .translate(-110%; -50%);        
+        .animation(swooshleft 200ms ease-in-out both);
+        display:none;      
+        &:after {
+          position:absolute;
+          content:'';
+          top:50%;
+          right:0;
+          .translate(97%; -50%);
+          width: 0;
+          height: 0;
+          border-style: solid;
+          border-width: 10px 0 10px 10px;
+          border-color: transparent transparent transparent @brand-danger;
+        }
+  }
+  .btn {
+    font-weight:700;
+    border-width:0;
+    border-radius:0;
+    text-transform:uppercase;
+    .transition(all .2s cubic-bezier(.25,.5,.5,.9));
+    &.btn-default {
+      color:@dialog-btn-primary-color;
+      background-color: @dialog-btn-primary-bg;
+      margin: 0 -10%;
+      width: 120%;
+      outline:none;
+      &:hover{
+        background-color: @dialog-btn-primary-bg-hover;
+        color:@dialog-btn-primary-color-hover;
+      }
+      &:active,&:focus {
+        background-color: @dialog-btn-primary-bg-hover;
+        color:@dialog-btn-primary-color-hover;
+      }
+    }
+  }
+}
+}
+
+.effect(swooshUp30; {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+});
+
+.effect(swooshleft; {
+    0% {
+        .translate(-90%; -50%);
+    }
+    100% {
+        .translate(-110%; -50%);
+    }
+});
+
+.effect(shakeDialog; {
+    0% {
+        left:51%;
+    }
+    25% {
+        left:49%;
+    }
+    50% {
+        left:51%;
+    }
+    100% {
+        left:50%;
+    }
+});
+
+/* Generated with Bounce.js. Edit at http://goo.gl/KtDT8H */
+
+@-webkit-keyframes showDialog { 
+  0% { -webkit-transform: matrix3d(0.8, 0, 0, 0, 0, 0.8, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(0.8, 0, 0, 0, 0, 0.8, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  7.61% { -webkit-transform: matrix3d(0.907, 0, 0, 0, 0, 0.907, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(0.907, 0, 0, 0, 0, 0.907, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  11.41% { -webkit-transform: matrix3d(0.948, 0, 0, 0, 0, 0.948, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(0.948, 0, 0, 0, 0, 0.948, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  15.12% { -webkit-transform: matrix3d(0.976, 0, 0, 0, 0, 0.976, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(0.976, 0, 0, 0, 0, 0.976, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  18.92% { -webkit-transform: matrix3d(0.996, 0, 0, 0, 0, 0.996, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(0.996, 0, 0, 0, 0, 0.996, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  22.72% { -webkit-transform: matrix3d(1.008, 0, 0, 0, 0, 1.008, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1.008, 0, 0, 0, 0, 1.008, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  30.23% { -webkit-transform: matrix3d(1.014, 0, 0, 0, 0, 1.014, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1.014, 0, 0, 0, 0, 1.014, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  50.25% { -webkit-transform: matrix3d(1.003, 0, 0, 0, 0, 1.003, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1.003, 0, 0, 0, 0, 1.003, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  70.27% { -webkit-transform: matrix3d(0.999, 0, 0, 0, 0, 0.999, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(0.999, 0, 0, 0, 0, 0.999, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  100% { -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); } 
+}
+
+@keyframes showDialog { 
+  0% { -webkit-transform: matrix3d(0.8, 0, 0, 0, 0, 0.8, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(0.8, 0, 0, 0, 0, 0.8, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  7.61% { -webkit-transform: matrix3d(0.907, 0, 0, 0, 0, 0.907, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(0.907, 0, 0, 0, 0, 0.907, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  11.41% { -webkit-transform: matrix3d(0.948, 0, 0, 0, 0, 0.948, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(0.948, 0, 0, 0, 0, 0.948, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  15.12% { -webkit-transform: matrix3d(0.976, 0, 0, 0, 0, 0.976, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(0.976, 0, 0, 0, 0, 0.976, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  18.92% { -webkit-transform: matrix3d(0.996, 0, 0, 0, 0, 0.996, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(0.996, 0, 0, 0, 0, 0.996, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  22.72% { -webkit-transform: matrix3d(1.008, 0, 0, 0, 0, 1.008, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1.008, 0, 0, 0, 0, 1.008, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  30.23% { -webkit-transform: matrix3d(1.014, 0, 0, 0, 0, 1.014, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1.014, 0, 0, 0, 0, 1.014, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  50.25% { -webkit-transform: matrix3d(1.003, 0, 0, 0, 0, 1.003, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1.003, 0, 0, 0, 0, 1.003, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  70.27% { -webkit-transform: matrix3d(0.999, 0, 0, 0, 0, 0.999, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(0.999, 0, 0, 0, 0, 0.999, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  100% { -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); } 
+}
+
+// This stiling is not a part of the widget.
+
+#successful_login, #successful_registration{
+  opacity:0;
+  visibility:hidden;
+  -webkit-transition: opacity .4s cubic-bezier(.25,.5,.5,.9),visibility .6s cubic-bezier(.25,.5,.5,.9);
+     -moz-transition: opacity .4s cubic-bezier(.25,.5,.5,.9),visibility .6s cubic-bezier(.25,.5,.5,.9);
+      -ms-transition: opacity .4s cubic-bezier(.25,.5,.5,.9),visibility .6s cubic-bezier(.25,.5,.5,.9);
+          transition: opacity .4s cubic-bezier(.25,.5,.5,.9),visibility .6s cubic-bezier(.25,.5,.5,.9);
+  &.active {
+    opacity:1;
+    visibility:visible;
+  }
+}
