@@ -2,8 +2,19 @@
 <!-- Generator: Adobe Illustrator 16.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="Ebene_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="49.725px" height="29.043px" viewBox="0 0 49.725 29.043" enable-background="new 0 0 49.725 29.043" xml:space="preserve">
-<path d="M37.501,0H25.723c-6.627,0-12,5.373-12,12v2.396c0,1.206,0.183,2.369,0.514,3.468C11.675,23.642,6.447,27.922,0,29.043
-	c5.889-0.096,14.112-0.795,21.782-3.322c1.236,0.43,2.558,0.676,3.941,0.676h11.778c6.627,0,12-5.373,12-12V12
-	C49.501,5.373,44.128,0,37.501,0z"/>
+	 width="20px" height="20px" viewBox="0 0 20 20" enable-background="new 0 0 20 20" xml:space="preserve">
+<g>
+	<g>
+		<path fill="#FFFFFF" d="M13.711,14.002H5.646H5.041v-0.605V6.38H0v10.837H1.47l-0.422,2.654c0,0,2.72-0.99,4.546-2.654h8.117
+			V14.002z"/>
+		<g>
+			<path fill="#FFFFFF" d="M20,2.128H5.646V6.38v7.017h8.472c1.828,1.662,4.546,2.652,4.546,2.652l-0.42-2.652H20V2.128z"/>
+		</g>
+	</g>
+	<g>
+		<circle fill="#FFFFFF" cx="12.795" cy="11.455" r="0.666"/>
+		<circle fill="#FFFFFF" cx="15.462" cy="11.455" r="0.666"/>
+		<circle fill="#FFFFFF" cx="18.126" cy="11.455" r="0.666"/>
+	</g>
+</g>
 </svg>

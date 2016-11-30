@@ -4,7 +4,9 @@
 <svg version="1.1" id="Ebene_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="20px" height="20px" viewBox="0 0 20 20" enable-background="new 0 0 20 20" xml:space="preserve">
 <g>
-	<path fill="#FFFFFF" d="M2.456,20c0-2.678,3.68-10.508,4.729-10.508h5.631c1.049,0,4.729,7.83,4.729,10.508H2.456z"/>
-	<circle fill="#FFFFFF" cx="9.916" cy="3.986" r="3.986"/>
+	<g>
+		<polygon fill="#FFFFFF" points="13.194,20 4.175,20 4.175,0 15.825,0 15.825,14.535 13.828,14.535 13.828,1.997 6.172,1.997 
+			6.172,18.004 11.197,18.004 11.197,7.068 8.804,7.068 8.804,14.553 6.807,14.553 6.807,5.072 13.194,5.072 		"/>
+	</g>
 </g>
 </svg>
