@@ -24,6 +24,7 @@ a:hover {
     position: absolute;
     margin-top: 0.8rem;
     height: 2rem;
+    line-height: 0.5em;
 }
 
 #search {
@@ -43,7 +44,7 @@ a:hover {
 }
 
 #top_icon_close_sidebar {
-    display: inline;
+    display: inline-block;
     height: 1.25em;
 }
 
