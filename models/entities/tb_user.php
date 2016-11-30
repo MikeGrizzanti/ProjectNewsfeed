@@ -113,7 +113,7 @@ class tb_user {
     }
     
     private static function updateUser() {
-        
+        //!!!! TODO
     }
     
     private static function createUser($firstName, $lastName, $nickName, $password, $eMail) {
