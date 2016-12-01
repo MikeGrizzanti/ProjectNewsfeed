@@ -19,7 +19,7 @@ class tb_category {
         
     }
     
-    public function getId() {
+    public function get_category_Id() {
         return $this->category_id;
     }
     
@@ -27,7 +27,7 @@ class tb_category {
         return $this->fk_category_name;
     }
     
-    public static function checkLogin($id) {
+    public static function getCategoryFromID($id) {
         $sql = 'SELECT * FROM tb_category WHERE category_id=?';
         $query = DB::getDB()->prepare($sql);
         $query->execute(array($id));
