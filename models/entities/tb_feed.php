@@ -59,8 +59,14 @@ class tb_feed {
         $this->feed_img_path = $feed_img_path;
     }
     
-    public static function getFeedFromID () {
-        
+    public static function getFeedFromID ($id) {
+        $sql = 'SELECT * FROM tb_feed WHERE feed_id = ?';
+        $query = DB::getDB()->prepare($sql);
+        $query->execute(array($id));
+        $query->setFetchMode(PDO::FETCH_CLASS, 'tb_feed');
+        return $query->fetch();
     }
+    
+    
 }
 
