@@ -37,3 +37,23 @@ a:hover {
     margin-bottom: 0;
     border-radius: 2px;
 }
+
+.main_part_support {
+    position: absolute;
+    left: 0; right: 0; bottom: 0; top: 10em;
+    padding: 2em;
+}
+#first_header {
+    font-family: "Roboto",sans-serif;
+    margin-top: 0;
+    letter-spacing: 0.2rem;
+}
+
+.explanation_box {
+    border: 1px solid #000;
+    width: 30em;
+    padding: 1em;
+    padding-top: 0;
+
+    font-family: "Open Sans",sans-serif;
+}
