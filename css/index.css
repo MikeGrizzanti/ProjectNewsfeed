@@ -17,7 +17,6 @@ a:hover {
     margin-right: auto;
     margin-top: 2rem;
     height: 6rem;
-    position: relative;
 }
 
 #top_nav {
@@ -79,7 +78,6 @@ a:hover {
     color: #fafafa;
     background-color: #FBB040;
     border-color: #FBB040;
-    font-weight: 150;
     letter-spacing: 0.1em;
     margin-left: 75em;
     border-radius: 2px;
