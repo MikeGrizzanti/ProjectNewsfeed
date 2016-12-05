@@ -30,28 +30,76 @@ body {
     border: 2px solid #b6b6b6;
     border-radius: 0.2rem;
 }
+.register_form{
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    width: 17.5em;    
+    border: 2px solid #b6b6b6;
+    border-radius: 0.2rem;
+}
 
+#register_header {
+    color: #fafafa;
+    font-family: 'Roboto',sans-serif;
+    margin-left: 2em;
+    margin-bottom: 0;
+}
 
-#text_field_email, #text_field_password {
+#text_field_nickname, #text_field_password{
     position: relative;
     display: block;
     height: 1.5em;
     width: 15em;
     font-family: "Roboto",sans-serif;
     margin: 3em;
-}
-#text_field_password{
     margin-bottom: 0.9em;
+}
+#text_field_password {
     margin-top: 0;
 }
-#text_field_email{
+
+#text_field_reg_first_name, #text_field_reg_last_name, #text_field_reg_password,#text_field_reg_rep_password, #text_field_reg_email{
+    margin: 3em;
     margin-bottom: 0.9em;
+    margin-top: 0;
+    position: relative;
+    display: block;
+    height: 1.5em;
+    width: 15em;
+    font-family: "Roboto",sans-serif;
+}
+#text_field_reg_nickname{
+    margin: 3em;
+    margin-bottom: 0.9em;
+    margin-top: 1.2em;
+    position: relative;
+    display: block;
+    height: 1.5em;
+    width: 15em;
+    font-family: "Roboto",sans-serif;
 }
 
 
-#action_button {
+
+
+#login_button {
     margin: 3em;
     margin-top: 0;
+    margin-bottom: 1em;
+    height: 2em;
+    width: 15.4em;
+    font-family: "Roboto",sans-serif;
+    font-weight: bold;
+    color: #fafafa;
+    background-color: orange;
+    border-color: orange;
+    font-weight: 150;
+    letter-spacing: 0.1em;
+}
+#register_button {
+    margin: 3em;
+    margin-top: 0.9em;
     margin-bottom: 1em;
     height: 2em;
     width: 15.4em;
@@ -111,6 +159,6 @@ hr {
     letter-spacing:  0.1em;
 }
 
-#no_login_option, #login_socialmedia, #action_button, #text_field_email, #text_field_password, #main_logo, #register_option:focus {
+#no_login_option, #login_socialmedia, #action_button, #text_field_nickname, #text_field_password, #main_logo, #register_option, #no_login_option, #text_field_reg_nickname, #text_field_reg_email, #text_field_reg_first_name, #text_field_reg_last_name, #text_field_reg_password, #text_field_reg_rep_password, #register_button:focus {
     outline: none;
 }

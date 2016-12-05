@@ -1,39 +1,46 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>jQuery.parseXML demo</title>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+ <script type="text/javascript" src="FeedEk-master/FeedEk-master/js/FeedEk.js"></script>
+</head>
+<body>
+ 
+<p id="someElement"></p>
+<p id="anotherElement"></p>
+    <div id="divRss"></div>
+ 
+<script>
+var xml = "<rss version='2.0'><channel><title>RSS Title</title><image><url>http://weather.gov/images/xml_logo.gif</url><title>NOAA's National Weather Service</title><link>http://weather.gov</link></image></channel></rss>",
+  xmlDoc = $.parseXML( xml ),
+  $xml = $( xmlDoc ),
+  $title = $xml.find( "url" );
+ 
+// Append "RSS Title" to #someElement
+$( "#someElement" ).append( $title.text() );
+ 
+// Change the title to "XML Title"
+$title.text( "XML Title" );
+ 
+// Append "XML Title" to #anotherElement
+$( "#anotherElement" ).append( $title.text() );
     
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>GETTING STARTED WITH BRACKETS</title>
-        <meta name="description" content="An interactive getting started guide for Brackets.">
-        <link rel="stylesheet" href="main.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-        <script type="text/javascript" src="feedparser.js"></script>
-    </head>
-    <body>
-        
-      
-    </body>
+$tester = document.createElement("a");
+</script>
+    
+    <script>
+    $('#divRss').FeedEk({
+    FeedUrl : 'http://www.ilfattoquotidiano.it/feed/',
+    MaxCount : 355,
+    ShowDesc : true,
+    ShowPubDate:true,
+    DescCharacterLimit:10000,
+    TitleLinkTarget:'_blank'
+  });
+    </script>
+ 
+</body>
 </html>
-<!--
 
-    [[[[[[[[[[[[[[[      ]]]]]]]]]]]]]]]
-    [::::::::::::::      ::::::::::::::]
-    [::::::::::::::      ::::::::::::::]
-    [::::::[[[[[[[:      :]]]]]]]::::::]
-    [:::::[                      ]:::::]
-    [:::::[                      ]:::::]
-    [:::::[                      ]:::::]
-    [:::::[                      ]:::::]
-    [:::::[     CODE THE WEB     ]:::::]
-    [:::::[  http://brackets.io  ]:::::]
-    [:::::[                      ]:::::]
-    [:::::[                      ]:::::]
-    [:::::[                      ]:::::]
-    [:::::[                      ]:::::]
-    [::::::[[[[[[[:      :]]]]]]]::::::]
-    [::::::::::::::      ::::::::::::::]
-    [::::::::::::::      ::::::::::::::]
-    [[[[[[[[[[[[[[[      ]]]]]]]]]]]]]]]
-
--->

@@ -1,0 +1,39 @@
+/* Head-Part */
+.header {
+    height: 10em;
+    width: 100%;
+    background-color: #000;
+    position: absolute;
+    left: 0; right: 0; top: 0; bottom: 0; 
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+#main_logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+    height: 6rem;
+    position: relative;
+}
+
+#home_button {
+    position: absolute;
+    text-decoration: underline;
+    display: block;
+    text-align: center;
+    height: 2em;
+    width: 13em;
+    font-family: "Roboto",sans-serif;
+    font-weight: bold;
+    color: #fafafa;
+    background-color: #FBB040;
+    border-color: #FBB040;
+    letter-spacing: 0.1em;
+    margin-left: 2em;
+    margin-bottom: 0;
+    border-radius: 2px;
+}
