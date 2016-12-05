@@ -1,6 +1,6 @@
 /* Head-Part */
 .header {
-    height: 15em;
+    height: 12em;
     width: 100%;
     background-color: #000;
     position: absolute;
@@ -28,10 +28,11 @@ a:hover {
 }
 
 #search {
-    display: block;
-    margin-left: auto;
+    display: inline;
+    position: absolute;
+    margin-left: 10em;;
     margin-right: auto;
-    margin-top: 2rem;
+    margin-top: 0;
     width: 50rem;
     height: 1.5rem;
     border-radius: 18px;
@@ -71,7 +72,7 @@ a:hover {
     text-decoration: underline;
     display: inline;
     text-align: center;
-    height: 2.5em;
+    height: 2em;
     width: 13em;
     font-family: "Roboto",sans-serif;
     font-weight: bold;
@@ -99,11 +100,11 @@ a:hover {
     position: fixed;
     width: 20rem;
     height: 35em;
-    left: 0; right: 0; top: 15em; bottom: 0;
+    left: 0; right: 0; top: 12em; bottom: 0;
     background-color: #fbb040;
     float: left;
     margin-left: 1.5em;
-    margin-top: 1.5em;
+    margin-top: 1em;
     border-radius: 2px;
     text-transform: uppercase;
 }
@@ -196,7 +197,7 @@ hr {
     background-color: #FAFAFA;
     position: fixed;
     height: auto;
-    top: 15em; right: 0; bottom: 0;left: 0;
+    top: 12em; right: 0; bottom: 0;left: 0;
 }
 
 .news_card {
@@ -228,7 +229,7 @@ hr {
 }
 
 #news_card_text_space {
-    font-family: 'Open Sans';
+    font-family: 'Open Sans',sans-serif;
     width: 14em;
     padding-left: 0.5em
 }
