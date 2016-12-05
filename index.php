@@ -1,17 +1,19 @@
-<!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title></title>
-    </head>
-    <body>
-        <?php
-        // put your code here
-        ?>
-    </body>
-</html>
+<?php
+
+require_once 'models/entites/db.php';
+require_once 'models/entites/tb_category.php';
+require_once 'models/entites/tb_feed.php';
+require_once 'models/entites/tb_groupChat.php';
+require_once 'models/entites/tb_groupChatPartecipants.php';
+require_once 'models/entites/tb_message.php';
+require_once 'models/entites/tb_user.php';
+require_once 'models/entites/tb_user_interests.php';
+
+require_once 'controller/controller.php';
+
+$action = isset($_GET['action'])?$_GET['action']:'login';
+$controller = new controller();
+
+if (method_exists($controller, $action)) {
+    $controller->run($action);
+}
