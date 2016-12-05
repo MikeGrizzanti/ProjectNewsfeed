@@ -27,7 +27,6 @@ if ($_POST) {
             } else {
                 $error = "Passwords don't match";
             }
-  
         }
     }
 }
