@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>MINDFEED</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="../css/login_register.css" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    </head>
+    
+    <body>
+<<<<<<< HEAD
+        
+        <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+	       <div class="flipper">
+		      <div class="front">
+			     <!-- front content -->
+                <a href="index.html">
+                    <img src="../images/Logo_Mindfeed_White_Orange.svg" id="main_logo"/>
+                </a>
+                <div id="subtitle">
+                    <p>welcome to mindfeed.</p>
+                    <p>we inform you to inspire you.</p>    
+                </div>
+=======
+        <a href="index.tpl.html">
+        <img src="../images/Logo_Mindfeed_White_Orange.svg" id="main_logo"/>
+        </a>
+        <div id="subtitle">
+            <p>welcome to mindfeed.</p>
+            <p>we inform you to inspire you.</p>    
+        </div>
+        
+        <div class="login_form">
+            <form action="#">
+                <input id="text_field_nickname" name="text_field_nickname" type="text" placeholder="USERNAME"/>
+                <input id="text_field_password" name="text_field_password" type="text" placeholder="PASSWORD"/>
+                <input id="login_button" type="submit" value="LOGIN" />
+            </form>
+            <hr/>
+            <a href="#"><input id="login_socialmedia" type="button" value="LOGIN WITH FACEBOOK" /></a>
+            <input id="register_option" type="button" value="REGISTER" />
+            <hr/>
+            <a href="index.tpl.html"><input id="no_login_option" type="button" value="PROCEED WITHOUT LOGIN" /></a>
+        </div>
+
+        
+        
+        <div class="register_form">
+        <form action="#">
+            <h3 id="register_header">create an account:</h3>
+            <input id="text_field_reg_nickname" name="text_field_reg_nickname" type="text" placeholder="USERNAME"/>
+            <input id="text_field_reg_email" name="text_field_reg_email" type="text" placeholder="EMAIL"/>
+            <input id="text_field_reg_first_name" name="text_field_reg_first_name" type="text" placeholder="FIRST NAME"/>
+            <input id="text_field_reg_last_name" name="text_field_reg_last_name" type="text" placeholder="LAST NAME"/>    
+            <input id="text_field_reg_password" name="text_field_reg_password" type="text" placeholder="PASSWORD"/>
+            <input id="text_field_reg_rep_password" name="text_field_reg_rep_password" type="text" placeholder="REPEAT PASSWORD"/>
+            <hr/>
+            <input id="register_button" type="submit" value="REGISTER" />
+            </form>
+        </div>
+        
+        
+>>>>>>> ead01d2e49362cfca6214e8129ed91ffca005963
+        
+                <div class="login_form">
+                    <form action="#">
+                        <input id="text_field_nickname" name="text_field_nickname" type="text" placeholder="USERNAME"/>
+                        <input id="text_field_password" name="text_field_password" type="text" placeholder="PASSWORD"/>
+                        <input id="login_button" type="submit" value="LOGIN" />
+                    </form>
+                    <hr/>
+                    <a href="#"><input id="login_socialmedia" type="button" value="LOGIN WITH FACEBOOK" /></a>
+                    <input id="register_option" type="button" value="REGISTER" />
+                    <script type="text/javascript"> $("#register_option").click(function() {
+        $(".flipper").css("transform","rotateY(180deg)");
+});</script>
+                    <hr/>
+                    <a href="index.html"><input id="no_login_option" type="button" value="PROCEED WITHOUT LOGIN" /></a>
+                </div>
+		      </div>
+		      <div class="back">
+			     <!-- back content -->
+                    <div class="register_form">
+                        <form action="#">
+                            <h3 id="register_header">create an account:</h3>
+                            <input id="text_field_reg_nickname" name="text_field_nickname" type="text" placeholder="USERNAME"/>
+                            <input id="text_field_reg_email" name="text_field_email" type="text" placeholder="EMAIL"/>
+                            <input id="text_field_reg_first_name" name="text_field_first_name" type="text" placeholder="FIRST NAME"/>
+                            <input id="text_field_reg_last_name" name="text_field_last_name" type="text" placeholder="LAST NAME"/>    
+                            <input id="text_field_reg_password" name="text_field_password" type="text" placeholder="PASSWORD"/>
+                            <input id="text_field_reg_password" name="text_field_rep_password" type="text" placeholder="REPEAT PASSWORD"/>
+                            <hr/>
+                            <input id="register_button" type="submit" value="REGISTER" />
+                        </form>
+                    </div>
+		      </div>
+	       </div>
+        </div>        
+        
+        
+    </body>
+</html>
