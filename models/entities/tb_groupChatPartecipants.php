@@ -1,8 +1,8 @@
 <?php
 
 class tb_groupChatPartecipants {
-    private $fk_group_chat_id   = 0;
-    private $fk_gcp_user_id     = 0;
+    private $fk_group_chat_id = 0;
+    private $fk_gcp_user_id = 0;
     
     public function __construct($data = array()) {
         if ($data) {
