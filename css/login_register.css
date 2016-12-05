@@ -59,7 +59,7 @@ body {
     margin-top: 0;
 }
 
-#text_field_reg_first_name, #text_field_reg_last_name, #text_field_reg_password, #text_field_reg_email{
+#text_field_reg_first_name, #text_field_reg_last_name, #text_field_reg_password,#text_field_reg_rep_password, #text_field_reg_email{
     margin: 3em;
     margin-bottom: 0.9em;
     margin-top: 0;
@@ -159,6 +159,6 @@ hr {
     letter-spacing:  0.1em;
 }
 
-#no_login_option, #login_socialmedia, #action_button, #text_field_nickname, #text_field_password, #main_logo, #register_option:focus {
+#no_login_option, #login_socialmedia, #action_button, #text_field_nickname, #text_field_password, #main_logo, #register_option, #no_login_option, #text_field_reg_nickname, #text_field_reg_email, #text_field_reg_first_name, #text_field_reg_last_name, #text_field_reg_password, #text_field_reg_rep_password, #register_button:focus {
     outline: none;
 }

@@ -1,6 +1,6 @@
 /* Head-Part */
 .header {
-    height: 12em;
+    height: 10em;
     width: 100%;
     background-color: #000;
     position: absolute;
@@ -20,57 +20,10 @@ a:hover {
     position: relative;
 }
 
-#top_nav {
+#home_button {
     position: absolute;
-    margin-top: 0.8rem;
-    height: 2rem;
-    line-height: 0.5em;
-}
-
-#search {
-    display: inline;
-    position: absolute;
-    margin-left: 10em;;
-    margin-right: auto;
-    margin-top: 0;
-    width: 50rem;
-    height: 1.5rem;
-    border-radius: 18px;
-}
-
-#top_icon_open_sidebar {
-    display: inline;
-    margin-left: 2em;
-    height: 1.25em;
-}
-
-#top_icon_close_sidebar {
-    display: inline-block;
-    height: 1.25em;
-}
-
-#top_icon_chat {
-    display: inline;
-    margin-left: 63em;
-    height: 1.25em;
-}
-
-#top_icon_profile {
-    display: inline;
-    margin-left: 1.5rem;
-    height: 1.25em;
-}
-
-#top_icon_settings {
-    display: inline;
-    margin-left: 1.5rem;
-    height: 1.25em;
-}
-
-#login_register_button {
-    position: relative;
     text-decoration: underline;
-    display: inline;
+    display: block;
     text-align: center;
     height: 2em;
     width: 13em;
@@ -79,178 +32,8 @@ a:hover {
     color: #fafafa;
     background-color: #FBB040;
     border-color: #FBB040;
-    font-weight: 150;
     letter-spacing: 0.1em;
-    margin-left: 75em;
+    margin-left: 2em;
+    margin-bottom: 0;
     border-radius: 2px;
-}
-
-#login_register_button, #search:focus{
-    outline: none;
-}
-#login_register_button:visited{
-    text-decoration: none;
-    color: #fafafa
-}
-
-
-/* Sidebar-Part */
-
-.sidebar {
-    position: fixed;
-    width: 20rem;
-    height: 35em;
-    left: 0; right: 0; top: 12em; bottom: 0;
-    background-color: #fbb040;
-    float: left;
-    margin-left: 1.5em;
-    margin-top: 1em;
-    border-radius: 2px;
-    text-transform: uppercase;
-}
-
-#sidebar_header {
-    font-family: 'Roboto', sans-serif;
-    color: #fafafa;
-    font-weight: 120;
-    font-size: 1.4rem;
-    margin-top: 0.5em;
-    margin-bottom: 0.2em;
-    margin-left: 1.5em;
-    font-size: 1em;
-}
-
-#add_point {
-    font-family: 'Roboto', sans-serif;
-    margin-left: 1em;
-    color: #fafafa;
-    margin-left: 1.5em;
-    font-weight: bold;
-}
-
-#sidebar_list_user_interests {
-    margin-top: 0.5em;
-    padding: 0;
-    margin-left: 1.7em;
-    font-size: 0.9em;
-    list-style-type: none;
-    color: #fafafa; 
-    height: auto;
-    margin-bottom: auto;
-    font-weight: 120;
-    height: 24em;
-}
-
-.user_interest {
-    color: #fafafa;
-    font-family: 'Roboto', sans-serif;
-    font-weight: bold;
-    text-decoration: none;
-    
-}
-
-#social_media_icons_div {
-    position: relative;
-}
-
-.social_media_icon {
-    height: 2em;
-}
-#first_icon {
-    margin-left: 1.5em; 
-}
-
-#sidebar_footer {
-    position: relative;
-    height: auto;
-    width: 100%;
-    bottom:0;
-    height: auto;
-}
-
-#sidebar_list_footer{
-    font-size: 1em;
-    list-style-type: none;
-}
-
-.sidebar_footer_point {
-    color: #fafafa;
-    text-decoration: none;
-    list-style-type: none;
-    font-family: 'Roboto', sans-serif;
-    font-size: 1em;
-    font-weight: 0;
-    margin-left: 1.5rem;
-    
-    text-transform: none;
-}
-
-hr {
-    width: 17em;
-}
-
-
-
-/* MainPage-Part */
-
-.main_page {
-    background-color: #FAFAFA;
-    position: fixed;
-    height: auto;
-    top: 12em; right: 0; bottom: 0;left: 0;
-}
-
-.news_card {
-    position: relative;
-    display: inline-block;
-    color: #000;
-    margin: 2em;
-    width: 15em;
-    height: 22em;
-    background-color: rgba(255,255,255,0.85);
-    -webkit-box-shadow: 0px 0px 15px 3px rgba(0,0,0,0.4);
-    -moz-box-shadow: 0px 0px 15px 3px rgba(0,0,0,0.4);
-    box-shadow: 0px 0px 15px 3px rgba(0,0,0,0.4);
-    text-decoration: none;
-    border-radius: 2px;
-}
-
-#news_card_link {
-    text-decoration: none;
-}
-
-#news_card_image_space {
-    top: 0; left: 0; bottom: 0; right: 0;
-}
-
-.news_card_img {
-    height: 15em;
-    width: 15em;
-}
-
-#news_card_text_space {
-    font-family: 'Open Sans',sans-serif;
-    width: 14em;
-    padding-left: 0.5em
-}
-
-.news_card_title {
-    white-space: normal;
-    margin: 0;
-}
-.news_card_text {
-    white-space: normal;
-    margin-top: 0;
-}
-
-.theme_container {
-    position: absolute;
-    font-size: 0.8em;
-    font-family: 'Roboto',sans-serif;
-    margin-left: 0.5rem;
-    margin-top: 0.5rem;
-    background-color: #BDBDBD;
-    height: 1.1rem;
-    width: 2.8rem;
-    padding-left: 0.1rem;
 }
