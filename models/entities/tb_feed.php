@@ -66,7 +66,5 @@ class tb_feed {
         $query->setFetchMode(PDO::FETCH_CLASS, 'tb_feed');
         return $query->fetch();
     }
-    
-    
 }
 
