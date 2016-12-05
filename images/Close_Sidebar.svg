@@ -2,15 +2,15 @@
 <!-- Generator: Adobe Illustrator 16.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="Ebene_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="29.103px" height="29.103px" viewBox="0 0 29.103 29.103" enable-background="new 0 0 29.103 29.103" xml:space="preserve">
+	 width="29.104px" height="29.104px" viewBox="0 0 29.104 29.104" enable-background="new 0 0 29.104 29.104" xml:space="preserve">
 <g>
 	<g>
-		<path fill="#FFFFFF" d="M2,29.103c-0.512,0-1.023-0.195-1.414-0.586c-0.781-0.781-0.781-2.047,0-2.828L25.688,0.587
-			c0.781-0.781,2.047-0.781,2.828,0c0.781,0.781,0.781,2.047,0,2.828L3.414,28.517C3.024,28.908,2.512,29.103,2,29.103z"/>
+		
+			<rect x="2.408" y="12.552" transform="matrix(0.7071 0.7071 -0.7071 0.7071 14.5508 -6.0271)" fill="#FFFFFF" width="24.285" height="4"/>
 	</g>
 	<g>
-		<path fill="#FFFFFF" d="M27.103,29.103c-0.512,0-1.023-0.195-1.414-0.586L0.586,3.414c-0.781-0.781-0.781-2.047,0-2.828
-			c0.78-0.781,2.047-0.781,2.828,0l25.102,25.103c0.781,0.781,0.781,2.047,0,2.828C28.126,28.908,27.614,29.103,27.103,29.103z"/>
+		
+			<rect x="12.551" y="2.409" transform="matrix(0.7071 0.7071 -0.7071 0.7071 14.5514 -6.0271)" fill="#FFFFFF" width="4" height="24.285"/>
 	</g>
 </g>
 </svg>
