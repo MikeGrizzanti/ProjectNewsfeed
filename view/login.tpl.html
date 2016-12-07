@@ -19,14 +19,13 @@
             <div class="flipper">
                 <div class="front">
                 <!-- front content -->
-                    
                     <div class="login_form">
-                        <form action="#">
+                        <form action="index.php?action=login" method="post">
                             <input id="text_field_nickname" name="text_field_nickname" type="text" placeholder="USERNAME"/>
                             <input id="text_field_password" name="text_field_password" type="text" placeholder="PASSWORD"/>
                             <input id="login_button" type="submit" value="LOGIN" />
                         </form>
-                        <div id="errorDiv"><?php echo $error ?></div>
+                        <div id="errorDivLogin"><?php echo $error ?></div>
                         <hr/>
                         <a href="#"><input id="login_socialmedia" type="button" value="LOGIN WITH FACEBOOK" /></a>
                         <input id="register_option" type="button" value="REGISTER" />
@@ -40,7 +39,7 @@
             <div class="back">
             <!-- back content -->
                 <div class="register_form">
-                    <form action="#">
+                    <form action="index.php?action=register" method="post">
                         <h3 id="register_header">create an account:</h3>
                         <input id="text_field_reg_nickname" name="text_field_reg_nickname" type="text" placeholder="USERNAME"/>
                         <input id="text_field_reg_email" name="text_field_reg_email" type="text" placeholder="EMAIL"/>
@@ -51,7 +50,7 @@
                         <hr/>
                         <input id="register_button" type="submit" value="REGISTER" />
                     </form>
-                    <div id="errorDiv"><?php echo $error ?></div>
+                    <div id="errorDivRegister"><?php echo $error ?></div>
                 </div>
             </div>
         </div>
