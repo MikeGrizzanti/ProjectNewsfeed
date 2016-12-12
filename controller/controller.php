@@ -15,6 +15,10 @@ class controller {
     
     public function login(){
         $erg = is_loggedIn();
+        
+        require_once 'models/register.inc.php';
+        $this->addContext("error", $error);
+        
         if(!$erg){
             require_once 'models/login.inc.php';
             $this->addContext("error", $error);
@@ -35,10 +39,9 @@ class controller {
         } 
     }
     
-    public function register() {
-        require_once 'models/register.inc.php';
-        $this->addContext("error", $error);
-    }
+    /*public function register() {
+        
+    }*/
     
     private function generatePage($template){
         extract($this->context);
