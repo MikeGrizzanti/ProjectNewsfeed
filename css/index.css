@@ -34,7 +34,13 @@ a:hover {
     margin-top: 0;
     width: 50rem;
     height: 1.5rem;
-    border-radius: 18px;
+    border-radius: 2px;
+    border-top: 0;
+    border-left: 0;
+    background-image: url(../images/search.svg);
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    padding-left: 1.5em;
 }
 
 #top_icon_open_sidebar {
@@ -224,7 +230,6 @@ hr {
     text-decoration: none;
     color: #000;
 }
-
 
 #news_card_image_space {
     top: 0; left: 0; bottom: 0; right: 0;

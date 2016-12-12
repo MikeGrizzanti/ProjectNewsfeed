@@ -163,8 +163,10 @@ hr {
 #login_button, #no_login_option, #login_socialmedia, #action_button, #text_field_nickname, #text_field_password, #main_logo, #register_option, #no_login_option, #text_field_reg_nickname, #text_field_reg_email, #text_field_reg_first_name, #text_field_reg_last_name, #text_field_reg_password, #text_field_reg_rep_password, #register_button, #register_button:focus {
     outline: none;
     border-radius: 2px;
-    border-bottom: 0;
+    border-left: 0;
     border-right: 0;
+    border-top: 0;
+    border-bottom: 0;
 }
 
 .text_field {
@@ -174,6 +176,11 @@ hr {
     padding-left: 0.5em;
 }
 
+.button:active {
+    -webkit-box-shadow: inset 0 0 30px #00f;
+    -moz-box-shadow: inset 0 0 30px #00f;
+    box-shadow: inset 0 0 30px #0b0b0b;
+}
 
 /* entire container, keeps perspective */
 .flip-container {
