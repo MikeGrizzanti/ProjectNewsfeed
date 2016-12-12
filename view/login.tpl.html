@@ -21,9 +21,9 @@
                 <!-- front content -->
                     <div class="login_form">
                         <form action="index.php?action=login" method="post">
-                            <input id="text_field_nickname" name="text_field_nickname" type="text" placeholder="USERNAME"/>
-                            <input id="text_field_password" name="text_field_password" type="text" placeholder="PASSWORD"/>
-                            <input id="login_button" type="submit" value="LOGIN" />
+                            <input class="text_field" id="text_field_nickname" name="text_field_nickname" type="text" placeholder="USERNAME"/>
+                            <input class="text_field" id="text_field_password" name="text_field_password" type="password" placeholder="PASSWORD"/>
+                            <input class="text_field" id="login_button" type="submit" value="LOGIN" />
                         </form>
                         <div id="errorDivLogin"><?php echo $error ?></div>
                         <hr/>
@@ -41,12 +41,12 @@
                 <div class="register_form">
                     <form action="index.php?action=login" method="post">
                         <h3 id="register_header">create an account:</h3>
-                        <input id="text_field_reg_nickname" name="text_field_reg_nickname" type="text" placeholder="USERNAME"/>
-                        <input id="text_field_reg_email" name="text_field_reg_email" type="text" placeholder="EMAIL"/>
-                        <input id="text_field_reg_first_name" name="text_field_reg_first_name" type="text" placeholder="FIRST NAME"/>
-                        <input id="text_field_reg_last_name" name="text_field_reg_last_name" type="text" placeholder="LAST NAME"/>    
-                        <input id="text_field_reg_password" name="text_field_reg_password" type="text" placeholder="PASSWORD"/>
-                        <input id="text_field_reg_rep_password" name="text_field_reg_rep_password" type="text" placeholder="REPEAT PASSWORD"/>
+                        <input class="text_field" id="text_field_reg_nickname" name="text_field_reg_nickname" type="text" placeholder="USERNAME"/>
+                        <input class="text_field" id="text_field_reg_email" name="text_field_reg_email" type="text" placeholder="EMAIL"/>
+                        <input class="text_field" id="text_field_reg_first_name" name="text_field_reg_first_name" type="text" placeholder="FIRST NAME"/>
+                        <input class="text_field" id="text_field_reg_last_name" name="text_field_reg_last_name" type="text" placeholder="LAST NAME"/>    
+                        <input class="text_field" id="text_field_reg_password" name="text_field_reg_password" type="password" placeholder="PASSWORD"/>
+                        <input class="text_field" id="text_field_reg_rep_password" name="text_field_reg_rep_password" type="password" placeholder="REPEAT PASSWORD"/>
                         <hr/>
                         <input id="register_button" type="submit" value="REGISTER" />
                     </form>
