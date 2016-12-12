@@ -27,7 +27,7 @@ class tb_user_interests {
     }
     
     public static function checkLogin($fk_user_id, $fk_category_id) {
-        $sql = 'SELECT * FROM tb_user_interests WHERE fk_category_id=? AND fk_user_id="';
+        $sql = 'SELECT * FROM tb_user_interests WHERE fk_category_id=? AND fk_user_id=?;';
         $query = DB::getDB()->prepare($sql);
         $query->execute(array($fk_user_id, $fk_category_id));
         $query->setFetchMode(PDO::FETCH_CLASS, 'tb_user');

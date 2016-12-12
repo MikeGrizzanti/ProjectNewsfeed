@@ -28,7 +28,7 @@ class tb_groupChatPartecipants {
     }
     
     public static function getPartecipantsFromGroupChat($fk_group_chat_id) {
-        $sql    = 'SELECT fk_gcp_user_id FROM tb_groupChatPartecipants WHERE tb_group_chat_id = ?';
+        $sql    = 'SELECT fk_gcp_user_id FROM tb_groupChatPartecipants WHERE tb_group_chat_id = ?;';
         $query  = DB::getDB()->prepare($sql);
         $query -> execute(array($fk_group_chat_id));
         $query -> setFetchMode(PDO::FETCH_CLASS, 'tb_groupChatPartecipants');

@@ -71,7 +71,7 @@ class tb_user {
     }
     
     public static function checkLogin($nickName, $password) {
-        $sql = 'SELECT * FROM tb_user WHERE user_nickName=?';
+        $sql = 'SELECT * FROM tb_user WHERE user_nickName=?;';
         $query = DB::getDB()->prepare($sql);
         $query->execute(array($nickName));
         
@@ -89,7 +89,7 @@ class tb_user {
     }
     
     public static function getUserFromId($id) {
-        $sql = 'SELECT * FROM tb_user WHERE user_id=?';
+        $sql = 'SELECT * FROM tb_user WHERE user_id=?;';
         $query = DB::getDB()->prepare($sql);
         $query->execute(array($id));
         $query->setFetchMode(PDO::FETCH_CLASS, 'tb_user');
@@ -97,7 +97,7 @@ class tb_user {
     }
     
     public static function getUserIdFromCategory($id) {
-        $sql = 'SELECT tb_user.user_id, tb_user.user_firstName, tb_user.user_lastName, tb_user.user_nickName, tb_user.user_password, tb_user.user_eMail FROM tb_user INNER JOIN tb_user_interests ON (tb_user.user_id = tb_user_interests.fk_user_id) WHERE tb_user_interests.fk_interests_id = ?';
+        $sql = 'SELECT tb_user.user_id, tb_user.user_firstName, tb_user.user_lastName, tb_user.user_nickName, tb_user.user_password, tb_user.user_eMail FROM tb_user INNER JOIN tb_user_interests ON (tb_user.user_id = tb_user_interests.fk_user_id) WHERE tb_user_interests.fk_interests_id = ?;';
         $query = DB::getDB()->prepare($sql);
         $query->execute(array(id));
         $query->setFetchMode(PDO::FETCH_CLASS, 'tb_user');
@@ -117,7 +117,7 @@ class tb_user {
     }
     
     private static function createUser($firstName, $lastName, $nickName, $password, $eMail) {
-        $sqlcheck = 'SELECT * FROM tb_user where user_nickName = ?';
+        $sqlcheck = 'SELECT * FROM tb_user where user_nickName = ?;';
         $queryCheck = DB::getDB()->prepare($sqlcheck);
         $queryCheck->execute(array($nickName));
         
@@ -125,11 +125,11 @@ class tb_user {
             return 'Nickname already taken';
         } else {
             $passwordHashed = password_hash($password, PASSWORD_DEFAULT);
-            $sql = 'INSERT INTO tb_user (user_firstName, user_lastName, user_nickName, user_password, user_eMail) VALUES (?,?,?,?,?)';
+            $sql = 'INSERT INTO tb_user (user_firstName, user_lastName, user_nickName, user_password, user_eMail) VALUES (?,?,?,?,?);';
             $query = DB::getDB()->prepare($sql);
             $query->execute(array($firstName, $lastName, $nickName, $eMail));
             
-            $sql2 = 'SELECT * FROM tb_user WHERE user_nickName = ?';
+            $sql2 = 'SELECT * FROM tb_user WHERE user_nickName = ?;';
             $query2 = DB::getDB()->prepare($sql2);
             $query2->execute(array($nickName));
             $query2->setFetchMode(PDO::FETCH_CLASS, 'tb_user');

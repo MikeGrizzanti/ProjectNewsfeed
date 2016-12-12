@@ -60,7 +60,7 @@ class tb_feed {
     }
     
     public static function getFeedFromID ($id) {
-        $sql = 'SELECT * FROM tb_feed WHERE feed_id = ?';
+        $sql = 'SELECT * FROM tb_feed WHERE feed_id = ?;';
         $query = DB::getDB()->prepare($sql);
         $query->execute(array($id));
         $query->setFetchMode(PDO::FETCH_CLASS, 'tb_feed');

@@ -47,7 +47,7 @@ class tb_groupChat {
     }
     
     public function getGroupChatFromId($id) {
-        $sql = 'SELECT * FROM tb_groupChat WHERE id = ?';
+        $sql = 'SELECT * FROM tb_groupChat WHERE id = ?;';
         $query = DB::getDB()->prepare($sql);
         $query->execute(array($id));
         $query->setFetchMode(PDO::FETCH_CLASS, 'tb_groupChat');

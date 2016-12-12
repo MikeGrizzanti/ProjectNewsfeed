@@ -51,7 +51,7 @@ class tb_message {
     }
     
     public static function getMessageFromGroupChat($fk_message_user_id, $fk_groupChat_id) {
-        $sql = 'SELECT message_id FROM tb_message WHERE fk_message_user_id = ? AND fk_groupChat_id = ?';
+        $sql = 'SELECT message_id FROM tb_message WHERE fk_message_user_id = ? AND fk_groupChat_id = ?;';
         $query = DB::getDB()->prepare($sql);
         $query -> execute (array($fk_message_user_id, $fk_groupChat_id));
         $query -> setFetchMode(PDO::FETCH_CLASS, 'tb_message');

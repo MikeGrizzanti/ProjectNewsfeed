@@ -28,7 +28,7 @@ class tb_category {
     }
     
     public static function getCategoryFromID($id) {
-        $sql = 'SELECT * FROM tb_category WHERE category_id=?';
+        $sql = 'SELECT * FROM tb_category WHERE category_id=?;';
         $query = DB::getDB()->prepare($sql);
         $query->execute(array($id));
         $query->setFetchMode(PDO::FETCH_CLASS, 'tb_user');
