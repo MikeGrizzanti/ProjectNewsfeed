@@ -21,11 +21,12 @@ if ($_POST) {
             $error = "Please fill all fields";
         } else {
             if ($user_password == $user_repeat_password) {
-                $erg = User::saveUser(null,$user_firstName, $user_lastName, $user_nickName, $user_password, $user_eMail);
+                $erg = tb_user::saveUser(NULL, $firstName, $lastName, $nickName, $password, $eMail);
                 $_SESSION['id'] = $erg->getId();
                 header("Location:index.php?action=main");
             } else {
                 $error = "Passwords don't match";
+                header("Location:index.php?action=login");
             }
         }
     }
