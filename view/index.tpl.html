@@ -11,12 +11,14 @@
         <!-- Head-Space -->
         <header class="header">
             <a href="index.tpl.html"><img id="main_logo" src="../images/Logo_Mindfeed_White_Orange.svg" /></a>
+            
+            
             <!-- icons -->
             <nav id="top_nav">
                 <img id="top_icon_open_sidebar" src="../images/open_sidebar.svg" />
                 <img id="top_icon_close_sidebar" src="../images/close_Sidebar.svg" />
                 <input type="search" id="search" placeholder="search" />
-                <a id="login_register_link" href="login.tpl.html"><input type="button" id="login_register_button" value="LOGIN | REGISTER" /></a>
+                <a href="login.tpl.html"><input type="button" id="login_register_button" value="LOGIN | REGISTER" /></a>
             </nav>
         </header>
         
@@ -24,15 +26,42 @@
         
         <div class="main_page">
             
-            <div id="first_news_card" class="news_card">
-                <img id="news_card_img" src="../images/Dubai_test_newscard.jpg"/>
-                <div id="news_card_text">
-                    <p>asdfasdf asdfasdfasd fasdfasdfasdfa sdfasdfaas sdfasdfaas</p>
+            
+            <div class="news_card" id="news_card">
+                <a id="news_card_link" href="#">
+                <div class="theme_container">
+                        <h7 class="theme">Thema</h7>
                 </div>
+                <div id="news_card_image_space">
+                    <img src="../images/Dubai_test_newscard.jpg" class="news_card_img"/>
+                </div>
+                <div id="news_card_text_space">
+                    <h3 class="news_card_title">Hallo Welt</h3>
+                    <p class="news_card_text">asdfasd fklajsdföal skdjfölask djföalskd jföal sdkf jlöasdkj faöslk djfaslökdfj</p>
+                </div>
+                    </a>
             </div>
+            
+            
+            
+            <a id="news_card_link" href="#">
+            <div class="news_card" id="news_card">
+                <div class="theme_container">
+                        <h7 class="theme">Thema</h7>
+                </div>
+                <div id="news_card_image_space">
+                    <img src="../images/Dubai_test_newscard.jpg" class="news_card_img"/>
+                </div>
+                <div id="news_card_text_space">
+                    <h3 class="news_card_title">Hallo Welt</h3>
+                    <p class="news_card_text">asdfasd fklajsdföal skdjfölask djföalskd jföal sdkf jlöasdkj faöslk djfaslökdfj</p>
+                </div> 
+            </div>
+            </a>
+        </div>
         
         <!-- Sidebar -->
-        <!--
+        
         <div class="sidebar">
             <h3 id="sidebar_header">Themes:</h3>
         <ul id="sidebar_list_user_interests">
@@ -60,7 +89,16 @@
             </nav>
         </footer>
         </div>
-        -->
-        </div>
+        
+        
+
+        
+        
+        
+        
+        
+        
+        
+        
     </body>
 </html>

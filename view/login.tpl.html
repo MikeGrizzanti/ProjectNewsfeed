@@ -33,7 +33,7 @@
                                     $(".flipper").css("transform","rotateY(180deg)");});
                         </script>
                         <hr/>
-                        <a href="index.tpl.html"><input class="button" id="no_login_option" type="button" value="PROCEED WITHOUT LOGIN" /></a>
+                        <a href="index.php?action=main"><input class="button" id="no_login_option" type="button" value="PROCEED WITHOUT LOGIN" /></a>
                     </div>
                 </div>
             <div class="back">
@@ -41,12 +41,12 @@
                 <div class="register_form">
                     <form action="index.php?action=register" method="post">
                         <h3 id="register_header">create an account:</h3>
-                        <input class="text_field" id="text_field_reg_nickname" name="text_field_reg_nickname" type="text" placeholder="USERNAME"/>
-                        <input class="text_field" id="text_field_reg_email" name="text_field_reg_email" type="text" placeholder="EMAIL"/>
-                        <input class="text_field" id="text_field_reg_first_name" name="text_field_reg_first_name" type="text" placeholder="FIRST NAME"/>
-                        <input class="text_field" id="text_field_reg_last_name" name="text_field_reg_last_name" type="text" placeholder="LAST NAME"/>    
-                        <input class="text_field" id="text_field_reg_password" name="text_field_reg_password" type="password" placeholder="PASSWORD"/>
-                        <input class="text_field" id="text_field_reg_rep_password" name="text_field_reg_rep_password" type="password" placeholder="REPEAT PASSWORD"/>
+                        <input class="text_field" id="text_field_reg_nickname" name="text_field_reg_nickname" type="text" placeholder="USERNAME" value="test"/>
+                        <input class="text_field" id="text_field_reg_email" name="text_field_reg_email" type="text" placeholder="EMAIL" value="test"/>
+                        <input class="text_field" id="text_field_reg_first_name" name="text_field_reg_first_name" type="text" placeholder="FIRST NAME" value="test"/>
+                        <input class="text_field" id="text_field_reg_last_name" name="text_field_reg_last_name" type="text" placeholder="LAST NAME" value="test"/>    
+                        <input class="text_field" id="text_field_reg_password" name="text_field_reg_password" type="password" placeholder="PASSWORD" value="test"/>
+                        <input class="text_field" id="text_field_reg_rep_password" name="text_field_reg_rep_password" type="password" placeholder="REPEAT PASSWORD" value="test"/>
                         <hr/>
                         <input class="button" id="register_button" type="submit" value="REGISTER" />
                     </form>
