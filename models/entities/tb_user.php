@@ -122,12 +122,12 @@ class tb_user {
         $queryCheck->execute(array($nickName));
         
         if($queryCheck->rowCount() > 0) {
-            return 'Nickname already taken';
+            return null;
         } else {
             $passwordHashed = password_hash($password, PASSWORD_DEFAULT);
             $sql = 'INSERT INTO tb_user (user_firstName, user_lastName, user_nickName, user_password, user_eMail) VALUES (?,?,?,?,?);';
             $query = DB::getDB()->prepare($sql);
-            $query->execute(array($firstName, $lastName, $nickName, $eMail));
+            $query->execute(array($firstName, $lastName, $nickName, $passwordHashed, $eMail));
             
             $sql2 = 'SELECT * FROM tb_user WHERE user_nickName = ?;';
             $query2 = DB::getDB()->prepare($sql2);
