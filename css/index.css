@@ -213,37 +213,92 @@ hr {
     top: 12em; right: 0; bottom: 0;left: 0;
 }
 
-.news_card {
-    height:18em;
-    width: 18em;
+.news_card_left {
+
+    float: left;
     margin-top: 2em;
-    margin-left: 5em;
-    border: 1px solid #000;
-    border-top: 0;
-}
-#news_card_img {
-    position: relative;
-    height: 13em;
+    margin-left: 2.5em;
+    display: inline;
+    height: 20em;
     width: 15em;
-    margin-left: 1.5em;
-    margin-right: auto;
+    
+    border-right: 1.5px solid #fbb040;
+    padding-right: 2em;
 }
 
-#news_card_text {
-    margin-top: 0.8em;
-    margin-left: 1.8em;
-    width: 19em;
-    height: 3em;
-    white-space: inherit;
-    font-family: "Open Sans", sans-serif;
-    font-size: 0.8em;
+.news_card_center_right {
+    float: right;
+    margin-top: 2em;
+    margin-right: 2em;
+    display: inline;
+    height: 20em;
+    width: 15em; 
+    margin-right: 5em;
+    border-right: 1.5px solid #fbb040;
     
 }
 
 
+.news_card_center_left{
+    float: left;
+    margin-top: 2em;
+    margin-left: 2em;
+    display: inline;
+    height:20em;
+    width: 15em;
+    
+    border-right: 1.5px solid #fbb040;
+    padding-right: 2em;
+}
+
+.news_card_right{
+    float: right;
+    margin-top: 2em;
+    margin-right: 3em;
+    display: inline;
+    height: 20em;
+    width: 15em;
+    
+    
+    
+}
 
 
-/*newscard border*/
-#first_news_card {
-    border-left: 0;
+#news_card_img {
+    height: 13em;
+    width: 15em;
+}
+
+#news_card_text {
+    white-space: normal;
+    font-family: "Open Sans", sans-serif;
+    text-align: justify;
+    font-size: 0.9em;
+    padding-bottom: 0.5em;
+    
+    border-bottom: 1.5px solid #000;
+}
+
+.theme_container {
+    display: inline;
+    margin-right: 5em;
+    font-family: "Roboto",sans-serif;
+    white-space: none;
+    font-size: 0.7em;
+    color: grey;
+}
+.source_container {
+    display: inline;
+    margin-right: 5em;
+    font-family: "Roboto",sans-serif;
+    white-space: none;
+    font-size: 0.7em;
+    color: grey;
+}
+.active_chats_container {
+    display:  inline;
+    font-family: "Roboto",sans-serif;
+    white-space: none;
+    font-size: 0.8em;
+    color: #fbb040;
 }
