@@ -1,24 +1,23 @@
 <?php
 
-class DB {
-    private static $db = null;
-    
+class DB {    
     private function __construct() {
         
     }
     
     public static function getDB() {
-        if (self::$db == NULL) {
+            $dsn = "mysql:host=mysql.hostinger.de;dbname=u584441810_mindf;charset=utf8mb4";
+            $user = "u584441810_admin";
+            $password = "hdgf672HH!!";
             try {
-                self::$db = new PDO('mysql:host=mysql.hostinger.de; dbname=mindf', 'u584441810_admin', 'hdgf672HH');
-                self::$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-                
+                $db = new PDO($dsn, $user, $password);
+                $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+                var_dump($db);
             } catch (PDOException $e) {
                 echo $e->getMessage();
-            }
-        }
-        
-        return self::$db;
+            }    
+        return $db;
     }
 }
 
+	
