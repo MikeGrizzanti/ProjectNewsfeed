@@ -31,7 +31,7 @@ if ($_POST) {
                 }
             } else {
                 $error = "Passwords don't match";
-                //header("Location:index.php?action=login");
+                header("Location:index.php?action=login");
             }
         }
     }

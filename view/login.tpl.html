@@ -25,7 +25,9 @@
                             <input class="text_field" id="text_field_password" name="text_field_password" type="password" placeholder="PASSWORD"/>
                             <input class="button" id="login_button" type="submit" value="LOGIN" />
                         </form>
-                        <div id="errorDivLogin"><?php echo $error ?></div>
+                        <?php if ($error != NULL) { ?>
+                            <div id="errorDivLogin"><?php echo $error ?></div>
+                        <?php } ?>
                         <hr/>
                         <a href="#"><input class="button" id="login_socialmedia" type="button" value="LOGIN WITH FACEBOOK" /></a>
                         <input class="button" id="register_option" type="button" value="REGISTER" />
@@ -49,13 +51,14 @@
                         <input class="text_field" id="text_field_reg_rep_password" name="text_field_reg_rep_password" type="password" placeholder="REPEAT PASSWORD" />
                         <hr/>
                         <input class="button" id="register_button" type="submit" value="REGISTER" />
-                        <div id="errorDivRegister"><?php echo $error ?></div>
+                        
                     </form>
-                    
+                    <?php if ($error != NULL) { ?>
+                            <div id="errorDivRegister"><?php echo $error ?></div>
+                    <? } ?>
                 </div>
             </div>
-        </div>
-    </div>     
-</body>
+        </div>  
+    </body>
 </html>
 
