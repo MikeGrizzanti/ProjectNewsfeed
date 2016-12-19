@@ -29,7 +29,7 @@ class controller {
     
     public function main() {
         $erg = is_loggedIn();
-        $this->addContext("template", "index");
+        $this->addContext("template", "logged_in");
         if(!$erg){
             header("Location:index.php");
         }
