@@ -27,6 +27,10 @@ class controller {
         header("Location:index.php");
     }
     
+    public function noLogin() {
+        $this->addContext("template", "index");
+    }
+    
     public function main() {
         $erg = is_loggedIn();
         $this->addContext("template", "logged_in");
