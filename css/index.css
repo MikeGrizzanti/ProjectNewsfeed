@@ -140,6 +140,17 @@ a:hover {
     color: #fafafa;
     margin-left: 1.5em;
     font-weight: bold;
+    float: left;
+}
+
+#add_feed {
+    font-family: 'Roboto', sans-serif;
+    margin-left: 1em;
+    color: #fafafa;
+    margin-left: 1.5em;
+    font-weight: bold;
+    float: right;
+    padding-right: 2em;
 }
 
 #sidebar_list_user_interests {
@@ -218,7 +229,7 @@ hr {
 
     float: left;
     margin-top: 2em;
-    margin-left: 2.5em;
+    margin-left: 3.8em;
     display: inline;
     height: 20em;
     width: 15em;
