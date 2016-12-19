@@ -37,9 +37,7 @@ class controller {
     
     public function register() {
         $erg = is_loggedIn();
-        
         require_once 'models/register.inc.php';
-        //DB::getDB();
         $this->addContext("error", $error);
         $this->addContext("template", "login");
     }
