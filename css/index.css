@@ -38,6 +38,7 @@ a:hover {
     border-top: 0;
     border-left: 0;
     background-image: url(../images/search.svg);
+    
     background-repeat: no-repeat;
     background-position: bottom left;
     padding-left: 1.5em;
@@ -226,19 +227,6 @@ hr {
     padding-right: 2em;
 }
 
-.news_card_center_right {
-    float: right;
-    margin-top: 2em;
-    margin-right: 2em;
-    display: inline;
-    height: 20em;
-    width: 15em; 
-    margin-right: 5em;
-    border-right: 1.5px solid #fbb040;
-    
-}
-
-
 .news_card_center_left{
     float: left;
     margin-top: 2em;
@@ -251,15 +239,27 @@ hr {
     padding-right: 2em;
 }
 
-.news_card_right{
-    float: right;
+.news_card_center_right {
+    float: left;
     margin-top: 2em;
-    margin-right: 3em;
+    display: inline;
+    height: 20em;
+    width: 15em; 
+    
+    margin-right: 2em;
+    padding-right: 2em;
+    padding-left: 2em;
+    border-right: 1.5px solid #fbb040;
+}
+
+.news_card_right{
+    float: left;
+    margin-top: 2em;
     display: inline;
     height: 20em;
     width: 15em;
+    
 }
-
 
 #news_card_img {
     height: 13em;
@@ -298,4 +298,9 @@ hr {
     white-space: none;
     font-size: 0.8em;
     color: #fbb040;
+}
+
+.news_card_sublink{
+    text-decoration: none;
+    color: grey;
 }
