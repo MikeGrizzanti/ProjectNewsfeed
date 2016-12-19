@@ -29,28 +29,35 @@ a:hover {
 #search {
     display: inline;
     position: absolute;
-    margin-left: 10em;;
+    margin-left: 17em;
     margin-right: auto;
     margin-top: 0;
-    width: 50rem;
+    width: 35rem;
     height: 1.5rem;
-    border-radius: 18px;
+    border-radius: 2px;
+    border-top: 0;
+    border-left: 0;
+    background-image: url(../images/search.svg);
+    
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    padding-left: 1.5em;
 }
 
 #top_icon_open_sidebar {
     display: inline;
-    margin-left: 2em;
+    margin-left: 5em;
     height: 1.25em;
 }
 
 #top_icon_close_sidebar {
-    display: inline-block;
+    display: inline;
     height: 1.25em;
 }
 
 #top_icon_chat {
     display: inline;
-    margin-left: 63em;
+    margin-left: 55em;
     height: 1.25em;
 }
 
@@ -68,7 +75,7 @@ a:hover {
 
 #login_register_button {
     position: relative;
-    text-decoration: underline;
+    text-decoration: none;
     display: inline;
     text-align: center;
     height: 2em;
@@ -77,10 +84,19 @@ a:hover {
     font-weight: bold;
     color: #fafafa;
     background-color: #FBB040;
-    border-color: #FBB040;
+    border: 0;
     letter-spacing: 0.1em;
-    margin-left: 75em;
+    margin-left: 70em;
     border-radius: 2px;
+}
+#login_register_button:active{
+    -webkit-box-shadow: inset 0 0 10px #00f;
+    -moz-box-shadow: inset 0 0 10px #00f;
+    box-shadow: inset 0 0 10px #0b0b0b;
+}
+#login_register_link{
+    display: inline;
+    text-decoration: none;
 }
 
 #login_register_button, #search:focus{
@@ -124,6 +140,17 @@ a:hover {
     color: #fafafa;
     margin-left: 1.5em;
     font-weight: bold;
+    float: left;
+}
+
+#add_feed {
+    font-family: 'Roboto', sans-serif;
+    margin-left: 1em;
+    color: #fafafa;
+    margin-left: 1.5em;
+    font-weight: bold;
+    float: right;
+    padding-right: 2em;
 }
 
 #sidebar_list_user_interests {
@@ -192,72 +219,99 @@ hr {
 /* MainPage-Part */
 
 .main_page {
-    background-color: #FAFAFA;
+    background-color: #FBFBFB;
     position: fixed;
     height: auto;
     top: 12em; right: 0; bottom: 0;left: 0;
 }
 
-.news_card {
-    position: relative;
-    display: inline-block;
-    color: #000;
-    margin: 2em;
+.news_card_left {
+
+    float: left;
+    margin-top: 2em;
+    margin-left: 3.8em;
+    display: inline;
+    height: 20em;
     width: 15em;
-    height: 22em;
-    background-color: rgba(255,255,255,0.85);
-    -webkit-box-shadow: 0px 0px 15px 3px rgba(0,0,0,0.4);
-    -moz-box-shadow: 0px 0px 15px 3px rgba(0,0,0,0.4);
-    box-shadow: 0px 0px 15px 3px rgba(0,0,0,0.4);
-    text-decoration: none;
-    border-radius: 2px;
+    
+    border-right: 1.5px solid #fbb040;
+    padding-right: 2em;
 }
 
-#news_card_link {
-    text-decoration: none;
-}
-#news_card_link:activate {
-    text-decoration: none;
-    color: #000;
-}
-#news_card_link:visited {
-    text-decoration: none;
-    color: #000;
-}
-
-
-#news_card_image_space {
-    top: 0; left: 0; bottom: 0; right: 0;
+.news_card_center_left{
+    float: left;
+    margin-top: 2em;
+    margin-left: 2em;
+    display: inline;
+    height:20em;
+    width: 15em;
+    
+    border-right: 1.5px solid #fbb040;
+    padding-right: 2em;
 }
 
-.news_card_img {
-    height: 15em;
+.news_card_center_right {
+    float: left;
+    margin-top: 2em;
+    display: inline;
+    height: 20em;
+    width: 15em; 
+    
+    margin-right: 2em;
+    padding-right: 2em;
+    padding-left: 2em;
+    border-right: 1.5px solid #fbb040;
+}
+
+.news_card_right{
+    float: left;
+    margin-top: 2em;
+    display: inline;
+    height: 20em;
+    width: 15em;
+    
+}
+
+#news_card_img {
+    height: 13em;
     width: 15em;
 }
 
-#news_card_text_space {
-    font-family: 'Open Sans',sans-serif;
-    width: 14em;
-    padding-left: 0.5em
-}
-
-.news_card_title {
+#news_card_text {
     white-space: normal;
-    margin: 0;
-}
-.news_card_text {
-    white-space: normal;
-    margin-top: 0;
+    font-family: "Open Sans", sans-serif;
+    text-align: justify;
+    font-size: 0.9em;
+    padding-bottom: 0.5em;
+    
+    border-bottom: 1.5px solid #000;
 }
 
 .theme_container {
-    position: absolute;
+    display: inline;
+    margin-right: 5em;
+    font-family: "Roboto",sans-serif;
+    white-space: none;
+    font-size: 0.7em;
+    color: grey;
+}
+.source_container {
+    display: inline;
+    margin-right: 5em;
+    font-family: "Roboto",sans-serif;
+    white-space: none;
+    font-size: 0.7em;
+    color: grey;
+}
+.active_chats_container {
+    display:  inline;
+    font-family: "Roboto",sans-serif;
+    white-space: none;
     font-size: 0.8em;
-    font-family: 'Roboto',sans-serif;
-    margin-left: 0.5rem;
-    margin-top: 0.5rem;
-    background-color: #BDBDBD;
-    height: 1.1rem;
-    width: 2.8rem;
-    padding-left: 0.1rem;
+    color: #fbb040;
+}
+
+.news_card_sublink{
+    text-decoration: none;
+    color: grey;
 }

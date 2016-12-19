@@ -18,8 +18,8 @@ class controller {
             require_once 'models/login.inc.php';
             $this->addContext("error", $error);
         } 
-        //else 
-            //header("Location:index.php?action=main");
+        else 
+            header("Location:index.php?action=main");
     }
     
     public function logout() {
@@ -27,18 +27,23 @@ class controller {
         header("Location:index.php");
     }
     
+    public function noLogin() {
+        $this->addContext("template", "index");
+    }
+    
     public function main() {
         $erg = is_loggedIn();
+        $this->addContext("template", "logged_in");
         if(!$erg){
             header("Location:index.php");
-        } 
+        }
     }
     
     public function register() {
         $erg = is_loggedIn();
-        
         require_once 'models/register.inc.php';
-        $this->addContext("template", $login);
+        $this->addContext("error", $error);
+        $this->addContext("template", "login");
     }
     
     private function generatePage($template){
@@ -51,3 +56,4 @@ class controller {
     }
 }
 
+	
