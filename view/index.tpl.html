@@ -2,9 +2,10 @@
 <html>
     <head>
     <title>MINDFEED</title>
-    <meta charset="utf-8" />
+    <meta charset="utf-8" />    
+    <script type="text/javascript" src="../js/css/transitions.js"></script>
     <link rel="stylesheet" type="text/css" href="../css/index.css" />
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">    
     </head>
     
     <body>
@@ -12,11 +13,10 @@
         <header class="header">
             <a href="index.php?action=noLogin"><img id="main_logo" src="../images/Logo_Mindfeed_White_Orange.svg" /></a>
             
-            
             <!-- icons -->
             <nav id="top_nav">
-                <img id="top_icon_open_sidebar" src="../images/open_sidebar.svg" />
-                <img id="top_icon_close_sidebar" src="../images/close_Sidebar.svg" />
+                <img class="top_icon_open_sidebar" src="../images/open_sidebar.svg" />
+                <img class="top_icon_close_sidebar" src="../images/close_Sidebar.svg" />
                 <input type="search" id="search" placeholder="search" />
                 <a href="index.php?action=login"><input type="button" id="login_register_button" value="LOGIN | REGISTER" /></a>
             </nav>
@@ -24,49 +24,46 @@
         
                 <!-- Main-Space -->
         
-        <div class="main_page">
+            <div class="main_page">
 
 
-            <div class="news_card_left">
-                <img id="news_card_img" src="../images/Dubai_test_newscard.jpg"/><br/>
-                <p id="news_card_text">asdfasdf asdfasdfasd fasdfasdfasdfa sdfasdfaas sdfasdfaas</p>
+                <div class="news_card_left">
+                    <img id="news_card_img" src="../images/Dubai_test_newscard.jpg"/><br/>
+                    <p id="news_card_text">asdfasdf asdfasdfasd fasdfasdfasdfa sdfasdfaas sdfasdfaas</p>
 
-                <div class="theme_container"><a class="news_card_sublink" href="#">theme</a></div>
-                <div class="source_container"><a class="news_card_sublink" href="#">source</a></div>
-                <div class="active_chats_container">x Chats</div>
-            </div> 
-            
-            <div class="news_card_center_left">
-                <img id="news_card_img" src="../images/Dubai_test_newscard.jpg"/><br/>
-                <p id="news_card_text">asdfasdf asdfasdfasd fasdfasdfasdfa sdfasdfaas sdfasdfaas</p>
+                    <div class="theme_container"><a class="news_card_sublink" href="#">theme</a></div>
+                    <div class="source_container"><a class="news_card_sublink" href="#">source</a></div>
+                    <div class="active_chats_container">x Chats</div>
+                </div> 
 
-                <div class="theme_container"><a class="news_card_sublink" href="#">theme</a></div>
-                <div class="source_container"><a class="news_card_sublink" href="#">source</a></div>
-                <div class="active_chats_container">x Chats</div>
-            </div>
-           
-            <div class="news_card_center_right">
-                 <img id="news_card_img" src="../images/Dubai_test_newscard.jpg"/><br/>
-                <p id="news_card_text">asdfasdfd asdfasdfasd fasdfasdfasdfa sdfasdfaas sdfasdfaas</p>
-                
-                
-                <div class="theme_container"><a class="news_card_sublink" href="#">theme</a></div>
-                <div class="source_container"><a class="news_card_sublink" href="#">source</a></div>
-                <div class="active_chats_container">x Chats</div>
-            </div>
-            
-            <div class="news_card_right">
-                <img id="news_card_img" src="../images/Dubai_test_newscard.jpg"/><br/>
-                <p id="news_card_text">asdfasdf asdfasdfasd fasdfasdfasdfa sdfasdfaas sdfasdfaas</p>
-            
-                <div class="theme_container"><a class="news_card_sublink" href="#">theme</a></div>
-                <div class="source_container"><a class="news_card_sublink" href="#">source</a></div>
-                <div class="active_chats_container">x Chats</div>
-            </div>
-            
+                <div class="news_card_center_left">
+                    <img id="news_card_img" src="../images/Dubai_test_newscard.jpg"/><br/>
+                    <p id="news_card_text">asdfasdf asdfasdfasd fasdfasdfasdfa sdfasdfaas sdfasdfaas</p>
+                    <div class="theme_container"><a class="news_card_sublink" href="#">theme</a></div>
+                    <div class="source_container"><a class="news_card_sublink" href="#">source</a></div>
+                    <div class="active_chats_container">x Chats</div>
+                </div>
 
-            
-            
+                <div class="news_card_center_right">
+                     <img id="news_card_img" src="../images/Dubai_test_newscard.jpg"/><br/>
+                    <p id="news_card_text">asdfasdfd asdfasdfasd fasdfasdfasdfa sdfasdfaas sdfasdfaas</p>   
+                    <div class="theme_container"><a class="news_card_sublink" href="#">theme</a></div>
+                    <div class="source_container"><a class="news_card_sublink" href="#">source</a></div>
+                    <div class="active_chats_container">x Chats</div>
+                </div>
+
+                <div class="news_card_right">
+                    <img id="news_card_img" src="../images/Dubai_test_newscard.jpg"/><br/>
+                    <p id="news_card_text">asdfasdf asdfasdfasd fasdfasdfasdfa sdfasdfaas sdfasdfaas</p>
+
+                    <div class="theme_container"><a class="news_card_sublink" href="#">theme</a></div>
+                    <div class="source_container"><a class="news_card_sublink" href="#">source</a></div>
+                    <div class="active_chats_container">x Chats</div>
+                </div>
+
+        </div>
+    </body>
+</html>
         
         <!-- Sidebar -->
         <!--
@@ -102,12 +99,4 @@
         
 
         
-        
-        
-        
-        
-        
-        
-        
-    </body>
-</html>
+

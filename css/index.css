@@ -44,15 +44,24 @@ a:hover {
     padding-left: 1.5em;
 }
 
-#top_icon_open_sidebar {
+.top_icon_open_sidebar {
     display: inline;
     margin-left: 5em;
     height: 1.25em;
+    -webkit-transition:0.25s;
+    -moz-transition:0.25s;
+    -o-transition:0.25s;
+    transition:0.25s;
+
 }
 
-#top_icon_close_sidebar {
+.top_icon_close_sidebar {
     display: inline;
     height: 1.25em;
+    -webkit-transform:rotate(45deg);
+    -moz-transform:rotate(45deg);
+    -o-transform:rotate(45deg);
+    transform:rotate(45deg);
 }
 
 #top_icon_chat {
