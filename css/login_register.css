@@ -186,7 +186,7 @@ hr {
 
 #errorDivLogin, #errorDivRegister {
     font-family: "Open Sans",sans-serif;
-    text-align: center justify;
+    text-align: center;
     font-size: 0.625em;
     color: #f00;
     height: 3em;
