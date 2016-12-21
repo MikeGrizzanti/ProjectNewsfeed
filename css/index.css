@@ -236,6 +236,8 @@ hr {
     
     border-right: 1.5px solid #fbb040;
     padding-right: 2em;
+    
+       
 }
 
 .news_card_center_left{
@@ -248,7 +250,16 @@ hr {
     
     border-right: 1.5px solid #fbb040;
     padding-right: 2em;
+    
 }
+
+.border_bottom {
+    margin-top: 1.5em;
+    width: 15em;
+    
+}
+
+
 
 .news_card_center_right {
     float: left;
@@ -269,7 +280,6 @@ hr {
     display: inline;
     height: 20em;
     width: 15em;
-    
 }
 
 #news_card_img {
