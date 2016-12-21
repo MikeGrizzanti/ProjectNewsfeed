@@ -53,7 +53,8 @@ body {
     width: 15em;
     font-family: "Roboto",sans-serif;
     margin: 3em;
-    margin-left: 3em;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 0.9em;
 }
 #text_field_password {
@@ -82,9 +83,10 @@ body {
 }
 
 #login_button {
+
     margin: 3em;
     margin-top: 0;
-    margin-bottom: 1em;
+    margin-bottom: 0.5em;
     height: 2em;
     width: 15.4em;
     font-family: "Roboto",sans-serif;
@@ -185,10 +187,10 @@ hr {
 #errorDivLogin, #errorDivRegister {
     font-family: "Open Sans",sans-serif;
     text-align: center justify;
-    font-size: 0.7em;
+    font-size: 0.625em;
     color: #f00;
-    height: 2em;
-    width: 12em;
+    height: 3em;
+    width: 18em;
     margin-bottom: 0.5em;
     margin-left: auto;
     margin-right: auto;
