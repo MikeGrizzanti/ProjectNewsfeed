@@ -130,7 +130,7 @@ class tb_user {
         $queryCheck->execute(array($nickName,$eMail));
         $queryCheck->setFetchMode(PDO::FETCH_CLASS, 'tb_user');
         
-        var_dump($queryCheck->fetch());
+        var_dump($queryCheck->fetchAll());
         
         if($queryCheck->rowCount() > 0) {
             return NULL;
