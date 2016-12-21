@@ -1,6 +1,5 @@
 "use strict";
 
-$("").click
 
 //Hamburger Open&Close
 $(".top_icon_open_sidebar").click(function () {
