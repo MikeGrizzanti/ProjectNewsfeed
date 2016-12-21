@@ -234,61 +234,19 @@ hr {
     top: 12em; right: 0; bottom: 0;left: 0;
 }
 
-.news_card_left {
-
-    float: left;
-    margin-top: 2em;
-    margin-left: 3.8em;
-    display: inline;
-    height: 20em;
-    width: 15em;
-    
-    border-right: 1.5px solid #fbb040;
-    padding-right: 2em;
-    
-       
+#table_news_cards {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
 }
-
-.news_card_center_left{
-    float: left;
-    margin-top: 2em;
-    margin-left: 2em;
-    display: inline;
-    height:20em;
-    width: 15em;
-    
-    border-right: 1.5px solid #fbb040;
-    padding-right: 2em;
-    
-}
-
-
-
-
-.news_card_center_right {
-    float: left;
-    margin-top: 2em;
-    display: inline;
-    height: 20em;
-    width: 15em; 
-    
-    margin-right: 2em;
-    padding-right: 2em;
-    padding-left: 2em;
-    border-right: 1.5px solid #fbb040;
-}
-
-.news_card_right{
-    float: left;
-    margin-top: 2em;
-    display: inline;
-    height: 20em;
-    width: 15em;
+.news_card {
+    width: 18em;
+    padding: 0.5em;
 }
 
 #news_card_img {
     height: 13em;
-    width: 15em;
+    width: 18em;
 }
 
 #news_card_text {
