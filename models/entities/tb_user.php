@@ -122,7 +122,7 @@ class tb_user {
         $queryCheck->execute(array($nickName));
         
         if($queryCheck->rowCount() > 0) {
-            return null;
+            return "User already exists, please change your email and/or password";
         } else {
             $passwordHashed = password_hash($password, PASSWORD_DEFAULT);
             $sql = 'INSERT INTO tb_user (user_firstName, user_lastName, user_nickName, user_password, user_eMail) VALUES (?,?,?,?,?);';
