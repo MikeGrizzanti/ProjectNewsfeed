@@ -27,7 +27,8 @@ if ($_POST) {
                     header("Location:index.php?action=main");
                 }
                 else {
-                   // register Formular noch mal anzeigen mit Fehlermeldung
+                   $error = "User already exists, please change your email and/or password";
+                   header("Location:index.php?action=login")
                 }
             } else {
                 $error = "Passwords don't match";
