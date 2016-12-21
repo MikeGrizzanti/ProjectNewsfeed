@@ -125,7 +125,7 @@ class tb_user {
     }
 
     private static function createUser($firstName, $lastName, $nickName, $password, $eMail) {
-        $sqlcheck = 'SELECT * FROM tb_user where user_nickName = ? AND user_eMail = ?;';
+        $sqlcheck = "SELECT * FROM tb_user where user_nickName = '?' AND user_eMail = '?';";
         $queryCheck = DB::getDB()->prepare($sqlcheck);
         $queryCheck->execute(array($nickName,$eMail));
         $queryCheck->setFetchMode(PDO::FETCH_CLASS, 'tb_user');
