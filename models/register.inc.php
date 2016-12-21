@@ -28,7 +28,7 @@ if ($_POST) {
                 }
                 else {
                    $error = "User already exists, please change your email and/or password";
-                   header("Location:index.php?action=login")
+                   header("Location:index.php?action=login");
                 }
             } else {
                 $error = "Passwords don't match";
