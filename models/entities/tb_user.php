@@ -116,13 +116,24 @@ class tb_user {
         //!!!! TODO
     }
     
-    private static function createUser($firstName, $lastName, $nickName, $password, $eMail) {
-        $sqlcheck = 'SELECT * FROM tb_user where user_nickName = ?;';
+    private static function checkIfÚnique ($nickName, $eMail) {
+        $sqlcheck = 'SELECT * FROM tb_user where user_nickName = ? AND user_eMail = ?;';
         $queryCheck = DB::getDB()->prepare($sqlcheck);
-        $queryCheck->execute(array($nickName));
+        $queryCheck->execute(array($nickName,$eMail));
+        
+        var_dump($queryCheck);
+    }
+
+    private static function createUser($firstName, $lastName, $nickName, $password, $eMail) {
+        $sqlcheck = 'SELECT * FROM tb_user where user_nickName = ? AND user_eMail = ?;';
+        $queryCheck = DB::getDB()->prepare($sqlcheck);
+        $queryCheck->execute(array($nickName,$eMail));
+        $queryCheck->setFetchMode(PDO::FETCH_CLASS, 'tb_user');
+        
+        var_dump($queryCheck->fetch());
         
         if($queryCheck->rowCount() > 0) {
-            return null;
+            return NULL;
         } else {
             $passwordHashed = password_hash($password, PASSWORD_DEFAULT);
             $sql = 'INSERT INTO tb_user (user_firstName, user_lastName, user_nickName, user_password, user_eMail) VALUES (?,?,?,?,?);';
