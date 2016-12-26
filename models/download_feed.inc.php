@@ -13,10 +13,17 @@ curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 $data = curl_exec ($ch);
 curl_close ($ch);
 
+//destination setup
 $destination = "xml_downloads/" . $testName;
 
+//XMLReader setup
+$xml = XMLReader::open($source);
+    // VALIDATE Option muss gesetzt werden, damit diese Methode ordnungsgemäß funktioniert
+    $xml->setParserProperty(XMLReader::VALIDATE, true);
+
+
 // URL is valid
-if ($headers[0] == 'HTTP/1.1 200 OK' && simplexml_load_string($source)) {
+if ($headers[0] == 'HTTP/1.1 200 OK' && $xml->isValid()) {
     //test it
     print_r(get_headers($source, 1));
     
