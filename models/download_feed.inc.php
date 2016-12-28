@@ -4,7 +4,7 @@ $testName = "Tester.xml";
 
 //curl and header
 $ch = curl_init();
-$source = "http://www.ilfattoquotidiano.it/feed/";
+$source = "http://www.ilfattoquotidiano.it/";
 $headers = get_headers($source, 1);
 
 //curl setup
