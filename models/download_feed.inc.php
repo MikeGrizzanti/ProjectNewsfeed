@@ -4,7 +4,7 @@ $testName = "Tester.xml";
 
 //curl and header
 $ch = curl_init();
-$source = "http://www.ilfattoquotidiano.it/";
+$source = "http://www.ilfattoquotidiano.it/rss";
 $headers = get_headers($source, 1);
 
 //curl setup
@@ -15,6 +15,19 @@ curl_close ($ch);
 
 //destination setup
 $destination = "xml_downloads/" . $testName;
+
+
+/*
+$feed = new SimplePie();
+$feed->set_feed_url('http://example.com/rss');
+$feed->init();
+$feed->handle_content_type();
+
+if ($feed->error())
+{
+    // this feed has errors
+}
+*/
 
 //XMLReader setup
 $dom = new DOMDocument;
