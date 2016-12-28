@@ -17,20 +17,22 @@ curl_close ($ch);
 $destination = "xml_downloads/" . $testName;
 
 //XMLReader setup
-$xml = XMLReader::open($source);
-    // VALIDATE Option muss gesetzt werden, damit diese Methode ordnungsgemäß funktioniert
-    $xml->setParserProperty(XMLReader::VALIDATE, true);
+$dom = new DOMDocument;
+$dom->Load($source);
+if ($dom->validate()) {
+    echo "This document is valid!\n";
+}
 
 
 // URL is valid
-if ($headers[0] == 'HTTP/1.1 200 OK' && $xml->isValid()) {
+if ($headers[0] == 'HTTP/1.1 200 OK') {
     //test it
     print_r(get_headers($source, 1));
     
     //exec
-    $file = fopen($destination, "w+");
+    /*$file = fopen($destination, "w+");
     fputs($file, $data);
-    fclose($file);
+    fclose($file);*/
 
 } 
 elseif ($headers[0] == 'HTTP/1.1 404 Not Found'){
