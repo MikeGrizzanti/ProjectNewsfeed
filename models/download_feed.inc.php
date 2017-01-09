@@ -31,9 +31,6 @@ $result = substr($response, $a, $b-$a);
 
 // URL is valid
 if ($headers[0] == 'HTTP/1.1 200 OK' && $result == 'true') {
-        //test it
-        print_r(get_headers($source, 1));
-
         //exec
         $file = fopen($destination, "w+");
         fputs($file, $data);
