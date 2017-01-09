@@ -46,20 +46,35 @@ a:hover {
 
 .top_icon_open_sidebar {
     display: inline;
+    position: fixed;
+    margin-left: 5em;
     height: 1.25em;
+    z-index: 999;
+    opacity: 1;
     -webkit-transition:all 0.2s ease;
     -moz-transition:all 0.2s ease;
     -o-transition:all 0.2s ease;
     transition: all 0.2s ease;
 }
 
+.Hide_Hamburger{
+  opacity:0;
+}
+
 .top_icon_close_sidebar {
-    display: inline;
+    position: fixed;
+    margin-left: 5em;
     height: 1.25em;
-    -webkit-transform:rotate(90deg);
-    -moz-transform:rotate(90deg);
-    -o-transform:rotate(90deg);
-    transform:rotate(90deg);
+    z-index: 899;
+    opacity: 0;
+    -webkit-transition:all 0.2s ease;
+    -moz-transition:all 0.2s ease;
+    -o-transition:all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+.Show_Cross{
+  opacity:1;
 }
 
 #top_icon_chat {
@@ -118,7 +133,7 @@ a:hover {
 /* Sidebar-Part */
 
 .sidebar {
-    position: fixed;
+    position: absolute;
     width: 20rem;
     height: 35em;
     left: 0; right: 0; top: 12em; bottom: 0;
@@ -128,6 +143,16 @@ a:hover {
     margin-top: 1em;
     border-radius: 2px;
     text-transform: uppercase;
+    z-index: 799;
+    opacity: 0;
+    -webkit-transition:all 0.2s ease;
+    -moz-transition:all 0.2s ease;
+    -o-transition:all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+.Show_Sidebar{
+  opacity:1;
 }
 
 #sidebar_header {
