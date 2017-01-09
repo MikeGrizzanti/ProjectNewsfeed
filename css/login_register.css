@@ -20,6 +20,11 @@ body {
     font-family: 'Roboto', sans-serif;
     text-align: center;
     margin-bottom: 2em;
+    margin-top: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    display: block;
 }
 
 .login_form {
@@ -311,18 +316,19 @@ hr {
 /* Desktops and laptops ----------- */
 @media only screen and (min-width: 1224px) {
   #main_logo{
-        height: 10%;
-        width: 10%;
+        height: 25%;
+        width: 25%;
+      margin-top: 2em;
     }
     
     #subtitle {
-        height: 10%;
-        width: 10%;
+        height: 25%;
+        width: 25%;
     }
     
     #flip-container {
-        height: 10%;
-        width: 10%;
+        height: 25%;
+        width: 25%;
     }
 }
 
