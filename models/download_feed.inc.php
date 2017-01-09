@@ -1,10 +1,8 @@
 <?php
 
-$testName = "Tester.xml";
-
 //curl and header
 $ch = curl_init();
-$source = "http://www.spiegel.de/politik/index.rss";
+$source = "http://www.ilfattoquotidiano.it/feed/";
 $headers = get_headers($source, 1);
 
 //curl setup
@@ -16,13 +14,11 @@ curl_close ($ch);
 
 //name
 $file_name = preg_replace('#^https?://#', '', $source);
-parse_url($file_name);
-echo array(3)["host"];
-echo "aa";
-
+$parsed_url = parse_url($source, PHP_URL_HOST);
+echo $parsed_url;
 
 //destination setup
-$destination = "xml_downloads/" . $testName;
+$destination = "xml_downloads/" . $parsed_url;
 
 
 //XMLReader setup
