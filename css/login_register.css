@@ -261,19 +261,23 @@ hr {
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
     #main_logo{
-        height: 70%;
-        width: 70%;
+        width: 131%;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
     }
     
     #subtitle {
-        height: 70%;
-        width: 70%;
+        font-size: 300%;
+        width: 130%;
     }
     
-    #flip-container {
-        height: 70%;
-        width: 70%;
+    .login_form {
+        height: auto;
+        width: 130%;
     }
+    
+    
 }
 
 /* Smartphones (landscape) ----------- */
