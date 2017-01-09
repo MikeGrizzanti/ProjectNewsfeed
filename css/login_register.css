@@ -313,22 +313,13 @@ hr {
 
 /* Desktops and laptops ----------- */
 @media only screen and (min-width: 1224px) {
-  #main_logo{
-        height: 20%;
-        width: 20%;
-        
-    }
     
     #subtitle {
-        height: 20%;
-        width: 20%;
         margin-top: 1em;
         margin-bottom: 2em;
     }
     
     #flip-container {
-        height: 20%;
-        width: 20%;
         margin-top: 0;
         margin-bottom: 0;
     }
