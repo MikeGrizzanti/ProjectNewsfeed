@@ -318,17 +318,21 @@ hr {
   #main_logo{
         height: 25%;
         width: 25%;
-      margin-top: 2em;
+      margin-top: 0em;
     }
     
     #subtitle {
         height: 25%;
         width: 25%;
+        margin-top: 0;
+        margin-bottom: 0;
     }
     
     #flip-container {
         height: 25%;
         width: 25%;
+        margin-top: 0;
+        margin-bottom: 0;
     }
 }
 
