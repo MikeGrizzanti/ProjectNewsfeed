@@ -30,6 +30,13 @@ body {
     border: 2px solid #b6b6b6;
     border-radius: 0.2rem;
 }
+
+#login_table {
+    margin: auto;
+    padding-left: auto;
+    padding-right: auto;
+}
+
 .register_form{
     margin-left: auto;
     margin-right: auto;
