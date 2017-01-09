@@ -311,18 +311,18 @@ hr {
 /* Desktops and laptops ----------- */
 @media only screen and (min-width: 1224px) {
   #main_logo{
-        height: 70%;
-        width: 70%;
+        height: -70%;
+        width: -70%;
     }
     
     #subtitle {
-        height: 70%;
-        width: 70%;
+        height: -70%;
+        width: -70%;
     }
     
     #flip-container {
-        height: 70%;
-        width: 70%;
+        height: -70%;
+        width: -70%;
     }
 }
 
