@@ -46,7 +46,6 @@ a:hover {
 
 .top_icon_open_sidebar {
     display: inline;
-    margin-left: 5em;
     height: 1.25em;
     -webkit-transition:all 0.2s ease;
     -moz-transition:all 0.2s ease;
