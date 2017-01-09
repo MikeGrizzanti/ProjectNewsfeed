@@ -45,6 +45,7 @@ a:hover {
 }
 
 .top_icon_open_sidebar {
+    display: inline;
     position: fixed;
     margin-left: 5em;
     height: 1.25em;
