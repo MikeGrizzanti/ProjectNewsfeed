@@ -10,7 +10,6 @@ body {
     position: relative;
     display: block;
     margin-top: 3;
-    margin-bottom: 1.5em;
 }
 
 #subtitle {
@@ -20,7 +19,6 @@ body {
     font-family: 'Roboto', sans-serif;
     text-align: center;
     margin-bottom: 1em;
-    margin-top: 3em;
     margin-left: auto;
     margin-right: auto;
     position: relative;
