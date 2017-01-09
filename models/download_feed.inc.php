@@ -18,6 +18,7 @@ curl_close ($ch);
 $file_name = preg_replace('#^https?://#', '', $source);
 parse_url($file_name);
 echo array(3)["host"];
+echo "aa";
 
 
 //destination setup
