@@ -363,14 +363,17 @@ hr {
     #register_button {
         position: relative;
         height: 60%;
-        width:  60%;
+        width:  65%;
         margin-top: 1em;
         font-size: 1.5em;
         margin-left: 5.5em;
     }
     
     #errorDivRegister {
-        font-size: 1.5em;
+        width: 60%;
+        height: 3em;
+        margin-top: 2em;
+        font-size: 50%;
     }
     
     #text_field_reg_nickname {
