@@ -27,8 +27,10 @@
             <br/>
         <footer id="sidebar_footer">
             <a class="add_point">ADD INTEREST +</a>
-            <a class="add_feed">ADD FEED +</a>
-            <input type="url" class="url_box" value="Ex: http://www.yoursite.com">
+            <form method="post" action="index.php?action=feed">
+                <a class="add_feed">ADD FEED +</a>
+                <input name="add_feed" type="url" class="url_box" placeholder="Ex: http://www.yoursite.com">
+            </form>
             <hr/>
             <div id="social_media_icons_div">
             <a href="#"><img class="social_media_icon" id="first_icon" src="../images/socialmedia/facebook.svg"/></a>

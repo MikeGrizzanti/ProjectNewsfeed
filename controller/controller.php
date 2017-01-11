@@ -46,6 +46,14 @@ class controller {
         $this->addContext("template", "login");
     }
     
+    public function feed() {
+        $erg = is_loggedIn();
+        require_once 'models/donwload_feed.inc.php';
+        $this->addContext("error", $error);
+        $this->addContext("template", "feed");
+    }
+
+
     private function generatePage($template){
         extract($this->context);
         require_once 'view/'.$template.".tpl.html";
