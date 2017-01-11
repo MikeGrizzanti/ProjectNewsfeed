@@ -31,7 +31,7 @@ if ($_POST) {
     $result = substr($response, $a, $b-$a);
 
     // URL is valid
-    if ($headers[0] == 'HTTP/1.1 200 OK' && $result == 'true') {
+    if ($headers[0] == 'HTTP/1.1 200 OK' && $result == 'true' || $headers[0] == 'HTTP/1.0 200 OK' && $result == 'true') {
             //exec
             $file = fopen($destination, "w+");
             fputs($file, $data);
