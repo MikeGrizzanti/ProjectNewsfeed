@@ -46,7 +46,7 @@ class controller {
         $this->addContext("template", "login");
     }
     
-    public function feed() {
+    public function download_feed() {
         $erg = is_loggedIn();
         require_once 'models/donwload_feed.inc.php';
         $this->addContext("error", $error);
