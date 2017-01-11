@@ -15,7 +15,7 @@ if ($_POST) {
 
 
     //name
-    $file_name = preg_replace('#^https?://www#', '', $source);
+    $file_name = preg_replace('#^https?://#', '', $source);
     $parsed_url = parse_url($source, PHP_URL_HOST);
 
     //destination setup
