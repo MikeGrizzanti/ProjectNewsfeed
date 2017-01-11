@@ -1,5 +1,33 @@
 <?php
 
+class feed_setup{
+    
+    $source = "";
+    
+    //name setup
+    public function set_filename($source){
+        $file_name = preg_replace('#^https?://#', '', $source);
+        $parsed_url = parse_url($source, PHP_URL_HOST);
+    }
+    
+    public function get_filename(){
+        return $parsed_url;
+    } 
+    
+    public function curl($source){
+        $ch = curl_init();
+        $headers = get_headers($source, 1);
+        
+        curl_setopt($ch, CURLOPT_URL, $source);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+        $data = curl_exec ($ch);
+        curl_close ($ch);
+        
+        $destination = "xml_downloads/" . get_filename();
+    }
+    
+}
+
 //curl and header
 $ch = curl_init();
 $source = "http://www.ilfattoquotidiano.it/feed/";
@@ -13,9 +41,9 @@ curl_close ($ch);
 
 
 //name
-$file_name = preg_replace('#^https?://#', '', $source);
+/*$file_name = preg_replace('#^https?://www#', '', $source);
 $parsed_url = parse_url($source, PHP_URL_HOST);
-echo $parsed_url;
+echo $parsed_url;*/
 
 //destination setup
 $destination = "xml_downloads/" . $parsed_url;
