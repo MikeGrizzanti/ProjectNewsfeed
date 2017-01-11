@@ -2,7 +2,7 @@
 if ($_POST) {
     //curl and header
     $ch = curl_init();
-    if (isset($_POST('add_feed'))) {
+    if (isset($_POST['add_feed'])) {
        $source = trim($_POST['add_feed']);
     }
     $headers = get_headers($source, 1);
