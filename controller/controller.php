@@ -50,7 +50,7 @@ class controller {
         $erg = is_loggedIn();
         require_once 'models/download_feed.inc.php';
         $this->addContext("error", $error);
-        $this->addContext("template", "feed");
+        $this->addContext("template", "download_feed");
     }
 
 
