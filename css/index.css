@@ -166,7 +166,7 @@ a:hover {
     font-size: 1em;
 }
 
-#add_point {
+.add_point {
     font-family: 'Roboto', sans-serif;
     margin-left: 1em;
     color: #fafafa;
@@ -175,7 +175,7 @@ a:hover {
     float: left;
 }
 
-#add_feed {
+.add_feed {
     font-family: 'Roboto', sans-serif;
     margin-left: 1em;
     color: #fafafa;
