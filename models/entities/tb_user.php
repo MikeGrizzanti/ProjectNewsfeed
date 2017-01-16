@@ -108,21 +108,28 @@ class tb_user {
         if (is_null($id)) {
             return self::createUser($firstName, $lastName, $nickName, $password, $eMail);
         } else {
-            self::updateUser();
+            self::updateUser($firstName, $lastName, $nickName, $password, $eMail, $id);
         }
     }
     
-    private static function updateUser() {
-        //!!!! TODO
+    private static function updateUser($firstName, $lastName, $nickName, $password, $eMail, $id) {
+        $sqlcheck = 'SELECT * FROM tb_user WHERE user_id = ?';
+        $queryCheck = DB::getDB()->prepare($sqlcheck);
+        $queryCheck->execute(array($firstName, $lastName, $nickName, $password, $eMail, $id));
+        
+        $passwordHashed = password_hash($password, PASSWORD_DEFAULT);
+        $sql = 'UPDATE tb_user SET = user_firstName = ?, user_lastName = ?, user_nickName = ?, user_password = ?, user_eMail = ? WHERE user_id = ?';
+        $query = DB::getDB()->prepare($sql);
+        $query->execute(array($firstName, $lastName, $nickName, $passwordHashed, $eMail, $id));
     }
     
-    private static function checkIfÚnique ($nickName, $eMail) {
+    /*private static function checkIfÚnique ($nickName, $eMail) {
         $sqlcheck = 'SELECT * FROM tb_user where user_nickName = ? AND user_eMail = ?;';
         $queryCheck = DB::getDB()->prepare($sqlcheck);
         $queryCheck->execute(array($nickName,$eMail));
         
         var_dump($queryCheck);
-    }
+    }*/
 
     private static function createUser($firstName, $lastName, $nickName, $password, $eMail) {
         $sqlcheck = "SELECT * FROM tb_user where user_nickName = ? AND user_eMail = ?;";
