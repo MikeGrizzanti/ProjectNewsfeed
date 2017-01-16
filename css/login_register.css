@@ -297,7 +297,7 @@ hr {
     /* front_table */
     .login_form {
         width: 80%;
-        height: 50em;
+        height: 40em;
     }
     
     #login_table {
@@ -307,9 +307,14 @@ hr {
         
     }
     .text_field {
+        margin-top: 1em;
         position: relative;
         width: 80%;
         font-size: 200%;
+    }
+    
+    #text_field_nickname {
+        margin-top: 1.3em;
     }
     #login_button {
         position: relative;
@@ -340,16 +345,17 @@ hr {
     
     #errorDivLogin {
         width: 65%;
-        height: 85%;
-        margin-top: 2em;
+        height: 5em;
+        margin-top: 1em;
         font-size: 50%;
+        margin-bottom: 1em;
     }
     
     #no_login_option {
         position: relative;
         height: 35%;
         width:  65%;
-        margin-top: 1em;
+        margin-top: 1.5em;
         font-size: 1.5em;
         margin-left: 5.5em;
     }
@@ -425,125 +431,3174 @@ hr {
     
 }
 
-/* Smartphones (landscape) ----------- */
-@media only screen and (min-width: 321px) {
-  /* Styles */
-}
-
-/* Smartphones (portrait) ----------- */
-@media only screen and (max-width: 320px) {
-  /* Styles */
-}
-
 /* iPads (portrait and landscape) ----------- */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-  /* Styles */
+    
+    #main_logo{
+        width: 100%;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #subtitle {
+        font-size: 200%;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+     /* front_table */
+    .login_form {
+        width: 70%;
+        height: 40em;
+    }
+    
+    #login_table {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        
+    }
+    .text_field {
+        margin-top: 1em;
+        position: relative;
+        width: 80%;
+        font-size: 200%;
+    }
+    
+    #text_field_nickname {
+        margin-top: 1.3em;
+    }
+    #login_button {
+        position: relative;
+        height: 60%;
+        width:  65%;
+        margin-top: 1em;
+        font-size: 1.5em;
+        margin-left: 5em;
+    }
+    
+    #login_socialmedia{
+        position: relative;
+        height: 60%;
+        width:  65%;
+        margin-top: 1em;
+        font-size: 1.5em;
+        margin-left: 5em;
+    }
+    
+    #register_option {
+        position: relative;
+        height: 60%;
+        width:  65%;
+        margin-top: 1em;
+        font-size: 1.5em;
+        margin-left: 5em;
+    }
+    
+    #errorDivLogin {
+        width: 65%;
+        height: 5em;
+        margin-top: 1em;
+        font-size: 50%;
+        margin-bottom: 1em;
+    }
+    
+    #no_login_option {
+        position: relative;
+        height: 35%;
+        width:  65%;
+        margin-top: 1.5em;
+        font-size: 1.5em;
+        margin-left: 5em;
+    }
+    
+    hr {
+        width: 100%;
+    }
+    
+    /* back_table */
+    
+    #register_header {
+        display: inline;
+        font-size: 200%;
+    }
+    .register_form {
+        width: 70%;
+        height: 500em;
+    }
+    
+    #register_table {
+        position: relative;
+        width: 100%; 
+        height: 100%;
+    }
+    
+    #register_button {
+        position: relative;
+        height: 60%;
+        width:  65%;
+        margin-top: 1em;
+        font-size: 1.5em;
+        margin-left: 5em;
+    }
+    
+    #errorDivRegister {
+        width: 65%;
+        height: 5em;
+        margin-top: 1em;
+        font-size: 50%;
+        margin-bottom: 1em;
+    }
+    
+    #text_field_reg_nickname {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #text_field_reg_email {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #text_field_reg_first_name {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #text_field_reg_last_name {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #text_field_reg_password {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #text_field_reg_rep_password {
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 /* iPads (landscape) ----------- */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
-  /* Styles */
+   #main_logo{
+        width: 100%;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #subtitle {
+        font-size: 200%;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+     /* front_table */
+    .login_form {
+        width: 70%;
+        height: 40em;
+    }
+    
+    #login_table {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        
+    }
+    .text_field {
+        margin-top: 1em;
+        position: relative;
+        width: 80%;
+        font-size: 200%;
+    }
+    
+    #text_field_nickname {
+        margin-top: 1.3em;
+    }
+    #login_button {
+        position: relative;
+        height: 60%;
+        width:  65%;
+        margin-top: 1em;
+        font-size: 1.5em;
+        margin-left: 5em;
+    }
+    
+    #login_socialmedia{
+        position: relative;
+        height: 60%;
+        width:  65%;
+        margin-top: 1em;
+        font-size: 1.5em;
+        margin-left: 5em;
+    }
+    
+    #register_option {
+        position: relative;
+        height: 60%;
+        width:  65%;
+        margin-top: 1em;
+        font-size: 1.5em;
+        margin-left: 5em;
+    }
+    
+    #errorDivLogin {
+        width: 65%;
+        height: 5em;
+        margin-top: 1em;
+        font-size: 50%;
+        margin-bottom: 1em;
+    }
+    
+    #no_login_option {
+        position: relative;
+        height: 35%;
+        width:  65%;
+        margin-top: 1.5em;
+        font-size: 1.5em;
+        margin-left: 5em;
+    }
+    
+    hr {
+        width: 100%;
+    }
+    
+    /* back_table */
+    
+    #register_header {
+        display: inline;
+        font-size: 200%;
+    }
+    .register_form {
+        width: 70%;
+        height: 50em;
+    }
+    
+    #register_table {
+        position: relative;
+        width: 100%; 
+        height: 100%;
+    }
+    
+    #register_button {
+        position: relative;
+        height: 60%;
+        width:  65%;
+        margin-top: 1em;
+        font-size: 1.5em;
+        margin-left: 5em;
+    }
+    
+    #errorDivRegister {
+        width: 65%;
+        height: 5em;
+        margin-top: 1em;
+        font-size: 50%;
+        margin-bottom: 1em;
+    }
+    
+    #text_field_reg_nickname {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #text_field_reg_email {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #text_field_reg_first_name {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #text_field_reg_last_name {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #text_field_reg_password {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #text_field_reg_rep_password {
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 /* iPads (portrait) ----------- */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
-  /* Styles */
+   #main_logo{
+        width: 100%;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #subtitle {
+        font-size: 200%;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+     /* front_table */
+    .login_form {
+        width: 70%;
+        height: 40em;
+    }
+    
+    #login_table {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        
+    }
+    .text_field {
+        margin-top: 1em;
+        position: relative;
+        width: 80%;
+        font-size: 200%;
+    }
+    
+    #text_field_nickname {
+        margin-top: 1.3em;
+    }
+    #login_button {
+        position: relative;
+        height: 60%;
+        width:  65%;
+        margin-top: 1em;
+        font-size: 1.5em;
+        margin-left: 5em;
+    }
+    
+    #login_socialmedia{
+        position: relative;
+        height: 60%;
+        width:  65%;
+        margin-top: 1em;
+        font-size: 1.5em;
+        margin-left: 5em;
+    }
+    
+    #register_option {
+        position: relative;
+        height: 60%;
+        width:  65%;
+        margin-top: 1em;
+        font-size: 1.5em;
+        margin-left: 5em;
+    }
+    
+    #errorDivLogin {
+        width: 65%;
+        height: 5em;
+        margin-top: 1em;
+        font-size: 50%;
+        margin-bottom: 1em;
+    }
+    
+    #no_login_option {
+        position: relative;
+        height: 35%;
+        width:  65%;
+        margin-top: 1.5em;
+        font-size: 1.5em;
+        margin-left: 5em;
+    }
+    
+    hr {
+        width: 100%;
+    }
+    
+    /* back_table */
+    
+    #register_header {
+        display: inline;
+        font-size: 200%;
+    }
+    .register_form {
+        width: 70%;
+        height: 50em;
+    }
+    
+    #register_table {
+        position: relative;
+        width: 100%; 
+        height: 100%;
+    }
+    
+    #register_button {
+        position: relative;
+        height: 60%;
+        width:  65%;
+        margin-top: 1em;
+        font-size: 1.5em;
+        margin-left: 5em;
+    }
+    
+    #errorDivRegister {
+        width: 65%;
+        height: 5em;
+        margin-top: 1em;
+        font-size: 50%;
+        margin-bottom: 1em;
+    }
+    
+    #text_field_reg_nickname {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #text_field_reg_email {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #text_field_reg_first_name {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #text_field_reg_last_name {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #text_field_reg_password {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #text_field_reg_rep_password {
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 /* iPad 3 (landscape) ----------- */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
-  /* Styles */
+   #main_logo{
+        width: 100%;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #subtitle {
+        font-size: 200%;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+     /* front_table */
+    .login_form {
+        width: 70%;
+        height: 40em;
+    }
+    
+    #login_table {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        
+    }
+    .text_field {
+        margin-top: 1em;
+        position: relative;
+        width: 80%;
+        font-size: 200%;
+    }
+    
+    #text_field_nickname {
+        margin-top: 1.3em;
+    }
+    #login_button {
+        position: relative;
+        height: 60%;
+        width:  65%;
+        margin-top: 1em;
+        font-size: 1.5em;
+        margin-left: 5em;
+    }
+    
+    #login_socialmedia{
+        position: relative;
+        height: 60%;
+        width:  65%;
+        margin-top: 1em;
+        font-size: 1.5em;
+        margin-left: 5em;
+    }
+    
+    #register_option {
+        position: relative;
+        height: 60%;
+        width:  65%;
+        margin-top: 1em;
+        font-size: 1.5em;
+        margin-left: 5em;
+    }
+    
+    #errorDivLogin {
+        width: 65%;
+        height: 5em;
+        margin-top: 1em;
+        font-size: 50%;
+        margin-bottom: 1em;
+    }
+    
+    #no_login_option {
+        position: relative;
+        height: 35%;
+        width:  65%;
+        margin-top: 1.5em;
+        font-size: 1.5em;
+        margin-left: 5em;
+    }
+    
+    hr {
+        width: 100%;
+    }
+    
+    /* back_table */
+    
+    #register_header {
+        display: inline;
+        font-size: 200%;
+    }
+    .register_form {
+        width: 70%;
+        height: 50em;
+    }
+    
+    #register_table {
+        position: relative;
+        width: 100%; 
+        height: 100%;
+    }
+    
+    #register_button {
+        position: relative;
+        height: 60%;
+        width:  65%;
+        margin-top: 1em;
+        font-size: 1.5em;
+        margin-left: 5em;
+    }
+    
+    #errorDivRegister {
+        width: 65%;
+        height: 5em;
+        margin-top: 1em;
+        font-size: 50%;
+        margin-bottom: 1em;
+    }
+    
+    #text_field_reg_nickname {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #text_field_reg_email {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #text_field_reg_first_name {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #text_field_reg_last_name {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #text_field_reg_password {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #text_field_reg_rep_password {
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 /* iPad 3 (portrait) ----------- */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
-  /* Styles */
+   #main_logo{
+        width: 100%;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #subtitle {
+        font-size: 200%;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+     /* front_table */
+    .login_form {
+        width: 70%;
+        height: 40em;
+    }
+    
+    #login_table {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        
+    }
+    .text_field {
+        margin-top: 1em;
+        position: relative;
+        width: 80%;
+        font-size: 200%;
+    }
+    
+    #text_field_nickname {
+        margin-top: 1.3em;
+    }
+    #login_button {
+        position: relative;
+        height: 60%;
+        width:  65%;
+        margin-top: 1em;
+        font-size: 1.5em;
+        margin-left: 5em;
+    }
+    
+    #login_socialmedia{
+        position: relative;
+        height: 60%;
+        width:  65%;
+        margin-top: 1em;
+        font-size: 1.5em;
+        margin-left: 5em;
+    }
+    
+    #register_option {
+        position: relative;
+        height: 60%;
+        width:  65%;
+        margin-top: 1em;
+        font-size: 1.5em;
+        margin-left: 5em;
+    }
+    
+    #errorDivLogin {
+        width: 65%;
+        height: 5em;
+        margin-top: 1em;
+        font-size: 50%;
+        margin-bottom: 1em;
+    }
+    
+    #no_login_option {
+        position: relative;
+        height: 35%;
+        width:  65%;
+        margin-top: 1.5em;
+        font-size: 1.5em;
+        margin-left: 5em;
+    }
+    
+    hr {
+        width: 100%;
+    }
+    
+    /* back_table */
+    
+    #register_header {
+        display: inline;
+        font-size: 200%;
+    }
+    .register_form {
+        width: 70%;
+        height: 45em;
+    }
+    
+    #register_table {
+        position: relative;
+        width: 100%; 
+        height: 100%;
+    }
+    
+    #register_button {
+        position: relative;
+        height: 60%;
+        width:  65%;
+        margin-top: 1em;
+        font-size: 1.5em;
+        margin-left: 5em;
+    }
+    
+    #errorDivRegister {
+        width: 65%;
+        height: 5em;
+        margin-top: 1em;
+        font-size: 50%;
+        margin-bottom: 1em;
+    }
+    
+    #text_field_reg_nickname {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #text_field_reg_email {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #text_field_reg_first_name {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #text_field_reg_last_name {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #text_field_reg_password {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #text_field_reg_rep_password {
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 /* Desktops and laptops ----------- */
 @media only screen and (min-width: 1224px) {
-    
-    #subtitle {
-        margin-top: 1em;
-        margin-bottom: 2em;
+    #main_logo{
+        width: 50%;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
     }
     
-    #flip-container {
-        margin-top: 0;
-        margin-bottom: 0;
+    #subtitle {
+        font-size: 200%;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+     /* front_table */
+    .login_form {
+        width: 70%;
+        height: 40em;
+    }
+    
+    #login_table {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        
+    }
+    .text_field {
+        margin-top: 1em;
+        position: relative;
+        width: 80%;
+        font-size: 200%;
+    }
+    
+    #text_field_nickname {
+        margin-top: 1.3em;
+    }
+    #login_button {
+        position: relative;
+        height: 60%;
+        width:  65%;
+        margin-top: 1em;
+        font-size: 2em;
+        margin-left: 4.5em;
+    }
+    
+    #login_socialmedia{
+        position: relative;
+        height: 60%;
+        width:  65%;
+        margin-top: 1em;
+        font-size: 1.5em;
+        margin-left: 6em;
+    }
+    
+    #register_option {
+        position: relative;
+        height: 60%;
+        width:  65%;
+        margin-top: 1em;
+        font-size: 1.5em;
+        margin-left: 6em;
+    }
+    
+    #errorDivLogin {
+        width: 65%;
+        height: 5em;
+        margin-top: 1em;
+        font-size: 50%;
+        margin-bottom: 1em;
+    }
+    
+    #no_login_option {
+        position: relative;
+        height: 35%;
+        width:  65%;
+        margin-top: 1.5em;
+        font-size: 1.5em;
+        margin-left: 6em;
+    }
+    
+    hr {
+        width: 100%;
+    }
+    
+    /* back_table */
+    
+    #register_header {
+        display: inline;
+        font-size: 200%;
+    }
+    .register_form {
+        width: 70%;
+        height: 46em;
+    }
+    
+    #register_table {
+        position: relative;
+        width: 100%; 
+        height: 100%;
+    }
+    
+    #register_button {
+        position: relative;
+        height: 60%;
+        width:  65%;
+        margin-top: 1em;
+        font-size: 1.5em;
+        margin-left: 6em;
+    }
+    
+    #errorDivRegister {
+        width: 65%;
+        height: 5em;
+        margin-top: 1em;
+        font-size: 50%;
+        margin-bottom: 1em;
+    }
+    
+    #text_field_reg_nickname {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #text_field_reg_email {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #text_field_reg_first_name {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #text_field_reg_last_name {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #text_field_reg_password {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #text_field_reg_rep_password {
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
 /* Large screens ----------- */
 @media only screen and (min-width: 1824px) {
-  /* Styles */
+  #main_logo{
+        width: 50%;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #subtitle {
+        font-size: 250%;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+     /* front_table */
+    .login_form {
+        width: 40%;
+        height: 40em;
+    }
+    
+    #login_table {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        
+    }
+    .text_field {
+        margin-top: 1em;
+        position: relative;
+        width: 80%;
+        font-size: 200%;
+    }
+    
+    #text_field_nickname {
+        margin-top: 1.3em;
+    }
+    #login_button {
+        position: relative;
+        height: 60%;
+        width:  65%;
+        margin-top: 1em;
+        font-size: 1.5em;
+        margin-left: 5em;
+    }
+    
+    #login_socialmedia{
+        position: relative;
+        height: 60%;
+        width:  65%;
+        margin-top: 1em;
+        font-size: 1.5em;
+        margin-left: 5em;
+    }
+    
+    #register_option {
+        position: relative;
+        height: 60%;
+        width:  65%;
+        margin-top: 1em;
+        font-size: 1.5em;
+        margin-left: 5em;
+    }
+    
+    #errorDivLogin {
+        width: 65%;
+        height: 5em;
+        margin-top: 1em;
+        font-size: 50%;
+        margin-bottom: 1em;
+    }
+    
+    #no_login_option {
+        position: relative;
+        height: 35%;
+        width:  65%;
+        margin-top: 1.5em;
+        font-size: 1.5em;
+        margin-left: 5em;
+    }
+    
+    hr {
+        width: 100%;
+    }
+    
+    /* back_table */
+    
+    #register_header {
+        display: inline;
+        font-size: 200%;
+    }
+    .register_form {
+        width: 40%;
+        height: 45em;
+    }
+    
+    #register_table {
+        position: relative;
+        width: 100%; 
+        height: 100%;
+    }
+    
+    #register_button {
+        position: relative;
+        height: 60%;
+        width:  65%;
+        margin-top: 1em;
+        font-size: 1.5em;
+        margin-left: 5em;
+    }
+    
+    #errorDivRegister {
+        width: 65%;
+        height: 5em;
+        margin-top: 1em;
+        font-size: 50%;
+        margin-bottom: 1em;
+    }
+    
+    #text_field_reg_nickname {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #text_field_reg_email {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #text_field_reg_first_name {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #text_field_reg_last_name {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #text_field_reg_password {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #text_field_reg_rep_password {
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 /* iPhone 4 (landscape) ----------- */
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
-  /* Styles */
+  #main_logo{
+        width: 100%;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #subtitle {
+        font-size: 200%;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    /* front_table */
+    .login_form {
+        width: 80%;
+        height: 40em;
+    }
+    
+    #login_table {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        
+    }
+    .text_field {
+        margin-top: 1em;
+        position: relative;
+        width: 80%;
+        font-size: 200%;
+    }
+    
+    #text_field_nickname {
+        margin-top: 1.3em;
+    }
+    #login_button {
+        position: relative;
+        height: 60%;
+        width:  65%;
+        margin-top: 1em;
+        font-size: 1.5em;
+        margin-left: 5.5em;
+    }
+    
+    #login_socialmedia{
+        position: relative;
+        height: 60%;
+        width:  65%;
+        margin-top: 1em;
+        font-size: 1.5em;
+        margin-left: 5.5em;
+    }
+    
+    #register_option {
+        position: relative;
+        height: 60%;
+        width:  65%;
+        margin-top: 1em;
+        font-size: 1.5em;
+        margin-left: 5.5em;
+    }
+    
+    #errorDivLogin {
+        width: 65%;
+        height: 5em;
+        margin-top: 1em;
+        font-size: 50%;
+        margin-bottom: 1em;
+    }
+    
+    #no_login_option {
+        position: relative;
+        height: 35%;
+        width:  65%;
+        margin-top: 1.5em;
+        font-size: 1.5em;
+        margin-left: 5.5em;
+    }
+    
+    hr {
+        width: 100%;
+    }
+    
+    
+    /* back_table */
+    
+    #register_header {
+        display: inline;
+        font-size: 200%;
+    }
+    .register_form {
+        width: 80%;
+        height: 50em;
+    }
+    
+    #register_table {
+        position: relative;
+        width: 100%; 
+        height: 100%;
+    }
+    
+    #register_button {
+        position: relative;
+        height: 60%;
+        width:  65%;
+        margin-top: 1em;
+        font-size: 1.5em;
+        margin-left: 5.5em;
+    }
+    
+    #errorDivRegister {
+        width: 60%;
+        height: 3em;
+        margin-top: 2em;
+        font-size: 50%;
+    }
+    
+    #text_field_reg_nickname {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #text_field_reg_email {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #text_field_reg_first_name {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #text_field_reg_last_name {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #text_field_reg_password {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #text_field_reg_rep_password {
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 /* iPhone 4 (portrait) ----------- */
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
-  /* Styles */
+  #main_logo{
+        width: 100%;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #subtitle {
+        font-size: 200%;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    /* front_table */
+    .login_form {
+        width: 80%;
+        height: 40em;
+    }
+    
+    #login_table {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        
+    }
+    .text_field {
+        margin-top: 1em;
+        position: relative;
+        width: 80%;
+        font-size: 200%;
+    }
+    
+    #text_field_nickname {
+        margin-top: 1.3em;
+    }
+    #login_button {
+        position: relative;
+        height: 60%;
+        width:  65%;
+        margin-top: 1em;
+        font-size: 1.5em;
+        margin-left: 5.5em;
+    }
+    
+    #login_socialmedia{
+        position: relative;
+        height: 60%;
+        width:  65%;
+        margin-top: 1em;
+        font-size: 1.5em;
+        margin-left: 5.5em;
+    }
+    
+    #register_option {
+        position: relative;
+        height: 60%;
+        width:  65%;
+        margin-top: 1em;
+        font-size: 1.5em;
+        margin-left: 5.5em;
+    }
+    
+    #errorDivLogin {
+        width: 65%;
+        height: 5em;
+        margin-top: 1em;
+        font-size: 50%;
+        margin-bottom: 1em;
+    }
+    
+    #no_login_option {
+        position: relative;
+        height: 35%;
+        width:  65%;
+        margin-top: 1.5em;
+        font-size: 1.5em;
+        margin-left: 5.5em;
+    }
+    
+    hr {
+        width: 100%;
+    }
+    
+    
+    /* back_table */
+    
+    #register_header {
+        display: inline;
+        font-size: 200%;
+    }
+    .register_form {
+        width: 80%;
+        height: 50em;
+    }
+    
+    #register_table {
+        position: relative;
+        width: 100%; 
+        height: 100%;
+    }
+    
+    #register_button {
+        position: relative;
+        height: 60%;
+        width:  65%;
+        margin-top: 1em;
+        font-size: 1.5em;
+        margin-left: 5.5em;
+    }
+    
+    #errorDivRegister {
+        width: 60%;
+        height: 3em;
+        margin-top: 2em;
+        font-size: 50%;
+    }
+    
+    #text_field_reg_nickname {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #text_field_reg_email {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #text_field_reg_first_name {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #text_field_reg_last_name {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #text_field_reg_password {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #text_field_reg_rep_password {
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 /* iPhone 5 (landscape) ----------- */
 @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
-  /* Styles */
+  #main_logo{
+        width: 100%;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #subtitle {
+        font-size: 200%;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    /* front_table */
+    .login_form {
+        width: 80%;
+        height: 40em;
+    }
+    
+    #login_table {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        
+    }
+    .text_field {
+        margin-top: 1em;
+        position: relative;
+        width: 80%;
+        font-size: 200%;
+    }
+    
+    #text_field_nickname {
+        margin-top: 1.3em;
+    }
+    #login_button {
+        position: relative;
+        height: 60%;
+        width:  65%;
+        margin-top: 1em;
+        font-size: 1.5em;
+        margin-left: 5.5em;
+    }
+    
+    #login_socialmedia{
+        position: relative;
+        height: 60%;
+        width:  65%;
+        margin-top: 1em;
+        font-size: 1.5em;
+        margin-left: 5.5em;
+    }
+    
+    #register_option {
+        position: relative;
+        height: 60%;
+        width:  65%;
+        margin-top: 1em;
+        font-size: 1.5em;
+        margin-left: 5.5em;
+    }
+    
+    #errorDivLogin {
+        width: 65%;
+        height: 5em;
+        margin-top: 1em;
+        font-size: 50%;
+        margin-bottom: 1em;
+    }
+    
+    #no_login_option {
+        position: relative;
+        height: 35%;
+        width:  65%;
+        margin-top: 1.5em;
+        font-size: 1.5em;
+        margin-left: 5.5em;
+    }
+    
+    hr {
+        width: 100%;
+    }
+    
+    
+    /* back_table */
+    
+    #register_header {
+        display: inline;
+        font-size: 200%;
+    }
+    .register_form {
+        width: 80%;
+        height: 50em;
+    }
+    
+    #register_table {
+        position: relative;
+        width: 100%; 
+        height: 100%;
+    }
+    
+    #register_button {
+        position: relative;
+        height: 60%;
+        width:  65%;
+        margin-top: 1em;
+        font-size: 1.5em;
+        margin-left: 5.5em;
+    }
+    
+    #errorDivRegister {
+        width: 60%;
+        height: 3em;
+        margin-top: 2em;
+        font-size: 50%;
+    }
+    
+    #text_field_reg_nickname {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #text_field_reg_email {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #text_field_reg_first_name {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #text_field_reg_last_name {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #text_field_reg_password {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #text_field_reg_rep_password {
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 /* iPhone 5 (portrait) ----------- */
 @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
-  /* Styles */
+  #main_logo{
+        width: 100%;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #subtitle {
+        font-size: 200%;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    /* front_table */
+    .login_form {
+        width: 80%;
+        height: 40em;
+    }
+    
+    #login_table {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        
+    }
+    .text_field {
+        margin-top: 1em;
+        position: relative;
+        width: 80%;
+        font-size: 200%;
+    }
+    
+    #text_field_nickname {
+        margin-top: 1.3em;
+    }
+    #login_button {
+        position: relative;
+        height: 60%;
+        width:  65%;
+        margin-top: 1em;
+        font-size: 1.5em;
+        margin-left: 5.5em;
+    }
+    
+    #login_socialmedia{
+        position: relative;
+        height: 60%;
+        width:  65%;
+        margin-top: 1em;
+        font-size: 1.5em;
+        margin-left: 5.5em;
+    }
+    
+    #register_option {
+        position: relative;
+        height: 60%;
+        width:  65%;
+        margin-top: 1em;
+        font-size: 1.5em;
+        margin-left: 5.5em;
+    }
+    
+    #errorDivLogin {
+        width: 65%;
+        height: 5em;
+        margin-top: 1em;
+        font-size: 50%;
+        margin-bottom: 1em;
+    }
+    
+    #no_login_option {
+        position: relative;
+        height: 35%;
+        width:  65%;
+        margin-top: 1.5em;
+        font-size: 1.5em;
+        margin-left: 5.5em;
+    }
+    
+    hr {
+        width: 100%;
+    }
+    
+    
+    /* back_table */
+    
+    #register_header {
+        display: inline;
+        font-size: 200%;
+    }
+    .register_form {
+        width: 80%;
+        height: 50em;
+    }
+    
+    #register_table {
+        position: relative;
+        width: 100%; 
+        height: 100%;
+    }
+    
+    #register_button {
+        position: relative;
+        height: 60%;
+        width:  65%;
+        margin-top: 1em;
+        font-size: 1.5em;
+        margin-left: 5.5em;
+    }
+    
+    #errorDivRegister {
+        width: 60%;
+        height: 3em;
+        margin-top: 2em;
+        font-size: 50%;
+    }
+    
+    #text_field_reg_nickname {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #text_field_reg_email {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #text_field_reg_first_name {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #text_field_reg_last_name {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #text_field_reg_password {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #text_field_reg_rep_password {
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 /* iPhone 6 (landscape) ----------- */
 @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
-  /* Styles */
+  #main_logo{
+        width: 100%;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #subtitle {
+        font-size: 200%;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    /* front_table */
+    .login_form {
+        width: 80%;
+        height: 40em;
+    }
+    
+    #login_table {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        
+    }
+    .text_field {
+        margin-top: 1em;
+        position: relative;
+        width: 80%;
+        font-size: 200%;
+    }
+    
+    #text_field_nickname {
+        margin-top: 1.3em;
+    }
+    #login_button {
+        position: relative;
+        height: 60%;
+        width:  65%;
+        margin-top: 1em;
+        font-size: 1.5em;
+        margin-left: 5.5em;
+    }
+    
+    #login_socialmedia{
+        position: relative;
+        height: 60%;
+        width:  65%;
+        margin-top: 1em;
+        font-size: 1.5em;
+        margin-left: 5.5em;
+    }
+    
+    #register_option {
+        position: relative;
+        height: 60%;
+        width:  65%;
+        margin-top: 1em;
+        font-size: 1.5em;
+        margin-left: 5.5em;
+    }
+    
+    #errorDivLogin {
+        width: 65%;
+        height: 5em;
+        margin-top: 1em;
+        font-size: 50%;
+        margin-bottom: 1em;
+    }
+    
+    #no_login_option {
+        position: relative;
+        height: 35%;
+        width:  65%;
+        margin-top: 1.5em;
+        font-size: 1.5em;
+        margin-left: 5.5em;
+    }
+    
+    hr {
+        width: 100%;
+    }
+    
+    
+    /* back_table */
+    
+    #register_header {
+        display: inline;
+        font-size: 200%;
+    }
+    .register_form {
+        width: 80%;
+        height: 50em;
+    }
+    
+    #register_table {
+        position: relative;
+        width: 100%; 
+        height: 100%;
+    }
+    
+    #register_button {
+        position: relative;
+        height: 60%;
+        width:  65%;
+        margin-top: 1em;
+        font-size: 1.5em;
+        margin-left: 5.5em;
+    }
+    
+    #errorDivRegister {
+        width: 60%;
+        height: 3em;
+        margin-top: 2em;
+        font-size: 50%;
+    }
+    
+    #text_field_reg_nickname {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #text_field_reg_email {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #text_field_reg_first_name {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #text_field_reg_last_name {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #text_field_reg_password {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #text_field_reg_rep_password {
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 /* iPhone 6 (portrait) ----------- */
 @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
-  /* Styles */
+  #main_logo{
+        width: 100%;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #subtitle {
+        font-size: 200%;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    /* front_table */
+    .login_form {
+        width: 80%;
+        height: 40em;
+    }
+    
+    #login_table {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        
+    }
+    .text_field {
+        margin-top: 1em;
+        position: relative;
+        width: 80%;
+        font-size: 200%;
+    }
+    
+    #text_field_nickname {
+        margin-top: 1.3em;
+    }
+    #login_button {
+        position: relative;
+        height: 60%;
+        width:  65%;
+        margin-top: 1em;
+        font-size: 1.5em;
+        margin-left: 5.5em;
+    }
+    
+    #login_socialmedia{
+        position: relative;
+        height: 60%;
+        width:  65%;
+        margin-top: 1em;
+        font-size: 1.5em;
+        margin-left: 5.5em;
+    }
+    
+    #register_option {
+        position: relative;
+        height: 60%;
+        width:  65%;
+        margin-top: 1em;
+        font-size: 1.5em;
+        margin-left: 5.5em;
+    }
+    
+    #errorDivLogin {
+        width: 65%;
+        height: 5em;
+        margin-top: 1em;
+        font-size: 50%;
+        margin-bottom: 1em;
+    }
+    
+    #no_login_option {
+        position: relative;
+        height: 35%;
+        width:  65%;
+        margin-top: 1.5em;
+        font-size: 1.5em;
+        margin-left: 5.5em;
+    }
+    
+    hr {
+        width: 100%;
+    }
+    
+    
+    /* back_table */
+    
+    #register_header {
+        display: inline;
+        font-size: 200%;
+    }
+    .register_form {
+        width: 80%;
+        height: 50em;
+    }
+    
+    #register_table {
+        position: relative;
+        width: 100%; 
+        height: 100%;
+    }
+    
+    #register_button {
+        position: relative;
+        height: 60%;
+        width:  65%;
+        margin-top: 1em;
+        font-size: 1.5em;
+        margin-left: 5.5em;
+    }
+    
+    #errorDivRegister {
+        width: 60%;
+        height: 3em;
+        margin-top: 2em;
+        font-size: 50%;
+    }
+    
+    #text_field_reg_nickname {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #text_field_reg_email {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #text_field_reg_first_name {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #text_field_reg_last_name {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #text_field_reg_password {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #text_field_reg_rep_password {
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 /* iPhone 6+ (landscape) ----------- */
 @media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
-  /* Styles */
+  #main_logo{
+        width: 100%;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #subtitle {
+        font-size: 200%;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    /* front_table */
+    .login_form {
+        width: 80%;
+        height: 40em;
+    }
+    
+    #login_table {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        
+    }
+    .text_field {
+        margin-top: 1em;
+        position: relative;
+        width: 80%;
+        font-size: 200%;
+    }
+    
+    #text_field_nickname {
+        margin-top: 1.3em;
+    }
+    #login_button {
+        position: relative;
+        height: 60%;
+        width:  65%;
+        margin-top: 1em;
+        font-size: 1.5em;
+        margin-left: 5.5em;
+    }
+    
+    #login_socialmedia{
+        position: relative;
+        height: 60%;
+        width:  65%;
+        margin-top: 1em;
+        font-size: 1.5em;
+        margin-left: 5.5em;
+    }
+    
+    #register_option {
+        position: relative;
+        height: 60%;
+        width:  65%;
+        margin-top: 1em;
+        font-size: 1.5em;
+        margin-left: 5.5em;
+    }
+    
+    #errorDivLogin {
+        width: 65%;
+        height: 5em;
+        margin-top: 1em;
+        font-size: 50%;
+        margin-bottom: 1em;
+    }
+    
+    #no_login_option {
+        position: relative;
+        height: 35%;
+        width:  65%;
+        margin-top: 1.5em;
+        font-size: 1.5em;
+        margin-left: 5.5em;
+    }
+    
+    hr {
+        width: 100%;
+    }
+    
+    
+    /* back_table */
+    
+    #register_header {
+        display: inline;
+        font-size: 200%;
+    }
+    .register_form {
+        width: 80%;
+        height: 50em;
+    }
+    
+    #register_table {
+        position: relative;
+        width: 100%; 
+        height: 100%;
+    }
+    
+    #register_button {
+        position: relative;
+        height: 60%;
+        width:  65%;
+        margin-top: 1em;
+        font-size: 1.5em;
+        margin-left: 5.5em;
+    }
+    
+    #errorDivRegister {
+        width: 60%;
+        height: 3em;
+        margin-top: 2em;
+        font-size: 50%;
+    }
+    
+    #text_field_reg_nickname {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #text_field_reg_email {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #text_field_reg_first_name {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #text_field_reg_last_name {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #text_field_reg_password {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #text_field_reg_rep_password {
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 /* iPhone 6+ (portrait) ----------- */
 @media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
-  /* Styles */
+  #main_logo{
+        width: 100%;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #subtitle {
+        font-size: 200%;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    /* front_table */
+    .login_form {
+        width: 80%;
+        height: 40em;
+    }
+    
+    #login_table {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        
+    }
+    .text_field {
+        margin-top: 1em;
+        position: relative;
+        width: 80%;
+        font-size: 200%;
+    }
+    
+    #text_field_nickname {
+        margin-top: 1.3em;
+    }
+    #login_button {
+        position: relative;
+        height: 60%;
+        width:  65%;
+        margin-top: 1em;
+        font-size: 1.5em;
+        margin-left: 5.5em;
+    }
+    
+    #login_socialmedia{
+        position: relative;
+        height: 60%;
+        width:  65%;
+        margin-top: 1em;
+        font-size: 1.5em;
+        margin-left: 5.5em;
+    }
+    
+    #register_option {
+        position: relative;
+        height: 60%;
+        width:  65%;
+        margin-top: 1em;
+        font-size: 1.5em;
+        margin-left: 5.5em;
+    }
+    
+    #errorDivLogin {
+        width: 65%;
+        height: 5em;
+        margin-top: 1em;
+        font-size: 50%;
+        margin-bottom: 1em;
+    }
+    
+    #no_login_option {
+        position: relative;
+        height: 35%;
+        width:  65%;
+        margin-top: 1.5em;
+        font-size: 1.5em;
+        margin-left: 5.5em;
+    }
+    
+    hr {
+        width: 100%;
+    }
+    
+    
+    /* back_table */
+    
+    #register_header {
+        display: inline;
+        font-size: 200%;
+    }
+    .register_form {
+        width: 80%;
+        height: 50em;
+    }
+    
+    #register_table {
+        position: relative;
+        width: 100%; 
+        height: 100%;
+    }
+    
+    #register_button {
+        position: relative;
+        height: 60%;
+        width:  65%;
+        margin-top: 1em;
+        font-size: 1.5em;
+        margin-left: 5.5em;
+    }
+    
+    #errorDivRegister {
+        width: 60%;
+        height: 3em;
+        margin-top: 2em;
+        font-size: 50%;
+    }
+    
+    #text_field_reg_nickname {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #text_field_reg_email {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #text_field_reg_first_name {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #text_field_reg_last_name {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #text_field_reg_password {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #text_field_reg_rep_password {
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 /* Samsung Galaxy S3 (landscape) ----------- */
 @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
-  /* Styles */
+  #main_logo{
+        width: 100%;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #subtitle {
+        font-size: 200%;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    /* front_table */
+    .login_form {
+        width: 80%;
+        height: 40em;
+    }
+    
+    #login_table {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        
+    }
+    .text_field {
+        margin-top: 1em;
+        position: relative;
+        width: 80%;
+        font-size: 200%;
+    }
+    
+    #text_field_nickname {
+        margin-top: 1.3em;
+    }
+    #login_button {
+        position: relative;
+        height: 60%;
+        width:  65%;
+        margin-top: 1em;
+        font-size: 1.5em;
+        margin-left: 5.5em;
+    }
+    
+    #login_socialmedia{
+        position: relative;
+        height: 60%;
+        width:  65%;
+        margin-top: 1em;
+        font-size: 1.5em;
+        margin-left: 5.5em;
+    }
+    
+    #register_option {
+        position: relative;
+        height: 60%;
+        width:  65%;
+        margin-top: 1em;
+        font-size: 1.5em;
+        margin-left: 5.5em;
+    }
+    
+    #errorDivLogin {
+        width: 65%;
+        height: 5em;
+        margin-top: 1em;
+        font-size: 50%;
+        margin-bottom: 1em;
+    }
+    
+    #no_login_option {
+        position: relative;
+        height: 35%;
+        width:  65%;
+        margin-top: 1.5em;
+        font-size: 1.5em;
+        margin-left: 5.5em;
+    }
+    
+    hr {
+        width: 100%;
+    }
+    
+    
+    /* back_table */
+    
+    #register_header {
+        display: inline;
+        font-size: 200%;
+    }
+    .register_form {
+        width: 80%;
+        height: 50em;
+    }
+    
+    #register_table {
+        position: relative;
+        width: 100%; 
+        height: 100%;
+    }
+    
+    #register_button {
+        position: relative;
+        height: 60%;
+        width:  65%;
+        margin-top: 1em;
+        font-size: 1.5em;
+        margin-left: 5.5em;
+    }
+    
+    #errorDivRegister {
+        width: 60%;
+        height: 3em;
+        margin-top: 2em;
+        font-size: 50%;
+    }
+    
+    #text_field_reg_nickname {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #text_field_reg_email {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #text_field_reg_first_name {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #text_field_reg_last_name {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #text_field_reg_password {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #text_field_reg_rep_password {
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 /* Samsung Galaxy S3 (portrait) ----------- */
 @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
-  /* Styles */
+  #main_logo{
+        width: 100%;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #subtitle {
+        font-size: 200%;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    /* front_table */
+    .login_form {
+        width: 80%;
+        height: 40em;
+    }
+    
+    #login_table {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        
+    }
+    .text_field {
+        margin-top: 1em;
+        position: relative;
+        width: 80%;
+        font-size: 200%;
+    }
+    
+    #text_field_nickname {
+        margin-top: 1.3em;
+    }
+    #login_button {
+        position: relative;
+        height: 60%;
+        width:  65%;
+        margin-top: 1em;
+        font-size: 1.5em;
+        margin-left: 5.5em;
+    }
+    
+    #login_socialmedia{
+        position: relative;
+        height: 60%;
+        width:  65%;
+        margin-top: 1em;
+        font-size: 1.5em;
+        margin-left: 5.5em;
+    }
+    
+    #register_option {
+        position: relative;
+        height: 60%;
+        width:  65%;
+        margin-top: 1em;
+        font-size: 1.5em;
+        margin-left: 5.5em;
+    }
+    
+    #errorDivLogin {
+        width: 65%;
+        height: 5em;
+        margin-top: 1em;
+        font-size: 50%;
+        margin-bottom: 1em;
+    }
+    
+    #no_login_option {
+        position: relative;
+        height: 35%;
+        width:  65%;
+        margin-top: 1.5em;
+        font-size: 1.5em;
+        margin-left: 5.5em;
+    }
+    
+    hr {
+        width: 100%;
+    }
+    
+    
+    /* back_table */
+    
+    #register_header {
+        display: inline;
+        font-size: 200%;
+    }
+    .register_form {
+        width: 80%;
+        height: 50em;
+    }
+    
+    #register_table {
+        position: relative;
+        width: 100%; 
+        height: 100%;
+    }
+    
+    #register_button {
+        position: relative;
+        height: 60%;
+        width:  65%;
+        margin-top: 1em;
+        font-size: 1.5em;
+        margin-left: 5.5em;
+    }
+    
+    #errorDivRegister {
+        width: 60%;
+        height: 3em;
+        margin-top: 2em;
+        font-size: 50%;
+    }
+    
+    #text_field_reg_nickname {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #text_field_reg_email {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #text_field_reg_first_name {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #text_field_reg_last_name {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #text_field_reg_password {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #text_field_reg_rep_password {
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 /* Samsung Galaxy S4 (landscape) ----------- */
 @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
-  /* Styles */
+  #main_logo{
+        width: 100%;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #subtitle {
+        font-size: 200%;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    /* front_table */
+    .login_form {
+        width: 80%;
+        height: 40em;
+    }
+    
+    #login_table {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        
+    }
+    .text_field {
+        margin-top: 1em;
+        position: relative;
+        width: 80%;
+        font-size: 200%;
+    }
+    
+    #text_field_nickname {
+        margin-top: 1.3em;
+    }
+    #login_button {
+        position: relative;
+        height: 60%;
+        width:  65%;
+        margin-top: 1em;
+        font-size: 1.5em;
+        margin-left: 5.5em;
+    }
+    
+    #login_socialmedia{
+        position: relative;
+        height: 60%;
+        width:  65%;
+        margin-top: 1em;
+        font-size: 1.5em;
+        margin-left: 5.5em;
+    }
+    
+    #register_option {
+        position: relative;
+        height: 60%;
+        width:  65%;
+        margin-top: 1em;
+        font-size: 1.5em;
+        margin-left: 5.5em;
+    }
+    
+    #errorDivLogin {
+        width: 65%;
+        height: 5em;
+        margin-top: 1em;
+        font-size: 50%;
+        margin-bottom: 1em;
+    }
+    
+    #no_login_option {
+        position: relative;
+        height: 35%;
+        width:  65%;
+        margin-top: 1.5em;
+        font-size: 1.5em;
+        margin-left: 5.5em;
+    }
+    
+    hr {
+        width: 100%;
+    }
+    
+    
+    /* back_table */
+    
+    #register_header {
+        display: inline;
+        font-size: 200%;
+    }
+    .register_form {
+        width: 80%;
+        height: 50em;
+    }
+    
+    #register_table {
+        position: relative;
+        width: 100%; 
+        height: 100%;
+    }
+    
+    #register_button {
+        position: relative;
+        height: 60%;
+        width:  65%;
+        margin-top: 1em;
+        font-size: 1.5em;
+        margin-left: 5.5em;
+    }
+    
+    #errorDivRegister {
+        width: 60%;
+        height: 3em;
+        margin-top: 2em;
+        font-size: 50%;
+    }
+    
+    #text_field_reg_nickname {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #text_field_reg_email {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #text_field_reg_first_name {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #text_field_reg_last_name {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #text_field_reg_password {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #text_field_reg_rep_password {
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 /* Samsung Galaxy S4 (portrait) ----------- */
 @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
-  /* Styles */
+  #main_logo{
+        width: 100%;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #subtitle {
+        font-size: 200%;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    /* front_table */
+    .login_form {
+        width: 80%;
+        height: 40em;
+    }
+    
+    #login_table {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        
+    }
+    .text_field {
+        margin-top: 1em;
+        position: relative;
+        width: 80%;
+        font-size: 200%;
+    }
+    
+    #text_field_nickname {
+        margin-top: 1.3em;
+    }
+    #login_button {
+        position: relative;
+        height: 60%;
+        width:  65%;
+        margin-top: 1em;
+        font-size: 1.5em;
+        margin-left: 5.5em;
+    }
+    
+    #login_socialmedia{
+        position: relative;
+        height: 60%;
+        width:  65%;
+        margin-top: 1em;
+        font-size: 1.5em;
+        margin-left: 5.5em;
+    }
+    
+    #register_option {
+        position: relative;
+        height: 60%;
+        width:  65%;
+        margin-top: 1em;
+        font-size: 1.5em;
+        margin-left: 5.5em;
+    }
+    
+    #errorDivLogin {
+        width: 65%;
+        height: 5em;
+        margin-top: 1em;
+        font-size: 50%;
+        margin-bottom: 1em;
+    }
+    
+    #no_login_option {
+        position: relative;
+        height: 35%;
+        width:  65%;
+        margin-top: 1.5em;
+        font-size: 1.5em;
+        margin-left: 5.5em;
+    }
+    
+    hr {
+        width: 100%;
+    }
+    
+    
+    /* back_table */
+    
+    #register_header {
+        display: inline;
+        font-size: 200%;
+    }
+    .register_form {
+        width: 80%;
+        height: 50em;
+    }
+    
+    #register_table {
+        position: relative;
+        width: 100%; 
+        height: 100%;
+    }
+    
+    #register_button {
+        position: relative;
+        height: 60%;
+        width:  65%;
+        margin-top: 1em;
+        font-size: 1.5em;
+        margin-left: 5.5em;
+    }
+    
+    #errorDivRegister {
+        width: 60%;
+        height: 3em;
+        margin-top: 2em;
+        font-size: 50%;
+    }
+    
+    #text_field_reg_nickname {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #text_field_reg_email {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #text_field_reg_first_name {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #text_field_reg_last_name {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #text_field_reg_password {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #text_field_reg_rep_password {
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 /* Samsung Galaxy S5 (landscape) ----------- */
 @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
-  /* Styles */
+  #main_logo{
+        width: 100%;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #subtitle {
+        font-size: 200%;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    /* front_table */
+    .login_form {
+        width: 80%;
+        height: 40em;
+    }
+    
+    #login_table {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        
+    }
+    .text_field {
+        margin-top: 1em;
+        position: relative;
+        width: 80%;
+        font-size: 200%;
+    }
+    
+    #text_field_nickname {
+        margin-top: 1.3em;
+    }
+    #login_button {
+        position: relative;
+        height: 60%;
+        width:  65%;
+        margin-top: 1em;
+        font-size: 1.5em;
+        margin-left: 5.5em;
+    }
+    
+    #login_socialmedia{
+        position: relative;
+        height: 60%;
+        width:  65%;
+        margin-top: 1em;
+        font-size: 1.5em;
+        margin-left: 5.5em;
+    }
+    
+    #register_option {
+        position: relative;
+        height: 60%;
+        width:  65%;
+        margin-top: 1em;
+        font-size: 1.5em;
+        margin-left: 5.5em;
+    }
+    
+    #errorDivLogin {
+        width: 65%;
+        height: 5em;
+        margin-top: 1em;
+        font-size: 50%;
+        margin-bottom: 1em;
+    }
+    
+    #no_login_option {
+        position: relative;
+        height: 35%;
+        width:  65%;
+        margin-top: 1.5em;
+        font-size: 1.5em;
+        margin-left: 5.5em;
+    }
+    
+    hr {
+        width: 100%;
+    }
+    
+    
+    /* back_table */
+    
+    #register_header {
+        display: inline;
+        font-size: 200%;
+    }
+    .register_form {
+        width: 80%;
+        height: 50em;
+    }
+    
+    #register_table {
+        position: relative;
+        width: 100%; 
+        height: 100%;
+    }
+    
+    #register_button {
+        position: relative;
+        height: 60%;
+        width:  65%;
+        margin-top: 1em;
+        font-size: 1.5em;
+        margin-left: 5.5em;
+    }
+    
+    #errorDivRegister {
+        width: 60%;
+        height: 3em;
+        margin-top: 2em;
+        font-size: 50%;
+    }
+    
+    #text_field_reg_nickname {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #text_field_reg_email {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #text_field_reg_first_name {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #text_field_reg_last_name {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #text_field_reg_password {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #text_field_reg_rep_password {
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 /* Samsung Galaxy S5 (portrait) ----------- */
 @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
-    /* Styles */}
+    #main_logo{
+        width: 100%;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #subtitle {
+        font-size: 200%;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    /* front_table */
+    .login_form {
+        width: 80%;
+        height: 40em;
+    }
+    
+    #login_table {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        
+    }
+    .text_field {
+        margin-top: 1em;
+        position: relative;
+        width: 80%;
+        font-size: 200%;
+    }
+    
+    #text_field_nickname {
+        margin-top: 1.3em;
+    }
+    #login_button {
+        position: relative;
+        height: 60%;
+        width:  65%;
+        margin-top: 1em;
+        font-size: 1.5em;
+        margin-left: 5.5em;
+    }
+    
+    #login_socialmedia{
+        position: relative;
+        height: 60%;
+        width:  65%;
+        margin-top: 1em;
+        font-size: 1.5em;
+        margin-left: 5.5em;
+    }
+    
+    #register_option {
+        position: relative;
+        height: 60%;
+        width:  65%;
+        margin-top: 1em;
+        font-size: 1.5em;
+        margin-left: 5.5em;
+    }
+    
+    #errorDivLogin {
+        width: 65%;
+        height: 5em;
+        margin-top: 1em;
+        font-size: 50%;
+        margin-bottom: 1em;
+    }
+    
+    #no_login_option {
+        position: relative;
+        height: 35%;
+        width:  65%;
+        margin-top: 1.5em;
+        font-size: 1.5em;
+        margin-left: 5.5em;
+    }
+    
+    hr {
+        width: 100%;
+    }
+    
+    
+    /* back_table */
+    
+    #register_header {
+        display: inline;
+        font-size: 200%;
+    }
+    .register_form {
+        width: 80%;
+        height: 50em;
+    }
+    
+    #register_table {
+        position: relative;
+        width: 100%; 
+        height: 100%;
+    }
+    
+    #register_button {
+        position: relative;
+        height: 60%;
+        width:  65%;
+        margin-top: 1em;
+        font-size: 1.5em;
+        margin-left: 5.5em;
+    }
+    
+    #errorDivRegister {
+        width: 60%;
+        height: 3em;
+        margin-top: 2em;
+        font-size: 50%;
+    }
+    
+    #text_field_reg_nickname {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #text_field_reg_email {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #text_field_reg_first_name {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #text_field_reg_last_name {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #text_field_reg_password {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #text_field_reg_rep_password {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
