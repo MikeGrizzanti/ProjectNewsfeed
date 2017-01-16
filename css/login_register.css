@@ -210,6 +210,21 @@ hr {
     background-color: #fbfbfb;
 }
 
+#register_header {
+    margin-top: 0.5em;
+    margin-left: 1em;
+    
+    display: inline;
+}
+
+#switch_to_login {
+    height: 0.8em;
+    width: 0.8em;
+    margin-top: 0.5em;
+    margin-left: 0.5em;
+    display: inline;
+}
+
 #register_table {
     margin-left: auto;
     margin-right: auto;
@@ -347,6 +362,7 @@ hr {
     /* back_table */
     
     #register_header {
+        display: inline;
         font-size: 200%;
     }
     .register_form {
