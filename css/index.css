@@ -311,6 +311,18 @@ hr {
     color: grey;
 }
 
+.url_box{
+    opacity: 0;
+    -webkit-transition:all 0.2s ease;
+    -moz-transition:all 0.2s ease;
+    -o-transition:all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+.url_box_show{
+    opacity: 1;
+}
+
 /*mediaqurries*/
 
 /* Smartphones (portrait and landscape) ----------- */

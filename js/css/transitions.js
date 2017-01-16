@@ -6,4 +6,10 @@
         $(".top_icon_close_sidebar").toggleClass("Show_Cross");
         $(".sidebar").toggleClass("Show_Sidebar");
     });
+     
+     
+     //Open add feed
+    $(".add_feed").click(function () {
+        $(".url_box").toggleClass("url_box_show");
+    });
 });
