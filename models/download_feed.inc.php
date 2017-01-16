@@ -1,6 +1,7 @@
 <?php
 if ($_POST) {
     try {
+        error_reporting(0);
         //curl and header
         $ch = curl_init();
         if (isset($_POST['add_feed'])) {
