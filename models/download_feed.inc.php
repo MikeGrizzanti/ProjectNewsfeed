@@ -40,7 +40,10 @@ if ($_POST) {
     elseif ($headers[0] == 'HTTP/1.1 404 Not Found'){
         print_r("Error! This url cannot be retrived: Server response -> " .$headers[0]); 
     }
-    else{
-        print_r("We're sorry this feed could not be processed!"); 
+    elseif ($headers[0] =='HTTP/1.1 500 Internal Error'){
+        print_r("We're sorry this feed could not be processed!" .$headers[0]); 
+    }
+    else {
+        print_r("URL does not exist and/or couldn't be found");
     }
 }
