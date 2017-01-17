@@ -1265,19 +1265,19 @@ hr {
     #text_field_nickname {
         margin-top: 1.3em;
     }
-    #login_button {
+     #login_button {
         position: relative;
         height: 60%;
-        width:  65%;
+        width:  60%;
         margin-top: 1em;
         font-size: 1.5em;
-        margin-left: 5.5em;
+        
     }
     
     #login_socialmedia{
         position: relative;
         height: 60%;
-        width:  65%;
+        width:  60%;
         margin-top: 1em;
         font-size: 1.5em;
         margin-left: 5.5em;
@@ -1286,24 +1286,25 @@ hr {
     #register_option {
         position: relative;
         height: 60%;
-        width:  65%;
+        width:  60%;
         margin-top: 1em;
         font-size: 1.5em;
         margin-left: 5.5em;
     }
     
     #errorDivLogin {
-        width: 65%;
+        width: 60%;
         height: 5em;
         margin-top: 1em;
         font-size: 50%;
         margin-bottom: 1em;
+        margin-left: 16em;
     }
     
     #no_login_option {
         position: relative;
         height: 35%;
-        width:  65%;
+        width:  60%;
         margin-top: 1.5em;
         font-size: 1.5em;
         margin-left: 5.5em;
@@ -1416,19 +1417,20 @@ hr {
     #text_field_nickname {
         margin-top: 1.3em;
     }
+    
     #login_button {
         position: relative;
         height: 60%;
-        width:  65%;
+        width:  60%;
         margin-top: 1em;
         font-size: 1.5em;
-        margin-left: 5.5em;
+        
     }
     
     #login_socialmedia{
         position: relative;
         height: 60%;
-        width:  65%;
+        width:  60%;
         margin-top: 1em;
         font-size: 1.5em;
         margin-left: 5.5em;
@@ -1437,24 +1439,25 @@ hr {
     #register_option {
         position: relative;
         height: 60%;
-        width:  65%;
+        width:  60%;
         margin-top: 1em;
         font-size: 1.5em;
         margin-left: 5.5em;
     }
     
     #errorDivLogin {
-        width: 65%;
+        width: 60%;
         height: 5em;
         margin-top: 1em;
         font-size: 50%;
         margin-bottom: 1em;
+        margin-left: 16em;
     }
     
     #no_login_option {
         position: relative;
         height: 35%;
-        width:  65%;
+        width:  60%;
         margin-top: 1.5em;
         font-size: 1.5em;
         margin-left: 5.5em;
@@ -1496,6 +1499,7 @@ hr {
         height: 3em;
         margin-top: 2em;
         font-size: 50%;
+        margin-left: 16.5em;
     }
     
     #text_field_reg_nickname {
