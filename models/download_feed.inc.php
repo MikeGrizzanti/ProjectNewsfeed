@@ -35,7 +35,7 @@ if ($_POST) {
         $parsed_url = parse_url($source, PHP_URL_HOST);
 
         //destination setup
-        $destination = "xml_downloads/it-IT/" . $parsed_url . "_" . $array[channel][language];
+        $destination = "xml_downloads/" . $parsed_url . "_" . $array[channel][language];
     
 
         // URL validations based on $retcode
