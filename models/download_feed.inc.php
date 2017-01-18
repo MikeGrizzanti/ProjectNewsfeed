@@ -21,14 +21,13 @@ if ($_POST) {
         $b = strpos($response, '</m:validity>', $a); 
         $result = substr($response, $a, $b-$a);
     
-        //parse
+        //parse file via url and get the language before saving
         $context  = stream_context_create(array('http' => array('header' => 'Accept: application/xml')));
 
         $xml = file_get_contents($source, false, $context);
         $xml = simplexml_load_string($xml);
         $json = json_encode($xml);
         $array = json_decode($json,TRUE);
-                echo gettype($array[channel][language]);
     
         //name
         $file_name = preg_replace('#^https?://#', '', $source);
@@ -45,6 +44,18 @@ if ($_POST) {
                 $file = fopen($destination, "w+");
                 fputs($file, $data);
                 fclose($file);
+            
+                //parse-test
+                $i = 0; // counter
+                $rss = simplexml_load_file($destination); // XML parser
+
+                foreach($xrss->channel->item as $item) {
+                        if ($i < 100) { // parse only 10 items
+                            print '<a href="'.$item->link.'">'.$item->title.'</a><br />';
+                        }
+                            $i++;
+                }
+            
         } 
     
         elseif ($retcode > 200 || $result == 'false'){
@@ -55,4 +66,4 @@ if ($_POST) {
             print_r("URL does not exist and/or couldn't be found: Server response -> " .$retcode);
         }
     
-}	
+}		
