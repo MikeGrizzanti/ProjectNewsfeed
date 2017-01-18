@@ -27,10 +27,6 @@ if ($_POST) {
 
         //destination setup
         $destination = "xml_downloads/" . $parsed_url;
-    
-        $xml=simplexml_load_file($destination) or die("Error: Cannot create object");
-        print_r($xml);
-
 
         // URL validations based on $retcode
         if ($retcode == 200 && $result == 'true') {
@@ -39,6 +35,10 @@ if ($_POST) {
                 $file = fopen($destination, "w+");
                 fputs($file, $data);
                 fclose($file);
+            
+                //parse
+                $xml=simplexml_load_file($destination) or die("Error: Cannot create object");
+                print_r($xml);
         } 
     
         elseif ($retcode > 200 || $result == 'false'){
