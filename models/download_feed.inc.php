@@ -12,6 +12,14 @@ if ($_POST) {
         $data = curl_exec ($ch);
         $retcode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
         curl_close ($ch);
+    
+        //XMLReader init
+                $validator = "http://validator.w3.org/feed/check.cgi?url=".$source."&output=soap12";
+
+                $response = file_get_contents($validator);
+                $a = strpos($response, '<m:validity>', 0)+12; 
+                $b = strpos($response, '</m:validity>', $a); 
+                $result = substr($response, $a, $b-$a);
 
 
         //name
@@ -24,13 +32,6 @@ if ($_POST) {
 
         // URL validations based on $retcode
         if ($retcode == 200 && $result == 'true') {
-                //XMLReader init
-                $validator = "http://validator.w3.org/feed/check.cgi?url=".$source."&output=soap12";
-
-                $response = file_get_contents($validator);
-                $a = strpos($response, '<m:validity>', 0)+12; 
-                $b = strpos($response, '</m:validity>', $a); 
-                $result = substr($response, $a, $b-$a);
             
                 //exec
                 $file = fopen($destination, "w+");
