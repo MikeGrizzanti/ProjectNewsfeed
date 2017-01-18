@@ -8,6 +8,8 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
         <link rel="icon" type="image/svg+xml" href="../images/mindfeed_favicon.svg" sizes="16x16" />
+        <meta name="google-signin-client_id" content="764761977830-m3m48i2fqvjf267sl6ibdr2lnb97dgj2.apps.googleusercontent.com">
+        <script src="https://apis.google.com/js/platform.js" async defer></script>
     </head>
     <body>
         
@@ -58,7 +60,7 @@
                                 </tr>
                                 <tr>
                                     <td>
-                                    <a href="#"><input class="button" id="login_socialmedia" type="button" value="LOGIN WITH FACEBOOK" /></a>
+                                        <div class="g-signin2" data-onsuccess="onSignIn"></div>
                                     </td>
                                 </tr>
                                 <tr>
