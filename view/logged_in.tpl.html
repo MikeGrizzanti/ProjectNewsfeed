@@ -29,7 +29,7 @@
             <a class="add_point">ADD INTEREST +</a>
             <form method="post" action="index.php?action=feed">
                 <a class="add_feed">ADD FEED +</a>
-                <input name="add_feed" type="url" class="url_box" placeholder="Ex: http://www.yoursite.com" value="<? php $source ?>">
+                <input name="add_feed" type="url" class="url_box" placeholder="Ex: http://www.yoursite.com">
                 <?php if ($retcode == 200 && $result == 'true') { ?>
                 <iframe width="300" height="400" src="http://www.rss-anzeigen.com/feed.php?showtype=1&url=<?php $source ?>&textfont=2&fontsize=10&fontc=000000&linkc=0000FF&tabwidth=300&tabborder=888888&tabbg=F8F8F8&newscount=5&newsshow=1&maxchars=0&target=1&ifbg=FFFFFF" frameborder=0>
                 </iframe>
