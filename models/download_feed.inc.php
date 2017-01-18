@@ -49,7 +49,7 @@ if ($_POST) {
                 $i = 0; // counter
                 $rss = simplexml_load_file($destination); // XML parser
 
-                foreach($xrss->channel->item as $item) {
+                foreach($rss->channel->item as $item) {
                         if ($i < 100) { // parse only 10 items
                             print '<a href="'.$item->link.'">'.$item->title.'</a><br />';
                         }
