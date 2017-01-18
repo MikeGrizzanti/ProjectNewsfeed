@@ -21,21 +21,21 @@ if ($_POST) {
         $b = strpos($response, '</m:validity>', $a); 
         $result = substr($response, $a, $b-$a);
     
+        //parse
+        $context  = stream_context_create(array('http' => array('header' => 'Accept: application/xml')));
+
+        $xml = file_get_contents($source, false, $context);
+        $xml = simplexml_load_string($xml);
+        $json = json_encode($xml);
+        $array = json_decode($json,TRUE);
+                echo gettype($array[channel][language]);
+    
         //name
         $file_name = preg_replace('#^https?://#', '', $source);
         $parsed_url = parse_url($source, PHP_URL_HOST);
 
         //destination setup
-        $destination = "xml_downloads/" . $parsed_url;
-    
-        //parse
-                $context  = stream_context_create(array('http' => array('header' => 'Accept: application/xml')));
-
-                $xml = file_get_contents($source, false, $context);
-                $xml = simplexml_load_string($xml);
-                $json = json_encode($xml);
-                $array = json_decode($json,TRUE);
-                print_r($array->channel);
+        $destination = "xml_downloads/it-IT/" . $parsed_url . "_" . $array[channel][language];
     
 
         // URL validations based on $retcode
