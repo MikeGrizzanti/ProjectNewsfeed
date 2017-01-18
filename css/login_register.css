@@ -122,6 +122,10 @@ body {
     font-weight: normal;
     letter-spacing: 0.1em;
 }
+.fb-login-button {
+    
+    
+}
 
 hr {
     width: 12em;
@@ -1189,7 +1193,7 @@ hr {
 }
 
 /* Desktops and laptops ----------- */
-@media only screen and (min-width: 1224px) {
+@media only screen and (min-width: 1024px) {
     #main_logo{
         width: 25%;
         height: auto;

@@ -278,9 +278,12 @@ hr {
     border-bottom: 1.5px solid #000;
 }
 
+#container_table {
+    width: 100%;
+    text-align: center;
+}
 .theme_container {
     display: inline;
-    margin-right: 5em;
     font-family: "Roboto",sans-serif;
     white-space: none;
     font-size: 0.7em;
@@ -288,7 +291,6 @@ hr {
 }
 .source_container {
     display: inline;
-    margin-right: 5em;
     font-family: "Roboto",sans-serif;
     white-space: none;
     font-size: 0.7em;
@@ -299,12 +301,12 @@ hr {
     font-family: "Roboto",sans-serif;
     white-space: none;
     font-size: 0.8em;
-    color: #fbb040;
+    color: #faaf41;
 }
 
 .news_card_sublink{
     text-decoration: none;
-    color: grey;
+    color: #787878;
 }
 
 .url_box{
