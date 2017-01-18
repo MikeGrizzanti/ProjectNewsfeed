@@ -11,28 +11,13 @@
     </head>
     <body>
         <div id="fb-root"></div>
-        <script>/*(function(d, s, id) {
+        <script>(function(d, s, id) {
             var js, fjs = d.getElementsByTagName(s)[0];
             if (d.getElementById(id)) return;
             js = d.createElement(s); js.id = id;
             js.src = "//connect.facebook.net/de_DE/sdk.js#xfbml=1&version=v2.8&appId=167575093726927";
             fjs.parentNode.insertBefore(js, fjs);
-            }(document, 'script', 'facebook-jssdk'));*/
-        
-        
-        $(document).ready(function() {
-              $.ajaxSetup({ cache: true });
-              $.getScript('//connect.facebook.net/en_US/sdk.js', function(){
-                FB.init({
-                  appId: '{your-app-id}',
-                  version: 'v2.7' // or v2.1, v2.2, v2.3, ...
-                });     
-                $('#loginbutton,#feedbutton').removeAttr('disabled');
-                FB.getLoginStatus(updateStatusCallback);
-              });
-        });
-        
-        </script>
+            }(document, 'script', 'facebook-jssdk'));</script>
         
         
             <img id="main_logo" src="../images/Logo_Mindfeed_White_Orange.svg" id="main_logo"/>
