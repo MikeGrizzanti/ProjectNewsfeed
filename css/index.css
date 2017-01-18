@@ -26,18 +26,17 @@ a:hover {
 }
 
 #search {
-    display: inline;
     position: relative;
     margin-left: auto;
     margin-right: auto;
     margin-top: 0;
-    width: 35rem;
+    margin-left: 30em;
+    width: 35em;
     height: 1.5rem;
     border-radius: 2px;
     border-top: 0;
     border-left: 0;
     background-image: url(../images/search.svg);
-    
     background-repeat: no-repeat;
     background-position: bottom left;
     padding-left: 1.5em;
@@ -46,7 +45,7 @@ a:hover {
 .top_icon_open_sidebar {
     display: inline;
     position: fixed;
-    margin-left: 5em;
+    margin-left: 2em;
     height: 1.25em;
     z-index: 999;
     opacity: 1;
@@ -61,8 +60,9 @@ a:hover {
 }
 
 .top_icon_close_sidebar {
+    display: inline;
     position: fixed;
-    margin-left: 5em;
+    margin-left: 2em;
     height: 1.25em;
     z-index: 899;
     opacity: 0;
@@ -95,6 +95,7 @@ a:hover {
 }
 
 #login_register_button {
+    position: inline;
     position: relative;
     text-decoration: none;
     display: inline;
@@ -106,7 +107,7 @@ a:hover {
     color: #fafafa;
     background-color: #FBB040;
     border: 0;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.05em;
     margin-left: 70em;
     border-radius: 2px;
 }
