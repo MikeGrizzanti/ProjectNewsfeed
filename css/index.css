@@ -32,7 +32,7 @@ a:hover {
     margin-top: 0;
     margin-left: 30em;
     width: 35em;
-    height: 1.5rem;
+    height: 2em;
     border-radius: 2px;
     border-top: 0;
     border-left: 0;
@@ -95,10 +95,6 @@ a:hover {
 }
 
 #login_register_button {
-    position: inline;
-    position: relative;
-    text-decoration: none;
-    display: inline;
     text-align: center;
     height: 2em;
     width: 13em;
@@ -108,7 +104,7 @@ a:hover {
     background-color: #FBB040;
     border: 0;
     letter-spacing: 0.05em;
-    margin-left: 70em;
+    margin-left: 11em;
     border-radius: 2px;
 }
 #login_register_button:active{
