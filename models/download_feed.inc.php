@@ -33,7 +33,7 @@ if ($_POST) {
 
                 $xml = file_get_contents($source, false, $context);
                 $xml = simplexml_load_string($xml);
-                print_r($xml->channel->language);
+                print_r($xml->channel->language[0]);
     
 
         // URL validations based on $retcode
