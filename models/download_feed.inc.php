@@ -14,20 +14,22 @@ if ($_POST) {
         curl_close ($ch);
     
         //XMLReader init
-                $validator = "http://validator.w3.org/feed/check.cgi?url=".$source."&output=soap12";
+        $validator = "http://validator.w3.org/feed/check.cgi?url=".$source."&output=soap12";
 
-                $response = file_get_contents($validator);
-                $a = strpos($response, '<m:validity>', 0)+12; 
-                $b = strpos($response, '</m:validity>', $a); 
-                $result = substr($response, $a, $b-$a);
-
-
+        $response = file_get_contents($validator);
+        $a = strpos($response, '<m:validity>', 0)+12; 
+        $b = strpos($response, '</m:validity>', $a); 
+        $result = substr($response, $a, $b-$a);
+    
         //name
         $file_name = preg_replace('#^https?://#', '', $source);
         $parsed_url = parse_url($source, PHP_URL_HOST);
 
         //destination setup
         $destination = "xml_downloads/" . $parsed_url;
+    
+        $xml=simplexml_load_file($destination) or die("Error: Cannot create object");
+        print_r($xml);
 
 
         // URL validations based on $retcode
