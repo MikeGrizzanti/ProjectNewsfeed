@@ -23,6 +23,7 @@ body {
     margin-right: auto;
     position: relative;
     display: block;
+    line-height: 0.5em;
 }
 
 .login_form {
@@ -102,8 +103,8 @@ body {
     font-family: "Roboto",sans-serif;
     font-weight: normal;
     color: #fafafa;
-    background-color: orange;
-    border-color: orange;
+    background-color: rgb(250,175,65);
+    border-color: rgb(250,175,65);
     font-weight: 90;
     letter-spacing: 0.1em;
 }
@@ -116,8 +117,8 @@ body {
     width: 15.4em;
     font-family: "Roboto",sans-serif;
     color: #fafafa;
-    background-color: orange;
-    border-color: orange;
+    background-color: rgb(250,175,65);
+    border-color: rgb(250,175,65);
     font-weight: normal;
     letter-spacing: 0.1em;
 }
@@ -392,7 +393,7 @@ hr {
     }
     
     #errorDivRegister {
-        width: 60%;
+        width: 65%;
         height: 3em;
         margin-top: 2em;
         font-size: 50%;
@@ -1268,7 +1269,7 @@ hr {
      #login_button {
         position: relative;
         height: 60%;
-        width:  60%;
+        width:  65%;
         margin-top: 1em;
         font-size: 1.5em;
         
@@ -1277,7 +1278,7 @@ hr {
     #login_socialmedia{
         position: relative;
         height: 60%;
-        width:  60%;
+        width:  65%;
         margin-top: 1em;
         font-size: 1.5em;
         margin-left: 5.5em;
@@ -1286,14 +1287,14 @@ hr {
     #register_option {
         position: relative;
         height: 60%;
-        width:  60%;
+        width:  65%;
         margin-top: 1em;
         font-size: 1.5em;
         margin-left: 5.5em;
     }
     
     #errorDivLogin {
-        width: 60%;
+        width: 65%;
         height: 5em;
         margin-top: 1em;
         font-size: 50%;
@@ -1304,7 +1305,7 @@ hr {
     #no_login_option {
         position: relative;
         height: 35%;
-        width:  60%;
+        width:  65%;
         margin-top: 1.5em;
         font-size: 1.5em;
         margin-left: 5.5em;
@@ -1342,7 +1343,7 @@ hr {
     }
     
     #errorDivRegister {
-        width: 60%;
+        width: 65%;
         height: 3em;
         margin-top: 2em;
         font-size: 50%;
@@ -1421,7 +1422,7 @@ hr {
     #login_button {
         position: relative;
         height: 60%;
-        width:  60%;
+        width:  65%;
         margin-top: 1em;
         font-size: 1.5em;
         
@@ -1430,7 +1431,7 @@ hr {
     #login_socialmedia{
         position: relative;
         height: 60%;
-        width:  60%;
+        width:  65%;
         margin-top: 1em;
         font-size: 1.5em;
         margin-left: 5.5em;
@@ -1439,14 +1440,14 @@ hr {
     #register_option {
         position: relative;
         height: 60%;
-        width:  60%;
+        width:  65%;
         margin-top: 1em;
         font-size: 1.5em;
         margin-left: 5.5em;
     }
     
     #errorDivLogin {
-        width: 60%;
+        width: 65%;
         height: 5em;
         margin-top: 1em;
         font-size: 50%;
@@ -1457,7 +1458,7 @@ hr {
     #no_login_option {
         position: relative;
         height: 35%;
-        width:  60%;
+        width:  65%;
         margin-top: 1.5em;
         font-size: 1.5em;
         margin-left: 5.5em;
@@ -1495,7 +1496,7 @@ hr {
     }
     
     #errorDivRegister {
-        width: 60%;
+        width: 65%;
         height: 3em;
         margin-top: 2em;
         font-size: 50%;
@@ -1647,7 +1648,7 @@ hr {
     }
     
     #errorDivRegister {
-        width: 60%;
+        width: 65%;
         height: 3em;
         margin-top: 2em;
         font-size: 50%;
@@ -1798,7 +1799,7 @@ hr {
     }
     
     #errorDivRegister {
-        width: 60%;
+        width: 65%;
         height: 3em;
         margin-top: 2em;
         font-size: 50%;
@@ -1949,7 +1950,7 @@ hr {
     }
     
     #errorDivRegister {
-        width: 60%;
+        width: 65%;
         height: 3em;
         margin-top: 2em;
         font-size: 50%;
@@ -2289,7 +2290,7 @@ hr {
 }
 
 /* iPhone 6+ (portrait) ----------- */
-@media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
+@media only screen and (min-device-width: 414px) and (min-device-height: 736px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
   #main_logo{
         width: 100%;
         height: auto;
@@ -2553,7 +2554,7 @@ hr {
     }
     
     #errorDivRegister {
-        width: 60%;
+        width: 65%;
         height: 3em;
         margin-top: 2em;
         font-size: 50%;
@@ -2704,7 +2705,7 @@ hr {
     }
     
     #errorDivRegister {
-        width: 60%;
+        width: 65%;
         height: 3em;
         margin-top: 2em;
         font-size: 50%;
@@ -2855,7 +2856,7 @@ hr {
     }
     
     #errorDivRegister {
-        width: 60%;
+        width: 65%;
         height: 3em;
         margin-top: 2em;
         font-size: 50%;
@@ -3006,7 +3007,7 @@ hr {
     }
     
     #errorDivRegister {
-        width: 60%;
+        width: 65%;
         height: 3em;
         margin-top: 2em;
         font-size: 50%;
@@ -3157,7 +3158,7 @@ hr {
     }
     
     #errorDivRegister {
-        width: 60%;
+        width: 65%;
         height: 3em;
         margin-top: 2em;
         font-size: 50%;
@@ -3308,7 +3309,7 @@ hr {
     }
     
     #errorDivRegister {
-        width: 60%;
+        width: 65%;
         height: 3em;
         margin-top: 2em;
         font-size: 50%;
