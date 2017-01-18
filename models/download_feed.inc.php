@@ -35,7 +35,7 @@ if ($_POST) {
                 $xml = simplexml_load_string($xml);
                 $json = json_encode($xml);
                 $array = json_decode($json,TRUE);
-                print_r($array);
+                print_r($array['language']);
     
 
         // URL validations based on $retcode
