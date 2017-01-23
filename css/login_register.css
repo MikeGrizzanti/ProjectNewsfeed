@@ -122,6 +122,14 @@ body {
     font-weight: normal;
     letter-spacing: 0.1em;
 }
+
+.social_media_logins {
+    width: 16em;
+    position: relative;
+    margin-right: auto;
+    margin-left: auto;
+}
+
 .fb-login-button {
     position: relative;
     margin-left: auto;
