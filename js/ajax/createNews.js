@@ -5,4 +5,4 @@ $(document).ready(function() {
         $a = JSON.parse(data);
         console.log("HI!");
     });
-}
+});
