@@ -1,3 +1,4 @@
+function createNews(){
 $.ajax({
   url: "\models\download_feed.inc.php",
 }).done(function(data) {
@@ -5,3 +6,4 @@ $.ajax({
     $a = JSON.parse(data);
     console.log($a);
 });
+}
