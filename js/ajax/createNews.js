@@ -4,5 +4,9 @@ $(document).ready(function() {
     success:function(data) {
       console.log(data); 
     }
+    error: function (xhr, ajaxOptions, thrownError) {
+        alert(xhr.status);
+        alert(thrownError);
+      }
+    });
   });
-});
