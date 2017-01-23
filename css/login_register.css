@@ -122,6 +122,14 @@ body {
     font-weight: normal;
     letter-spacing: 0.1em;
 }
+
+.social_media_logins {
+    width: 16em;
+    position: relative;
+    margin-right: auto;
+    margin-left: auto;
+}
+
 .fb-login-button {
     position: relative;
     margin-left: auto;
@@ -140,21 +148,6 @@ hr {
     margin-right: auto;
 }
 
-#login_socialmedia {
-    border-color: #3b5998;
-    background-color: #3b5998;
-    font-family: "Roboto",sans-serif;
-    font-weight: normal;
-    color: #fafafa;
-    margin: 3em;
-    margin-top: 1em;
-    margin-bottom: 1em;
-    height: 2em;
-    width: 15.4em;
-    letter-spacing: 0.1em;
-    font-weight: 30;
-}
-
 #no_login_option{
     border-color: #bdbdbd;
     background-color: #bdbdbd;
@@ -162,6 +155,7 @@ hr {
     font-weight: normal;
     color: #fafafa;
     margin: 3em;
+    margin-bottom: 0;
     margin-top: 1em;
     height: 2em;
     width: 15.4em;
