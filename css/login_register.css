@@ -132,7 +132,7 @@ body {
 
 .fb-login-button {
     position: relative;
-    margin-left: auto;
+    margin-left: 3em;
     margin-right: auto;
     height: 2em;
     width: 2em;
