@@ -50,9 +50,9 @@ if ($_POST) {
                 //$rss = simplexml_load_file($destination); // XML parser
 
                 foreach($xml->channel->item as $item) {
-                        if ($i < 100) { // parse only 10 items
-                            $string = '<a href="'.$item->link.'">'.$item->title.'</a><br />';
-                            echo json_encode($string);
+                        if ($i < 100) { // parse only 100 items
+                            echo json_encode("23");
+                            //'<a href="'.$item->link.'">'.$item->title.'</a><br />'
                         }
                             $i++;
                 }
