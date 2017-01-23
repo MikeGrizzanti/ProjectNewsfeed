@@ -199,7 +199,6 @@ a:hover {
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
     text-decoration: none;
-    
 }
 
 #social_media_icons_div {
@@ -209,6 +208,7 @@ a:hover {
 .social_media_icon {
     height: 2em;
 }
+
 #first_icon {
     margin-left: 1.5em; 
 }
@@ -238,9 +238,7 @@ a:hover {
     text-transform: none;
 }
 
-hr {
-    width: 17em;
-}
+
 
 
 
@@ -319,6 +317,12 @@ hr {
 
 .url_box_show{
     opacity: 1;
+}
+
+
+.horizontal_line {
+    background-color: #faaf41; 
+    width: 17em;
 }
 
 /*mediaqurries*/
