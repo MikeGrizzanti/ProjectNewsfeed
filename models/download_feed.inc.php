@@ -51,8 +51,8 @@ if ($_POST) {
 
                 foreach($xml->channel->item as $item) {
                         if ($i < 100) { // parse only 100 items
-                            echo json_encode($xml);
-                            print '<a href="'.$item->link.'">'.$item->title.'</a><br />';
+                            echo $array;
+                            //print '<a href="'.$item->link.'">'.$item->title.'</a><br />';
                         }
                             $i++;
                 }
