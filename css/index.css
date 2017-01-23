@@ -131,12 +131,12 @@ a:hover {
 .sidebar {
     position: absolute;
     width: 20rem;
-    height: 35em;
+    height: 32em;
     left: 0; right: 0; top: 12em; bottom: 0;
     background-color: #fbb040;
     float: left;
-    margin-left: 1.5em;
-    margin-top: 1em;
+    margin-left: 1.8em;
+    margin-top: 0.6em;
     border-radius: 2px;
     text-transform: uppercase;
     z-index: 799;
@@ -259,11 +259,18 @@ a:hover {
 .news_card {
     width: 18em;
     padding: 0.5em;
+    margin: 0.2em;
+    margin-top: 0em;
+}
+
+#last_in_row {
+    border-right: 0;
 }
 
 #news_card_img {
     height: 13em;
     width: 18em;
+    margin-bottom: 0;
 }
 
 #news_card_text {
@@ -272,13 +279,15 @@ a:hover {
     text-align: justify;
     font-size: 0.9em;
     padding-bottom: 0.5em;
-    
+    margin-bottom: 0;
     border-bottom: 1.5px solid #000;
 }
 
 #container_table {
     width: 100%;
+    margin-top: 0;
     text-align: center;
+    
 }
 .theme_container {
     display: inline;
@@ -286,6 +295,7 @@ a:hover {
     white-space: none;
     font-size: 0.7em;
     color: grey;
+    text-align: left;
 }
 .source_container {
     display: inline;
@@ -293,6 +303,7 @@ a:hover {
     white-space: none;
     font-size: 0.7em;
     color: grey;
+    text-align: center;
 }
 .active_chats_container {
     display:  inline;
@@ -300,11 +311,16 @@ a:hover {
     white-space: none;
     font-size: 0.8em;
     color: #faaf41;
+    text-align-last: right;
 }
 
 .news_card_sublink{
     text-decoration: none;
     color: #787878;
+}
+
+.sublink_text {
+    margin-top: 0;
 }
 
 .url_box{
@@ -324,6 +340,7 @@ a:hover {
     background-color: #faaf41; 
     width: 17em;
 }
+
 
 /*mediaqurries*/
 
