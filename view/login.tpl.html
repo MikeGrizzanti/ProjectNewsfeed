@@ -9,6 +9,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
         <script src="../js/css/transitions.js"></script>
         <link rel="icon" type="image/svg+xml" href="../images/mindfeed_favicon.svg" sizes="16x16" />
+        <meta name="google-signin-client_id" content="764761977830-m3m48i2fqvjf267sl6ibdr2lnb97dgj2.apps.googleusercontent.com">
     </head>
     <body>
         <div id="fb-root"></div>
@@ -18,15 +19,18 @@
             js = d.createElement(s); js.id = id;
             js.src = "//connect.facebook.net/de_DE/sdk.js#xfbml=1&version=v2.8&appId=167575093726927";
             fjs.parentNode.insertBefore(js, fjs);
-            }(document, 'script', 'facebook-jssdk'));</script>
+            }(document, 'script', 'facebook-jssdk'));
+        </script>
+        <script src="https://apis.google.com/js/platform.js" async defer></script>
         
         
-            <img id="main_logo" src="../images/Logo_Mindfeed_White_Orange.svg" id="main_logo"/>
+        <img id="main_logo" src="../images/Logo_Mindfeed_White_Orange.svg" id="main_logo"/>
         
         <div id="subtitle">
             <p>welcome to mindfeed.</p>
             <p>we inform to inspire you.</p>    
         </div>
+        
         <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
             <div class="flipper">
                 
@@ -86,7 +90,7 @@
                                         <div class="fb-login-button" data-max-rows="1" data-size="medium" data-show-faces="false" data-auto-logout-link="false"></div>
                                     </td>
                                     <td>
-                                        <!-- LOGIN WITH GOOGLE-->
+                                        <div class="g-signin2" data-onsuccess="onSignIn"></div>
                                     </td>
                                 </tr>
                             </table>
