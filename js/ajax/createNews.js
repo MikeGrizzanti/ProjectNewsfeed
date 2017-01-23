@@ -1,6 +1,6 @@
 $(document).ready(function() {
    $.ajax({
-    url:"/models/download_feed.inc.php",  
+    url:"www.mindfeed.esy.es/models/download_feed.inc.php",  
     success:function(data) {
       console.log(data); 
     },
