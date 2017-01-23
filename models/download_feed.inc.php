@@ -60,7 +60,7 @@ if ($_POST) {
                                     <div class="theme_container"><a class="news_card_sublink" href="#">theme</a></div>
                                     <div class="source_container"><a class="news_card_sublink" href="#">source</a></div>
                                     <div class="active_chats_container">x Chats</div>    
-                                </div>'
+                                </div>';
                         }
                             $i++;
                 }
