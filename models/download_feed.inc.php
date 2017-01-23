@@ -53,14 +53,20 @@ if ($_POST) {
                         if ($i < 100) { // parse only 100 items
                             //echo json_encode();
                             //print '<a href="'.$item->link.'">'.$item->title.'</a><br />';
-                            print '<div class="news_card">
-                                    <img id="news_card_img" src="../images/Dubai_test_newscard.jpg"/><br/>
-                                    <p id="news_card_text">'.$item->title.'</p>
+                            print '<table id="table_news_cards">
+                                    <tr> 
+                                    <td>    
+                                        <div class="news_card">
+                                            <img id="news_card_img" src="../images/Dubai_test_newscard.jpg"/><br/>
+                                            <p id="news_card_text">'.$item->title.'</p>
 
-                                    <div class="theme_container"><a class="news_card_sublink" href="#">theme</a></div>
-                                    <div class="source_container"><a class="news_card_sublink" href="#">source</a></div>
-                                    <div class="active_chats_container">x Chats</div>    
-                                </div>';
+                                            <div class="theme_container"><a class="news_card_sublink" href="#">theme</a></div>
+                                            <div class="source_container"><a class="news_card_sublink" href="#">source</a></div>
+                                            <div class="active_chats_container">x Chats</div>    
+                                        </div>
+                                    </td>               
+                                    </tr>    
+                                    </table>';
                         }
                             $i++;
                 }
