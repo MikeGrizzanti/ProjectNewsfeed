@@ -143,13 +143,13 @@ body {
 .abcRioButtonLightBlue {
     background-color: #fff;
     color: #757575;
-    position: relative;
-    margin-left: 3em;
-    margin-right: auto;
-    height: 2em;
-    width: 2em;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
+    position: relative !important;
+    margin-left: 3em !important;
+    margin-right: auto !important;
+    height: 2em !important;
+    width: 2em !important;
+    margin-top: 0.5em !important;
+    margin-bottom: 0.5em !important;
 }
 
 hr {
