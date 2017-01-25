@@ -1,7 +1,7 @@
 $(document).ready(function() {
    
     var data = $('.url_box url_box_show').serialize();
-    $(".url_box url_box_show").submit(function(){
+    $("#add_feed_box").submit(function(){
        $.ajax({
         type: "POST",
         url:"/models/download_feed.inc.php",
