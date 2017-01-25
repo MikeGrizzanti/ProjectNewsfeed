@@ -1,8 +1,13 @@
 $(document).ready(function() {
    
-    var data = $('.url_box').serialize();
+    
     $("#add_feed_box").submit(function(){
-        
+        var data = $('.url_box').serialize();
+        /*
+        e.preventDefault(); // don't submit multiple times
+        this.submit(); // use the native submit method of the form element
+        $('#imagefile').val(''); // blank the input
+        */
         
         $.ajax({
         type: "POST",
