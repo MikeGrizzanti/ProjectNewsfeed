@@ -11,7 +11,7 @@ $(document).ready(function() {
             data: data,
             //dataType: 'json',
             success:function(data) { //ok
-              const ret_data =data;
+              var RET_DATA = data;
                 console.log(data); 
             },
             error: function (xhr, ajaxOptions, thrownError, url) { //error
@@ -21,5 +21,5 @@ $(document).ready(function() {
             }
         }); 
     });
-       console.log(ret_data);
+       console.log(RET_DATA);
 });
