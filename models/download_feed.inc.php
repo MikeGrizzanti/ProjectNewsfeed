@@ -1,5 +1,5 @@
 <?php
-if (true) {
+if ($_POST) {
         //curl and header
         $ch = curl_init();
         if (isset($_POST['add_feed'])) {
@@ -51,9 +51,8 @@ if (true) {
 
                 foreach($xml->channel->item as $item) {
                         if ($i < 100) { // parse only 100 items
-                           //echo json_encode($xml);
+                           echo json_encode($parsed_url);
                             //print '<a href="'.$item->link.'">'.$item->title.'</a><br />';
-                            echo json_encode($parsed_url);
                         }
                             $i++;
                 }
