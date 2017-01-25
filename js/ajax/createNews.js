@@ -1,4 +1,9 @@
 $(document).ready(function() {
+    
+    $(".url_box url_box_show").onkeypress(event){
+        console.log(event.type);
+    }
+    
    $.ajax({
     url:"/models/download_feed.inc.php",
     data: data,
