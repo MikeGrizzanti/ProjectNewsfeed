@@ -53,6 +53,7 @@ if ($_POST) {
                         if ($i < 100) { // parse only 100 items
                            //echo json_encode($xml);
                             //print '<a href="'.$item->link.'">'.$item->title.'</a><br />';
+                            echo json_decode($source);
                         }
                             $i++;
                 }
