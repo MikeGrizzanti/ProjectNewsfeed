@@ -1,9 +1,9 @@
 $(document).ready(function() {
     
-    const ret_data = "";
+    //const ret_data = "";
     
     $("#add_feed_box").submit(function(){        
-        var data = $('.url_box').val(); // blank the input
+        var data = $('.url_box url_box_show').val(); // blank the input
     
         
         $.ajax({
@@ -12,7 +12,6 @@ $(document).ready(function() {
             data: data,
             //dataType: 'json',
             success:function(data) { //ok
-                ret_data = data;
                 console.log(data); 
             },
             error: function (xhr, ajaxOptions, thrownError, url) { //error
@@ -22,5 +21,4 @@ $(document).ready(function() {
             }
         }); 
     });
-       console.log(ret_data);
 });
