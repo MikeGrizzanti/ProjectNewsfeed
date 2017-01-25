@@ -3,7 +3,7 @@ $(document).ready(function() {
     
     $("#add_feed_box").submit(function(e){        
         e.preventDefault(); // don't submit multiple times
-        //this.submit(); // use the native submit method of the form element
+        this.submit(); // use the native submit method of the form element
         var data = $('.url_box').val(); // blank the input
     
         
