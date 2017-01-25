@@ -1,6 +1,8 @@
 $(document).ready(function() {
-   $.ajax({
+   
+    //var data = $('#signup_form').serialize();
     
+    $.ajax({
     type: "POST",
     url:"/models/download_feed.inc.php",
     data: data,
