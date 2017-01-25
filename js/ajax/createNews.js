@@ -9,7 +9,7 @@ $(document).ready(function() {
             type: "POST",
             url:"/models/download_feed.inc.php",
             data: data,
-            //dataType: 'json',
+            dataType: 'json',
             success:function(data) { //ok
                 console.log(data); 
             },
