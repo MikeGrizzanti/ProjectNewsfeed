@@ -22,5 +22,5 @@ $(document).ready(function() {
             }
         }); 
     });
-       console.log(ret_data;);
+       console.log(ret_data);
 });
