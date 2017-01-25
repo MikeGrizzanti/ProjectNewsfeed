@@ -20,19 +20,6 @@ if ($_POST) {
                 header("Location:index.php?action=main");
             }
         }
-        //Facebook-Login
-        $fb = new Facebook([
-          'app_id' => '167575093726927', 
-          'app_secret' => '{app-secret}',
-          'default_graph_version' => 'v2.2',
-          ]);
-
-        $helper = $fb->getRedirectLoginHelper();
-
-        $permissions = ['email']; // Optional permissions
-        $loginUrl = $helper->getLoginUrl('https://example.com/fb-callback.php', $permissions);
-
-        echo '<a href="' . htmlspecialchars($loginUrl) . '">Log in with Facebook!</a>';
     }   
 }
 
