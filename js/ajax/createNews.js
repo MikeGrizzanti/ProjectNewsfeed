@@ -1,6 +1,6 @@
 $(document).ready(function() {
    
-    var data = $('.url_box url_box_show').serialize();
+    //var data = $('.url_box url_box_show').serialize();
     $("#add_feed_box").submit(function(){
        $.ajax({
         type: "POST",
@@ -10,7 +10,7 @@ $(document).ready(function() {
         success:function(data) { //ok
           console.log(data); 
         },
-        error: function (xhr, ajaxOptions, thrownError) { //error
+        error: function (xhr, ajaxOptions, thrownError, url) { //error
             alert(xhr.status);
             console.log(url);
             console.warn(thrownError);
