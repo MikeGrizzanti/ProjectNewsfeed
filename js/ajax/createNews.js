@@ -11,7 +11,7 @@ $(document).ready(function() {
             data: data,
             //dataType: 'json',
             success:function(data) { //ok
-              ret_data =data;
+              const ret_data =data;
                 console.log(data); 
             },
             error: function (xhr, ajaxOptions, thrownError, url) { //error
