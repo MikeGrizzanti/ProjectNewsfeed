@@ -111,7 +111,7 @@ body {
 
 #register_button {
     margin: 3em;
-    margin-top: 0.9em;
+    margin-top: 2em;
     margin-bottom: 1em;
     height: 2em;
     width: 15.4em;
@@ -169,7 +169,7 @@ hr {
     font-weight: normal;
     color: #fafafa;
     margin: 3em;
-    margin-top: 0;
+    margin-top: 1em;
     height: 2em;
     width: 15.4em;
     margin-bottom: 1em;
@@ -205,7 +205,7 @@ hr {
     font-size: 0.625em;
     color: #f00;
     height: 2em;
-    width: 20em;
+    width: 17em;
     margin-bottom: 0.5em;
     margin-left: auto;
     margin-right: auto;
@@ -1208,7 +1208,24 @@ hr {
         margin-right: auto;
     }
     
+    #login_button {
+        margin-left: 3.9em;
+    }
     
+    #register_option {
+        margin-left: 3.9em;
+        margin-top: 1em;
+    }
+    
+    #no_login_option {
+        margin-left: 3.9em;
+        margin-bottom: 0;
+    }
+    
+    #switch_to_login {
+        margin-left: 1em;
+        outline: none;
+    }
 }
 
 /* Large screens ----------- */
