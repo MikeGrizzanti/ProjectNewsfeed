@@ -1,6 +1,6 @@
 /* Head-Part */
 .header {
-    position: fixed;
+    
     height: 12em;
     width: 100%;
     background-color: #000;
@@ -23,14 +23,14 @@ a:hover {
 #top_nav {
     margin-top: 1rem;
     height: 1em;
+    width: 100%;
+    
 }
 
 #search {
     position: relative;
-    margin-left: auto;
-    margin-right: auto;
     margin-top: 0;
-    margin-left: 30em;
+    margin-left: 36em;
     width: 35em;
     height: 2em;
     border-radius: 2px;
@@ -38,13 +38,12 @@ a:hover {
     border-left: 0;
     background-image: url(../images/search.svg);
     background-repeat: no-repeat;
-    background-position: bottom left;
-    padding-left: 1.5em;
+    padding-left: 1.8em;
 }
 
 .top_icon_open_sidebar {
     display: inline;
-    position: fixed;
+    position: relative;
     margin-left: 2em;
     height: 1.25em;
     z-index: 999;
@@ -56,13 +55,14 @@ a:hover {
 }
 
 .Hide_Hamburger{
-  opacity:0;
+    display: inline;
+    opacity:0;
 }
 
 .top_icon_close_sidebar {
     display: inline;
-    position: fixed;
-    margin-left: 2em;
+    position: relative;
+    margin-left: -1.8em;
     height: 1.25em;
     z-index: 899;
     opacity: 0;
@@ -73,6 +73,7 @@ a:hover {
 }
 
 .Show_Cross{
+display: inline;
   opacity:1;
 }
 
@@ -94,6 +95,10 @@ a:hover {
     height: 1.25em;
 }
 
+.hamburger_open_close {
+    display: inline;
+}
+
 #login_register_button {
     text-align: center;
     height: 2em;
@@ -104,7 +109,7 @@ a:hover {
     background-color: #FBB040;
     border: 0;
     letter-spacing: 0.05em;
-    margin-left: 11em;
+    margin-left: 15em;
     border-radius: 2px;
 }
 #login_register_button:active{
@@ -246,7 +251,7 @@ a:hover {
 
 .main_page {
     background-color: #FBFBFB;
-    position: fixed;
+    position: relative;
     height: auto;
     top: 12em; right: 0; bottom: 0;left: 0;
 }
