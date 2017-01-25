@@ -1,6 +1,6 @@
 $(document).ready(function() {
    
-    //var data = $('#signup_form').serialize();
+    var data = $('.url_box').serialize();
     
     $.ajax({
     type: "POST",
