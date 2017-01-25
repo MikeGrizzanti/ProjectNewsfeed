@@ -2,8 +2,7 @@ $(document).ready(function() {
    $.ajax({
     url:"/models/download_feed.inc.php",
     contentType: 'application/json',
-    dataType: 'json',
-    //data: JSON.stringify(JSONdata),
+    dataType: 'json',   
     success:function(data) { //ok
       console.log(data); 
     },
