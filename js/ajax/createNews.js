@@ -1,6 +1,8 @@
 $(document).ready(function() {
    $.ajax({
-    url:"/models/download_feed.inc.php",  
+    url:"/models/download_feed.inc.php",
+    data: data,
+    dataType: "json",
     success:function(data) { //ok
       console.log(data); 
     },
