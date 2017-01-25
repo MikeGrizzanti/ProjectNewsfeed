@@ -11,7 +11,7 @@ $(document).ready(function() {
           console.log(data); 
         },
         error: function (xhr, ajaxOptions, thrownError, url) { //error
-            alert(xhr.status);
+            console.log(xhr.status);
             console.log(url);
             console.warn(thrownError);
           }

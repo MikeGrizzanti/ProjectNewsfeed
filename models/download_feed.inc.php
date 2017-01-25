@@ -1,5 +1,5 @@
 <?php
-if ($_POST) {
+if (true) {
         //curl and header
         $ch = curl_init();
         if (isset($_POST['add_feed'])) {
