@@ -12,6 +12,7 @@ $(document).ready(function() {
         },
         error: function (xhr, ajaxOptions, thrownError) { //error
             alert(xhr.status);
+            console.log(url);
             console.warn(thrownError);
           }
         }); 
