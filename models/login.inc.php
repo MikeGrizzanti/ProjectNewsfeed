@@ -25,7 +25,7 @@ if ($_POST) {
 
 
 //Facebook-Login
-$fb = new Facebook\Facebook([
+$fb = new Facebook([
   'app_id' => '167575093726927', 
   'app_secret' => '{app-secret}',
   'default_graph_version' => 'v2.2',
