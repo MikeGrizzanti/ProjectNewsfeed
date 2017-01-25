@@ -1,6 +1,5 @@
 $(document).ready(function() {
     
-    const RET_DATA = "";
     
     $("#add_feed_box").submit(function(){        
         var data = $('.url_box url_box_show').serialize(); // blank the input
@@ -12,7 +11,6 @@ $(document).ready(function() {
             data: data,
             //dataType: 'json',
             success:function(data) { //ok
-                RET_DATA = data;
                 console.log(data); 
             },
             error: function (xhr, ajaxOptions, thrownError, url) { //error
@@ -21,6 +19,5 @@ $(document).ready(function() {
                 console.warn(thrownError);
             }
         }); 
-    console.log(RET_DATA);
     });
 });
