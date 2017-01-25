@@ -12,7 +12,7 @@ $(document).ready(function() {
     },
     error: function (xhr, ajaxOptions, thrownError) { //error
         alert(xhr.status);
-        alert(thrownError);
+        console.warn(thrownError);
       }
     });
   });
