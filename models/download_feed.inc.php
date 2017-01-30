@@ -45,6 +45,11 @@ if ($_POST) {
                 fputs($file, $data);
                 fclose($file);
             
+            
+            
+                $rss =simplexml_load_file($destination);
+                print_r($xml);
+            
                 //this file is only meant to download the feed, parse it items via php_functions and save them into the db
                 $dbhost = "mysql.hostinger.de";
                 $dbname = "u584441810_mindf";
@@ -55,7 +60,7 @@ if ($_POST) {
 
                 $statement = $link->prepare("INSERT INTO tb_feed (feed_id, feed_title, feed_content, feed_img_path, fk_category_id)
                     VALUES(?,?,?,?,?)");
-                $statement->execute(array("1", "Desaunois", "18", "C:/jdd/gsgs", "Politics"));
+                $statement->execute(array("1", "Desaunois", "18", "C:/jdd/gsgs", "Politics")); //insert parsed values here
             
             
             
