@@ -40,6 +40,9 @@ if ($_POST) {
         // URL validations based on $retcode
         if ($retcode == 200 && $result == 'true') {
             
+                
+            $testArr = simplexml_load_file($destination);
+            
                 //exec
                 $file = fopen($destination, "w+");
                 fputs($file, $data);
@@ -49,7 +52,7 @@ if ($_POST) {
                 $i = 0; // counter
                 //$rss = simplexml_load_file($destination); // XML parser
 
-                foreach($xml->channel->item as $item) {
+                foreach($testArr->channel->item as $item) {
                         if ($i < 100) { // parse only 100 items
                            echo json_encode($item->title);
                             //print '<a href="'.$item->link.'">'.$item->title.'</a><br />';
