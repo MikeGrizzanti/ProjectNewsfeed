@@ -23,7 +23,7 @@ $(document).ready(function() {
             },
             complete: function(data){
                var objStr = JSON.stringify(data);
-               console.log('complete');
+               console.log('complete' + objStr);
                alert(objStr); // It should now, worky!
             }
         }); 
