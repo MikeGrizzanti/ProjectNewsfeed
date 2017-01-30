@@ -60,11 +60,11 @@ if ($_POST) {
         } 
     
         elseif ($retcode > 200 || $result == 'false'){
-            print_r("Error! This url cannot be retrived or processed: Server response -> " .$retcode); 
+            echo "Error! This url cannot be retrived or processed: Server response -> " .$retcode; 
         }
     
         else {
-            print_r("URL does not exist and/or couldn't be found: Server response -> " .$retcode);
+            echo "URL does not exist and/or couldn't be found: Server response -> " .$retcode;
         }
     
 }		
