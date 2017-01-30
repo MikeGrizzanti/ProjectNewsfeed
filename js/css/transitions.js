@@ -23,4 +23,9 @@
         $(".url_box").toggleClass("url_box_show");
     }); 
      
+    //pop-up
+    $("div.news_card > table > tbody > tr > td").click(function () {
+        $(".article_popup").toggleClass("article_popup_show");
+        $(".background_article_popup").toggleClass("background_article_popup_show");
+    }); 
 });
