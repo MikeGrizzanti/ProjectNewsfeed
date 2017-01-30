@@ -2,9 +2,9 @@
 .header {
     position: fixed;
     height: 12em;
+    z-index: 1000;
     width: 100%;
     background-color: #000;
-    position: absolute;
     left: 0; right: 0; top: 0; bottom: 0; 
 }
 
@@ -23,30 +23,28 @@ a:hover {
 #top_nav {
     margin-top: 1rem;
     height: 1em;
+    width: 100%;
+    position: fixed;
 }
 
 #search {
-    display: inline;
     position: relative;
-    margin-left: auto;
-    margin-right: auto;
     margin-top: 0;
-    width: 35rem;
-    height: 1.5rem;
+    margin-left: 36em;
+    width: 35em;
+    height: 2em;
     border-radius: 2px;
     border-top: 0;
     border-left: 0;
     background-image: url(../images/search.svg);
-    
     background-repeat: no-repeat;
-    background-position: bottom left;
-    padding-left: 1.5em;
+    padding-left: 1.8em;
 }
 
 .top_icon_open_sidebar {
     display: inline;
-    position: fixed;
-    margin-left: 5em;
+    position: relative;
+    margin-left: 2em;
     height: 1.25em;
     z-index: 999;
     opacity: 1;
@@ -57,12 +55,14 @@ a:hover {
 }
 
 .Hide_Hamburger{
-  opacity:0;
+    display: inline;
+    opacity:0;
 }
 
 .top_icon_close_sidebar {
-    position: fixed;
-    margin-left: 5em;
+    display: inline;
+    position: relative;
+    margin-left: -1.8em;
     height: 1.25em;
     z-index: 899;
     opacity: 0;
@@ -73,6 +73,7 @@ a:hover {
 }
 
 .Show_Cross{
+display: inline;
   opacity:1;
 }
 
@@ -94,10 +95,11 @@ a:hover {
     height: 1.25em;
 }
 
-#login_register_button {
-    position: relative;
-    text-decoration: none;
+.hamburger_open_close {
     display: inline;
+}
+
+#login_register_button {
     text-align: center;
     height: 2em;
     width: 13em;
@@ -106,8 +108,8 @@ a:hover {
     color: #fafafa;
     background-color: #FBB040;
     border: 0;
-    letter-spacing: 0.1em;
-    margin-left: 70em;
+    letter-spacing: 0.05em;
+    margin-left: 15em;
     border-radius: 2px;
 }
 #login_register_button:active{
@@ -132,14 +134,13 @@ a:hover {
 /* Sidebar-Part */
 
 .sidebar {
-    position: absolute;
+    position: fixed;
     width: 20rem;
-    height: 35em;
-    left: 0; right: 0; top: 12em; bottom: 0;
+    height: 26em;
     background-color: #fbb040;
     float: left;
-    margin-left: 1.5em;
-    margin-top: 1em;
+    margin-left: 1.8em;
+    margin-top: 13em;
     border-radius: 2px;
     text-transform: uppercase;
     z-index: 799;
@@ -158,11 +159,12 @@ a:hover {
     font-family: 'Roboto', sans-serif;
     color: #fafafa;
     font-weight: 120;
-    font-size: 1.4rem;
+    font-size: 2em;
     margin-top: 0.5em;
     margin-bottom: 0.2em;
     margin-left: 1.5em;
     font-size: 1em;
+    text-decoration: underline;
 }
 
 .add_point {
@@ -185,16 +187,14 @@ a:hover {
 }
 
 #sidebar_list_user_interests {
-    margin-top: 0.5em;
+    margin-top: 1em;
     padding: 0;
     margin-left: 1.7em;
     font-size: 0.9em;
     list-style-type: none;
     color: #fafafa; 
-    height: auto;
-    margin-bottom: auto;
+    height: 15em;
     font-weight: 120;
-    height: 24em;
 }
 
 .user_interest {
@@ -202,7 +202,6 @@ a:hover {
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
     text-decoration: none;
-    
 }
 
 #social_media_icons_div {
@@ -212,21 +211,22 @@ a:hover {
 .social_media_icon {
     height: 2em;
 }
+
 #first_icon {
     margin-left: 1.5em; 
 }
 
 #sidebar_footer {
     position: relative;
-    height: auto;
+    height: 2em auto;
     width: 100%;
-    bottom:0;
-    height: auto;
+    margin-bottom: 0;
 }
 
 #sidebar_list_footer{
     font-size: 1em;
     list-style-type: none;
+    height: 2em;
 }
 
 .sidebar_footer_point {
@@ -237,21 +237,14 @@ a:hover {
     font-size: 1em;
     font-weight: 0;
     margin-left: 1.5rem;
-    
     text-transform: none;
 }
-
-hr {
-    width: 17em;
-}
-
-
 
 /* MainPage-Part */
 
 .main_page {
     background-color: #FBFBFB;
-    position: fixed;
+    position: relative;
     height: auto;
     top: 12em; right: 0; bottom: 0;left: 0;
 }
@@ -260,15 +253,27 @@ hr {
     position: relative;
     margin-left: auto;
     margin-right: auto;
+    
 }
 .news_card {
     width: 18em;
     padding: 0.5em;
+    margin: 0.2em;
+    margin-top: 0em;
+    
+    -webkit-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.2);
+    box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.2);
+}
+
+#last_in_row {
+    border-right: 0;
 }
 
 #news_card_img {
     height: 13em;
     width: 18em;
+    margin-bottom: 0;
 }
 
 #news_card_text {
@@ -277,37 +282,47 @@ hr {
     text-align: justify;
     font-size: 0.9em;
     padding-bottom: 0.5em;
-    
+    margin-bottom: 0;
     border-bottom: 1.5px solid #000;
 }
 
+#container_table {
+    width: 100%;
+    margin-top: 0;
+    text-align: center;
+}
 .theme_container {
     display: inline;
-    margin-right: 5em;
     font-family: "Roboto",sans-serif;
     white-space: none;
     font-size: 0.7em;
     color: grey;
+    text-align: left;
 }
 .source_container {
     display: inline;
-    margin-right: 5em;
     font-family: "Roboto",sans-serif;
     white-space: none;
     font-size: 0.7em;
     color: grey;
+    text-align: center;
 }
 .active_chats_container {
     display:  inline;
     font-family: "Roboto",sans-serif;
     white-space: none;
     font-size: 0.8em;
-    color: #fbb040;
+    color: #faaf41;
+    text-align-last: right;
 }
 
 .news_card_sublink{
     text-decoration: none;
-    color: grey;
+    color: #787878;
+}
+
+.sublink_text {
+    margin-top: 0;
 }
 
 .url_box{
@@ -321,6 +336,7 @@ hr {
 .url_box_show{
     opacity: 1;
 }
+
 
 /*mediaqurries*/
 

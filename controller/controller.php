@@ -24,7 +24,7 @@ class controller {
     
     public function logout() {
         session_destroy();
-        header("Location:index.php");
+        header("Location:index.php?action=login");
     }
     
     public function noLogin() {
@@ -45,6 +45,12 @@ class controller {
         $this->addContext("error", $error);
         $this->addContext("template", "login");
     }
+    
+    /*public function profile() {
+        $erg = is_loggedIn();
+        $this->addContext("error", $error);
+        $this->addContext("template", "profile");
+    }*/
     
     public function download_feed() {
         $erg = is_loggedIn();

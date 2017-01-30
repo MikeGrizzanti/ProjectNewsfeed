@@ -57,5 +57,11 @@ class tb_message {
         $query -> setFetchMode(PDO::FETCH_CLASS, 'tb_message');
         return $query->fetch();
     }
+    
+    public static function saveMessage($message_timestamp, $fk_message_user_id, $message_text, $fk_groupChat_id) {
+        $sql = 'INSERT INTO tb_message (message_timestamp, fk_message_user_id, message_text, fk_groupChat_id) VALUES (?,?,?) WHERE fk_groupChat_id = ?';
+        $query = DB::getDB()->prepare($sql);
+        $query->execute(array($message_timestamp, $fk_message_user_id, $message_text, $fk_groupChat_id));
+    }
 }
 

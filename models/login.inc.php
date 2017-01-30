@@ -20,6 +20,8 @@ if ($_POST) {
                 header("Location:index.php?action=main");
             }
         }
-    }
+    }   
 }
+
+
 

@@ -5,6 +5,7 @@
     <meta charset="utf-8" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="../js/ajax/createNews.js"></script>
     <script type="text/javascript" src="../js/css/transitions.js"></script>    
     <link rel="stylesheet" type="text/css" href="../css/index.css" />
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
@@ -27,9 +28,9 @@
             <br/>
         <footer id="sidebar_footer">
             <a class="add_point">ADD INTEREST +</a>
-            <form method="post" action="index.php?action=feed">
+            <form method="post" action="index.php?action=main" id="add_feed_box">
                 <a class="add_feed">ADD FEED +</a>
-                <input name="add_feed" type="url" class="url_box" placeholder="Ex: http://www.yoursite.com">
+                <input name="add_feed" type="url" class="url_box" placeholder="Ex: http://www.yoursite.com" >
             </form>
             <hr/>
             <div id="social_media_icons_div">
