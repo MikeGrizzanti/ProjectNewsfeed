@@ -54,8 +54,8 @@ if ($_POST) {
             
                  foreach($rss->channel->item as $item) {
                         if ($i < 100) { // parse only 100 items
-                           echo $item->title;
-                            echo $item->description;
+                           $title_itm = $item->title;
+                            $description_itm = $item->description;
                             //print '<a href="'.$item->link.'">'.$item->title.'</a><br />';
                             
                         }
@@ -72,7 +72,7 @@ if ($_POST) {
 
                 $statement = $link->prepare("INSERT INTO tb_feed (feed_id, feed_title, feed_content, feed_img_path, fk_category_id)
                     VALUES(?,?,?,?,?)");
-                $statement->execute(array("1", "Desaunois", "18", "C:/jdd/gsgs", "Politics")); //insert parsed values here
+                $statement->execute(array($i, $title_itm, $description_itm, "C:/jdd/gsgs", 10)); //insert parsed values here
             
             
             
