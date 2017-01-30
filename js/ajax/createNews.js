@@ -11,7 +11,7 @@ $(document).ready(function() {
             type: "POST",
             url:"/models/download_feed.inc.php",
             data: {mydata: data_irr},
-            dataType: 'json',
+            //dataType: 'json',
             success: function(data){
                console.log('worky');
                alert(data); // It should now, worky!
