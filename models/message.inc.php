@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 $message_text = "";
 $message_timestamp = time();
