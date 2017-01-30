@@ -96,7 +96,7 @@ class tb_user {
         return $query->fetch();
     }
     
-    public static function getUserIdFromCategory($id) {
+    public static function getUserIdFromCategory($user_id) {
         $sql = 'SELECT tb_user.user_id, tb_user.user_firstName, tb_user.user_lastName, tb_user.user_nickName, tb_user.user_password, tb_user.user_eMail FROM tb_user INNER JOIN tb_user_interests ON (tb_user.user_id = tb_user_interests.fk_user_id) WHERE tb_user_interests.fk_interests_id = ?;';
         $query = DB::getDB()->prepare($sql);
         $query->execute(array(id));
