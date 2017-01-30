@@ -1,9 +1,10 @@
 
 $(document).ready(function() {
-    var data_irr = $(".url_box url_box_show").val();
+    //var data_irr = "";
     
     $("#add_feed_box").submit(function(){        
-        //var data_irr = 'irrelevant';
+        var data_irr = $(".url_box url_box_show").val();
+
         
         $.ajax({
             type: "POST",
@@ -27,5 +28,5 @@ $(document).ready(function() {
         }); 
     });
     
-    console.log();
+    //console.log(obj);
 });
