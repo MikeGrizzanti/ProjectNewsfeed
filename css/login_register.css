@@ -132,7 +132,7 @@ body {
 
 .fb-login-button {
     position: relative;
-    margin-left: 6em;
+    margin-left: 5em;
     margin-right: auto;
     height: 2em !important;
     width: 2em;
@@ -330,14 +330,6 @@ hr {
         margin-left: 5.5em;
     }
     
-    #login_socialmedia{
-        position: relative;
-        height: 60%;
-        width:  65%;
-        margin-top: 1em;
-        font-size: 1.5em;
-        margin-left: 5.5em;
-    }
     
     #register_option {
         position: relative;
