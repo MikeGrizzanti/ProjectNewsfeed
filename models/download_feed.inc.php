@@ -46,9 +46,21 @@ if ($_POST) {
                 fclose($file);
             
             
-            
+                //setup parser
                 $rss =simplexml_load_file($destination);
                 print gettype($rss);
+            
+                $i = 0;
+            
+                 foreach($rss->channel->item as $item) {
+                        if ($i < 100) { // parse only 100 items
+                           echo $item->title;
+                            echo $item->description;
+                            //print '<a href="'.$item->link.'">'.$item->title.'</a><br />';
+                            
+                        }
+                            $i++;
+                }
             
                 //this file is only meant to download the feed, parse it items via php_functions and save them into the db
                 $dbhost = "mysql.hostinger.de";
