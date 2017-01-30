@@ -1,6 +1,4 @@
 
-        
-
 $(document).ready(function() {
     var data_irr = 'irrelevant';
     
