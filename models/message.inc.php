@@ -2,8 +2,8 @@
 
 $message_text = "";
 $message_timestamp = time();
-$_SESSION['user_id'] = $user_id;
-$_SESSION['groupChat_id'] = $groupChat_id;
+$_SESSION['user_id'] = tb_user::getId();
+$_SESSION['groupChat_id'] = tb_message::get_fk_groupChat_id();
 $error = "";
 $erg = "";
 

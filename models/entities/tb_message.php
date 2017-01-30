@@ -22,23 +22,23 @@ class tb_message {
         
     }
     
-    public function get_message_id() {
+    public static function get_message_id() {
         return $this->message_id;
     }
     
-    public function get_message_timestamp() {
+    public static function get_message_timestamp() {
         return $this->message_timestamp;
     }
     
-    public function get_message_text() {
+    public static function get_message_text() {
         return $this->message_text;
     }
     
-    public function get_fk_message_user_id() {
+    public static function get_fk_message_user_id() {
         return $this->fk_message_user_id;
     }
     
-    public function get_fk_groupChat_id() {
+    public static function  get_fk_groupChat_id() {
         return $this->fk_groupChat_id;
     }
     
