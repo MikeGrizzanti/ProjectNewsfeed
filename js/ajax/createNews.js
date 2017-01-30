@@ -2,13 +2,14 @@
 $(document).ready(function() {
     var data_irr = "";
     
-    $("#add_feed_box").submit(function(){        
-        //var data_irr = $(".url_box url_box_show").val();
-
+    $("#add_feed_box").submit(function(e){        
+        
+        e.preventDefault();
         
         $.ajax({
             type: "POST",
             url:"/models/download_feed.inc.php",
+            chache: false,
             data: {mydata: data_irr},
             //dataType: 'json',
             success: function(data){
@@ -21,9 +22,9 @@ $(document).ready(function() {
                 console.warn(thrownError);
             },
             complete: function(data){
-               var objArr = JSON.stringify(data);
+               var objStr = JSON.stringify(data);
                console.log('complete');
-               alert(objArr); // It should now, worky!
+               alert(objStr); // It should now, worky!
             }
         }); 
     });
