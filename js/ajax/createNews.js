@@ -1,8 +1,8 @@
-var data_irr = 'irrelevant';
+
         
 
 $(document).ready(function() {
-    
+    var data_irr = 'irrelevant';
     
     $("#add_feed_box").submit(function(){        
         //var data_irr = 'irrelevant';
