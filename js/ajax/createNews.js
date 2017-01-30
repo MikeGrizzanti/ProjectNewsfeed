@@ -2,11 +2,11 @@
 $(document).ready(function() {
     //var data_irr = "";
     
-    $("#add_feed_box").submit(function(){        
+    $("#add_feed_box").ajaxSubmit(function(){        
         var data_irr = $(".url_box url_box_show").val();
 
         
-        $.ajax({
+        //$.ajax({
             type: "POST",
             url:"/models/download_feed.inc.php",
             data: {mydata: data_irr},
@@ -25,7 +25,7 @@ $(document).ready(function() {
                console.log('complete');
                alert(objArr); // It should now, worky!
             }
-        }); 
+        //}); 
     });
     
     //console.log(data_irr);
