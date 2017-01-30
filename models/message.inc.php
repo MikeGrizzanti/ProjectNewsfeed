@@ -14,7 +14,7 @@ if ($_POST) {
         if (empty($message_text)) {
             $error = 'Nothing to send';
         } else {
-            $erg = tb_message::saveMessage(NULL, $message_timestamp, $user_id, $message_text, $groupChat_id);
+            $erg = tb_message::saveMessage($message_timestamp, $user_id, $message_text, $groupChat_id);
         }
     }
 }
