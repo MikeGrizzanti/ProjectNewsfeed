@@ -3,7 +3,7 @@ $(document).ready(function() {
     //var data_irr = "";
     
     $("#add_feed_box").submit(function(){        
-        const data_irr = $(".url_box url_box_show").val();
+        var data_irr = $(".url_box url_box_show").val();
 
         
         $.ajax({
@@ -28,5 +28,5 @@ $(document).ready(function() {
         }); 
     });
     
-    console.log(data_irr);
+    //console.log(data_irr);
 });
