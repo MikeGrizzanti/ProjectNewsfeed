@@ -48,7 +48,8 @@ if ($_POST) {
                 //parse-test
                 $i = 0; // counter
                 // XML parser
-                $rss = simplexml_load_file($destination) or die("Error: Cannot create object");
+                echo json_encode($source);
+                //$rss = simplexml_load_file($destination) or die("Error: Cannot create object");
 
                 /*foreach($xml->channel->item as $item) {
                         if ($i < 100) { // parse only 100 items
