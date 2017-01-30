@@ -1,10 +1,10 @@
 
 $(document).ready(function() {
-    var data_irr = "";
+    //var data_irr = "";
     
     $("#add_feed_box").submit(function(e){        
         
-        e.preventDefault();
+        //e.preventDefault();
         
         $.ajax({
             type: "POST",
