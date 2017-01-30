@@ -4,7 +4,7 @@
 $(document).ready(function() {
     var data_irr = 'irrelevant';
     
-    $("#add_feed_box").submit(function(){        
+    //$("#add_feed_box").submit(function(){        
         //var data_irr = 'irrelevant';
         
         $.ajax({
@@ -22,5 +22,5 @@ $(document).ready(function() {
                 console.warn(thrownError);
             }
         }); 
-    });
+    //});
 });
