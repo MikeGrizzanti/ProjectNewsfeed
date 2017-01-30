@@ -2,7 +2,7 @@
 $(document).ready(function() {
     var data_irr = 'irrelevant';
     
-    //$("#add_feed_box").submit(function(){        
+    $("#add_feed_box").submit(function(){        
         //var data_irr = 'irrelevant';
         
         $.ajax({
@@ -21,9 +21,11 @@ $(document).ready(function() {
             },
             complete: function(data){
                var objArr = JSON.stringify(data);
-               console.log('complete' + objArr);
-               alert(data); // It should now, worky!
+               console.log('complete');
+               alert(objArr); // It should now, worky!
             }
         }); 
-    //});
+    });
+    
+    console.log();
 });
