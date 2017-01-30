@@ -47,8 +47,7 @@ if ($_POST) {
             
             
             
-                $rss =simplexml_load_file($destination);
-                print_r($xml);
+                $rss =simplexml_load_file(gettype($destination));
             
                 //this file is only meant to download the feed, parse it items via php_functions and save them into the db
                 $dbhost = "mysql.hostinger.de";
