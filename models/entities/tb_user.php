@@ -23,27 +23,27 @@ class tb_user {
         
     }
     
-    public static function getId() {
+    public function getId() {
         return $this->user_id;
     }
     
-    public static function getFirstName() {
+    public function getFirstName() {
         return $this->user_firstName;
     }
     
-    public static function getLastName() {
+    public function getLastName() {
         return $this->user_lastName;
     }
     
-    public static function getNickName() {
+    public function getNickName() {
         return $this->user_nickName;
     }
     
-    public static function getPassword() {
+    public function getPassword() {
         return $this->user_password;
     }
     
-    public static function getEmail() {
+    public function getEmail() {
         return $this->user_eMail;
     }
     
