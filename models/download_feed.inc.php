@@ -24,8 +24,8 @@ if ($_POST) {
         //parse file via url and get the language before saving
         $context  = stream_context_create(array('http' => array('header' => 'Accept: application/xml')));
 
-        $xml = file_get_contents($source, false, $context);
-        $xml_1 = simplexml_load_string($xml);
+        $xml_1 = file_get_contents($source, false, $context);
+        $xml = simplexml_load_string($xml_1);
         $json = json_encode($xml);
         $array = json_decode($json,TRUE);
     
@@ -49,7 +49,7 @@ if ($_POST) {
                 $i = 0; // counter
                 //$rss = simplexml_load_file($destination); // XML parser
 
-                foreach($xml_1->channel->item as $item) {
+                foreach($xml->channel->item as $item) {
                         if ($i < 100) { // parse only 100 items
                            echo json_encode($parsed_url);
                             //print '<a href="'.$item->link.'">'.$item->title.'</a><br />';
