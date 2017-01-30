@@ -18,6 +18,10 @@ $(document).ready(function() {
                 console.log(xhr.status);
                 console.log(url);
                 console.warn(thrownError);
+            },
+            complete: function(data){
+               console.log('complete');
+               alert(data); // It should now, worky!
             }
         }); 
     //});
