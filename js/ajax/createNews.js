@@ -2,15 +2,15 @@
 $(document).ready(function() {
     //var data_irr = "";
     
-    $("#add_feed_box").submit(function(e){        
+    $("add_feed").submit(function(e){        
         
-        e.preventDefault();
+        //e.preventDefault();
         
         $.ajax({
             type: "POST",
             url:"/models/download_feed.inc.php",
             chache: false,
-            data: $('#add_feed_box').serialize(),
+            data: $('add_feed').serialize(),
             //dataType: 'json',
             success: function(data){
                console.log('worky');
