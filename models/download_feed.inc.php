@@ -44,8 +44,7 @@ if ($_POST) {
                 $file = fopen($destination, "w+");
                 fputs($file, $data);
                 fclose($file);
-                fread($file);
-;            
+                fread($file);            
                 //parse-test
                 $i = 0; // counter
                 //$rss = simplexml_load_file($destination); // XML parser
