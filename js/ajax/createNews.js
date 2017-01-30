@@ -1,5 +1,5 @@
 
-$(document).ready(function() {
+/*$(document).ready(function() {
     //var data_irr = "";
     
     $("#add_feed_box").on("submit",function(e){        
@@ -29,5 +29,4 @@ $(document).ready(function() {
         }); 
     });
     
-    //console.log(data_irr);
-});
+});*/
