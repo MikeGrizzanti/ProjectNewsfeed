@@ -104,6 +104,11 @@ class tb_user {
         return $query->fetchAll();
     }
     
+    public static function getUserIdFromMessageID ($message_id) {
+        $sql = 'SELECT tb_message.message_id FROM tb_message INNER JOIN tb_user ON (tb_message.fk_message_user_id = tb_user.user_id);';
+    }
+
+
     public static function saveUser($id, $firstName, $lastName, $nickName, $password, $eMail) {
         if (is_null($id)) {
             return self::createUser($firstName, $lastName, $nickName, $password, $eMail);

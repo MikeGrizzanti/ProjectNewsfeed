@@ -244,12 +244,13 @@ display: inline;
 
 .background_article_popup {
     position: absolute;
-    height: 200em;
+    height: 100%;
     width: 100%;
     left: 0; right: 0; top: 0; bottom: 0;
     background-color: #BDBDBD;
     z-index: 1400;
     opacity: 0.5;
+   
     /*
     -webkit-transition:all 0.2s ease;
     -moz-transition:all 0.2s ease;
@@ -260,6 +261,7 @@ display: inline;
 }
 
 .article_popup {
+    font-family: 'Open Sans', sans-serif;
     background-color: #fafafa;
     border-radius: 3px;
     height: 90%;
@@ -269,6 +271,7 @@ display: inline;
     position: fixed;
     z-index: 1500;
     opacity: 1;
+    
     
     /*
     -webkit-transition:all 0.2s ease;
@@ -281,8 +284,28 @@ display: inline;
 .article_title {
     font-family: 'Roboto', sans-serif;
     position: relative;
-    margin-left: 25em;
-    margin-right: auto;
+    text-align: justify;
+}
+
+.article_subtitle {
+    position: relative;
+    text-align: justify;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+}
+
+.article_img {
+    margin: 1em;
+    margin-top: 1.5em;
+    height: 20em;
+    display: inline;
+    float: left;
+}
+.article_content {
+    margin: 1em; 
+    position: relative;
+    white-space: normal;
+    text-align:justify; 
 }
 
 /*
