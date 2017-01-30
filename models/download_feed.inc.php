@@ -24,8 +24,8 @@ if ($_POST) {
         //parse file via url and get the language before saving
         $context  = stream_context_create(array('http' => array('header' => 'Accept: application/xml')));
 
-        $xml_1 = file_get_contents($source, false, $context);
-        $xml = simplexml_load_string($xml_1);
+        $xml = file_get_contents($source, false, $context);
+        $xml = simplexml_load_string($xml);
         $json = json_encode($xml);
         $array = json_decode($json,TRUE);
     
