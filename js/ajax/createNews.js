@@ -20,7 +20,7 @@ $(document).ready(function() {
                 console.warn(thrownError);
             },
             complete: function(data){
-               console.log('complete');
+               console.log('complete' + data);
                alert(data); // It should now, worky!
             }
         }); 
