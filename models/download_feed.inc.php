@@ -22,24 +22,23 @@ if ($_POST) {
         $result = substr($response, $a, $b-$a);
     
         //parse file via url and get the language before saving
-        /*$context  = stream_context_create(array('http' => array('header' => 'Accept: application/xml')));
+        $context  = stream_context_create(array('http' => array('header' => 'Accept: application/xml')));
 
         $xml = file_get_contents($source, false, $context);
         $xml = simplexml_load_string($xml);
         $json = json_encode($xml);
-        $array = json_decode($json,TRUE);*/
+        $array = json_decode($json,TRUE);
     
         //name
         $file_name = preg_replace('#^https?://#', '', $source);
         $parsed_url = parse_url($source, PHP_URL_HOST);
 
         //destination setup
-        $destination = "xml_downloads/" . $parsed_url; 
+        $destination = "xml_downloads/" . $parsed_url . "_" . $array[channel][language];
     
 
         // URL validations based on $retcode
         if ($retcode == 200 && $result == 'true') {
-            
             
                 //exec
                 $file = fopen($destination, "w+");
@@ -47,16 +46,16 @@ if ($_POST) {
                 fclose($file);
             
                 //parse-test
-                //$i = 0; // counter
+                $i = 0; // counter
                 //$rss = simplexml_load_file($destination); // XML parser
 
-                /*foreach($testArr->channel->item as $item) {
+                foreach($xml->channel->item as $item) {
                         if ($i < 100) { // parse only 100 items
                            echo json_encode($item->title);
                             //print '<a href="'.$item->link.'">'.$item->title.'</a><br />';
                         }
                             $i++;
-                }*/
+                }
             
         } 
     
