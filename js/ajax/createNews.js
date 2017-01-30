@@ -2,7 +2,7 @@
 $(document).ready(function() {
     //var data_irr = "";
     
-    $("#add_feed_box").ajaxSubmit(function(){        
+    $("#add_feed_box").ajaxSubmit({        
         var data_irr = $(".url_box url_box_show").val();
 
         
