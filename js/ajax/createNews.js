@@ -10,7 +10,7 @@ $(document).ready(function() {
             type: "POST",
             url:"/models/download_feed.inc.php",
             chache: false,
-            data: {mydata: data_irr},
+            data: $('#add_feed_box').serialize(),
             //dataType: 'json',
             success: function(data){
                console.log('worky');
