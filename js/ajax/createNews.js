@@ -20,8 +20,8 @@ $(document).ready(function() {
                 console.warn(thrownError);
             },
             complete: function(data){
-               var objArr = $.makeArray(data);
-               console.log('complete' + objArr[0]);
+               var objArr = JSON.stringify(data);
+               console.log('complete' + objArr);
                alert(data); // It should now, worky!
             }
         }); 
