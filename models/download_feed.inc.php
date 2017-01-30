@@ -45,16 +45,30 @@ if ($_POST) {
                 fputs($file, $data);
                 fclose($file);
             
-                //parse-test
-                $i = 0; // counter
-                // XML parser
-                echo json_encode($source);
-                //$rss = simplexml_load_file($destination) or die("Error: Cannot create object");
+                //this file is only meant to download the feed, parse it items via php_functions and save them into the db
+                $dbhost = "mysql.hostinger.de";
+                $dbname = "u584441810_mindf";
+                $dbusername = "u584441810_admin";
+                $dbpassword = "hdgf672HH!!";
 
-                /*foreach($xml->channel->item as $item) {
+                $link = new PDO("mysql:host=$dbhost;dbname=$dbname",$dbusername,$dbpassword);
+
+                $statement = $link->prepare("INSERT INTO tb_feed (feed_id, feed_title, feed_content, feed_img_path, fk_category_id)
+                    VALUES(?,?,?,?,?)");
+                $statement->execute(array("1", "Desaunois", "18", "C:/jdd/gsgs", "Politics"));
+            
+            
+            
+                    
+                // XML parser
+
+                /*
+                $i = 0; // counter
+                foreach($xml->channel->item as $item) {
                         if ($i < 100) { // parse only 100 items
                            echo json_encode($item->title);
                             //print '<a href="'.$item->link.'">'.$item->title.'</a><br />';
+                            
                         }
                             $i++;
                 }*/
