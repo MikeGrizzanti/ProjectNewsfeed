@@ -2,8 +2,6 @@
 
 session_start();
 
-tb_user::getUserFromId($_SESSION['user_id']); 
-
 $user_nickName = "";
 $user_password = "";
 $error = "";

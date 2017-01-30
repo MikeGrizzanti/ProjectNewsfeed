@@ -3,8 +3,8 @@ session_start();
 
 $message_text = "";
 $message_timestamp = time();
-$user_id = $_SESSION['user_id'];
-//$groupChat_id = tb_message::get_fk_groupChat_id();*/
+$user_id = $_SESSION['id'];
+tb_message::getUserIdFromCategory($_SESSION['category_id']);
 $error = "";
 $erg = "";
 
