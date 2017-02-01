@@ -99,15 +99,19 @@ class tb_user {
     public static function getUserIdFromCategory($user_id) {
         $sql = 'SELECT tb_user.user_id, tb_user.user_firstName, tb_user.user_lastName, tb_user.user_nickName, tb_user.user_password, tb_user.user_eMail FROM tb_user INNER JOIN tb_user_interests ON (tb_user.user_id = tb_user_interests.fk_user_id) WHERE tb_user_interests.fk_interests_id = ?;';
         $query = DB::getDB()->prepare($sql);
-        $query->execute(array(id));
+        $query->execute(array($user_id));
         $query->setFetchMode(PDO::FETCH_CLASS, 'tb_user');
         return $query->fetchAll();
     }
     
     public static function getUserIdFromMessageID ($message_id) {
         $sql = 'SELECT tb_message.message_id FROM tb_message INNER JOIN tb_user ON (tb_message.fk_message_user_id = tb_user.user_id);';
+        $query = DB::getDB()->prepare($sql);
+        $query->execute(array($message_id));
+        $query->setFetchMode(PDO::FETCH_CLASS, 'tb_message');
+        return $query->fetchAll();
+        
     }
-
 
     public static function saveUser($id, $firstName, $lastName, $nickName, $password, $eMail) {
         if (is_null($id)) {

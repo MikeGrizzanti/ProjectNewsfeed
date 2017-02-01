@@ -30,7 +30,7 @@ a:hover {
 #search {
     position: relative;
     margin-top: 0;
-    margin-left: 36em;
+    margin-left: 26em;
     width: 35em;
     height: 2em;
     border-radius: 2px;
@@ -109,8 +109,9 @@ display: inline;
     background-color: #FBB040;
     border: 0;
     letter-spacing: 0.05em;
-    margin-left: 15em;
+    margin-left: 13em;
     border-radius: 2px;
+    font-size: 0.7em;
 }
 #login_register_button:active{
     -webkit-box-shadow: inset 0 0 10px #00f;
@@ -136,7 +137,7 @@ display: inline;
 .sidebar {
     position: fixed;
     width: 20rem;
-    height: 26em;
+    height: auto;
     background-color: #fbb040;
     float: left;
     margin-left: 1.8em;
@@ -182,8 +183,20 @@ display: inline;
     color: #fafafa;
     margin-left: 1.5em;
     font-weight: bold;
-    float: right;
+    float: left;
     padding-right: 2em;
+}
+
+.theme_selection{
+    opacity: 0;
+    -webkit-transition:all 0.2s ease;
+    -moz-transition:all 0.2s ease;
+    -o-transition:all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+#sidebar_header{
+    text-decoration: none;
 }
 
 #sidebar_list_user_interests {
@@ -202,6 +215,25 @@ display: inline;
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
     text-decoration: none;
+}
+
+#sidebar_list_themes{
+    margin-top: 1em;
+    padding: 0;
+    margin-left: 1.7em;
+    font-size: 0.9em;
+    list-style-type: none;
+    color: #fafafa; 
+    height: 15em;
+    font-weight: 120;
+}
+
+.sidebar_themes {
+    color: #fafafa;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    list-style-type: none;
 }
 
 #social_media_icons_div {
@@ -250,7 +282,7 @@ display: inline;
     background-color: #BDBDBD;
     z-index: 1400;
     opacity: 0.5;
-   
+    visibility: hidden;
     /*
     -webkit-transition:all 0.2s ease;
     -moz-transition:all 0.2s ease;
@@ -271,7 +303,7 @@ display: inline;
     position: fixed;
     z-index: 1500;
     opacity: 1;
-    
+    visibility: hidden;
     
     /*
     -webkit-transition:all 0.2s ease;
@@ -405,6 +437,7 @@ display: inline;
 
 .url_box{
     opacity: 0;
+    float: left;
     -webkit-transition:all 0.2s ease;
     -moz-transition:all 0.2s ease;
     -o-transition:all 0.2s ease;
