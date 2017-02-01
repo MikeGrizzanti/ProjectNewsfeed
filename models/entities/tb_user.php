@@ -121,7 +121,13 @@ class tb_user {
         }
     }
     
-    private static function updateUser($firstName, $lastName, $nickName, $password, $eMail, $id) {
+    public static function update_user_status($newStatus, $id) {
+        $sql = "UPDATE tb_user SET user_status = ? WHERE id = ?";
+        $query = DB::getDB()->prepare($sql);
+        $query->execute(array($newStatus, $id));
+    }
+
+        private static function updateUser($firstName, $lastName, $nickName, $password, $eMail, $id) {
         $sqlcheck = 'SELECT * FROM tb_user WHERE user_id = ?';
         $queryCheck = DB::getDB()->prepare($sqlcheck);
         $queryCheck->execute(array($firstName, $lastName, $nickName, $password, $eMail, $id));

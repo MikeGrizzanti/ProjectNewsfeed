@@ -25,6 +25,35 @@ if ($_POST) {
                 if ($erg != null){
                     $_SESSION['id'] = $erg->getId();
                     header("Location:index.php?action=main");
+                    
+                    //Bestätigungsemail
+                    $mail = new PHPMailer;
+                    $mail->CharSet = "UTF-8";
+                    $mail->From = "support@mindfeed.esy.es";
+                    $mail->FromName = "mindfeed.esy.es";
+                    $mail->Sender = "support@mindfeed.esy.es";
+                    
+                    $mail->addAddress($erg->getEmail());
+                    $mail->Subject = "Verify registration on mindfeed.esy.es";
+                    
+                    $mail->isHTML(TRUE);
+                    $mail->Body = "<h3>Hello " .$erg->getFirstName() ."</h3>"
+                                . "<p> You logged in on our site mindfeed.esy.es with this email."
+                                . "<p> Please click on the following link to verify your email: <p>"
+                                . "<a> href=mindfeed.esy.es/index.php?action=status&email="
+                                . $erg->getEmail()
+                                . "&id="
+                                . $erg->getId()
+                                . ">mindfeed.esy.es</a>";
+                    
+                    $mail->AltBody = "You were registered on our site. Please copy the following link and paste it in your browser: http://mindfeed.esy.es/index.php?action=status&email="
+                                . $erg->getEmail()
+                                . "&id="
+                                . $erg->getId();
+                    
+                    if (!$mail->send()) {
+                            echo "An error ocurred while sending the email: " . $mail->ErrorInfo;
+                    }
                 }
                 else {
                    $error = "User already exists, please change your email and/or password";
