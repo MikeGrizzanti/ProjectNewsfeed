@@ -31,7 +31,6 @@ body {
     margin-right: auto;
     position: relative;
     width: 17em; 
-    
     border: 2px solid #b6b6b6;
     border-radius: 0.2rem;
 }
@@ -57,7 +56,7 @@ body {
     height: 1.5em;
     width: 15em;
     font-family: "Roboto",sans-serif;
-    margin-top: 1.5em;
+    margin-top: 1em;
     margin-bottom: 1em;
 }
 
@@ -199,10 +198,22 @@ hr {
 }
 
 #register_header {
-    margin-top: 0.5em;
+    font-size: 1em;
+    margin-top: 0em;
     margin-left: 1.8em;
     text-align: right;
     display: inline;
+    font-family: 'Roboto', sans-serif;
+}
+
+#login_header {
+    font-family: 'Roboto', sans-serif;
+    color: #fafafa;
+    margin-bottom: 0;
+    margin-top: 0;
+    text-align: left;
+    margin-left: 1.3em;
+    font-size: 1em;
 }
 
 #switch_to_login {
@@ -1199,7 +1210,7 @@ hr {
     }
     
     .login_form {
-        height: 17em;
+        height: 18em;
     }
 }
 
