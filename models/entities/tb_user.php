@@ -113,7 +113,6 @@ class tb_user {
         
     }
 
-
     public static function saveUser($id, $firstName, $lastName, $nickName, $password, $eMail) {
         if (is_null($id)) {
             return self::createUser($firstName, $lastName, $nickName, $password, $eMail);
