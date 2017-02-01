@@ -24,8 +24,8 @@ if ($_POST) {
         //parse file via url and get the language before saving
         $context  = stream_context_create(array('http' => array('header' => 'Accept: application/xml')));
 
-        $xml_1 = file_get_contents($source, false, $context);
-        $xml = simplexml_load_string($xml_1);
+        $xml = file_get_contents($source, false, $context);
+        $xml = simplexml_load_string($xml);
         $json = json_encode($xml);
         $array = json_decode($json,TRUE);
     
@@ -45,17 +45,53 @@ if ($_POST) {
                 fputs($file, $data);
                 fclose($file);
             
-                //parse-test
-                $i = 0; // counter
-                //$rss = simplexml_load_file($destination); // XML parser
+            
+                //setup parser
+                $rss =simplexml_load_file($destination);
+                //print gettype($rss);
+            
+                //this file is only meant to download the feed, parse it items via php_functions and save them into the db
+                $dbhost = "mysql.hostinger.de";
+                $dbname = "u584441810_mindf";
+                $dbusername = "u584441810_admin";
+                $dbpassword = "hdgf672HH!!";
 
+                $link = new PDO("mysql:host=$dbhost;dbname=$dbname",$dbusername,$dbpassword);
+
+                $statement = $link->prepare("INSERT INTO tb_feed (feed_id, feed_title, feed_content, feed_img_path, fk_category_id)
+                    VALUES(?,?,?,?,?)");
+                $statement->execute(array($i, $title_itm, $description_itm, $source, 10)); //insert parsed values here
+            
+            
+                $i = 0;
+            
+                 foreach($rss->channel->item as $item) {
+                        if ($i < 100) { // parse only 100 items
+                           $title_itm = $item->title;
+                            $description_itm = $item->description;
+                            //print '<a href="'.$item->link.'">'.$item->title.'</a><br />';
+                            
+                        }
+                            $i++;
+                }
+            
+                
+            
+            
+            
+                    
+                // XML parser
+
+                /*
+                $i = 0; // counter
                 foreach($xml->channel->item as $item) {
                         if ($i < 100) { // parse only 100 items
                            echo json_encode($item->title);
                             //print '<a href="'.$item->link.'">'.$item->title.'</a><br />';
+                            
                         }
                             $i++;
-                }
+                }*/
             
         } 
     

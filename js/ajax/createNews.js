@@ -1,10 +1,10 @@
 
-$(document).ready(function() {
+/*$(document).ready(function() {
     //var data_irr = "";
     
-    $("#add_feed_box").submit(function(e){        
+    $("#add_feed_box").on("submit",function(e){        
         
-        //e.preventDefault();
+        e.preventDefault();
         
         $.ajax({
             type: "POST",
@@ -29,5 +29,4 @@ $(document).ready(function() {
         }); 
     });
     
-    //console.log(data_irr);
-});
+});*/
