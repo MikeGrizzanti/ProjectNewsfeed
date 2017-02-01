@@ -30,23 +30,17 @@ body {
     margin-left: auto;
     margin-right: auto;
     position: relative;
-    width: 17.5em;    
+    width: 17em; 
+    
     border: 2px solid #b6b6b6;
     border-radius: 0.2rem;
 }
-
-#login_table {
-    margin: auto;
-    margin-top: 0;
-    padding-left: auto;
-    padding-right: auto;
-}
-
 .register_form{
     margin-left: auto;
     margin-right: auto;
     position: relative;
-    width: 17.5em;    
+    width: 17em;
+    
     border: 2px solid #b6b6b6;
     border-radius: 0.2rem;
 }
@@ -60,21 +54,18 @@ body {
 
 #text_field_nickname, #text_field_password{
     position: relative;
-    display: block;
     height: 1.5em;
     width: 15em;
     font-family: "Roboto",sans-serif;
-    margin-top: 3em;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 0.9em;
+    margin-top: 1.5em;
+    margin-bottom: 1em;
 }
+
 #text_field_password {
     margin-top: 0;
 }
 
 #text_field_reg_first_name, #text_field_reg_last_name, #text_field_reg_password,#text_field_reg_rep_password, #text_field_reg_email{
-    margin: 3em;
     margin-bottom: 0.9em;
     margin-top: 0;
     position: relative;
@@ -84,7 +75,6 @@ body {
     font-family: "Roboto",sans-serif;
 }
 #text_field_reg_nickname{
-    margin: 3em;
     margin-bottom: 0.9em;
     margin-top: 1.2em;
     position: relative;
@@ -95,7 +85,6 @@ body {
 }
 
 #login_button {
-    margin: 3em;
     margin-top: 0;
     margin-bottom: 0.5em;
     height: 2em;
@@ -106,13 +95,12 @@ body {
     background-color: rgb(250,175,65);
     border-color: rgb(250,175,65);
     font-weight: 90;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.05em;
 }
 
 #register_button {
-    margin: 3em;
-    margin-top: 2em;
-    margin-bottom: 0em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
     height: 2em;
     width: 15.4em;
     font-family: "Roboto",sans-serif;
@@ -144,8 +132,6 @@ hr {
     width: 12em;
     margin-top: 0;
     margin-bottom: 0;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 #no_login_option{
@@ -154,12 +140,11 @@ hr {
     font-family: "Roboto",sans-serif;
     font-weight: normal;
     color: #fafafa;
-    margin: 3em;
     margin-bottom: 0;
-    margin-top: 1em;
+    margin-top: 0em;
     height: 2em;
     width: 15.4em;
-    letter-spacing:  0.1em;
+    letter-spacing:  0.05em;
 }
 
 #register_option {
@@ -168,12 +153,11 @@ hr {
     font-family: "Roboto",sans-serif;
     font-weight: normal;
     color: #fafafa;
-    margin: 3em;
-    margin-top: 1em;
+    margin-top: 0.5em;
     height: 2em;
     width: 15.4em;
     margin-bottom: 1em;
-    letter-spacing:  0.1em;
+    letter-spacing:  0.05em;
 }
 
 #login_button, #no_login_option, #login_socialmedia, #action_button, #text_field_nickname, #text_field_password, #main_logo, #register_option, #no_login_option, #text_field_reg_nickname, #text_field_reg_email, #text_field_reg_first_name, #text_field_reg_last_name, #text_field_reg_password, #text_field_reg_rep_password, #register_button, #register_button:focus {
@@ -205,7 +189,7 @@ hr {
     font-size: 0.625em;
     color: #f00;
     height: 2em;
-    width: 17em;
+    width: 20em;
     margin-bottom: 0.5em;
     margin-left: auto;
     margin-right: auto;
@@ -216,7 +200,7 @@ hr {
 
 #register_header {
     margin-top: 0.5em;
-    margin-left: 1em;
+    margin-left: 1.8em;
     text-align: right;
     display: inline;
 }
@@ -233,6 +217,19 @@ hr {
     margin-left: auto;
     margin-right: auto;
 }
+
+#login_table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* margins_login_form */
+#text_field_nickname, #text_field_password, #login_button, #register_option, #no_login_option {
+    margin-left: 1.85em;
+    margin-right: auto;
+} 
+
+
 /* entire container, keeps perspective */
 .flip-container {
 	perspective: 1000px;
@@ -1185,11 +1182,11 @@ hr {
 }
 
 /* Desktops and laptops ----------- */
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1024px) and (max-device-height: 1280px) {
     #main_logo{
         width: 25%;
         height: auto;
-        margin-top: 5em;
+        margin-top: 10em;
         margin-left: auto;
         margin-right: auto;
     }
@@ -1201,23 +1198,8 @@ hr {
         margin-right: auto;
     }
     
-    #login_button {
-        margin-left: 3.9em;
-    }
-    
-    #register_option {
-        margin-left: 3.9em;
-        margin-top: 1em;
-    }
-    
-    #no_login_option {
-        margin-left: 3.9em;
-        margin-bottom: 0;
-    }
-    
-    #switch_to_login {
-        margin-left: 1em;
-        outline: none;
+    .login_form {
+        height: 17em;
     }
 }
 
