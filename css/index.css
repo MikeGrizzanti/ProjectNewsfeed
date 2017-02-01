@@ -137,7 +137,7 @@ display: inline;
 .sidebar {
     position: fixed;
     width: 20rem;
-    height: 26em;
+    height: auto;
     background-color: #fbb040;
     float: left;
     margin-left: 1.8em;
@@ -181,10 +181,74 @@ display: inline;
     font-family: 'Roboto', sans-serif;
     margin-left: 1em;
     color: #fafafa;
-    margin-left: 1.5em;
+    margin-left: 1.7em;
     font-weight: bold;
-    float: right;
+    float: left;
     padding-right: 2em;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.main_wrapper, label{
+    display: -webkit-flex; /* Safari */
+    -webkit-flex-direction: row-reverse; /* Safari 6.1+ */
+    display: flex;
+    flex-direction: row;
+    clear: both;
+}
+
+select{
+    border-radius: 4px;
+    height: 2em;
+    width: auto;
+}
+
+.select_mod:after{
+}
+
+.wrap{
+  clear: both;
+  float: left;
+  margin-left: 1.7em;
+  margin-top: 0.5em;
+  opacity: 0;
+    -webkit-transition:all 0.2s ease;
+    -moz-transition:all 0.2s ease;
+    -o-transition:all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+#wrap2{
+    padding-left: 2em;
+}
+
+.wrap_url_box{
+  clear: both;
+  float: left;
+  margin-top: 1em;
+  margin-left: 1.7em;
+  opacity: 0;
+  -webkit-transition:all 0.2s ease;
+    -moz-transition:all 0.2s ease;
+    -o-transition:all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+.url_box, #member1, #member2{
+  display:block;
+}
+
+label{
+    font-family: 'Roboto', sans-serif;
+    color: #fafafa;
+    font-variant: small-caps;
+    font-size: 0.6em;
+    float: left;
+    opacity: 0;
+    -webkit-transition:all 0.2s ease;
+    -moz-transition:all 0.2s ease;
+    -o-transition:all 0.2s ease;
+    transition: all 0.2s ease;
 }
 
 #sidebar_list_user_interests {
@@ -207,6 +271,7 @@ display: inline;
 
 #social_media_icons_div {
     position: relative;
+    float: left;
 }
 
 .social_media_icon {
@@ -219,9 +284,10 @@ display: inline;
 
 #sidebar_footer {
     position: relative;
-    height: 2em auto;
+    height: 7em;
     width: 100%;
     margin-bottom: 0;
+    margin-top: 3.5em;
 }
 
 #sidebar_list_footer{
@@ -405,7 +471,6 @@ display: inline;
 }
 
 .url_box{
-    opacity: 0;
     -webkit-transition:all 0.2s ease;
     -moz-transition:all 0.2s ease;
     -o-transition:all 0.2s ease;
