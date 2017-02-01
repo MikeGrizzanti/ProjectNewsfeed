@@ -30,7 +30,7 @@ a:hover {
 #search {
     position: relative;
     margin-top: 0;
-    margin-left: 36em;
+    margin-left: 26em;
     width: 35em;
     height: 2em;
     border-radius: 2px;
@@ -109,8 +109,9 @@ display: inline;
     background-color: #FBB040;
     border: 0;
     letter-spacing: 0.05em;
-    margin-left: 15em;
+    margin-left: 13em;
     border-radius: 2px;
+    font-size: 0.7em;
 }
 #login_register_button:active{
     -webkit-box-shadow: inset 0 0 10px #00f;
@@ -250,7 +251,7 @@ display: inline;
     background-color: #BDBDBD;
     z-index: 1400;
     opacity: 0.5;
-   
+    visibility: hidden;
     /*
     -webkit-transition:all 0.2s ease;
     -moz-transition:all 0.2s ease;
@@ -271,7 +272,7 @@ display: inline;
     position: fixed;
     z-index: 1500;
     opacity: 1;
-    
+    visibility: hidden;
     
     /*
     -webkit-transition:all 0.2s ease;
