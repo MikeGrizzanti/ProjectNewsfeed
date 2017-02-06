@@ -26,12 +26,51 @@
             <li><a class="user_interest" href="#">amet</a></li>
             </ul> 
             <br/>
-        <footer id="sidebar_footer">
-            <a class="add_point">ADD INTEREST +</a>
+            
+            
             <form method="post" action="index.php?action=main" id="add_feed_box">
                 <a class="add_feed">ADD FEED +</a>
-                <input name="add_feed" type="url" class="url_box" placeholder="Ex: http://www.yoursite.com" >
+                <div class="main_wrapper">
+                <div class="wrap">
+                    <label class="select_mod">
+                    <select name="member1" id="member1">
+                                  <option value="1">Politics</option>
+                                  <option value="2">Economy</option>
+                                  <option value="3">Technology</option>
+                                  <option value="4">Science</option>
+                                  <option value="5">Chronicle</option>
+                                  <option value="6">Art</option>
+                                  <option value="7">Social</option>
+                                  <option value="8">Travel</option>
+                                  <option value="9">Sport</option>
+                                </select>
+                    </label>
+                    <label for="member1">Choose source</label>
+                </div>
+                <div class="wrap" id="wrap2">
+                    <label class="select_mod">
+                    <select name="member2" id="member2">
+                                  <option value="1">Politics</option>
+                                  <option value="2">Economy</option>
+                                  <option value="3">Technology</option>
+                                  <option value="4">Science</option>
+                                  <option value="5">Chronicle</option>
+                                  <option value="6">Art</option>
+                                  <option value="7">Social</option>
+                                  <option value="8">Travel</option>
+                                  <option value="9">Sport</option>
+                                </select>
+                    </label>    
+                    <label for="member2">Choose theme</label>
+                </div>
+            </div>
+            <div class="wrap_url_box">
+                <input name="add_feed" type="url" class="url_box" placeholder="Ex: http://www.yoursite.com">
+                <label for="member3">Insert Custom Source</label>
+            </div>
             </form>
+            
+        <footer id="sidebar_footer">
             <hr/>
             <div id="social_media_icons_div">
             <a href="#"><img class="social_media_icon" id="first_icon" src="../images/socialmedia/facebook.svg"/></a>
