@@ -2,8 +2,6 @@
 
 require_once 'models/functions.inc.php';
 
-session_start();
-
 class controller {
     
     private $context = array();
