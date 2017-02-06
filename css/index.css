@@ -95,12 +95,12 @@ display: inline;
     height: 1.25em;
 }
 
-.hamburger_open_close {
+.hamburger_open_close {0
     display: inline;
 }
 
 #login_register_button {
-    text-align: center;
+    text-align: center; 
     height: 2em;
     width: 13em;
     font-family: "Roboto",sans-serif;
