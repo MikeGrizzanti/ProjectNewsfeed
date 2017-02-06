@@ -106,6 +106,16 @@
         
         
         <div class="main_page">
+            
+            <!-- Überprüft ob user_status == 0, wenn ja wird meldung angezeigt EMAIL zu bestätigen -->
+            <?php 
+                $user = tb_user::getUserFromID($_SESSION['id']);
+                var_dump($user);
+                if ($user->getStatus() == 0) { ?>
+                    
+            <?php } ?>
+            <!-- -->
+            
             <table id="table_news_cards">
             <tr> 
             <td>    

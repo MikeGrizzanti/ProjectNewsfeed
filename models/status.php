@@ -6,6 +6,7 @@
 $eMail = '';
 $id = '';
 $info = '';
+$errorStatus = '';
 
 if ($_GET) {
     if (isset($_GET['email']) && isset($_GET['id'])) {

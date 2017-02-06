@@ -7,6 +7,7 @@ class tb_user {
     private $user_nickName = '';
     private $user_password = '';
     private $user_eMail = '';
+    private $user_status = '';
     
     public function __construct($data = array()) {
         if ($data) {
@@ -47,6 +48,10 @@ class tb_user {
         return $this->user_eMail;
     }
     
+    public function getStatus() {
+        return $this->user_status;
+    }
+
     public function setFirstName($firstName) {
         if (strlen($firstName) <= 50) 
             $this->user_firstName = $firstName;
