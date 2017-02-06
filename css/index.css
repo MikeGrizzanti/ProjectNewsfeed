@@ -317,7 +317,7 @@ label{
     background-color: #BDBDBD;
     z-index: 1400;
     opacity: 0.5;
-    
+    visibility: hidden;
     /*
     -webkit-transition:all 0.2s ease;
     -moz-transition:all 0.2s ease;
@@ -339,13 +339,21 @@ label{
     z-index: 1500;
     opacity: 1;
     overflow-y: scroll;
-    
+    visibility: hidden;
     /*
     -webkit-transition:all 0.2s ease;
     -moz-transition:all 0.2s ease;
     -o-transition:all 0.2s ease;
     transition: all 0.2s ease;
     */
+}
+
+#close_popup {
+    position: absolute;
+}
+
+#window_title {
+    position: absolute;
 }
 
 .article_title {
