@@ -64,14 +64,6 @@
                                 <tr>
                                     <td>
                                     <input class="button" id="login_button" type="submit" value="LOGIN" />
-                            
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                    <?php if ($error != NULL) { ?>
-                                    <div id="errorDivLogin"><?php echo $error ?></div>
-                                    <?php } ?>
                                     </td>
                                 </tr>
                                 <tr>
@@ -95,6 +87,18 @@
                                         <div class="fb-login-button" data-max-rows="1" data-size="large" data-show-faces="false" data-auto-logout-link="false"></div>
                                     </td>
                                 </tr>
+                                
+                                <?php if ($error != NULL) { ?>
+                                    <style>
+                                        #text_field_nickname {
+                                            border: 1px solid red;
+                                        }
+                                        #text_field_password {
+                                            border: 1px solid red;
+                                        }
+                                    </style>    
+                                <?php } ?>  
+                                
                             </table>
                         </form>
                     </div>
@@ -150,15 +154,11 @@
                         <input class="button" id="register_button" type="submit" value="REGISTER" />
                                 </td>
                             </tr>
-                        
-                    
-                            <tr>
-                                <td>
                     <?php if ($error != NULL) { ?>
-                            <div id="errorDivRegister"><?php echo $error ?></div>
+                            <style>
+                                        
+                            </style>
                     <? } ?>
-                                </td>
-                            </tr>
                             </table>
                         
                     </form>
