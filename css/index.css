@@ -317,7 +317,7 @@ label{
     background-color: #BDBDBD;
     z-index: 1400;
     opacity: 0.5;
-    visibility: hidden;
+    
     /*
     -webkit-transition:all 0.2s ease;
     -moz-transition:all 0.2s ease;
@@ -338,7 +338,7 @@ label{
     position: fixed;
     z-index: 1500;
     opacity: 1;
-    visibility: hidden;
+    overflow-y: scroll;
     
     /*
     -webkit-transition:all 0.2s ease;
@@ -358,7 +358,7 @@ label{
     position: relative;
     text-align: justify;
     margin-left: 0.5em;
-    margin-right: 0.5em;
+    margin-right: 2em;
 }
 
 .article_img {
@@ -370,9 +370,11 @@ label{
 }
 .article_content {
     margin: 1em; 
+    height: 35em;
     position: relative;
     white-space: normal;
-    text-align:justify; 
+    text-align:justify;
+    
 }
 
 /*
