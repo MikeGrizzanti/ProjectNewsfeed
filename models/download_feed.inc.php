@@ -75,9 +75,9 @@ if ($_POST) {
 
                 $feed_source = tb_feed::getAllFeedSources();
 
-                $statement = $link->prepare("INSERT INTO tb_feed (feed_id, feed_title, feed_content, feed_img_path, fk_category_id)
+                /*$statement = $link->prepare("INSERT INTO tb_feed (feed_id, feed_title, feed_content, feed_img_path, fk_category_id)
                     VALUES(?,?,?,?,?)");
-                $statement->execute(array($i, $title_itm, $description_itm, "C:/jdd/gsgs", 10)); //insert parsed values here
+                */$statement->execute(array($i, $title_itm, $description_itm, "C:/jdd/gsgs", 10)); //insert parsed values here
             
         } 
     
