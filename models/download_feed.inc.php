@@ -63,6 +63,7 @@ if ($_POST) {
                 }
             
                 //this file is only meant to download the feed, parse it items via php_functions and save them into the db
+
                 $feed_source = tb_category::getAllFeedSources();
 
                 $statement = $link->prepare("INSERT INTO tb_feed (feed_id, feed_title, feed_content, feed_img_path, fk_category_id)
