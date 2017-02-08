@@ -2,8 +2,16 @@
 if ($_POST) {
         //curl and header
         $ch = curl_init();
-        if (isset($_POST['add_feed'])) {
-           $source = trim($_POST['add_feed']);
+        if (isset($_POST['add_feed']) && isset($_POST['member2'])) {
+            $source = trim($_POST['add_feed']);
+            $theme = trim($_POST['member2']);
+            $_POST['member1'] = NULL;
+        }
+        
+        elseif (isset($_POST['member1']) && isset($_POST['member2'])){
+            $source_predefined = trim($_POST['member1']);
+            $theme = trim($_POST['member2']);
+            $_POST['add_feed'] = NULL;
         }
     
         //curl setup
@@ -64,7 +72,7 @@ if ($_POST) {
             
                 //this file is only meant to download the feed, parse it items via php_functions and save them into the db
 
-                $feed_source = tb_feed::getAllFeedSources();
+                $feed_source = tb_category::getAllFeedSources();
 
                 $statement = $link->prepare("INSERT INTO tb_feed (feed_id, feed_title, feed_content, feed_img_path, fk_category_id)
                     VALUES(?,?,?,?,?)");
