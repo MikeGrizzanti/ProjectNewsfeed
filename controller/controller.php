@@ -53,11 +53,11 @@ class controller {
     }*/
     
     public function download_feed() {
-        if(is_loggedIn() && !empty($_POST)){
+        //if(is_loggedIn() && !empty($_POST)){
             require_once 'models/download_feed.inc.php';
             $this->addContext("error", $error);
             $this->addContext("template", "feed");
-        }
+        //}
     }
 
 
