@@ -35,12 +35,6 @@ class tb_category {
         return $query->fetch();
     }
     
-    public static function getAllFeedSources() {
-        $sql = 'SELECT catefory_feed_source FROM tb_category';
-        $query = DB::getDB()->prepare($sql);
-        $query->execute(array($category_feed_source));
-        $query->setFetchMode(PDO::FETCH_CLASS, 'tb_category');
-        $query->fetchAll();
-    }
+    
 }
 
