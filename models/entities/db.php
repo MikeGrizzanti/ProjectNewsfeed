@@ -12,7 +12,7 @@ class DB {
             try {
                 $db = new PDO($dsn, $user, $password);
                 $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-                var_dump($db);
+                //var_dump($db);
             } catch (PDOException $e) {
                 echo $e->getMessage();
             }    
