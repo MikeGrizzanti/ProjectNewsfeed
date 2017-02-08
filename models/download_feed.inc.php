@@ -63,12 +63,7 @@ if ($_POST) {
                 }
             
                 //this file is only meant to download the feed, parse it items via php_functions and save them into the db
-                $dbhost = "mysql.hostinger.de";
-                $dbname = "u584441810_mindf";
-                $dbusername = "u584441810_admin";
-                $dbpassword = "hdgf672HH!!";
-
-                $link = new PDO("mysql:host=$dbhost;dbname=$dbname",$dbusername,$dbpassword);
+                $feed_source = tb_category::getAllFeedSources();
 
                 $statement = $link->prepare("INSERT INTO tb_feed (feed_id, feed_title, feed_content, feed_img_path, fk_category_id)
                     VALUES(?,?,?,?,?)");
