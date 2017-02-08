@@ -1189,10 +1189,10 @@ hr {
     .login_form {
         height: 18em;
     }
-}
+} 
 
 /* Large screens ----------- */
-@media only screen and (min-width: 1824px) and (max-device-height: 1024) {
+@media only screen and (min-device-width: 1920px) and (max-device-height: 1080px) {
   #main_logo{
       position: relative;
         width: 20%;
