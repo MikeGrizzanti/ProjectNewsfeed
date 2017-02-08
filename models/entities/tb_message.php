@@ -53,8 +53,8 @@ class tb_message {
     public static function getMessageFromGroupChat($fk_message_user_id, $fk_groupChat_id) {
         $sql = 'SELECT message_id FROM tb_message WHERE fk_message_user_id = ? AND fk_groupChat_id = ?;';
         $query = DB::getDB()->prepare($sql);
-        $query -> execute (array($fk_message_user_id, $fk_groupChat_id));
-        $query -> setFetchMode(PDO::FETCH_CLASS, 'tb_message');
+        $query->execute (array($fk_message_user_id, $fk_groupChat_id));
+        $query->setFetchMode(PDO::FETCH_CLASS, 'tb_message');
         return $query->fetch();
     }
     
@@ -63,5 +63,14 @@ class tb_message {
         $query = DB::getDB()->prepare($sql);
         $query->execute(array($message_timestamp, $fk_message_user_id, $message_text, $fk_groupChat_id));
     }
+    
+    public static function printMessage ($fk_message_user_id, $fk_groupChat_id) {
+        $sql = 'SELECT message_text, message_timestamp FROM tb_message WHERE fk_message_user_id = ? AND fk_groupChat_id = ?;';
+        $query = DB::getDB()->prepare($sql);
+        $query->execute(array($fk_message_user_id, $fk_groupChat_id));
+        $query->setFetchMode(PDO::FETCH_CLASS, 'tb_message');
+        return $query->fetch();
+    }
+    
 }
 
