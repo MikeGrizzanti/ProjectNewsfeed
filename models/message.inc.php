@@ -1,10 +1,9 @@
 <?php
-session_start();
 
 $message_text = "";
 $message_timestamp = time();
 $user_id = $_SESSION['id'];
-tb_message::getUserIdFromCategory($_SESSION['category_id']);
+//tb_message::getUserIdFromCategory($_SESSION['category_id']);
 $error = "";
 $erg = "";
 
