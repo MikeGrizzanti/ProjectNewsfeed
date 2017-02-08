@@ -43,7 +43,8 @@ if ($_POST) {
 
         //destination setup
         $destination = "xml_downloads/" . $parsed_url . "_" . $array[channel][language];
-    
+        
+        echo $source." ".$theme;
 
         // URL validations based on $retcode
         if ($retcode == 200 && $result == 'true') {
