@@ -187,7 +187,6 @@ display: inline;
 
 .add_feed {
     font-family: 'Roboto', sans-serif;
-    margin-left: 0.6em;
     color: #fafafa;
     margin-left: 1.7em;
     font-weight: bold;
@@ -195,6 +194,14 @@ display: inline;
     padding-right: 2em;
     cursor: pointer;
     text-decoration: none;
+}
+
+#member1 {
+    margin-left: 0em;
+    width: 8em;
+}
+#member2 {
+    width: 8em; 
 }
 
 .main_wrapper, label{
@@ -236,7 +243,7 @@ select{
   clear: both;
   float: left;
   margin-top: 0;
-    margin-left: 0.6em;
+  margin-left: 0.5em;
   opacity: 0;
   -webkit-transition:all 0.2s ease;
     -moz-transition:all 0.2s ease;
@@ -245,6 +252,7 @@ select{
 }
 
 .url_box {
+    
     border: none;
     border-radius: 2px;
 }
@@ -258,7 +266,7 @@ select{
 }
 
 .wrap {
-    margin:  0.6em;
+    margin:  0.5em;
 }
 
 
