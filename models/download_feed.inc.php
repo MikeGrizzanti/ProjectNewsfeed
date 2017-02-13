@@ -6,12 +6,16 @@ if ($_POST) {
             $source = trim($_POST['add_feed']);
             $theme = trim($_POST['member2']);
             $_POST['member1'] = NULL;
+            
+            //code...
         }
         
         elseif (isset($_POST['member1']) && isset($_POST['member2'])){
             $source_predefined = trim($_POST['member1']);
             $theme = trim($_POST['member2']);
             $_POST['add_feed'] = NULL;
+            
+            //code...
         }
     
         //curl setup
@@ -38,11 +42,13 @@ if ($_POST) {
         $array = json_decode($json,TRUE);
     
         //name
-        $file_name = preg_replace('#^https?://#', '', $source);
-        $parsed_url = parse_url($source, PHP_URL_HOST);
-
+    
+        $info = parse_url($url);
+        $host = $info['host'];
+        $host_names = explode(".", $host);
+    
         //destination setup
-        $destination = "xml_downloads/" . $parsed_url . "_" . $array[channel][language];
+        $destination = "xml_downloads/" . $host_names[1];
         
 
         // URL validations based on $retcode
