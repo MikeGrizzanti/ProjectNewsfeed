@@ -48,7 +48,7 @@ if ($_POST) {
         $host_names = explode(".", $host);
     
         //destination setup
-        $destination = "xml_downloads/" . $host_names[1] . "xml";
+        $destination = "xml_downloads/" . $host_names[1] . ".xml";
         
 
         // URL validations based on $retcode
