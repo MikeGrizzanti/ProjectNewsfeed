@@ -35,9 +35,9 @@
                     <label class="select_mod">
                     <select name="member1" id="member1">
                                   <?php
-                                    foreach($feed_source as $key => $value){
+                                    foreach($feed_source as $key => $value):
                                         echo '<option value="'.$key.'">'.$value.'</option>'; 
-                                    }
+                                    endforeach;
                                     ?>
                     </select>
                     </label>
