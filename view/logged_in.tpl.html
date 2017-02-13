@@ -126,7 +126,7 @@
         
         
         <header class="header">
-            <a href="index.php?action=main"><img id="main_logo" src="../images/Logo_Mindfeed_White_Orange.svg" /></a>
+            <img id="main_logo" src="../images/Logo_Mindfeed_White_Orange.svg" />
             
             
             <!-- icons -->
@@ -150,7 +150,7 @@
             <?php 
                 $user = tb_user::getUserFromID($_SESSION['id']);
                 if ($user->getStatus() == 0) { ?>
-                    <p>Bitte email hier bes</p>
+                    <div class="confirm_email_div"><p id="confirm_warning">To complete your registration, please confirm your email.</p></div>
             <?php } ?>
             <!-- -->
             
