@@ -64,9 +64,9 @@
                 <div class="wrap">
                     <label class="select_mod">
                     <select name="member1" id="member1">
-                                  <?php
-                                    foreach($_SESSION['feed_source'] as $key => $value){ ?>
-                                    <option value="<?php echo $key ?>"><?php echo $value ?></option> 
+                                  <?php foreach($_SESSION['feed_source'] as $value){ ?>
+                                  <option value="<?php echo $value->getSourceName() ?>">
+                                      <?php echo $value->getSourceName() ?></option> 
                                     <?php } ?>
                     </select>
                     </label>
