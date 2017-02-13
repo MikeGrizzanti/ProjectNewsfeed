@@ -47,6 +47,7 @@
             <li><a class="user_interest" href="#">SPORT</a></li>
             </ul> 
             <br/>
+                
             <h3 class="sidebar_header">Favorites:</h3>
             <ul id="sidebar_list_user_favorites">
             <li><a class="user_interest" href="#">POLITICS</a></li>
@@ -65,7 +66,7 @@
                     <label class="select_mod">
                     <select name="member1" id="member1">
                                   <?php foreach($feed_source as $value){ ?>
-                                  <option value="<?php echo $value->getSourceName() ?>">
+                                  <option class="selected_option" value="<?php echo $value->getSourceName() ?>">
                                       <?php echo $value->getSourceName() ?></option> 
                                     <?php } ?>
                     </select>
