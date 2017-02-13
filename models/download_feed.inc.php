@@ -68,9 +68,17 @@ if ($_POST) {
             
                  foreach($rss->channel->item as $item) {
                         if ($i < 100) { // parse only 100 items
-                           $title_itm = $item->title;
+                            $title_itm = $item->title;
                             $description_itm = $item->description;
-                            //print '<a href="'.$item->link.'">'.$item->title.'</a><br />';
+                            $author_itm = $item->author;
+                            $pubDate_itm = $item->pubDate;
+                            $guid_itm = $item->guid;
+                            $image_itm = $item->image;
+                           
+                            
+                            $sql = "INSERT INTO tb_feed (feed_title, feed_content, feed_author, feed_pubDate, feed_guid, feed_img_path, fk_category_id, fk_source_id) VALUES (?,?,?,?,?,?,?,?)";
+                            $query = DB::getDB()->prepare($sql);
+                            $query->execute(array($title_itm, $description_itm, $author_itm, $pubDate_itm, $guid_itm, $image_itm, 1, 1));
                             
                         }
                             $i++;
