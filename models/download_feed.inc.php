@@ -43,7 +43,7 @@ if ($_POST) {
     
         //name
     
-        $info = parse_url($url);
+        $info = parse_url($source);
         $host = $info['host'];
         $host_names = explode(".", $host);
     
