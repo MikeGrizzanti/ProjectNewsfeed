@@ -40,7 +40,7 @@ if ($_POST) {
                     $mail->Body = "<h3>Hello " .$erg->getFirstName() ." ,</h3>"
                                 . "<p> You logged in on our site mindfeed.esy.es with this email."
                                 . "<p> Please click on the following link to verify your email: <p>"
-                                . "<a> href=mindfeed.esy.es/index.php?action=status&email="
+                                . "<a href=mindfeed.esy.es/index.php?action=status&email="
                                 . $erg->getEmail()
                                 . "&id="
                                 . $erg->getId()

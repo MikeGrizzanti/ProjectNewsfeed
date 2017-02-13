@@ -40,6 +40,11 @@ class controller {
         }
     }
     
+    public function status() {
+        require_once 'models/status.php';
+        $this->addContext("template", "logged_in");
+    }
+    
     public function register() {
         $erg = is_loggedIn();
         require_once 'models/register.inc.php';
