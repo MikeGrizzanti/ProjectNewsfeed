@@ -67,6 +67,13 @@ a:hover {
     height: 1.5em;
 }
 
+.top_icon_dropdown {
+    height: 10em;
+    width: 20em;
+    position: absolute;
+    z-index: 2000;
+    
+}
 
 .top_icon_open_sidebar {
     display: inline;
@@ -222,11 +229,11 @@ select{
 }
 
 .wrap{
-  clear: both;
-  float: left;
-  margin-left: 1.7em;
-  margin-top: 0.5em;
-  opacity: 0;
+    clear: both;
+    float: left;
+    margin-left: 1.7em;
+    margin-top: 0.5em;
+    opacity: 0;
     -webkit-transition:all 0.2s ease;
     -moz-transition:all 0.2s ease;
     -o-transition:all 0.2s ease;
@@ -246,9 +253,9 @@ select{
   margin-left: 0.5em;
   opacity: 0;
   -webkit-transition:all 0.2s ease;
-    -moz-transition:all 0.2s ease;
-    -o-transition:all 0.2s ease;
-    transition: all 0.2s ease;
+  -moz-transition:all 0.2s ease;
+  -o-transition:all 0.2s ease;
+  transition: all 0.2s ease;
 }
 
 .url_box {
