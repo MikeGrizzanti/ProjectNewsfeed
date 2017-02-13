@@ -127,7 +127,7 @@ class tb_user {
     }
     
     public static function update_user_status($newStatus, $id) {
-        $sql = "UPDATE tb_user SET user_status = ? WHERE id = ?";
+        $sql = "UPDATE tb_user SET user_status = ? WHERE user_id = ?";
         $query = DB::getDB()->prepare($sql);
         $query->execute(array($newStatus, $id));
     }
