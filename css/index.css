@@ -45,26 +45,26 @@ a:hover {
 #top_icon_group {
     display: inline;
     position: relative;
-    margin-left: 8em;
+    margin-left: 7em;
 }
 
 #top_icon_chat {
     position: relative;
     display: inline;
     margin-left: 2rem;
-    height: 1.25em;
+    height: 1.5em;
 }
 
 #top_icon_profile {
     display: inline;
     margin-left: 2rem;
-    height: 1.25em;
+    height: 1.5em;
 }
 
 #top_icon_settings {
     display: inline;
     margin-left: 2rem;
-    height: 1.25em;
+    height: 1.5em;
 }
 
 
