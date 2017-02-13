@@ -48,7 +48,7 @@ if ($_POST) {
         $host_names = explode(".", $host);
     
         //destination setup
-        $destination = "xml_downloads/" . $host_names[1];
+        $destination = "xml_downloads/" . $host_names[1] . "xml";
         
 
         // URL validations based on $retcode
@@ -61,7 +61,7 @@ if ($_POST) {
             
             
                 //setup parser
-                $rss =simplexml_load_file($destination);
+                $rss = simplexml_load_file($destination);
                 //print gettype($rss);
             
                 $i = 0;
