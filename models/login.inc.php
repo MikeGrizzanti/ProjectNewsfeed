@@ -2,6 +2,7 @@
 
 session_start();
 
+$feed_source = tb_source::getNameFromSource();
 $user_nickName = "";
 $user_password = "";
 $error = "";
