@@ -32,12 +32,13 @@ class controller {
     }
     
     public function main() {
+        if(!$erg){
+            header("Location:index.php?action=login");
+        }
+        
         $erg = is_loggedIn();
         $this->addContext("template", "logged_in");
         $this->addContext("feed_source", $_SESSION['feed_source']);
-        if(!$erg){
-            header("Location:index.php");
-        }
     }
     
     public function status() {

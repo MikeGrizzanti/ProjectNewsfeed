@@ -14,7 +14,7 @@ require_once 'models/phpmailer.php';
 
 require_once 'controller/controller.php';
 
-$action = isset($_GET['action'])?$_GET['action']:'login';
+$action = isset($_GET['action'])?$_GET['action']:'main';
 $controller = new controller();
 
 if (method_exists($controller, $action)) {
