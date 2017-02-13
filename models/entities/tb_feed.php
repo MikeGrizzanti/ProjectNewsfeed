@@ -72,7 +72,7 @@ class tb_feed {
         $query = DB::getDB()->prepare($sql);
         $query->execute(array($feed_source));
         $query->setFetchMode(PDO::FETCH_CLASS, 'tb_feed');
-        $query->fetchAll();
+        return $query->fetchAll();
     }
 }
 

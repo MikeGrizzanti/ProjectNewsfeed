@@ -40,9 +40,9 @@ class tb_source {
     public static function getNameFromSource() {
         $sql = 'SELECT source_name FROM tb_source;';
         $query = DB::getDB()->prepare($sql);
-        $query->execute(array($source_name));
+        $query->execute();
         $query->setFetchMode(PDO::FETCH_CLASS, 'tb_source');
-        $query->fetch();
+        return $query->fetchAll();
     }
     
     
