@@ -51,19 +51,19 @@ a:hover {
 #top_icon_chat {
     position: relative;
     display: inline;
-    margin-left: 0em;
+    margin-left: 2rem;
     height: 1.25em;
 }
 
 #top_icon_profile {
     display: inline;
-    margin-left: 1.5rem;
+    margin-left: 2rem;
     height: 1.25em;
 }
 
 #top_icon_settings {
     display: inline;
-    margin-left: 1.5rem;
+    margin-left: 2rem;
     height: 1.25em;
 }
 
