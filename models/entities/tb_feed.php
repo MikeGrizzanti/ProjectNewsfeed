@@ -68,7 +68,7 @@ class tb_feed {
     }
     
     public static function getAllFeedSources() {
-        $sql = 'SELECT feed_source FROM tb_feed';
+        $sql = 'SELECT fk_source_id FROM tb_feed';
         $query = DB::getDB()->prepare($sql);
         $query->execute(array($feed_source));
         $query->setFetchMode(PDO::FETCH_CLASS, 'tb_feed');
