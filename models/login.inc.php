@@ -1,8 +1,7 @@
 <?php
 
-session_start();
+$_SESSION['feed_source'] = tb_source::getNameFromSource();
 
-$feed_source = tb_source::getNameFromSource();
 $user_nickName = "";
 $user_password = "";
 $error = "";
