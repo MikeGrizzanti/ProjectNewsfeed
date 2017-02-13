@@ -34,12 +34,12 @@ if ($_POST) {
         $result = substr($response, $a, $b-$a);
     
         //parse file via url and get the language before saving
-        $context  = stream_context_create(array('http' => array('header' => 'Accept: application/xml')));
+        /*$context  = stream_context_create(array('http' => array('header' => 'Accept: application/xml')));
 
         $xml = file_get_contents($source, false, $context);
         $xml = simplexml_load_string($xml);
         $json = json_encode($xml);
-        $array = json_decode($json,TRUE);
+        $array = json_decode($json,TRUE);*/
     
         //name
     
@@ -78,7 +78,7 @@ if ($_POST) {
             
                 //this file is only meant to download the feed, parse it items via php_functions and save them into the db
 
-                $feed_source = tb_feed::getAllFeedSources();
+                $feed_source = tb_source::getNameFromSource();
 
                 /*$statement = $link->prepare("INSERT INTO tb_feed (feed_id, feed_title, feed_content, feed_img_path, fk_category_id)
                     VALUES(?,?,?,?,?)");
