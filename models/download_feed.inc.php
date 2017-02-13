@@ -6,12 +6,16 @@ if ($_POST) {
             $source = trim($_POST['add_feed']);
             $theme = trim($_POST['member2']);
             $_POST['member1'] = NULL;
+            
+            //code...
         }
         
         elseif (isset($_POST['member1']) && isset($_POST['member2'])){
             $source_predefined = trim($_POST['member1']);
             $theme = trim($_POST['member2']);
             $_POST['add_feed'] = NULL;
+            
+            //code...
         }
     
         //curl setup
@@ -30,19 +34,21 @@ if ($_POST) {
         $result = substr($response, $a, $b-$a);
     
         //parse file via url and get the language before saving
-        $context  = stream_context_create(array('http' => array('header' => 'Accept: application/xml')));
+        /*$context  = stream_context_create(array('http' => array('header' => 'Accept: application/xml')));
 
         $xml = file_get_contents($source, false, $context);
         $xml = simplexml_load_string($xml);
         $json = json_encode($xml);
-        $array = json_decode($json,TRUE);
+        $array = json_decode($json,TRUE);*/
     
         //name
-        $file_name = preg_replace('#^https?://#', '', $source);
-        $parsed_url = parse_url($source, PHP_URL_HOST);
-
+    
+        $info = parse_url($source);
+        $host = $info['host'];
+        $host_names = explode(".", $host);
+    
         //destination setup
-        $destination = "xml_downloads/" . $parsed_url . "_" . $array[channel][language];
+        $destination = "xml_downloads/" . $host_names[1] . ".xml";
         
 
         // URL validations based on $retcode
@@ -55,7 +61,7 @@ if ($_POST) {
             
             
                 //setup parser
-                $rss =simplexml_load_file($destination);
+                $rss = simplexml_load_file($destination);
                 //print gettype($rss);
             
                 $i = 0;
@@ -72,7 +78,7 @@ if ($_POST) {
             
                 //this file is only meant to download the feed, parse it items via php_functions and save them into the db
 
-                $feed_source = tb_feed::getAllFeedSources();
+                $feed_source = tb_source::getNameFromSource();
 
                 /*$statement = $link->prepare("INSERT INTO tb_feed (feed_id, feed_title, feed_content, feed_img_path, fk_category_id)
                     VALUES(?,?,?,?,?)");

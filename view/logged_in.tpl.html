@@ -64,16 +64,12 @@
                 <div class="wrap">
                     <label class="select_mod">
                     <select name="member1" id="member1">
-                                  <option value="1"><?php echo $feed_source; ?> </option>
-                                  <option value="2">Economy</option>
-                                  <option value="3">Technology</option>
-                                  <option value="4">Science</option>
-                                  <option value="5">Chronicle</option>
-                                  <option value="6">Art</option>
-                                  <option value="7">Social</option>
-                                  <option value="8">Travel</option>
-                                  <option value="9">Sport</option>
-                                </select>
+                                  <?php
+                                    foreach($feed_source as $key => $value){
+                                        echo '<option value="'.$key.'">'.$value.'</option>'; 
+                                    }
+                                    ?>
+                    </select>
                     </label>
                     <label for="member1">Choose source</label>
                 </div>
