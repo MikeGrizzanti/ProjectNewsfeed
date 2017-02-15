@@ -1,7 +1,5 @@
 <?php
 
-require('html2text.php');
-
 if ($_POST) {
         //curl and header
         $ch = curl_init();
@@ -68,6 +66,8 @@ if ($_POST) {
                 //print gettype($rss);
             
                 $i = 0;
+                $sql = "INSERT INTO tb_feed (feed_title, feed_content, feed_author, feed_pubDate, feed_guid, feed_img_path, fk_category_id, fk_source_id) VALUES (?,?,?,?,?,?,?,?)";
+                $query = DB::getDB()->prepare($sql);
             
                  foreach($rss->channel->item as $item) {
                         if ($i < 10) { // parse only 100 items
@@ -81,15 +81,7 @@ if ($_POST) {
                                 'image' => $item->image,
                             ];
                             
-                            foreach ($feed_attributes as $key => $value) {
-                                $textVersion = html2text( $value );
-                                $feed_attributes[$key] = $textVersion;
-                            }
-                            
-                           
-                            
-                            $sql = "INSERT INTO tb_feed (feed_title, feed_content, feed_author, feed_pubDate, feed_guid, feed_img_path, fk_category_id, fk_source_id) VALUES (?,?,?,?,?,?,?,?)";
-                            $query = DB::getDB()->prepare($sql);
+                         
                             $query->execute(array($feed_attributes['title'], $feed_attributes['description'], $feed_attributes['author'], $feed_attributes['pubDate'], $feed_attributes['guid'], $feed_attributes['image'], 1, 1));
                             
                         }
