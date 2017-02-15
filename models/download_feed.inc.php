@@ -82,8 +82,8 @@ if ($_POST) {
                             ];
                             
                             foreach ($feed_attributes as $key => $value) {
-                                $text = convert_html_to_text($html);
-                                $feed_attributes[$key] = $value;
+                                $text = convert_html_to_text($value);
+                                $feed_attributes[$key] = $text;
                             }
                             
                            
