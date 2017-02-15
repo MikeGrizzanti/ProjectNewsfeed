@@ -34,13 +34,34 @@ if ($_POST) {
         $b = strpos($response, '</m:validity>', $a); 
         $result = substr($response, $a, $b-$a);
     
-        //parse file via url and get the language before saving
-        /*$context  = stream_context_create(array('http' => array('header' => 'Accept: application/xml')));
+        //decodeHTMLent
+        function decodeHtmlEnt($str) {
+            $ret = html_entity_decode($str, ENT_COMPAT, 'UTF-8');
+            $p2 = -1;
+            for(;;) {
+                $p = strpos($ret, '&#', $p2+1);
+                if ($p === FALSE)
+                    break;
+                $p2 = strpos($ret, ';', $p);
+                if ($p2 === FALSE)
+                    break;
 
-        $xml = file_get_contents($source, false, $context);
-        $xml = simplexml_load_string($xml);
-        $json = json_encode($xml);
-        $array = json_decode($json,TRUE);*/
+                if (substr($ret, $p+2, 1) == 'x')
+                    $char = hexdec(substr($ret, $p+3, $p2-$p-3));
+                else
+                    $char = intval(substr($ret, $p+2, $p2-$p-2));
+
+                //echo "$char\n";
+                $newchar = iconv(
+                    'UCS-4', 'UTF-8',
+                    chr(($char>>24)&0xFF).chr(($char>>16)&0xFF).chr(($char>>8)&0xFF).chr($char&0xFF) 
+                );
+                //echo "$newchar<$p<$p2<<\n";
+                $ret = substr_replace($ret, $newchar, $p, 1+$p2-$p);
+                $p2 = $p + strlen($newchar);
+            }
+            echo $ret;
+        }
     
         //name
     
@@ -74,7 +95,7 @@ if ($_POST) {
                             
                             $feed_attributes = [
                                 'title' => $item->title, 
-                                'description' => strip_tags($item->description), 
+                                'description' => strip_tags(decodeHtmlEnt($item->description)), 
                                 'author' => $item->author, 
                                 'pubDate' => $item->pubDate,
                                 'guid' => $item->guid,
