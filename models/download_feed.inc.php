@@ -74,7 +74,7 @@ if ($_POST) {
                             
                             $feed_attributes = [
                                 'title' => $item->title, 
-                                'description' => $item->description, 
+                                'description' => strip_tags($item->description), 
                                 'author' => $item->author, 
                                 'pubDate' => $item->pubDate,
                                 'guid' => $item->guid,
