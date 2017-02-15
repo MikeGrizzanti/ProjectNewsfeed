@@ -81,10 +81,10 @@ if ($_POST) {
                                 'image' => $item->image,
                             ];
                             
-                            /*foreach ($feed_attributes as $key => $value) {
+                            foreach ($feed_attributes as $key => $value) {
                                 $text = convert_html_to_text($value);
                                 $feed_attributes[$key] = $text;
-                            }*/
+                            }
                             
                            
                             
