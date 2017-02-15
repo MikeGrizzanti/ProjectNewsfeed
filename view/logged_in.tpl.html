@@ -14,6 +14,16 @@
     
     <body>
         
+        <div id="fb-root"></div>
+        <script>(function(d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return;
+                js = d.createElement(s); js.id = id;
+                js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.8&appId=167575093726927";
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+        </script>
+        
         <div class="background_article_popup"></div>
         <div class="article_popup">
         <nav id="popup_nav">
@@ -100,9 +110,10 @@
         <footer id="sidebar_footer">
             <hr/>
             <div id="social_media_icons_div">
-            <a href="http://www.facebook.com/profile.php"><img class="social_media_icon" id="first_icon" src="../images/socialmedia/facebook.svg"/></a>
+            <!--<a href="http://www.facebook.com/profile.php"><img class="social_media_icon" id="first_icon" src="../images/socialmedia/facebook.svg"/></a>
             <a href="#"><img class="social_media_icon" src="../images/socialmedia/twitter.svg"/></a>
-            <a href="#"><img class="social_media_icon" src="../images/socialmedia/google+.svg"/></a>
+            <a href="#"><img class="social_media_icon" src="../images/socialmedia/google+.svg"/></a>-->
+                <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
             </div>
             <br/>
             
