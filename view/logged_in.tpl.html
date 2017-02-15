@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-    <title>MINDFEED</title>
+    <title>mindfeed</title>
     <meta charset="utf-8" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
@@ -125,6 +125,11 @@
         </footer>
         </div>
         
+        <!--Open Options-->
+        <div class="options">
+            
+        </div>
+        
         
         <header class="header">
             <img id="main_logo" src="../images/Logo_Mindfeed_White_Orange.svg" />
@@ -151,7 +156,7 @@
             <!-- Überprüft ob user_status == 0, wenn ja wird meldung angezeigt EMAIL zu bestätigen -->
             <?php 
                 $user = tb_user::getUserFromID($_SESSION['id']);
-                if ($user->getStatus() == 0) { ?>
+                if ($user->getStatus() == '0') { ?>
                     <div class="confirm_email_div"><p id="confirm_warning">To complete your registration, please confirm your email.</p></div>
             <?php } ?>
             <!-- -->
