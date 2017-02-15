@@ -94,7 +94,7 @@ if ($_POST) {
                         if ($i < 10) { // parse only 100 items
                             
                             $feed_attributes = [
-                                'title' => $item->title, 
+                                'title' => strip_tags(decodeHtmlEnt($item->title)), 
                                 'description' => strip_tags(decodeHtmlEnt($item->description)), 
                                 'author' => $item->author, 
                                 'pubDate' => $item->pubDate,
