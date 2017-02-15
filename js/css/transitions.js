@@ -16,6 +16,13 @@
         $(".top_icon_close_sidebar").toggleClass("Show_Cross");
         $(".sidebar").toggleClass("Show_Sidebar");
     });
+    
+    //Open Otions
+    $("").click(function () {
+       $(this).toggleClass("");
+       $("").toggleClass("");
+       $("").toggleClass("");
+    });
      
      
      //Open add feed
