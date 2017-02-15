@@ -60,7 +60,7 @@ if ($_POST) {
                 $ret = substr_replace($ret, $newchar, $p, 1+$p2-$p);
                 $p2 = $p + strlen($newchar);
             }
-            echo $ret;
+            return $ret;
         }
     
         //name
