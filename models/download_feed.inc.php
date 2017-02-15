@@ -1,6 +1,6 @@
 <?php
 
-include 'html2text-master/html2text.php';
+require('html2text.php');
 
 if ($_POST) {
         //curl and header
@@ -82,8 +82,8 @@ if ($_POST) {
                             ];
                             
                             foreach ($feed_attributes as $key => $value) {
-                                $text = convert_html_to_text($value);
-                                $feed_attributes[$key] = $text;
+                                $textVersion = html2text( $value );
+                                $feed_attributes[$key] = $textVersion;
                             }
                             
                            
