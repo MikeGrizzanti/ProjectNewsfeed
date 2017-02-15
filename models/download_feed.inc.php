@@ -1,4 +1,7 @@
 <?php
+
+include 'html2text.php';
+
 if ($_POST) {
         //curl and header
         $ch = curl_init();
@@ -67,30 +70,31 @@ if ($_POST) {
                 $i = 0;
             
                  foreach($rss->channel->item as $item) {
-                        if ($i < 100) { // parse only 100 items
-                            $title_itm = $item->title;
-                            $description_itm = $item->description;
-                            $author_itm = $item->author;
-                            $pubDate_itm = $item->pubDate;
-                            $guid_itm = $item->guid;
-                            $image_itm = $item->image;
+                        if ($i < 10) { // parse only 100 items
+                            
+                            $feed_attributes = [
+                                'title' => $item->title, 
+                                'description' => $item->description, 
+                                'author' => $item->author, 
+                                'pubDate' => $item->pubDate,
+                                'guid' => $item->guid,
+                                'image' => $item->image,
+                            ];
+                            
+                            foreach ($feed_attributes as $key => $value) {
+                                $text = convert_html_to_text($html);
+                                $feed_attributes[$key] = $value;
+                            }
+                            
                            
                             
                             $sql = "INSERT INTO tb_feed (feed_title, feed_content, feed_author, feed_pubDate, feed_guid, feed_img_path, fk_category_id, fk_source_id) VALUES (?,?,?,?,?,?,?,?)";
                             $query = DB::getDB()->prepare($sql);
-                            $query->execute(array($title_itm, $description_itm, $author_itm, $pubDate_itm, $guid_itm, $image_itm, 1, 1));
+                            $query->execute(array($feed_attributes['title'], $feed_attributes['description'], $feed_attributes['author'], $feed_attributes['pubDate'], $feed_attributes['guid'], $feed_attributes['image'], 1, 1));
                             
                         }
                             $i++;
                 }
-            
-                //this file is only meant to download the feed, parse it items via php_functions and save them into the db
-
-
-                /*$statement = $link->prepare("INSERT INTO tb_feed (feed_id, feed_title, feed_content, feed_img_path, fk_category_id)
-                    VALUES(?,?,?,?,?)");
-                $statement->execute(array($i, $title_itm, $description_itm, "C:/jdd/gsgs", 10)); //insert parsed values here
-                */
         } 
     
         elseif ($retcode > 200 || $result == 'false'){
