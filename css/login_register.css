@@ -280,7 +280,7 @@ hr {
 	/* for firefox 31 */
 	-ms-transform: rotateY(0deg); /* IE 9 */
     -webkit-transform: rotateY(0deg); /* Chrome, Safari, Opera */
-    transform: rotateT(0deg);
+    transform: rotateY(0deg);
 }
 
 /* back, initially hidden pane */
@@ -289,7 +289,6 @@ hr {
     -webkit-transform: rotateY(180deg); /* Chrome, Safari, Opera */
     transform: rotateT(180deg);
 }
-
 
 
 
