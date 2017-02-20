@@ -9,6 +9,7 @@
                 "OTransform":"rotateY(180deg)",
                 "transform":"rotateY(180deg)"
             });
+        $(".flipper").style.webkitTransform = "rotateY(180deg)";
     });
      
     //rotate login_div REGISTER -> Back
@@ -20,6 +21,9 @@
                 "OTransform":"rotateY(360deg)",
                 "transform":"rotateY(360deg)"
             });
+         
+         $(".flipper").style.webkitTransform = "rotateY(360deg)";
+
      });
      
      //Hamburger Open&Close
