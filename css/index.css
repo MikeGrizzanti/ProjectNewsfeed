@@ -140,14 +140,38 @@ a:hover {
     box-shadow:  0 0 10px #0b0b0b;
     border:0;
     border-radius: 2px;
+<<<<<<< HEAD
+=======
     
+<<<<<<< HEAD
     -webkit-transition:all 0.2s ease;
     -moz-transition:all 0.2s ease;
     -o-transition:all 0.2s ease;
     transition: all 0.2s ease;
+=======
+    visibility: hidden;
+    
+>>>>>>> 17e99bd402cdf9d57536c174a33c521c0c1e44c8
+>>>>>>> 057486a3b6645ee68fa8ae11db5e3febae3df2a2
 }
 
+.settings_table {
+    font-family: "Roboto", sans-serif;
+}
 
+#clear_search_operations_button {
+    text-align: center; 
+    margin: 1em;
+    height: 2em;
+    width: 13em;
+    font-family: "Roboto",sans-serif;
+    color: #fafafa;
+    background-color: #FBB040;
+    border: 0;
+    letter-spacing: 0.05em;
+    border-radius: 2px;
+    font-size: 0.7em;
+}
 
 .top_icon_open_sidebar {
     display: inline;
