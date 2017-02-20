@@ -67,6 +67,8 @@ a:hover {
     height: 1.5em;
 }
 
+/* chat_dropdown */
+
 .top_icon_chat_dropdown {
     display: inline;
     height: 10em;
@@ -84,6 +86,31 @@ a:hover {
     border-radius: 2px;
 }
 
+.dropdown_chat_list {
+    background-color: aqua;
+}
+
+.article_title {
+    margin: 0;
+    height: 2em;
+    text-align: justify;
+    font-weight: bold;
+    font-family: "Roboto", sans-serif;
+}
+
+.unread_messages {
+    font-family: "Roboto", sans-serif;
+    display: inline;
+}
+
+.unread_messages_counter {
+    font-family: "Roboto", sans-serif;
+    display: inline;
+    font-size: 0.8em;
+    color: #faaf41;
+}
+/* settings_dropdown */
+
 .top_icon_settings_dropdown {
     display: inline;
     height: 10em;
@@ -99,6 +126,8 @@ a:hover {
     box-shadow:  0 0 10px #0b0b0b;
     border:0;
     border-radius: 2px;
+    
+    visibility: hidden;
 }
 
 .top_icon_open_sidebar {
@@ -484,15 +513,26 @@ label{
     margin-right: auto;
     height: 2em;
     background-color: #FBB040;
+    align-content: center;
+}
+
+.close_email_warning {
+    display: inline;
+    height: 1em;
+    width: auto;
+    margin-left: 49em;
+    margin-top: 0.5em;
 }
 
 #confirm_warning {
+    display: inline;
     font-family: 'Open Sans', sans-serif;
     color: #fbfbfb;
     font-size: 1em;
     margin-left: 0.5em;
     white-space: nowrap;
-    line-height: -1em;
+    margin-bottom: auto;
+    margin-top: 3em;
 }
 
 #table_news_cards {
