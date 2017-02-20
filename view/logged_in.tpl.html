@@ -78,8 +78,8 @@
                 <div class="wrap" id="wrap2">
                     <label class="select_mod">
                     <select name="member2" id="member2">
-                                  <?php foreach($_SESSION['category_name'] as $value){ ?>
-                                  <option class="selected_option" value="<?php echo $value->get_category_name() ?>"><?php echo $value->get_category_name() ?></option> 
+                                  <?php foreach($_SESSION['category_name'] as $key){ ?>
+                                  <option class="selected_option" value="<?php echo $key->get_category_name() ?>"><?php echo $key->get_category_name() ?></option> 
                                     <?php } ?>
                                 </select>
                     </label>    
