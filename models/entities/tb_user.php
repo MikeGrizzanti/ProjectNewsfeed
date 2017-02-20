@@ -185,8 +185,10 @@ class tb_user {
         $query->execute(array($id));
     }
     
-    public static function changePassword($id) {
-        
+    public static function changePassword($newPasswordHashed, $id) {
+        $sql = 'UPDATE tb_user SET user_password = ? WHERE user_id = ?;';
+        $query = DB::getDB()->prepare($sql);
+        $query->execute(array($newPasswordHashed, $id));
     }
 }
 
