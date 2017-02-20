@@ -23,7 +23,7 @@ class tb_category {
         return $this->category_id;
     }
     
-    private function get_category_name() {
+    public function get_category_name() {
         return $this->category_name;
     }
     
