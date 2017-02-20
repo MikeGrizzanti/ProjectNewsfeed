@@ -82,9 +82,14 @@ if ($_POST) {
                 fclose($file);
             
             
+                $sql = "INSERT INTO tb_source (source_name, source_path, fk_category_id) VALUES (?,?,?)";
+                $query = DB::getDB()->prepare($sql);
+                $query->execute(array($host_names[1], $source, $theme));
+            
+            
+            
                 //setup parser
                 $rss = simplexml_load_file($destination);
-                //print gettype($rss);
             
                 $i = 0;
                 $sql = "INSERT INTO tb_feed (feed_title, feed_content, feed_author, feed_pubDate, feed_guid, feed_img_path, fk_category_id, fk_source_id) VALUES (?,?,?,?,?,?,?,?)";
