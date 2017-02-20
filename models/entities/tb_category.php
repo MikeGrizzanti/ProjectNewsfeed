@@ -2,7 +2,7 @@
 
 class tb_category {
     private $category_id = 0;
-    private $fk_category_name = "";
+    private $category_name = "";
     
     public function __construct($data = array()) {
         if ($data) {
