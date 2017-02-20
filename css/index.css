@@ -1,5 +1,6 @@
 .make_visible {
     visibility: visible;
+    opacity:1;
 }
 
 /* Head-Part */
@@ -80,6 +81,7 @@ a:hover {
     position: absolute;
     z-index: 2000;
     background-color: #fafafa;
+    opacity: 0;
     margin-top: 1em;
     margin-left: 51em;
     
@@ -92,6 +94,10 @@ a:hover {
     overflow-y: scroll;
     
     visibility: hidden;
+    -webkit-transition:all 0.2s ease;
+    -moz-transition:all 0.2s ease;
+    -o-transition:all 0.2s ease;
+    transition: all 0.2s ease;
 }
 
 
@@ -131,7 +137,7 @@ a:hover {
     background-color: #fafafa;
     margin-top: 1em;
     margin-left: 51em;
-    
+    opacity: 0;
     -webkit-box-shadow:  0 0 10px #00f;
     -moz-box-shadow:  0 0 10px #00f;
     box-shadow:  0 0 10px #0b0b0b;
@@ -139,6 +145,7 @@ a:hover {
     border-radius: 2px;
     
     visibility: hidden;
+    
 }
 
 
