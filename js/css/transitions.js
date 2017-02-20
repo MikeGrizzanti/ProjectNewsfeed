@@ -2,12 +2,12 @@
     
     //rotate login_div REGISTER
     $("#register_option").click(function() {
-        $(".flipper").css("transform","rotateY(180deg)");
+        $(".flipper").css("webkit-transform","rotateY(180deg)");
     });
      
     //rotate login_div REGISTER -> Back
      $("#switch_to_login").click(function() {
-        $(".flipper").css("transform","rotateY(360deg)");
+        $(".flipper").css("webkit-transform","rotateY(360deg)");
      });
      
      //Hamburger Open&Close
