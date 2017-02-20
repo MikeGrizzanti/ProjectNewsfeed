@@ -282,7 +282,6 @@ hr {
     -webkit-transform: rotateY(0deg); /* Chrome, Safari, Opera */
     transform: rotateT(0deg);
 }
-}
 
 /* back, initially hidden pane */
 .back {
