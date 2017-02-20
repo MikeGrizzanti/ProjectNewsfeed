@@ -24,8 +24,13 @@ class controller {
     }
     
     public function forgotPassword() {
-        require_once 'models/forgot_pw.php';
+        require_once 'models/forgot_password.php';
         $this->addContext("template", "login");
+    }
+    
+    public function changePassword() {
+        require_once 'models/change_password.php';
+        $this->addContext("template", "logged_in");
     }
     
     public function logout() {
