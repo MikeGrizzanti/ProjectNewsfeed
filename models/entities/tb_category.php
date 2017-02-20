@@ -23,8 +23,8 @@ class tb_category {
         return $this->category_id;
     }
     
-    private function get_fk_category_name() {
-        return $this->fk_category_name;
+    private function get_category_name() {
+        return $this->category_name;
     }
     
     public static function getCategoryFromID($id) {
@@ -36,7 +36,7 @@ class tb_category {
     }
     
     public static function getNameFromCategory() {
-        $sql = 'SELECT categrory_name FROM tb_categrory;';
+        $sql = 'SELECT category_name FROM tb_category;';
         $query = DB::getDB()->prepare($sql);
         $query->execute();
         $query->setFetchMode(PDO::FETCH_CLASS, 'tb_category');
