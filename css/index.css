@@ -140,19 +140,15 @@ a:hover {
     box-shadow:  0 0 10px #0b0b0b;
     border:0;
     border-radius: 2px;
-<<<<<<< HEAD
-=======
+
     
-<<<<<<< HEAD
+
     -webkit-transition:all 0.2s ease;
     -moz-transition:all 0.2s ease;
     -o-transition:all 0.2s ease;
     transition: all 0.2s ease;
-=======
+
     visibility: hidden;
-    
->>>>>>> 17e99bd402cdf9d57536c174a33c521c0c1e44c8
->>>>>>> 057486a3b6645ee68fa8ae11db5e3febae3df2a2
 }
 
 .settings_table {
