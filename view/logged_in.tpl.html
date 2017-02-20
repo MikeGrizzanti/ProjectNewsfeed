@@ -88,15 +88,10 @@
                 <div class="wrap" id="wrap2">
                     <label class="select_mod">
                     <select name="member2" id="member2">
-                                  <option value="1">Politics</option>
-                                  <option value="2">Economy</option>
-                                  <option value="3">Technology</option>
-                                  <option value="4">Science</option>
-                                  <option value="5">Chronicle</option>
-                                  <option value="6">Art</option>
-                                  <option value="7">Social</option>
-                                  <option value="8">Travel</option>
-                                  <option value="9">Sport</option>
+                                  <?php foreach($category_name as $value){ ?>
+                                  <option class="selected_option" value="<?php echo $value->get_fk_category_name() ?>">
+                                      <?php echo $value->get_fk_category_name() ?></option> 
+                                    <?php } ?>
                                 </select>
                     </label>    
                     <label for="member2">Choose theme</label>

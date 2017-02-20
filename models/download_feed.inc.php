@@ -82,9 +82,9 @@ if ($_POST) {
                 fclose($file);
             
             
-                $sql = "INSERT INTO tb_source (source_name, source_path, fk_category_id) VALUES (?,?,?)";
-                $query = DB::getDB()->prepare($sql);
-                $query->execute(array($host_names[1], $source, $theme));
+                $sql_source = "INSERT INTO tb_source (source_name, source_path, fk_category_id) VALUES (?,?,?)";
+                $query_source = DB::getDB()->prepare($sql_source);
+                $query_source->execute(array($host_names[1], $source, $theme));
             
             
             

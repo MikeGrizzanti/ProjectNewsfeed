@@ -35,6 +35,14 @@ class tb_category {
         return $query->fetch();
     }
     
+    public static function getNameFromCategory() {
+        $sql = 'SELECT categrory_name FROM tb_categrory;';
+        $query = DB::getDB()->prepare($sql);
+        $query->execute();
+        $query->setFetchMode(PDO::FETCH_CLASS, 'tb_category');
+        return $query->fetchAll();
+    }
+    
     
 }
 
