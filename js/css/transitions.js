@@ -2,15 +2,24 @@
     
     //rotate login_div REGISTER
     $("#register_option").click(function() {
-        $(".flipper").css("webkit-transform","rotateY(180deg)");
-        $(".flipper").style.webkitTransform = "rotateY(180deg)"; //safari
-
+            $(".flipper").css({
+                "webkitTransform":"rotateY(180deg)",
+                "MozTransform":"rotateY(180deg)",
+                "msTransform":"rotateY(180deg)",
+                "OTransform":"rotateY(180deg)",
+                "transform":"rotateY(180deg)"
+            });
     });
      
     //rotate login_div REGISTER -> Back
      $("#switch_to_login").click(function() {
-        $(".flipper").css("webkit-transform","rotateY(360deg)");
-         (".flipper").style.webkitTransform = "rotateY(360deg)"; //safari
+         $(".flipper").css({
+                "webkitTransform":"rotateY(360deg)",
+                "MozTransform":"rotateY(360deg)",
+                "msTransform":"rotateY(360deg)",
+                "OTransform":"rotateY(360deg)",
+                "transform":"rotateY(360deg)"
+            });
      });
      
      //Hamburger Open&Close
