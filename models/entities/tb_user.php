@@ -132,7 +132,7 @@ class tb_user {
         $query->execute(array($newStatus, $id));
     }
 
-        private static function updateUser($firstName, $lastName, $nickName, $password, $eMail, $id) {
+    private static function updateUser($firstName, $lastName, $nickName, $password, $eMail, $id) {
         $sqlcheck = 'SELECT * FROM tb_user WHERE user_id = ?';
         $queryCheck = DB::getDB()->prepare($sqlcheck);
         $queryCheck->execute(array($firstName, $lastName, $nickName, $password, $eMail, $id));
@@ -143,6 +143,13 @@ class tb_user {
         $query->execute(array($firstName, $lastName, $nickName, $passwordHashed, $eMail, $id));
     }
     
+    public static function getUserIdFromEmail ($email) {
+        $sql = 'SELECT user_id FROM tb_user WHERE user_email = ?;';
+        $query = DB::getDB()->prepare($sql);
+        $query->execute(array($email));
+    }
+
+
     /*private static function checkIfÚnique ($nickName, $eMail) {
         $sqlcheck = 'SELECT * FROM tb_user where user_nickName = ? AND user_eMail = ?;';
         $queryCheck = DB::getDB()->prepare($sqlcheck);

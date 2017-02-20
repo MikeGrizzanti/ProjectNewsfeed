@@ -23,6 +23,11 @@ class controller {
             header("Location:index.php?action=main");
     }
     
+    public function forgotPassword() {
+        require_once 'models/forgot_pw.php';
+        $this->addContext("template", "login");
+    }
+    
     public function logout() {
         session_destroy();
         header("Location:index.php?action=login");
@@ -66,8 +71,6 @@ class controller {
             $this->addContext("template", "feed");
         }
     }
-
-
     private function generatePage($template){
         extract($this->context);
         require_once 'view/'.$template.".tpl.html";
