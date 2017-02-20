@@ -8,7 +8,6 @@ if ($_POST) {
         if (empty($eMail)) {
             $error = "Put in your E-Mail";
         } else {
-            
             $user = tb_user::getUserIdFromEmail($eMail);
      
             //Reset-Pw Email
