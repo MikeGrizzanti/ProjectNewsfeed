@@ -87,7 +87,10 @@ a:hover {
     
     overflow-y: scroll;
     
-   visibility: hidden;
+    visibility: hidden;
+}
+.top_icon_chat_dropdown_show {
+    visibility: visible;
 }
 
 .dropdown_chat_list {
