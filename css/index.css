@@ -1,5 +1,4 @@
 .make_visible {
-    visibility: visible;
     opacity:1;
 }
 
@@ -92,9 +91,7 @@ a:hover {
     border-radius: 2px;
     
     overflow-y: scroll;
-    
-    visibility: hidden;
-    -webkit-transition:all 0.2s ease;
+        -webkit-transition:all 0.2s ease;
     -moz-transition:all 0.2s ease;
     -o-transition:all 0.2s ease;
     transition: all 0.2s ease;
@@ -144,8 +141,10 @@ a:hover {
     border:0;
     border-radius: 2px;
     
-    visibility: hidden;
-    
+    -webkit-transition:all 0.2s ease;
+    -moz-transition:all 0.2s ease;
+    -o-transition:all 0.2s ease;
+    transition: all 0.2s ease;
 }
 
 
