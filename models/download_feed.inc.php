@@ -74,7 +74,7 @@ if ($_POST) {
         
 
         // URL validations based on $retcode
-        if ($retcode == 200 && $result == 'true') {
+        if ($retcode == 200/* && $result == 'true'*/) {
             
                 //exec
                 $file = fopen($destination, "w+");
