@@ -171,5 +171,15 @@ class tb_user {
             return $query2->fetch();
         }
     }
+    
+    public static function getOldPw($id) {
+        $sql = 'SELECT user_password FROM tb_user WHERE user_id = ?;';
+        $query = DB::getDB()->prepare($sql);
+        $query->execute(array($id));
+    }
+    
+    public static function changePassword($id) {
+        
+    }
 }
 

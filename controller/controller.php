@@ -53,11 +53,11 @@ class controller {
         $this->addContext("template", "login");
     }
     
-    /*public function profile() {
+    public function user_profile() {
         $erg = is_loggedIn();
         $this->addContext("error", $error);
-        $this->addContext("template", "profile");
-    }*/
+        $this->addContext("template", "user_profile");
+    }
     
     public function download_feed() {
         if(is_loggedIn() && !empty($_POST)){
