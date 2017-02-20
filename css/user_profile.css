@@ -352,23 +352,24 @@ label{
 
 #user_settings {
     background-color: aqua;
-    height: 30em;
+    height: 13em;
     width: 20em;
     margin-left: 3em;
     margin-top: 1em;
-    
     font-family: "Roboto", sans-serif;
 }
 #settings_header {
     margin-top: 10em;
     font-family: "Roboto", sans-serif;
     margin-left: 2em;
+    color: #fbb040;
 }
 
 #user_information_header {
-    color: #000
+    color: #000;
     font-family: "Roboto", sans-serif;
-    
+    margin-left: 3em;
+    margin-top: 2em;
 }
 
 #profile_picture {
@@ -376,11 +377,18 @@ label{
     width: 10em;
     background-color: #fbb040;
     display: inline;
+    margin-left: 3em;
 }
 
 
 
-
+#email_password {
+    background-color: aquamarine;
+    height: 10em;
+    width: 20em;
+    margin-left: 3em;
+    margin-top: 2em;
+}
 
 
 
