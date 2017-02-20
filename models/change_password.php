@@ -14,13 +14,14 @@ if ($_POST) {
         if (empty($oldPassword) || empty($repeat_oldPasswort) || empty($newPassword)) {
             $error = 'Please fill all fields';
         } else {
-            $passwordHashed = password_hash($oldPassword, PASSWORD_DEFAULT);
-            if (($oldPassword == $repeat_oldPasswort) && ($passwordHashed == tb_user::getOldPw($_SESSION['id']))) {
-                $erg = tb_user::changePassword($_SESSION['id']);
+            $oldPasswordHashed = password_hash($oldPassword, PASSWORD_DEFAULT);
+            $newPasswordHashed = password_hash($newPassword, PASSWORD_DEFAULT);
+            if (($oldPassword == $repeat_oldPasswort) && ($oldPasswordHashed == tb_user::getOldPw($_SESSION['id']))) {
+                $erg = tb_user::changePassword($newPasswordHashed, $_SESSION['id']);
                 if ($erg != NULL) {
                     header('Location: index.php?action=main');
                 } else
-                    $error = "Something went wrong";
+                    $error = "Something went wrong while changing your password";
             }
         }
     }
