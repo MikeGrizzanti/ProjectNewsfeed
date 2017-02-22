@@ -41,9 +41,17 @@
      
      
     //pop-up
-    $("div.news_card > table > tbody > tr > td").click(function (e) {
+    $("#table_news_cards td").click(function (e) {
         e.preventDefault();
-        $(".article_popup").toggleClass("article_popup_show");
-        $(".background_article_popup").toggleClass("background_article_popup_show");
-    }); 
+        $(".article_popup").toggleClass("Show_Sidebar");
+        $(".background_article_popup").toggleClass("show_background");
+        
+    }); close_popup
+     
+    $(".close_popup").click(function (e) {
+        e.preventDefault();
+        $(".article_popup").toggleClass("hide_it");
+        $(".background_article_popup").toggleClass("hide_it");
+        
+    });
 });

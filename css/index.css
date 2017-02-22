@@ -183,6 +183,11 @@ a:hover {
     opacity:0;
 }
 
+.hide_it{
+    opacity: 0 !important;
+    visibility: hidden !important;
+}
+
 .top_icon_close_sidebar {
     display: inline;
     position: relative;
@@ -260,8 +265,12 @@ display: inline;
 }
 
 .Show_Sidebar{
-  opacity:1;
-    visibility: visible;
+  opacity:1 !important;
+    visibility: visible !important;
+}
+
+.show_background{
+    visibility: visible !important;
 }
 
 .sidebar_header {
@@ -482,7 +491,7 @@ label{
     margin-left: 10em;
     margin-top: 1.5em;
     z-index: 1500;
-    opacity: 1;
+    opacity: 0;
     overflow-y: scroll;
     visibility: hidden;
     /*
