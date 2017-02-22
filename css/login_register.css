@@ -229,7 +229,7 @@ hr {
 /* margins_register_form */
 
 #text_field_reg_nickname, #text_field_reg_email, #text_field_reg_first_name, #text_field_reg_last_name, #text_field_reg_password, #text_field_reg_rep_password, #register_button {
-    margin-left: 1em;
+    margin-left: 0.3em;
 }
 
 /* entire container, keeps perspective */
