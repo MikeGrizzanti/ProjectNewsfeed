@@ -28,6 +28,16 @@ class controller {
         $this->addContext("template", "login");
     }
     
+    public function forgotEmail() {
+        require_once 'models/forgot_email.php';
+        $this->addContext("template", "login");
+    }
+
+    public function changeEmail() {
+        require_once 'models/change_email.php';
+        $this->addContext("template", "logged_in");
+    }
+    
     public function changePassword() {
         require_once 'models/change_password.php';
         $this->addContext("template", "logged_in");
