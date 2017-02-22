@@ -75,10 +75,10 @@ class controller {
     
     public function user_profile() {
         $erg = is_loggedIn();
-        if ($erg == TRUE) {
+        if ($erg == FALSE) {
             $this->addContext("error", $error);
             $this->addContext("template", "user_profile");
-        }   
+        }
     }
     
     public function download_feed() {
