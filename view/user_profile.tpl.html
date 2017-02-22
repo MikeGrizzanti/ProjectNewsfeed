@@ -130,16 +130,46 @@
     
     <!-- Main_Page -->
     
-    <h2 id="settings_header">SETTINGS</h2>
+    <h2 id="page_header">SETTINGS</h2>
     
-    
-    <div class="header_settings">
-        <h3 id="user_information_header">user informations:</h3>
+    <table>
+        <td id="center_breaker">
+    <div id="user_information">
+        <h3 class="header_settings">user informations</h3>
         <img id="profile_picture" src="../images/profile.svg"/>
+        
+        <ul id="user_information_list">
+        <li class="user_information_list_element"></li>
+        <li class="user_information_list_element"></li>
+        <li class="user_information_list_element"></li>
+        </ul>
     </div>
     
     <div id="email_password">
+        <h3 class="header_settings">email / password</h3>
         
-        <h3 class="header_settings"></h3>
         
+        <h5 id="email_field"><?php echo tb_user::getEmail($_SESSION['id']); ?></h5>
+        <a id="change_email_link" href="#">change your email</a>
+        
+        <h5 id="password_field">password</h5>
+        <a id="change_password_link" href="#">change your password</a>
     </div>
+        
+        
+        
+        
+        
+     </td>   
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    </table>

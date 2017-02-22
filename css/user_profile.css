@@ -350,48 +350,96 @@ label{
 
 /* main page */
 
-#user_settings {
-    background-color: aqua;
-    height: 13em;
-    width: 20em;
-    margin-left: 3em;
-    margin-top: 1em;
-    font-family: "Roboto", sans-serif;
-}
-#settings_header {
+#page_header {
     margin-top: 10em;
     font-family: "Roboto", sans-serif;
     margin-left: 2em;
     color: #fbb040;
 }
 
-#user_information_header {
+#center_breaker {
+    width: 30em;
+    border-right: 1px solid #fbb040;
+}
+
+.header_settings {
     color: #000;
     font-family: "Roboto", sans-serif;
-    margin-left: 3em;
-    margin-top: 2em;
+    margin-top: 1em;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.1em;
 }
+
+#user_information {
+    height: 13em;
+    width: 20em;
+    font-family: "Roboto", sans-serif;
+    margin-top: 1em;
+    margin-bottom: 2em;
+    margin-left: 3em;
+}
+
+#user_information_list {
+    
+    margin-left: 0;
+    list-style-type: none;
+    font-family: 'Roboto',sans-serif;
+    color: #787878;
+    text-align: left;
+}
+.user_information_list_element { margin-bottom: 0.5em;}
 
 #profile_picture {
     height: 10em;
     width: 10em;
     background-color: #fbb040;
-    display: inline;
-    margin-left: 3em;
+    margin-right: 2em;
+    float: left;
 }
-
 
 
 #email_password {
-    background-color: aquamarine;
     height: 10em;
     width: 20em;
+    margin-top: 3em;
     margin-left: 3em;
-    margin-top: 2em;
 }
 
+#email_field {
+    border: 1px solid #fbb040;
+    border-radius: 5px;
+    padding: 0.8em;
+    font-family: 'Roboto', sans-serif;
+    width: 15em;
+    margin-bottom: 0;
+}
+#change_email_link {
+    color: #787878;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.8em;
+    text-decoration: none;
+}
+#change_email_link:hover {
+    text-decoration: underline;
+}
 
+#password_field {
+    color: #fbb040;
+    font-family: 'Roboto', sans-serif;
+    text-transform: capitalize;
+    margin-bottom: 0;
+}
 
+#change_password_link {
+    color: #787878;
+    font-size: 0.8em;
+    font-family: 'Roboto',sans-serif;
+    text-decoration: none;
+}
+#change_password_link:hover {
+    text-decoration: underline;
+}
 
 
 
