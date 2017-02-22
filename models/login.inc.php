@@ -22,6 +22,7 @@ if ($_POST) {
                 $error = "Wrong username and/or password";
             else {
                 $_SESSION['id'] = $erg->getId();
+                $_SESSION['email'] = $erg->getEmail();
                 header("Location:index.php?action=main");
             }
         }
