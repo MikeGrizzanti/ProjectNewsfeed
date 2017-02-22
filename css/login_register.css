@@ -2,6 +2,12 @@ body {
     background-color: #000;
 }
 
+* { 
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
 #main_logo{
     height: 7em;
     width: auto;
@@ -117,16 +123,6 @@ body {
     margin-left: auto;
 }
 
-.fb-login-button {
-    position: relative;
-    margin-left: 5em;
-    margin-right: auto;
-    height: 2em !important;
-    width: 2em;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-}
-
 hr {
     width: 12em;
     margin-top: 0;
@@ -222,15 +218,18 @@ hr {
 }
 
 /* margins_login_form */
-#text_field_nickname, #text_field_password, #login_button, #register_option, #no_login_option {
-    margin-left: 3.9em;
+#login_button, #register_option, #no_login_option {
+    margin-left: 0em;
     margin-right: auto;
 } 
+#text_field_nickname, #text_field_password {
+    margin-left: 0.1em;
+}
 
 /* margins_register_form */
 
 #text_field_reg_nickname, #text_field_reg_email, #text_field_reg_first_name, #text_field_reg_last_name, #text_field_reg_password, #text_field_reg_rep_password, #register_button {
-    margin-left: 1em;
+    margin-left: 0.3em;
 }
 
 /* entire container, keeps perspective */
@@ -251,6 +250,7 @@ hr {
 .flipper {
 	transition: 0.6s;
 	transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
 
 	position: relative;
     margin: 0 auto;
@@ -258,6 +258,7 @@ hr {
 
 /* hide back of pane during swap */
 .front, .back {
+    -webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
 
 	position: absolute;
@@ -269,12 +270,16 @@ hr {
 .front {
 	z-index: 2;
 	/* for firefox 31 */
-	transform: rotateY(0deg);
+	-ms-transform: rotateY(0deg); /* IE 9 */
+    -webkit-transform: rotateY(0deg); /* Chrome, Safari, Opera */
+    transform: rotateT(0deg);
 }
 
 /* back, initially hidden pane */
 .back {
-	transform: rotateY(180deg);
+	-ms-transform: rotateY(180deg); /* IE 9 */
+    -webkit-transform: rotateY(180deg); /* Chrome, Safari, Opera */
+    transform: rotateY(180deg);
 }
 
 

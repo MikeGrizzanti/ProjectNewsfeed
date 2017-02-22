@@ -190,5 +190,11 @@ class tb_user {
         $query = DB::getDB()->prepare($sql);
         $query->execute(array($newPasswordHashed, $id));
     }
+    
+    public static function changeEmail($email, $id) {
+        $sql = 'UPDATE tb_user SET user_email = ? WHERE USER_id = ?;';
+        $query = DB::getDB()->prepare($sql);
+        $query->execute(array($email, $id));
+    }
 }
 

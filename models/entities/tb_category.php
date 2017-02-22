@@ -19,6 +19,10 @@ class tb_category {
         
     }
     
+    public function setCategoryName($category_name) {
+        $this->category_name = $category_name;
+    }
+    
     public function get_category_Id() {
         return $this->category_id;
     }
