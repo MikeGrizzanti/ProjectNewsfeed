@@ -10,6 +10,11 @@
         $(".flipper").css("transform","rotateY(360deg)");
      });
      
+     //prevent feed form from autosubmit
+     $("#add_feed_box").submit(function(e) {
+        e.preventDefault();
+     });
+     
      //Hamburger Open&Close
     $(".top_icon_open_sidebar").click(function () {
         $(this).toggleClass("Hide_Hamburger");
