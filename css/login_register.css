@@ -123,16 +123,6 @@ body {
     margin-left: auto;
 }
 
-.fb-login-button {
-    position: relative;
-    margin-left: 5em;
-    margin-right: auto;
-    height: 2em !important;
-    width: 2em;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-}
-
 hr {
     width: 12em;
     margin-top: 0;
@@ -228,10 +218,13 @@ hr {
 }
 
 /* margins_login_form */
-#text_field_nickname, #text_field_password, #login_button, #register_option, #no_login_option {
-    margin-left: 3.9em;
+#login_button, #register_option, #no_login_option {
+    margin-left: 0em;
     margin-right: auto;
 } 
+#text_field_nickname, #text_field_password {
+    margin-left: 0.1em;
+}
 
 /* margins_register_form */
 
