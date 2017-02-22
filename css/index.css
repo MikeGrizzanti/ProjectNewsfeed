@@ -136,21 +136,18 @@ a:hover {
     background-color: #fafafa;
     margin-top: 1em;
     margin-left: 51em;
-    opacity: 0;
     -webkit-box-shadow:  0 0 10px #00f;
     -moz-box-shadow:  0 0 10px #00f;
     box-shadow:  0 0 10px #0b0b0b;
     border:0;
     border-radius: 2px;
-
-    
-
     -webkit-transition:all 0.2s ease;
     -moz-transition:all 0.2s ease;
     -o-transition:all 0.2s ease;
     transition: all 0.2s ease;
 
     visibility: hidden;
+    opacity: 0;
 }
 
 .settings_table {

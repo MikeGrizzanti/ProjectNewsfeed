@@ -24,7 +24,7 @@
     
     //Open Otions
     $(".top_icon_settings").click(function () {
-       $(".top_icon_settings_dropdown").toggleClass("make_visible");
+       $(".top_icon_settings_dropdown").toggleClass("Show_Sidebar");
     });
      
      
