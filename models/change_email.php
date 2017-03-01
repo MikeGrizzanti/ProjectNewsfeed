@@ -20,7 +20,7 @@ if ($_POST) {
                     if ($erg != NULL) {
                         header('Location: index.php?action=main');
                     } else
-                        $error = "Something went wrong while changing your email";
+                        $error = "Something went wrong while changing your email, please try again";
                 }
             }
         }
