@@ -732,12 +732,16 @@ label{
     }
     
     #search {
-        margin-left: 59em;
+        margin-left: 46em;
         width: 45em;    
     }
     
     #login_register_button {
         margin-left: 40em;
+    }
+    
+    #top_icon_chat {
+        margin-left: 10em;
     }
 }
 
