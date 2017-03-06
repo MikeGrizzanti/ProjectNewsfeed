@@ -89,7 +89,7 @@ if ($_POST) {
                 $query_source->execute(array($host_names[1], $source, $theme));
             
             
-                $sql_source_id = "SELECT source_id FROM tb_source WHERE source_path LIKE 'http://www.ilfattoquotidiano.it/feed/'";
+                $sql_source_id = "SELECT source_id FROM tb_source WHERE source_path LIKE '".$source."'";
                 $query_source_id = DB::getDB()->prepare($sql_source_id);
                 $query_source_id->execute();
             
