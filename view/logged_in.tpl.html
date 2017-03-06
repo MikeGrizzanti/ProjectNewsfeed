@@ -54,6 +54,7 @@
             <li><a class="user_interest" href="#">POLITICS</a></li>
             <li><a class="user_interest" href="#">ECONOMY</a></li>
             <li><a class="user_interest" href="#">TECHNOLOGY</a></li>
+            <li><a class="user_interest" href="#"><?php var_dump($_SESSION['feed_source']);?></a></li>    
             </ul> 
             <br/>
             </div>
@@ -78,7 +79,7 @@
                 <div class="wrap" id="wrap2">
                     <label class="select_mod">
                     <select name="member2" id="member2">
-                                  <?php foreach($category_name as $key){ ?>
+                                  <?php foreach($category_name as $value){ ?>
                                   <option class="selected_option" value="<?php echo $value->get_category_name() ?>"><?php echo $value->get_category_name() ?></option> 
                                     <?php } ?>
                                 </select>
