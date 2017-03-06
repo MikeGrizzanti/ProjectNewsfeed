@@ -87,6 +87,16 @@ if ($_POST) {
                 $query_source->execute(array($host_names[1], $source, $theme));
             
             
+                $sql_source_id = "SELECT source_id FROM tb_source WHERE source_path LIKE 'http://www.ilfattoquotidiano.it/feed/'";
+                $query_source_id = DB::getDB()->prepare($sql_source_id);
+                $query_source_id->execute();
+            
+                
+                $sql_interest = "INSERT INTO tb_user_interests (fk_user_id, fk_interests_id) VALUES (?,?)";
+                $query_interest = DB::getDB()->prepare($sql_interest);
+                $query_interest->execute(array($_SESSION['id'], $query_source_id));
+            
+            
             
                 //setup parser
                 $rss = simplexml_load_file($destination);
