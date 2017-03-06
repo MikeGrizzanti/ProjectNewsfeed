@@ -32,7 +32,6 @@
      
      //Open add feed
     $(".add_feed").click(function (e) {
-        e.preventDefault();
         $(".wrap").toggleClass("url_box_show");
         $(".wrap_url_box").toggleClass("url_box_show");
         $("label").toggleClass("url_box_show");
