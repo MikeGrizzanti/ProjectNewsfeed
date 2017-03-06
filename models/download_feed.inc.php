@@ -126,7 +126,7 @@ if ($_POST) {
                 }
         } 
     
-        elseif ($retcode > 200 || $result == 'false'){
+        elseif ($retcode > 200){
             echo "Error! This url cannot be retrived or processed: Server response -> " .$retcode; 
         }
     
