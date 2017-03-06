@@ -29,12 +29,12 @@ if ($_POST) {
         curl_close ($ch);
     
         //XMLReader init
-        $validator = "http://validator.w3.org/feed/check.cgi?url=".$source."&output=soap12";
+        /*$validator = "http://validator.w3.org/feed/check.cgi?url=".$source."&output=soap12";
 
         $response = file_get_contents($validator);
         $a = strpos($response, '<m:validity>', 0)+12; 
         $b = strpos($response, '</m:validity>', $a); 
-        $result = substr($response, $a, $b-$a);
+        $result = substr($response, $a, $b-$a);*/
     
         //decodeHTMLent
         function decodeHtmlEnt($str) {

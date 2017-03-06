@@ -14,7 +14,6 @@
           
      //Hamburger Open&Close
     $(".top_icon_open_sidebar").click(function (e) {
-        e.preventDefault();
         $(this).toggleClass("Hide_Hamburger");
         $(".top_icon_close_sidebar").toggleClass("Show_Cross");
         $(".sidebar").toggleClass("Show_Sidebar");
