@@ -135,42 +135,42 @@
         </div>
         
         
-        <header class="header">
+    <header class="header">
             <a href="index.php?action=main"><img id="main_logo" src="../images/Logo_Mindfeed_White_Orange.svg" /></a>
             
             
             <!-- icons -->
             <nav id="top_nav">
-                <img class="top_icon_open_sidebar" src="../images/open_sidebar.svg" />
-                <img class="top_icon_close_sidebar" src="../images/close_Sidebar.svg" />
-                <input type="search" id="search" placeholder="search" />
-                <div id="top_icon_group">
+                    <img class="top_icon_open_sidebar" src="../images/open_sidebar.svg" />
+                    <img class="top_icon_close_sidebar" src="../images/close_Sidebar.svg" />
+                    <input type="search" id="search" placeholder="search" />
+                    <div id="top_icon_group">
                     <img id="top_icon_chat" src="../images/chat.svg" />                    
                     <img id="top_icon_settings" src="../images/settings.svg" />
                     <img id="top_icon_profile" src="../images/profile.svg" />
-                </div>
+                    </div>
             </nav>
         </header>
     
     
     <!-- Main_Page -->
     
-    <h2 id="page_header">SETTINGS</h2>
+        <h2 id="page_header">SETTINGS</h2>
+
+        <table>
+            <td id="center_breaker">
+                <div id="user_information">
+                <h3 class="header_settings">user informations</h3>
+                <img id="profile_picture" src="../images/profile.svg"/>
+
+                <ul id="user_information_list">
+                <li class="user_information_list_element"></li>
+                <li class="user_information_list_element"></li>
+                <li class="user_information_list_element"></li>
+                </ul>
+            </div>
     
-    <table>
-        <td id="center_breaker">
-    <div id="user_information">
-        <h3 class="header_settings">user informations</h3>
-        <img id="profile_picture" src="../images/profile.svg"/>
-        
-        <ul id="user_information_list">
-        <li class="user_information_list_element"></li>
-        <li class="user_information_list_element"></li>
-        <li class="user_information_list_element"></li>
-        </ul>
-    </div>
-    
-    <div id="email_password">
+            <div id="email_password">
         <h3 class="header_settings">email / password</h3>
         <h5 id="email_field"><?php echo $_SESSION['email'];?></h5>
         <a id="change_email_link" href="#">change your email</a>
@@ -179,23 +179,59 @@
         <a id="change_password_link" href="#">change your password</a>
     </div>
         
-    <div id="custom_source">
-        <h3 class="header_settings">source</h3>
-        <ul id="source_list">
-            <li id="source_list_element">asdfasdfasdf</li>
-            <li id="source_list_element">asdfasdfasdf</li>
-            <li id="source_list_element">asdfasdfasdf</li>
-            <li id="source_list_element">asdfasdfasdf</li>
-            <li id="source_list_element">asdfasdfasdf</li>
-        </ul>
+            <div id="custom_source">
+                <h3 class="header_settings">source</h3>
+                    <ul id="source_list">
+                        <li id="source_list_element">asdfasdfasdf</li>
+                        <li id="source_list_element">asdfasdfasdf</li>
+                        <li id="source_list_element">asdfasdfasdf</li>
+                        <li id="source_list_element">asdfasdfasdf</li>
+                        <li id="source_list_element">asdfasdfasdf</li>
+                    </ul>
         
-        <h3 class="sub_header">Add source</h3>
-    </div>    
+            <div id="new_source">
+                <h3 class="sub_header">Add source</h3>
+                
+                <label>
+                    <select name="member1" id="member1">
+                                  <?php
+                                    foreach($feed_source as $key => $value):
+                                        echo '<option value="'.$key.'">'.$value.'</option>'; 
+                                    endforeach;
+                                    ?>
+                    </select>
+                </label>                    
+                
+                <label >
+                    <select name="member2" id="member2">
+                                <option value="1">Politics</option>
+                                <option value="2">Economy</option>
+                                <option value="3">Technology</option>
+                                <option value="4">Science</option>
+                                <option value="5">Chronicle</option>
+                                <option value="6">Art</option>
+                                <option value="7">Social</option>
+                                <option value="8">Travel</option>
+                                <option value="9">Sport</option>
+                    </select>
+                </label>    
+                <label for="member2">Choose theme</label>
+            </div>
+        </div> 
+     
+        </td>   
+        <td id="second_column">
         
-        
-        
-     </td>   
-        
+        <div id="active_chats">
+            <h3 class="header_settings">active chats</h3>
+                <ul id="chats_information_list">
+                    <li>
+                        <h5 class="chat_title">lorem ipsum dolor sit amet</h5>
+                        <p id="chat_counter_text">new messages: <p class="new_messages_counter">x</p></p>
+                    </li>
+                </ul>
+        </div>
+        </td> 
         
         
         

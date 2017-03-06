@@ -375,7 +375,7 @@ label{
     color: #fbb040;
     text-transform: uppercase;
     font-weight: bold;
-    font-size: 1em;
+    font-size: 0.9em;
 }
 
 #user_information {
@@ -451,10 +451,14 @@ label{
 
 #custom_source {
     background-color: aqua;
-    height: 15em;
+    height: 30em;
     width: 20em;
     margin-left: 3em;
-    
+
+}
+
+#new_source {
+    background-color: red;
 }
 
 #source_list {
@@ -462,6 +466,42 @@ label{
     font-family: 'Roboto', sans-serif;
 }
 
+
+#second_column {
+    width: auto;
+    float: left;
+}
+
+#active_chats{
+    margin-left: 1em;
+}
+.chat_title {
+    font-family: 'Roboto',sans-serif;
+    color: #fbb040;
+    font-size: 1em;
+    margin-bottom: 0;
+    margin-top: 1em;
+}
+
+#chats_information_list {
+    list-style-type: none;
+}
+
+#chat_counter_text {
+    display: inline;
+    color: #787878;
+    font-family: 'Roboto',sans-serif;
+    font-size: 0.8em;
+    margin-top: 0;
+}
+
+.new_messages_counter {
+    display: inline;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 0.8em;
+    color: #fbb040;
+}
 
 /* popup change email */ 
 .background_article_popup {
@@ -548,6 +588,7 @@ label{
     visibility: hidden;
     opacity: 0;
 }
+
 #popup_nav {
     background: #fbb040;   
 }
