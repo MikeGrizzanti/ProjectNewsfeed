@@ -42,7 +42,7 @@ class tb_category {
     public static function getNameFromCategory() {
         $sql = 'SELECT category_name FROM tb_category;';
         $query = DB::getDB()->prepare($sql);
-        $query->execute(array($category_name));
+        $query->execute();
         $query->setFetchMode(PDO::FETCH_CLASS, 'tb_category');
         return $query->fetchAll();
     }
