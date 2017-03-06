@@ -8,18 +8,7 @@ if ($_POST) {
             $theme = trim($_POST['member2']);
             $_POST['member1'] = NULL;
             
-            //code...
-        }
-        
-        elseif (isset($_POST['member1']) && isset($_POST['member2'])){
-            $source_predefined = trim($_POST['member1']);
-            $theme = trim($_POST['member2']);
-            $_POST['add_feed'] = NULL;
-            
-            //code...
-        }
-    
-        //curl setup
+                    //curl setup
         curl_setopt($ch, CURLOPT_URL, $source);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
         $data = curl_exec ($ch);
@@ -133,4 +122,14 @@ if ($_POST) {
             echo "URL does not exist and/or couldn't be found: Server response -> " .$retcode;
         }
     
-}		
+}
+        }
+        
+        elseif (isset($_POST['member1']) && isset($_POST['member2'])){
+            $source_predefined = trim($_POST['member1']);
+            $theme = trim($_POST['member2']);
+            $_POST['add_feed'] = NULL;
+            
+            //code...
+        }
+		
