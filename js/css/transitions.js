@@ -45,7 +45,7 @@
         $(".article_popup").toggleClass("Show_Sidebar");
         $(".background_article_popup").toggleClass("show_background");
         
-    }); close_popup
+    });
      
     $(".close_popup").click(function (e) {
         e.preventDefault();
