@@ -180,44 +180,37 @@
     </div>
         
             <div id="custom_source">
-                <h3 class="header_settings">source</h3>
-                    <ul id="source_list">
-                        <li id="source_list_element">asdfasdfasdf</li>
-                        <li id="source_list_element">asdfasdfasdf</li>
-                        <li id="source_list_element">asdfasdfasdf</li>
-                        <li id="source_list_element">asdfasdfasdf</li>
-                        <li id="source_list_element">asdfasdfasdf</li>
-                    </ul>
-        
-            <div id="new_source">
-                <h3 class="sub_header">Add source</h3>
-                
-                <label>
+            <h3 class="header_settings">add source</h3>
+                <div class="main_wrapper">
+                <div class="wrap">
+                    <label class="select_mod">
                     <select name="member1" id="member1">
-                                  <?php
-                                    foreach($feed_source as $key => $value):
-                                        echo '<option value="'.$key.'">'.$value.'</option>'; 
-                                    endforeach;
-                                    ?>
+                                  <?php foreach($feed_source as $value){ ?>
+                                  <option class="selected_option" value="<?php echo $value->getSourceName() ?>">
+                                      <?php echo $value->getSourceName() ?></option> 
+                                    <?php } ?>
                     </select>
-                </label>                    
-                
-                <label >
+                    </label>
+                    <label for="member1">Choose source</label>
+                </div>
+                    
+                <div class="wrap" id="wrap2">
+                    <label class="select_mod">
                     <select name="member2" id="member2">
-                                <option value="1">Politics</option>
-                                <option value="2">Economy</option>
-                                <option value="3">Technology</option>
-                                <option value="4">Science</option>
-                                <option value="5">Chronicle</option>
-                                <option value="6">Art</option>
-                                <option value="7">Social</option>
-                                <option value="8">Travel</option>
-                                <option value="9">Sport</option>
-                    </select>
-                </label>    
-                <label for="member2">Choose theme</label>
+                                  <?php foreach($category_name as $value){ ?>
+                                  <option class="selected_option" value="<?php echo $value->get_category_name() ?>">
+                                      <?php echo $value->get_category_name() ?></option> 
+                                    <?php } ?>
+                                </select>
+                    </label>    
+                    <label for="member2">Choose theme</label>
+                </div>
             </div>
-        </div> 
+            <div class="wrap_url_box">
+                <input name="add_feed" type="url" class="url_box" placeholder="Ex: http://www.yoursite.com">
+                <label for="member3">Insert Custom Source</label>
+            </div>
+            </div> 
      
         </td>   
         <td id="second_column">
