@@ -11,7 +11,7 @@
          e.preventDefault();
          $(".flipper").css('-webkit-transform',"rotateY(360deg)");
      });
-     
+          
      //Hamburger Open&Close
     $(".top_icon_open_sidebar").click(function (e) {
         e.preventDefault();
