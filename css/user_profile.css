@@ -370,6 +370,13 @@ label{
     font-weight: bold;
     font-size: 1.1em;
 }
+.sub_header {
+    font-family: "Roboto", sans-serif;
+    color: #fbb040;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1em;
+}
 
 #user_information {
     height: 13em;
@@ -444,7 +451,7 @@ label{
 
 #custom_source {
     background-color: aqua;
-    height: 10em;
+    height: 15em;
     width: 20em;
     margin-left: 3em;
     
@@ -455,6 +462,125 @@ label{
     font-family: 'Roboto', sans-serif;
 }
 
+
+/* popup change email */ 
+.background_article_popup {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    left: 0; right: 0; top: 0; bottom: 0;
+    background-color: #bdbdbd;
+    z-index: 1400;
+    opacity: 0.5;
+    visibility: hidden;
+}
+.change_email_popup {
+    font-family: 'Open Sans', sans-serif;
+    position: absolute;
+    background-color: #fafafa;
+    border-radius: 3px;
+    height: 20%;
+    width: 20em;
+    margin-left: 30em;
+    margin-top: 8em;
+    z-index: 1500;
+    visibility: hidden;
+    opacity: 0;
+}
+#popup_nav {
+    background: #fbb040;   
+}
+
+.change_email_form {
+    margin-top: 1em;
+    margin-left: 1em;
+}
+
+.change_information_text_field {
+    position: relative;
+    display: block;
+    width: 20em;
+    border: 1px solid #fbb040;
+    border-radius: 2px;
+    margin-top: 1em;
+    margin-left: 0.8em;
+}
+.change_information_text_field:focus {
+    outline: none;
+}
+.change_information_submit_button {
+    position: relative;
+    display: block;
+    width: 20em;
+    margin-top: 1em;
+    margin-left: 0.8em;
+}
+#user_terms {
+    font-size: 0.6em;
+    text-align:justify;
+    padding-right: 2em;
+}
+
+/* popup change password */ 
+.background_change_information_popup {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    left: 0; right: 0; top: 0; bottom: 0;
+    background-color: #bdbdbd;
+    z-index: 1400;
+    opacity: 0.5;
+
+    visibility: hidden;
+    opacity: 0;
+}
+.change_password_popup {
+    font-family: 'Open Sans', sans-serif;
+    position: absolute;
+    background-color: #fafafa;
+    border-radius: 3px;
+    height: 25%;
+    width: 20em;
+    margin-left: 30em;
+    margin-top: 8em;
+    z-index: 1500;
+    
+    visibility: hidden;
+    opacity: 0;
+}
+#popup_nav {
+    background: #fbb040;   
+}
+
+.change_password_form {
+    margin-top: 1em;
+    margin-left: 1em;
+}
+
+.change_information_text_field {
+    position: relative;
+    display: block;
+    width: 20em;
+    border: 1px solid #fbb040;
+    border-radius: 2px;
+    margin-top: 1em;
+    margin-left: 0.8em;
+}
+.change_information_text_field:focus {
+    outline: none;
+}
+.change_information_submit_button {
+    position: relative;
+    display: block;
+    width: 20em;
+    margin-top: 1em;
+    margin-left: 0.8em;
+}
+#user_terms {
+    font-size: 0.6em;
+    text-align:justify;
+    padding-right: 2em;
+}
 
 
 /* Mediaquerries */

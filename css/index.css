@@ -168,6 +168,15 @@ a:hover {
     font-size: 0.7em;
 }
 
+.change_information_link {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.8em;
+    color: #fbb404;
+    margin-left: 1em;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
 .top_icon_open_sidebar {
     display: inline;
     position: relative;
@@ -503,7 +512,7 @@ label{
 }
 
 #popup_nav {
-    background: #BDBDBD;   
+    background: #fbb040;   
 }
 
 .article_title {

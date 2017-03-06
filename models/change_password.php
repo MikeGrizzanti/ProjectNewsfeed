@@ -1,13 +1,13 @@
 <?php
 
 $oldPassword = "";
-$repeat_oldPassword = "";
+$repeat_new_password = "";
 $newPassword = "";
 $error = "";
 
 if ($_POST) {
     if (is_loggedIn() == TRUE) {
-        if (isset($_POST['text_field_old_password']) && isset($_POST['text_field_repeat_old_password']) && isset($_POST['text_field_new_password'])) {
+        if (isset($_POST['text_field_old_password']) && isset($_POST['text_field_repeat_new_password']) && isset($_POST['text_field_new_password'])) {
             $oldPassword = trim($_POST['text_field_old_password']);
             $repeat_oldPassword = trim($_POST['text_field_repeat_old_password']);
             $newPassword = trim($_POST['text_field_new_password']);
