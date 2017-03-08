@@ -86,7 +86,7 @@ class controller {
     
     public function download_feed() {
         $erg = is_loggedIn();
-        if(!$erg && !empty($_POST)){
+        if(!$erg){
             require_once 'models/download_feed.inc.php';
             $this->addContext("error", $error);
             $this->addContext("template", "feed");
