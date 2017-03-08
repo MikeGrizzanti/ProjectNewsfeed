@@ -91,9 +91,8 @@ if ($_POST) {
             
                 $sql_source_id = "SELECT source_id FROM tb_source WHERE source_path LIKE '".$source."'";
                 $query_source_id = DB::getDB()->prepare($sql_source_id);
-                $query_source_id->execute(array($source_id));
+                $query_source_id->execute();
                 $query_source_id->setFetchMode(PDO::FETCH_CLASS, 'tb_source');
-                $query_source_id->fetch();
                 
                 var_dump($query_source_id->fetch());
                         
