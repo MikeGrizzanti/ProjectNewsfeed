@@ -89,7 +89,6 @@ class controller {
         if($erg){
             require_once 'models/download_feed.inc.php';
             $this->addContext("error", $error);
-            $this->addContext("template", "feed");
         }
     }
     private function generatePage($template){
