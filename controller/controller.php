@@ -88,7 +88,7 @@ class controller {
         $erg = is_loggedIn();
         require_once 'models/download_feed.inc.php';
         $this->addContext("error", $error);
-        $this->addContext("template", "main");
+        $this->addContext("template", "logged_in");
          if(!$erg) {
              header('Location: index.php?action=login');
          }
