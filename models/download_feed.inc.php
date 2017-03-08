@@ -89,7 +89,7 @@ if ($_POST) {
                 $query_source->execute(array($host_names[1], $source, $theme));
             
             
-                $sql_source_id = "SELECT source_id FROM tb_source WHERE source_path LIKE '".$source."'";
+                $sql_source_id = "SELECT source_id as id FROM tb_source WHERE source_path LIKE '".$source."'";
                 $query_source_id = DB::getDB()->prepare($sql_source_id);
                 $query_source_id->execute();   
                 $query_source_id->setFetchMode(PDO::FETCH_CLASS, 'tb_source');
