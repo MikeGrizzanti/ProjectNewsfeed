@@ -96,7 +96,7 @@ if ($_POST) {
                         
                 echo '<pre>';
                 if (!isset($_SESSION['id'])) {
-                    echo 'fuik';
+                    echo 'session geht ned';
                 }
                 
                 $sql_interest = "INSERT INTO tb_user_interests (fk_user_id, fk_interests_id) VALUES (?,?)";
