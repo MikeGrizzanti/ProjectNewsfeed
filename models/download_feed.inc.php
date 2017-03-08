@@ -97,6 +97,7 @@ if ($_POST) {
                 $sql_interest = "INSERT INTO tb_user_interests (fk_user_id, fk_interests_id) VALUES (?,?)";
                 $query_interest = DB::getDB()->prepare($sql_interest);
                 $query_interest->execute(array($_SESSION['id'], $query_source_id));
+                var_dump($query_interest);
             
             
             
