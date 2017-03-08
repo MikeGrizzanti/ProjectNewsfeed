@@ -89,7 +89,7 @@ class controller {
         if(is_loggedIn() && !empty($_POST)){
             require_once 'models/download_feed.inc.php';
             $this->addContext("error", $error);
-            $this->addContext("template", "feed");
+            $this->addContext("template", "main");
         }
     }
     private function generatePage($template){
