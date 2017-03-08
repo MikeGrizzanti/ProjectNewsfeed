@@ -93,6 +93,8 @@ if ($_POST) {
                 $query_source_id = DB::getDB()->prepare($sql_source_id);
                 $query_source_id->execute();   
                 $query_source_id->setFetchMode(PDO::FETCH_CLASS, 'tb_source');
+                
+                var_dump($query_source_id->fetch()->getSourceId());
                       
                 
                 $sql_interest = "INSERT INTO tb_user_interests (fk_user_id, fk_interests_id) VALUES (?,?)";
