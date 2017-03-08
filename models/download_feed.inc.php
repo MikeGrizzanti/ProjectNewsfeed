@@ -95,9 +95,7 @@ if ($_POST) {
                 $query_source_id->setFetchMode(PDO::FETCH_CLASS, 'tb_source');
                         
                 echo '<pre>';
-                if (!isset($_SESSION['id'])) {
-                    echo 'session geht ned';
-                }
+                var_dump($_SESSION['id']);
                 
                 $sql_interest = "INSERT INTO tb_user_interests (fk_user_id, fk_interests_id) VALUES (?,?)";
                 $query_interest = DB::getDB()->prepare($sql_interest);
