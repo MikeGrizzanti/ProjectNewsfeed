@@ -225,8 +225,6 @@ select{
     padding-left: 2em;
 }
 
-
-
 .wrap_url_box{
   clear: both;
   float: left;
@@ -353,7 +351,20 @@ label{
     text-transform: uppercase;
     font-weight: bold;
     font-size: 1.1em;
+    
 }
+
+.custom_header_settings {
+    color: #fbb040;
+    font-family: "Roboto", sans-serif;
+    margin-top: 1em;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1em;
+    margin-bottom: 0;
+    
+}
+
 .sub_header {
     font-family: "Roboto", sans-serif;
     color: #fbb040;
@@ -432,31 +443,81 @@ label{
     text-decoration: underline;
 }
 
+.sources {
+    margin-left: 3em;
+}
 #user_sources_list {
     margin-left: 0;
     list-style-type: none;
     font-family: 'Roboto',sans-serif;
     color: #787878;
     text-align: left;
+    text-transform: uppercase;
+    font-weight: bold;
+    
+}
+
+.user_source_list_element {
+    margin-top: 0;
+    margin-bottom: 0.8em;
 }
 
 #custom_source {
-    background-color: aqua;
-    height: 30em;
-    width: 20em;
-    margin-left: 3em;
-
+    margin-top: 2em;
+    height: 25em;
+    width: 11em;
+    border-radius: 2px;
+}
+.url_box_profile {
+    border-radius: 2px;
+    height: 1.5em;
+    margin: 0;
+    border: 1px solid #fbb040;
+}
+.custom_source_url_box {
+    margin-left: 0;
 }
 
-#new_source {
-    background-color: red;
+.custom_source_header {
+    margin-top: 1em;
+    margin-bottom: 0em;
+    text-transform: uppercase;
+    font-size: 0.7;
+    color: #0b0b0b;
+    font-family: 'Roboto',sans-serif;
 }
 
-#source_list {
-    list-style-type: none;
-    font-family: 'Roboto', sans-serif;
+#first_selection {
+    display: inline;
+}
+#second_selection {
+    display: inline;
 }
 
+.selected_option_profile_page {
+    
+}
+
+.url_box_custom_source{
+    border: 0.8px solid #fbb040;
+    height: 1.5em;
+    border-radius: 4px;
+}
+
+#confirm_add_source_button {
+    display: block;
+    margin: 1em;
+    margin-left: 0;
+    margin-top: 1em;
+    height: 2em;
+    width: 10em;
+    text-align: center;
+    font-family: "Roboto",sans-serif;
+    color: #fafafa;
+    background-color: #FBB040;
+    border: 0;
+    border-radius: 2px;
+}
 
 #second_column {
     width: auto;
