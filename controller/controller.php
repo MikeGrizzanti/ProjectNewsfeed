@@ -1,7 +1,7 @@
 <?php
 
 require_once 'models/functions.inc.php';
-require_once 'models/download_feed.inc.php';
+
 
 session_start();
 
