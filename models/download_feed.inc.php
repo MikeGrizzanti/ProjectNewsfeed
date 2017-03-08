@@ -91,7 +91,7 @@ if ($_POST) {
             
                 $sql_source_id = "SELECT source_id FROM tb_source WHERE source_path LIKE '".$source."'";
                 $query_source_id = DB::getDB()->prepare($sql_source_id);
-                $query_source_id->execute(array($sql_source_id));
+                $query_source_id->execute();
                         
                 
                 $sql_interest = "INSERT INTO tb_user_interests (fk_user_id, fk_interests_id) VALUES (?,?)";
