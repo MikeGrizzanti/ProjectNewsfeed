@@ -86,11 +86,13 @@ class controller {
     
     public function download_feed() {
         $erg = is_loggedIn();
-        if(is_loggedIn() && !empty($_POST)){
-            require_once 'models/download_feed.inc.php';
-            $this->addContext("error", $error);
-            $this->addContext("template", "main");
-        }
+        require_once 'models/download_feed.inc.php';
+        $this->addContext("error", $error);
+        $this->addContext("template", "main");
+         if(!$erg) {
+             header('Location: index.php?action=login');
+         }
+        
     }
     private function generatePage($template){
         extract($this->context);
