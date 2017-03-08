@@ -157,8 +157,8 @@
     
         <h2 id="page_header">SETTINGS</h2>
 
-        <table>
-            <td id="center_breaker">
+    <table>
+        <td id="center_breaker">
                 <div id="user_information">
                 <h3 class="header_settings">user informations</h3>
                 <img id="profile_picture" src="../images/profile.svg"/>
@@ -192,119 +192,57 @@
                     <h3 class="custom_header_settings">add source</h3>
                     
                     <table>
-                        <tr>
-                            <td>
-                                <div id="first_selection">
-                                <h5 class="custom_source_header">source</h5>
-                                <select class="select_box_user_profile" name="set_source_name">
-                                    <?php foreach($feed_source as $value){ ?>
-                                        <option class="selected_option_profile_page" value="<?php echo $value->getSourceName() ?>">
-                                        <?php echo $value->getSourceName() ?></option> 
-                                    <?php } ?>
-                                </select>
-                                </div>
-                            </td>
-                            <td>
-                                <div id="second_selection">
-                                <h5 class="custom_source_header">category</h5>
-                                <select class="select_box_user_profile" name="set_category_name">
-                                    <?php foreach($category_name as $value){ ?>
-                                        <option class="selected_option_profile_page" value="<?php echo $value->get_category_name() ?>">
-                                        <?php echo $value->get_category_name() ?></option> 
-                                    <?php } ?>
-                                </select>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <h5 class="custom_source_header">custom</h5>
-                                <input type="text" class="url_box_custom_source" name="url_box_custom_source" placeholder="Ex: http://www.yoursite.com"/>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <input type="submit" value="confirm" id="confirm_add_source_button" />
-                            </td>
-                        </tr>
-                    </table>
-                </form>
-            </div>
-        </div>
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                <!--    <div class="add_source">
-                <div class="add_source_box">
-                    <h5 class="custom_source_header">name</h5>
-                    <label class="select_mod">
-                    <select name="member1" id="member1">
-                                  <?php foreach($feed_source as $value){ ?>
-                                  <option class="selected_option_profile_page" value="<?php echo $value->getSourceName() ?>">
-                                      <?php echo $value->getSourceName() ?></option> 
-                                    <?php } ?>
-                    </select>
-                    </label>
-                    <label for="member1">Choose source</label>
+                            <tr>
+                                <td>
+                                    <div id="first_selection">
+                                    <h5 class="custom_source_header">source</h5>
+                                    <select class="select_box_user_profile" name="set_source_name">
+                                        <?php foreach($feed_source as $value){ ?>
+                                            <option class="selected_option_profile_page" value="<?php echo $value->getSourceName() ?>">
+                                            <?php echo $value->getSourceName() ?></option> 
+                                        <?php } ?>
+                                    </select>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div id="second_selection">
+                                    <h5 class="custom_source_header">category</h5>
+                                    <select class="select_box_user_profile" name="set_category_name">
+                                        <?php foreach($category_name as $value){ ?>
+                                            <option class="selected_option_profile_page" value="<?php echo $value->get_category_name() ?>">
+                                            <?php echo $value->get_category_name() ?></option> 
+                                        <?php } ?>
+                                    </select>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h5 class="custom_source_header">custom</h5>
+                                    <input type="text" class="url_box_custom_source" name="url_box_custom_source" placeholder="Ex: http://www.yoursite.com"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="submit" value="confirm" id="confirm_add_source_button" />
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
                 </div>
-                    
-                <div class="add_source_box" >
-                    <h5 class="custom_source_header">category</h5>
-                    <label class="select_mod">
-                    <select name="member2" id="member2">
-                                  <?php foreach($category_name as $value){ ?>
-                                  <option class="selected_option_profile_page" value="<?php echo $value->get_category_name() ?>">
-                                      <?php echo $value->get_category_name() ?></option> 
-                                    <?php } ?>
-                    </select>
-                    </label>    
-                </div>
-                    <br/>
-            </div>
-            <div>
-                 <h5 class="custom_source_header">add custom source</h5>
-                <h7 class="custom_source_subtitle">for advanced users only: </h7>
-                <input name="add_feed" type="url" class="url_box_profile" placeholder="Ex: http://www.yoursite.com">
-                
-            </div>
-                
-                <input type="submit" value="confirm" id="confirm_add_soource_button" />
-                    
-                </form>
--->
-          
-
-       
-                
-                
-        </td>   
-        <td id="second_column">
-        
-        <div id="active_chats">
-            <h3 class="header_settings">active chats</h3>
-                <ul id="chats_information_list">
-                    <li>
-                        <h5 class="chat_title">lorem ipsum dolor sit amet</h5>
-                        <p id="chat_counter_text">new messages: <p class="new_messages_counter">x</p></p>
-                    </li>
-                </ul>
-        </div>
-        </td> 
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+            </div>                
+            </td>   
+            <td id="second_column">
+                    <div id="active_chats">
+                        <h3 class="header_settings">active chats</h3>
+                            <ul id="chats_information_list">
+                                <li>
+                                    <h5 class="chat_title">lorem ipsum dolor sit amet</h5>
+                                    <p id="chat_counter_text">new messages: </p><p class="new_messages_counter">x</p>
+                                </li>
+                            </ul>
+                    </div>
+            </td> 
         </table>
 </body>
+</html>
