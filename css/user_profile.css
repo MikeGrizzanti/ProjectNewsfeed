@@ -219,11 +219,6 @@ select{
   float: left;
   margin-left: 1.7em;
   margin-top: 0.5em;
-  opacity: 0;
-    -webkit-transition:all 0.2s ease;
-    -moz-transition:all 0.2s ease;
-    -o-transition:all 0.2s ease;
-    transition: all 0.2s ease;
 }
 
 #wrap2{
@@ -236,12 +231,6 @@ select{
   clear: both;
   float: left;
   margin-top: 0;
-    margin-left: 0.6em;
-  opacity: 0;
-  -webkit-transition:all 0.2s ease;
-    -moz-transition:all 0.2s ease;
-    -o-transition:all 0.2s ease;
-    transition: all 0.2s ease;
 }
 
 .url_box {
@@ -268,11 +257,6 @@ label{
     font-variant: small-caps;
     font-size: 0.6em;
     float: left;
-    opacity: 0;
-    -webkit-transition:all 0.2s ease;
-    -moz-transition:all 0.2s ease;
-    -o-transition:all 0.2s ease;
-    transition: all 0.2s ease;
 }
 
 #sidebar_list_user_interests {
@@ -448,6 +432,13 @@ label{
     text-decoration: underline;
 }
 
+#user_sources_list {
+    margin-left: 0;
+    list-style-type: none;
+    font-family: 'Roboto',sans-serif;
+    color: #787878;
+    text-align: left;
+}
 
 #custom_source {
     background-color: aqua;
