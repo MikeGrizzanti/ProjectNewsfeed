@@ -752,6 +752,24 @@ label{
     #top_icon_chat {
         margin-left: 10em;
     }
+    
+    .close_email_warning {
+        margin-left: 88em;      
+    }
+    
+    .top_icon_settings_dropdown {
+        margin-left: 84em;
+    }
+    
+    #clear_search_operations_button {
+        margin-left: 7.5em;
+    }
+    
+    #wrap2 {
+        padding-left: 0em;
+        margin: 0;
+        margin-top: 0.5em;
+    }
 }
 
 
