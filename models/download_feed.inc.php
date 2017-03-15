@@ -8,7 +8,7 @@ if ($_POST) {
             $theme = trim($_POST['member2']);
             $_POST['member1'] = NULL;
             
-            
+            var_dump($_SESSION['id']);
         }
         
         elseif (isset($_POST['member1']) && isset($_POST['member2'])){
@@ -16,7 +16,7 @@ if ($_POST) {
             $theme = trim($_POST['member2']);
             $_POST['add_feed'] = NULL;
             
-            //code...
+            var_dump($_SESSION['id']);
         }
     
 
@@ -96,7 +96,7 @@ if ($_POST) {
                 $fetch_source = $query_source_id->fetch()->getSourceId();
                 
                 //var_dump($query_source_id->fetch()->getSourceId());
-                echo $_SESSION['id'];
+                //echo $_SESSION['id'];
                       
                 
                 $sql_interest = "INSERT INTO tb_user_interests (fk_user_id, fk_interests_id) VALUES (?,?)";
