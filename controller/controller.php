@@ -1,9 +1,11 @@
 <?php
 
+session_start();
+
 require_once 'models/functions.inc.php';
 
 
-session_start();
+
 
 class controller {
     
