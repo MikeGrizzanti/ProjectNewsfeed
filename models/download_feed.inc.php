@@ -20,6 +20,7 @@ if ($_POST) {
         }
     
 
+    session_start();
     
      //curl setup
         curl_setopt($ch, CURLOPT_URL, $source);
@@ -94,7 +95,6 @@ if ($_POST) {
                 $query_source_id->execute();   
                 $query_source_id->setFetchMode(PDO::FETCH_CLASS, 'tb_source');
                 $fetch_source = $query_source_id->fetch()->getSourceId();
-                $session_id = session_id();
                 //var_dump($query_source_id->fetch()->getSourceId());
                 var_dump($_SESSION["id"]);
                       
