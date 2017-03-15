@@ -95,7 +95,7 @@ if ($_POST) {
                 $query_source_id->setFetchMode(PDO::FETCH_CLASS, 'tb_source');
                 $fetch_source = $query_source_id->fetch()->getSourceId();
                 
-                var_dump($query_source_id->fetch()->getSourceId());
+                //var_dump($query_source_id->fetch()->getSourceId());
                 var_dump($_SESSION["id"]);
                       
                 
