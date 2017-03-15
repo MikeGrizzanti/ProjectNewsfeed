@@ -19,8 +19,6 @@ if ($_POST) {
             //code...
         }
     
- if (session_status() == PHP_SESSION_NONE) {
-    session_start();
 
     
      //curl setup
@@ -142,5 +140,5 @@ if ($_POST) {
     
     
    } 
-}
+
 		
