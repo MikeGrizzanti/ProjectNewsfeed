@@ -8,6 +8,7 @@ if ($_POST) {
             $theme = trim($_POST['member2']);
             $_POST['member1'] = NULL;
             
+            echo "hi";
             var_dump($_SESSION['id']);
         }
         
@@ -16,6 +17,7 @@ if ($_POST) {
             $theme = trim($_POST['member2']);
             $_POST['add_feed'] = NULL;
             
+            echo "hi";
             var_dump($_SESSION['id']);
         }
     
