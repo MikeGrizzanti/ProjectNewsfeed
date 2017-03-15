@@ -1,6 +1,6 @@
 <?php
 
-session_start():
+session_start();
 
 if ($_POST) {
         //curl and header
