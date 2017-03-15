@@ -19,7 +19,9 @@ if ($_POST) {
             //code...
         }
     
- 
+ if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+
     
      //curl setup
         curl_setopt($ch, CURLOPT_URL, $source);
@@ -139,6 +141,6 @@ if ($_POST) {
         }
     
     
-    
+   } 
 }
 		
