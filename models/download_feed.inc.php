@@ -1,5 +1,7 @@
 <?php
 
+session_start():
+
 if ($_POST) {
         //curl and header
         $ch = curl_init();
@@ -10,6 +12,7 @@ if ($_POST) {
             
             echo "hi";
             var_dump($_SESSION['id']);
+            
         }
         
         elseif (isset($_POST['member1']) && isset($_POST['member2'])){
