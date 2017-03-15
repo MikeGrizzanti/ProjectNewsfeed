@@ -98,9 +98,9 @@ if ($_POST) {
                 var_dump($_SESSION["id"]);
                       
                 
-                $sql_interest = "INSERT INTO tb_user_interests (fk_user_id, fk_interests_id) VALUES (?,?)";
+                /*$sql_interest = "INSERT INTO tb_user_interests (fk_user_id, fk_interests_id) VALUES (?,?)";
                 $query_interest = DB::getDB()->prepare($sql_interest);
-                $query_interest->execute(array($_SESSION['id'], 10));
+                $query_interest->execute(array($_SESSION['id'], ));*/
                 
                 
                 //setup parser
