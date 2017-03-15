@@ -96,7 +96,7 @@ if ($_POST) {
                 $fetch_source = $query_source_id->fetch()->getSourceId();
                 
                 //var_dump($query_source_id->fetch()->getSourceId());
-                var_dump($_SESSION["category_name"]);
+                echo $_SESSION['id'];
                       
                 
                 $sql_interest = "INSERT INTO tb_user_interests (fk_user_id, fk_interests_id) VALUES (?,?)";
