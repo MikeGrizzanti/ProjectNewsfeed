@@ -150,7 +150,7 @@ display: inline;
     background-color: #fbb040;
     float: left;
     margin-left: 1.8em;
-    margin-top: 13em;
+    margin-top: 0em;
     border-radius: 2px;
     text-transform: uppercase;
     z-index: 799;
@@ -229,6 +229,7 @@ select{
   clear: both;
   float: left;
   margin-top: 0;
+    margin-left: 0.7em;
 }
 
 .url_box {

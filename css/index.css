@@ -339,6 +339,7 @@ select{
 .wrap{
     clear: both;
     float: left;
+    margin: 0.4em;
     margin-left: 1.7em;
     margin-top: 0.5em;
     opacity: 0;
@@ -358,7 +359,7 @@ select{
   clear: both;
   float: left;
   margin-top: 0;
-  margin-left: 0.5em;
+  margin-left: 0.7em;
   opacity: 0;
   -webkit-transition:all 0.2s ease;
   -moz-transition:all 0.2s ease;
@@ -381,7 +382,7 @@ select{
 }
 
 .wrap {
-    margin:  0.5em;
+    margin:  0.6em;
 }
 
 
