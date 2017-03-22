@@ -313,10 +313,10 @@ display: inline;
 
 #member1 {
     margin-left: 0em;
-    width: 8em;
+    width: 7em;
 }
 #member2 {
-    width: 8em; 
+    width: 7em; 
 }
 
 .main_wrapper, label{
@@ -350,7 +350,7 @@ select{
 }
 
 #wrap2{
-    padding-left: 2em;
+    padding-left: 0em;
 }
 
 

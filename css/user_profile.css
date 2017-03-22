@@ -245,6 +245,14 @@ select{
   display: inline;
 }
 
+#member1 {
+    margin-left: 0em;
+    width: 7em;
+}
+#member2 {
+    width: 7em; 
+}
+
 .wrap {
     margin:  0.6em;
 }
