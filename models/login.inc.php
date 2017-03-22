@@ -1,7 +1,4 @@
 <?php
-session_start();
-
-
 $_SESSION['feed_source'] = tb_source::getNameFromSource();
 $_SESSION['category_name'] = tb_category::getNameFromCategory();
 

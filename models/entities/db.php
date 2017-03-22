@@ -6,9 +6,9 @@ class DB {
     }
     
     public static function getDB() {
-            $dsn = "mysql:host=mysql.hostinger.de;dbname=u584441810_mindf;charset=utf8mb4";
-            $user = "u584441810_admin";
-            $password = "hdgf672HH!!";
+            $dsn = "pgsql:host=mattia98.org;dbname=mindfeed";
+            $user = "mindfeed";
+            $password = "F8NVn3fL";
             try {
                 $db = new PDO($dsn, $user, $password);
                 $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);

@@ -3,6 +3,9 @@
 class tb_feed {
     private $feed_id = 0;
     private $feed_title = "";
+    private $feed_author = "";
+    private $feed_pubdate = "";
+    private $feed_guid = "";
     private $feed_content = "";
     private $feed_img_path = "";
     private $fk_category_id = 0;
@@ -35,6 +38,18 @@ class tb_feed {
         return $this->feed_content;
     }
     
+    public function get_feed_author() {
+        return $this->feed_author;
+    }
+    
+    public function get_feed_pubDate() {
+        return $this->feed_pubdate;
+    }
+    
+    public function get_feed_guid() {
+        return $this->feed_guid;
+    }
+
     public function get_feed_img_path() {
         return $this->feed_img_path;
     }
@@ -43,15 +58,27 @@ class tb_feed {
         return $this->fk_category_id;
     }
     
-    public function get_fk_feed_groupChat_id() {
-        return $this->fk_feed_groupChat_id;
+    public function get_fk_feed_groupchat_id() {
+        return $this->fk_feed_groupchat_id;
     }
     
-    public function set_feed_title ($feed_title) {
+    public function set_feed_title($feed_title) {
         $this->feed_title = $feed_title;
     }
     
-    public function set_feed_content ($feed_content) {
+    public function set_feed_author($feed_author) {
+        $this->feed_author = $feed_author;
+    }
+    
+    public function set_feed_pubDate($feed_pubDate) {
+        $this->feed_pubdate = $feed_pubDate;
+    }
+    
+    public function set_feed_guid($feed_guid) {
+        $this->feed_guid = $feed_guid;
+    }
+
+    public function set_feed_content($feed_content) {
         $this->feed_content = $feed_content;
     }
     

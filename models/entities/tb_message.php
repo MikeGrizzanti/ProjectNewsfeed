@@ -5,7 +5,7 @@ class tb_message {
     private $message_timestamp = "";
     private $message_text = "";
     private $fk_message_user_id = 0;
-    private $fk_groupChat_id = 0;
+    private $fk_groupchat_id = 0;
     
     public function __construct($data = array()) {
         if ($data) {
@@ -39,7 +39,7 @@ class tb_message {
     }
     
     public function  get_fk_groupChat_id() {
-        return $this->fk_groupChat_id;
+        return $this->fk_groupchat_id;
     }
     
     public function set_message_timestamp ($message_timestamp) {
@@ -51,7 +51,7 @@ class tb_message {
     }
     
     public static function getMessageFromGroupChat($fk_message_user_id, $fk_groupChat_id) {
-        $sql = 'SELECT message_id FROM tb_message WHERE fk_message_user_id = ? AND fk_groupChat_id = ?;';
+        $sql = 'SELECT message_id FROM tb_message WHERE fk_message_user_id = ? AND fk_groupchat_id = ?;';
         $query = DB::getDB()->prepare($sql);
         $query->execute (array($fk_message_user_id, $fk_groupChat_id));
         $query->setFetchMode(PDO::FETCH_CLASS, 'tb_message');
@@ -59,13 +59,13 @@ class tb_message {
     }
     
     public static function saveMessage($message_timestamp, $fk_message_user_id, $message_text, $fk_groupChat_id) {
-        $sql = 'INSERT INTO tb_message (message_timestamp, fk_message_user_id, message_text, fk_groupChat_id) VALUES (?,?,?) WHERE fk_groupChat_id = ?';
+        $sql = 'INSERT INTO tb_message (message_timestamp, fk_message_user_id, message_text, fk_groupchat_id) VALUES (?,?,?) WHERE fk_groupchat_id = ?';
         $query = DB::getDB()->prepare($sql);
         $query->execute(array($message_timestamp, $fk_message_user_id, $message_text, $fk_groupChat_id));
     }
     
     public static function printMessage ($fk_message_user_id, $fk_groupChat_id) {
-        $sql = 'SELECT message_text, message_timestamp FROM tb_message WHERE fk_message_user_id = ? AND fk_groupChat_id = ?;';
+        $sql = 'SELECT message_text, message_timestamp FROM tb_message WHERE fk_message_user_id = ? AND fk_groupchat_id = ?;';
         $query = DB::getDB()->prepare($sql);
         $query->execute(array($fk_message_user_id, $fk_groupChat_id));
         $query->setFetchMode(PDO::FETCH_CLASS, 'tb_message');

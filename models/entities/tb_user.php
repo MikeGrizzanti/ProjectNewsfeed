@@ -2,11 +2,11 @@
 
 class tb_user {
     private $user_id = 0;
-    private $user_firstName = '';
-    private $user_lastName = '';
-    private $user_nickName = '';
+    private $user_firstname = '';
+    private $user_lastname = '';
+    private $user_nickname = '';
     private $user_password = '';
-    private $user_eMail = '';
+    private $user_email = '';
     private $user_status = '';
     
     public function __construct($data = array()) {
@@ -29,15 +29,15 @@ class tb_user {
     }
     
     public function getFirstName() {
-        return $this->user_firstName;
+        return $this->user_firstname;
     }
     
     public function getLastName() {
-        return $this->user_lastName;
+        return $this->user_lastname;
     }
     
     public function getNickName() {
-        return $this->user_nickName;
+        return $this->user_nickname;
     }
     
     public function getPassword() {
@@ -45,7 +45,7 @@ class tb_user {
     }
     
     public function getEmail() {
-        return $this->user_eMail;
+        return $this->user_email;
     }
     
     public function getStatus() {
@@ -54,17 +54,17 @@ class tb_user {
 
     public function setFirstName($firstName) {
         if (strlen($firstName) <= 50) 
-            $this->user_firstName = $firstName;
+            $this->user_firstname = $firstName;
     }
     
     public function setLastName($lastName) {
         if (strlen($lastName) <= 50) 
-            $this->user_lastName = $lastName;
+            $this->user_lastname = $lastName;
     }
     
     public function setNickName($nickName) {
         if (strlen($nickName) <= 50) 
-            $this->user_nickName = $nickName;
+            $this->user_nickname = $nickName;
     }
     
     public function setPassword($password) {
@@ -72,11 +72,11 @@ class tb_user {
     }
     
     public function setEmail($email) {
-        $this->user_eMail = $email;
+        $this->user_email = $email;
     }
     
     public static function checkLogin($nickName, $password) {
-        $sql = 'SELECT * FROM tb_user WHERE user_nickName=?;';
+        $sql = 'SELECT * FROM tb_user WHERE user_nickname=?;';
         $query = DB::getDB()->prepare($sql);
         $query->execute(array($nickName));
         
@@ -102,7 +102,7 @@ class tb_user {
     }
     
     public static function getUserIdFromCategory($user_id) {
-        $sql = 'SELECT tb_user.user_id, tb_user.user_firstName, tb_user.user_lastName, tb_user.user_nickName, tb_user.user_password, tb_user.user_eMail FROM tb_user INNER JOIN tb_user_interests ON (tb_user.user_id = tb_user_interests.fk_user_id) WHERE tb_user_interests.fk_interests_id = ?;';
+        $sql = 'SELECT tb_user.user_id, tb_user.user_firstname, tb_user.user_lastname, tb_user.user_nickname, tb_user.user_password, tb_user.user_email FROM tb_user INNER JOIN tb_user_interests ON (tb_user.user_id = tb_user_interests.fk_user_id) WHERE tb_user_interests.fk_interests_id = ?;';
         $query = DB::getDB()->prepare($sql);
         $query->execute(array($user_id));
         $query->setFetchMode(PDO::FETCH_CLASS, 'tb_user');
@@ -138,7 +138,7 @@ class tb_user {
         $queryCheck->execute(array($firstName, $lastName, $nickName, $password, $eMail, $id));
         
         $passwordHashed = password_hash($password, PASSWORD_DEFAULT);
-        $sql = 'UPDATE tb_user SET = user_firstName = ?, user_lastName = ?, user_nickName = ?, user_password = ?, user_eMail = ? WHERE user_id = ?';
+        $sql = 'UPDATE tb_user SET = user_firstname = ?, user_lastname = ?, user_nickname = ?, user_password = ?, user_email = ? WHERE user_id = ?';
         $query = DB::getDB()->prepare($sql);
         $query->execute(array($firstName, $lastName, $nickName, $passwordHashed, $eMail, $id));
     }
@@ -159,7 +159,7 @@ class tb_user {
     }*/
 
     private static function createUser($firstName, $lastName, $nickName, $password, $eMail) {
-        $sqlcheck = "SELECT * FROM tb_user where user_nickName = ? AND user_eMail = ?;";
+        $sqlcheck = "SELECT * FROM tb_user where user_nickname = ? AND user_email = ?;";
         $queryCheck = DB::getDB()->prepare($sqlcheck);
         $queryCheck->execute(array($nickName,$eMail));
         
@@ -167,11 +167,11 @@ class tb_user {
             return NULL;
         } else {
             $passwordHashed = password_hash($password, PASSWORD_DEFAULT);
-            $sql = 'INSERT INTO tb_user (user_firstName, user_lastName, user_nickName, user_password, user_eMail) VALUES (?,?,?,?,?);';
+            $sql = 'INSERT INTO tb_user (user_firstname, user_lastname, user_nickname, user_password, user_email) VALUES (?,?,?,?,?);';
             $query = DB::getDB()->prepare($sql);
             $query->execute(array($firstName, $lastName, $nickName, $passwordHashed, $eMail));
             
-            $sql2 = 'SELECT * FROM tb_user WHERE user_nickName = ?;';
+            $sql2 = 'SELECT * FROM tb_user WHERE user_nickname = ?;';
             $query2 = DB::getDB()->prepare($sql2);
             $query2->execute(array($nickName));
             $query2->setFetchMode(PDO::FETCH_CLASS, 'tb_user');
