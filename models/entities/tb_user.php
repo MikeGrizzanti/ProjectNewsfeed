@@ -75,6 +75,11 @@ class tb_user {
         $this->user_email = $email;
     }
     
+    public function setStatus ($status) {
+        $this->user_status = $status;
+    }
+
+
     public static function checkLogin($nickName, $password) {
         $sql = 'SELECT * FROM tb_user WHERE user_nickname=?;';
         $query = DB::getDB()->prepare($sql);
@@ -93,6 +98,7 @@ class tb_user {
         }
     }
     
+
     public static function getUserFromId($id) {
         $sql = 'SELECT * FROM tb_user WHERE user_id=?;';
         $query = DB::getDB()->prepare($sql);
@@ -126,6 +132,12 @@ class tb_user {
         }
     }
     
+    public static function setStatusToZero($id) {
+        $sql = 'UPDATE tb_user SET user_status = 0 WHERE user_id = ?;';
+        $query = DB::getDB()->prepare($sql);
+        $query->execute(array($id));
+    }
+    
     public static function update_user_status($newStatus, $id) {
         $sql = "UPDATE tb_user SET user_status = ? WHERE user_id = ?";
         $query = DB::getDB()->prepare($sql);
@@ -138,7 +150,7 @@ class tb_user {
         $queryCheck->execute(array($firstName, $lastName, $nickName, $password, $eMail, $id));
         
         $passwordHashed = password_hash($password, PASSWORD_DEFAULT);
-        $sql = 'UPDATE tb_user SET = user_firstname = ?, user_lastname = ?, user_nickname = ?, user_password = ?, user_email = ? WHERE user_id = ?';
+        $sql = 'UPDATE tb_user SET user_firstname = ?, user_lastname = ?, user_nickname = ?, user_password = ?, user_email = ? WHERE user_id = ?';
         $query = DB::getDB()->prepare($sql);
         $query->execute(array($firstName, $lastName, $nickName, $passwordHashed, $eMail, $id));
     }

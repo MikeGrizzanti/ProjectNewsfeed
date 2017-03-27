@@ -24,17 +24,18 @@ if ($_POST) {
                 $erg = tb_user::saveUser(NULL, $user_firstName, $user_lastName, $user_nickName, $user_password, $user_eMail);
                 if ($erg != null){
                     $_SESSION['id'] = $erg->getId();
+                    tb_user::setStatusToZero($_SESSION['id']);
                     header("Location:index.php?action=main");
                     
                     //Bestätigungsemail
                     $mail = new PHPMailer;
                     $mail->CharSet = "UTF-8";
-                    $mail->From = "support@mindfeed.esy.es";
-                    $mail->FromName = "mindfeed.esy.es";
-                    $mail->Sender = "support@mindfeed.esy.es";
+                    $mail->From = "support@mindfeed.duckdns.org";
+                    $mail->FromName = "mindfeed.duckdns.org";
+                    $mail->Sender = "support@mindfeed.duckdns.org";
                     
                     $mail->addAddress($erg->getEmail());
-                    $mail->Subject = "Verify registration on mindfeed.esy.es";
+                    $mail->Subject = "Verify registration on mindfeed.duckdns.org";
                     
                     $mail->isHTML(TRUE);
                     $mail->Body = "<h3>Hello " .$erg->getFirstName() ." ,</h3>"
@@ -44,9 +45,9 @@ if ($_POST) {
                                 . $erg->getEmail()
                                 . "&id="
                                 . $erg->getId()
-                                . ">mindfeed.esy.es</a>";
+                                . ">mindfeed.duckdns.org</a>";
                     
-                    $mail->AltBody = "You were registered on our site. Please copy the following link and paste it in your browser: http://mindfeed.esy.es/index.php?action=status&email="
+                    $mail->AltBody = "You were registered on our site. Please copy the following link and paste it in your browser: http://mindfeed.duckdns.org/index.php?action=status&email="
                                 . $erg->getEmail()
                                 . "&id="
                                 . $erg->getId();
