@@ -28,7 +28,7 @@ a:hover {
     margin-top: 1rem;
     height: 1em;
     width: 100%;
-    position: fixed;
+    position: relative fixed;
 }
 
 #search {
@@ -261,7 +261,7 @@ display: inline;
     background-color: #fbb040;
     float: left;
     margin-left: 1.8em;
-    margin-top: 10em;
+    margin-top: 1em;
     border-radius: 2px;
     text-transform: uppercase;
     z-index: 799;
@@ -561,7 +561,7 @@ label{
     background-color: #FBFBFB;
     position: relative;
     height: auto;
-    top: 8em; right: 0; bottom: 0;left: 0;
+    top: 1em; right: 0; bottom: 0;left: 0;
 }
 
 .confirm_email_div {
