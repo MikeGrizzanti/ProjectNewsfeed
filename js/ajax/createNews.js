@@ -1,11 +1,9 @@
-
-/*$(document).ready(function() {
-    //var data_irr = "";
+$(document).ready(function(e) {
     
-    $("#add_feed_box").on("submit",function(e){        
-        
-        e.preventDefault();
-        
+    e.preventDefault();
+    
+    $("#add_feed_box").on("submit",function(){        
+ 
         $.ajax({
             type: "POST",
             url:"/models/download_feed.inc.php",
@@ -29,4 +27,5 @@
         }); 
     });
     
-});*/
+});
+

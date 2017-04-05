@@ -31,6 +31,8 @@ class tb_category {
         $this->category_name = $category_name;
     }
     
+    //we need a function to get the id from the category in order to make it dynmaic html code should be --> value="<?php echo $value->get_category_id() " returning the id of every category from 1 to 10 
+    
     public static function getCategoryFromID($id) {
         $sql = 'SELECT * FROM tb_category WHERE category_id=?;';
         $query = DB::getDB()->prepare($sql);

@@ -1,4 +1,10 @@
 /* Head-Part */
+
+.showElement{
+    visibility: visible;
+    opacity: 1;
+}
+
 .header {
     position: fixed;
     height: 12em;

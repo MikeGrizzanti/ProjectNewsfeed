@@ -45,6 +45,10 @@
         e.preventDefault();
         $(".article_popup").toggleClass("hide_it");
         $(".background_article_popup").toggleClass("hide_it");
-        
+    });
+     
+    $("#change_email_link").click(function (e) {
+        e.preventDefault();
+        $(".change_email_popup").toggleClass("Show_Sidebar");
     });
 });

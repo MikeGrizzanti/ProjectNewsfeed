@@ -1,38 +1,23 @@
 <?php
 
-session_start();
 
 if ($_POST) {
         //curl and header
-        $ch = curl_init();
+        //$ch = curl_init();
         if (isset($_POST['add_feed']) && isset($_POST['member2'])) {
             $source = trim($_POST['add_feed']);
             $theme = trim($_POST['member2']);
             $_POST['member1'] = NULL;
             
-            echo "hi";
-            var_dump($_SESSION['id']);
-            
-        }
-        
-        elseif (isset($_POST['member1']) && isset($_POST['member2'])){
-            $source_predefined = trim($_POST['member1']);
-            $theme = trim($_POST['member2']);
-            $_POST['add_feed'] = NULL;
-            
-            echo "hi";
-            var_dump($_SESSION['id']);
-        }
-    
-
-    
-     //curl setup
-        curl_setopt($ch, CURLOPT_URL, $source);
+            $headers = get_headers($source, 1);
+        /*curl_setopt($ch, CURLOPT_URL, $source);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
         $data = curl_exec ($ch);
         $retcode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-        curl_close ($ch);
+        curl_close ($ch);*/
+        
     
+        
         //XMLReader init
         /*$validator = "http://validator.w3.org/feed/check.cgi?url=".$source."&output=soap12";
 
@@ -71,7 +56,6 @@ if ($_POST) {
         }
     
         //name
-    
         $info = parse_url($source);
         $host = $info['host'];
         $host_names = explode(".", $host);
@@ -81,12 +65,12 @@ if ($_POST) {
         
 
         // URL validations based on $retcode
-        if ($retcode == 200/* && $result == 'true'*/) {
+        if ($headers[0] == "HTTP/1.1 200 OK" || $headers[0] == "HTTP/1.0 200 OK") {
             
                 //exec
-                $file = fopen($destination, "w+");
+                /*$file = fopen($destination, "w+");
                 fputs($file, $data);
-                fclose($file);
+                fclose($file);*/
             
             
                 $sql_source = "INSERT INTO tb_source (source_name, source_path, fk_category_id) VALUES (?,?,?)";
@@ -110,11 +94,16 @@ if ($_POST) {
                 
                 
                 //setup parser
-                $rss = simplexml_load_file($destination);
+                //$rss = simplexml_load_file($destination);
+            
+            
+                $context  = stream_context_create(array('http' => array('header' => 'Accept: application/xml')));
+                $rss = file_get_contents($source, true, $context);
+                $rss = simplexml_load_string($rss, null, LIBXML_NOERROR) or die("Error: Cannot create object");
             
                 $i = 0;
-                $sql = "INSERT INTO tb_feed (feed_title, feed_content, feed_author, feed_pubDate, feed_guid, feed_img_path, fk_category_id, fk_source_id) VALUES (?,?,?,?,?,?,?,?)";
-                
+                /*$sql = "INSERT INTO tb_feed (feed_title, feed_content, feed_author, feed_pubDate, feed_guid, feed_img_path, fk_category_id, fk_source_id) VALUES (?,?,?,?,?,?,?,?)";
+                */
             
                  foreach($rss->channel->item as $item) {
                         if ($i < 10) { // parse only 100 items
@@ -128,21 +117,42 @@ if ($_POST) {
                                 'image' => $item->image,
                             ];
                             
-                            $query = DB::getDB()->prepare($sql);
-                            $query->execute(array($feed_attributes['title'], $feed_attributes['description'], $feed_attributes['author'], $feed_attributes['pubDate'], $feed_attributes['guid'], $feed_attributes['image'], 1, 1));
+                            echo json_encode($feed_attributes);
+                            
+                            
+                            
+                            /*$query = DB::getDB()->prepare($sql);
+                            $query->execute(array($feed_attributes['title'], $feed_attributes['description'], $feed_attributes['author'], $feed_attributes['pubDate'], $feed_attributes['guid'], $feed_attributes['image'], 1, 1));*/
                             
                         }
                             $i++;
                 }
         } 
     
-        elseif ($retcode > 200){
-            echo "Error! This url cannot be retrived or processed: Server response -> " .$retcode; 
+        elseif ($headers[0] == "HTTP/1.1 200 OK" || $headers[0] == "HTTP/1.0 200 OK"){
+            echo "Error! This url cannot be retrived or processed: Server response -> " .$headers[0]; 
         }
     
         else {
-            echo "URL does not exist and/or couldn't be found: Server response -> " .$retcode;
+            echo "URL does not exist and/or couldn't be found: Server response -> " .$headers[0];
         }
+                        
+            
+        }
+        
+        elseif (isset($_POST['member1']) && isset($_POST['member2'])){
+            $source_predefined = trim($_POST['member1']);
+            $theme = trim($_POST['member2']);
+            $_POST['add_feed'] = NULL;
+            
+            echo "hi";
+            var_dump($_SESSION['id']);
+        }
+    
+
+    
+        //curl setup
+
     
     
    } 
