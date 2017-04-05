@@ -190,7 +190,7 @@ a:hover {
     position: relative;
     margin-left: 2em;
     height: 1.25em;
-    z-index: 999;
+    z-index: 2000;
     opacity: 1;
     
 }
@@ -723,7 +723,74 @@ label{
 
 
 
+/* chat sidebar when logged in */
+#chat_sidebar {
+    z-index: 3800;
+    height: 79%;
+    position: absolute;
+    width: 25%;
+    background-color: #fafafa;
+    -webkit-box-shadow: -3px 0px 5px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: -3px 0px 5px 0px rgba(0,0,0,0.5);
+    box-shadow: -3px 0px 5px 0px rgba(0,0,0,0.5);
+    
+    top: 12em; right: 0; left: auto; bottom: 0;
+    
+}
 
+.message_box {
+    height: 80%;
+    width: 90%;
+    position: relative;
+    margin: 1em;
+    margin-top: 1em;
+    
+    background-color: aqua;
+    z-index: 3850;
+}
+
+#chat_title {
+   margin-left: 1em; 
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 0.5em;
+}
+
+#chat_break_line {
+    margin-left: 1em;
+    margin-right: 1em;
+    margin-top: 0;
+}
+
+#chat_start_date {
+    margin-left: 1.8em;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.6em;
+    color: #787878;
+}
+
+#member_list_dropdown {
+    height: 1.5em;
+    margin-left: 12em;
+    color: #787878; 
+    font-size: 0.6em;
+}
+
+.chat_leave_link {
+    margin-left: 1.2em;
+    color: #787878;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.8em;
+    cursor: pointer;
+    display: inline;
+}
+.chat_report_link {
+    margin-left: 2em;
+    color: #787878;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.8em;
+    cursor: pointer;
+    display: inline;
+}
 
 /*mediaqurries*/
 
