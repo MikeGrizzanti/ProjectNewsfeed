@@ -8,8 +8,8 @@ $error = "";
 $erg = "";
 
 if ($_POST) {
-    if (isset($_POST['message_box_chat'])) {
-        $message_text = trim($_POST['message_box_chat']);
+    if (isset($_POST['chat_text_box'])) {
+        $message_text = trim($_POST['chat_text_box']);
         
         if (empty($message_text)) {
             $error = 'Nothing to send';
