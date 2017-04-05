@@ -192,11 +192,11 @@ hr {
 #login_header {
     font-family: 'Roboto', sans-serif;
     color: #fafafa;
-    margin-bottom: 0;
     margin-top: 0;
     text-align: left;
-    margin-left: 1.3em;
+    margin-left: 0em;
     font-size: 1em;
+    margin-bottom: 0.8em;
 }
 
 #switch_to_login {

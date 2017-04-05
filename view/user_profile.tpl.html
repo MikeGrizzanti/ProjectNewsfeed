@@ -5,7 +5,6 @@
     <meta charset="utf-8" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-    <script src="js/ajax/createNews.js"></script>
     <script type="text/javascript" src="js/css/transitions.js"></script>    
     <link rel="stylesheet" type="text/css" href="css/user_profile.css" />
     
@@ -145,10 +144,40 @@
                     <img class="top_icon_close_sidebar" src="images/close_Sidebar.svg" />
                     <input type="search" id="search" placeholder="search" />
                     <div id="top_icon_group">
-                    <img id="top_icon_chat" src="images/chat.svg" />                    
-                    <img id="top_icon_settings" src="images/settings.svg" />
-                    <img id="top_icon_profile" src="images/profile.svg" />
+                    <img id="top_icon_chat" class="top_icon_chat" src="images/chat.svg" />
+                    <img id="top_icon_settings" class="top_icon_settings"  src="images/settings.svg" />
+                    <a href="index.php?action=user_profile"><img id="top_icon_profile" class="top_icon_profile" src="images/profile.svg" /></a>
+                    
+                    <!-- dropdowns -->
+                    <div id="drop_downs">
+                    <div class="top_icon_chat_dropdown">
+                        <div class="dropdown_chat_list">
+                            <p class="article_title">asdfas dfasdjklfa jklösdfjk lajkl asdfas dfasdjklfa jklösdfjk lajkl asdfas</p>
+                            <br/>
+                            <h7 class="unread_messages_text">unread messages: <p class="unread_messages_counter">X </p></h7> 
+                        </div>
+                        
+                        <div class="dropdown_chat_list">
+                            <p class="article_title">asdfas dfasdjklfa jklösdfjk lajkl asdfas dfasdjklfa jklösdfjk lajkl asdfas</p>
+                            <br/>
+                            <h7 class="unread_messages_text">unread messages: <p class="unread_messages_counter">X </p></h7> 
+                        </div>
                     </div>
+                
+                    <div class="top_icon_settings_dropdown">
+                        <a href="#"><input type="button" id="clear_search_operations_button" value="Clear search operations" /></a>
+                        
+                        <footer class="bottom_table">
+                        <table id="settings_table">
+                            <tr>
+                            <td><a class="change_information_link" href="index.php?action=changePassword">change password</a></td>
+                            <td><a class="change_information_link" id="logout_option" href="index.php?action=logout">Logout</a></td>
+                            </tr>    
+                        </table>
+                        </footer>
+                    </div>
+                </div>
+                </div>
             </nav>
         </header>
     
