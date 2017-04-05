@@ -30,24 +30,24 @@ if ($_POST) {
                     //Bestätigungsemail
                     $mail = new PHPMailer;
                     $mail->CharSet = "UTF-8";
-                    $mail->From = "support@mindfeed.duckdns.org";
+                    $mail->From = "team.mindfeed@gmail.com";
                     $mail->FromName = "mindfeed.duckdns.org";
-                    $mail->Sender = "support@mindfeed.duckdns.org";
+                    $mail->Sender = "team.mindfeed@gmail.com";
                     
                     $mail->addAddress($erg->getEmail());
                     $mail->Subject = "Verify registration on mindfeed.duckdns.org";
                     
                     $mail->isHTML(TRUE);
                     $mail->Body = "<h3>Hello " .$erg->getFirstName() ." ,</h3>"
-                                . "<p> You logged in on our site mindfeed with this email."
+                                . "<p> You registered on our site mindfeed.duckdns.org with this email."
                                 . "<p> Please click on the following link to verify your email: <p>"
-                                . "<a href=mindfeed.esy.es/index.php?action=status&email="
+                                . "<a href=mindfeed.duckdns.org/index.php?action=status&email="
                                 . $erg->getEmail()
                                 . "&id="
                                 . $erg->getId()
                                 . ">mindfeed.duckdns.org</a>";
                     
-                    $mail->AltBody = "You were registered on our site. Please copy the following link and paste it in your browser: http://mindfeed.duckdns.org/index.php?action=status&email="
+                    $mail->AltBody = "You registered on our site mindfeed.duckdns.org with this email. Please copy the following link and paste it in your browser in order to confirm it: http://mindfeed.duckdns.org/index.php?action=status&email="
                                 . $erg->getEmail()
                                 . "&id="
                                 . $erg->getId();
