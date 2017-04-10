@@ -44,8 +44,6 @@ class tb_source {
         $query->setFetchMode(PDO::FETCH_CLASS, 'tb_source');
         return $query->fetchAll();
     }
-    
-    
 }
     
     
