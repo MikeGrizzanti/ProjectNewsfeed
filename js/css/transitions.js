@@ -1,4 +1,4 @@
- $(document).ready(function() {
+ $(document).ready(function() { 
     
     //rotate login_div REGISTER
     $("#register_option").click(function(e) {
@@ -40,15 +40,29 @@
         $(".background_article_popup").toggleClass("show_background");
         
     });
-     
+    
+    //article hide
     $(".close_popup").click(function (e) {
         e.preventDefault();
         $(".article_popup").toggleClass("hide_it");
         $(".background_article_popup").toggleClass("hide_it");
     });
      
-    $("#change_email_link").click(function (e) {
+    //change email
+     $("#change_email_link").click(function (e) {
         e.preventDefault();
         $(".change_email_popup").toggleClass("Show_Sidebar");
+    });
+     
+    //disble url_box
+    $("#member1").click(function () {
+        $(this).prop('disabled', false);
+        $('#add_feed_url').attr('disabled', 'disabled');
+    });
+    
+    //disble source
+     $("#add_feed_url").click(function () {
+        $(this).prop('disabled', false);
+       	$('#member1').attr('disabled', 'disabled');
     });
 });

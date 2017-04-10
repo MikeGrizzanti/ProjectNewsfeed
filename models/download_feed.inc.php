@@ -1,32 +1,7 @@
 <?php
 
 
-if ($_POST) {
-        //curl and header
-        //$ch = curl_init();
-        if (isset($_POST['add_feed']) && isset($_POST['member2'])) {
-            $source = trim($_POST['add_feed']);
-            $theme = trim($_POST['member2']);
-            $_POST['member1'] = NULL;
-            
-            $headers = get_headers($source, 1);
-        /*curl_setopt($ch, CURLOPT_URL, $source);
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-        $data = curl_exec ($ch);
-        $retcode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-        curl_close ($ch);*/
-        
-    
-        
-        //XMLReader init
-        /*$validator = "http://validator.w3.org/feed/check.cgi?url=".$source."&output=soap12";
-
-        $response = file_get_contents($validator);
-        $a = strpos($response, '<m:validity>', 0)+12; 
-        $b = strpos($response, '</m:validity>', $a); 
-        $result = substr($response, $a, $b-$a);*/
-    
-        //decodeHTMLent
+//decodeHTMLent
         function decodeHtmlEnt($str) {
             $ret = html_entity_decode($str, ENT_COMPAT, 'UTF-8');
             $p2 = -1;
@@ -54,6 +29,32 @@ if ($_POST) {
             }
             return $ret;
         }
+
+
+if ($_POST) {
+        //curl and header
+        //$ch = curl_init();
+        if (isset($_POST['add_feed']) && isset($_POST['member2'])) {
+            $source = trim($_POST['add_feed']);
+            $theme = trim($_POST['member2']);
+            $_POST['member1'] = NULL;
+            
+            $headers = get_headers($source, 1);
+        /*curl_setopt($ch, CURLOPT_URL, $source);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+        $data = curl_exec ($ch);
+        $retcode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+        curl_close ($ch);*/
+        
+    
+        
+        //XMLReader init
+        /*$validator = "http://validator.w3.org/feed/check.cgi?url=".$source."&output=soap12";
+
+        $response = file_get_contents($validator);
+        $a = strpos($response, '<m:validity>', 0)+12; 
+        $b = strpos($response, '</m:validity>', $a); 
+        $result = substr($response, $a, $b-$a);*/
     
         //name
         $info = parse_url($source);
@@ -117,12 +118,10 @@ if ($_POST) {
                                 'image' => $item->image,
                             ];
                             
-                            echo json_encode($feed_attributes);
+                            echo json_encode($feed_attributes['title']);
                             
                             
                             
-                            /*$query = DB::getDB()->prepare($sql);
-                            $query->execute(array($feed_attributes['title'], $feed_attributes['description'], $feed_attributes['author'], $feed_attributes['pubDate'], $feed_attributes['guid'], $feed_attributes['image'], 1, 1));*/
                             
                         }
                             $i++;
@@ -144,9 +143,8 @@ if ($_POST) {
             $source_predefined = trim($_POST['member1']);
             $theme = trim($_POST['member2']);
             $_POST['add_feed'] = NULL;
+                        
             
-            echo "hi";
-            var_dump($_SESSION['id']);
         }
     
 

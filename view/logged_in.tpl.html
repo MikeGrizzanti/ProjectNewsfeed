@@ -41,7 +41,7 @@
         <!-- Head-Space -->
         
         <!-- Sidebar -->
-        <div class="loggedin_sidebar">
+        <div class="sidebar">
             <div id="scrol_div">
             <h3 class="sidebar_header">Interests:</h3>
         <ul id="sidebar_list_user_interests">
@@ -74,8 +74,8 @@
                 <div class="wrap">
                     <label class="select_mod">
                     <select name="member1" id="member1">
-                                  <?php foreach($feed_source as $value){ ?>
-                                  <option class="selected_option" value="<?php echo $value->getSourceName() ?>">
+                                  <?php $index = 1; foreach($feed_source as $value){ ?>
+                                  <option class="selected_option" value="<?php echo $index++ ?>">
                                       <?php echo $value->getSourceName() ?></option> 
                                     <?php } ?>
                     </select>
@@ -96,7 +96,7 @@
                 </div>
             </div>
             <div class="wrap_url_box">
-                <input name="add_feed" type="url" class="url_box" placeholder="Ex: http://www.yoursite.com">
+                <input id="add_feed_url" name="add_feed" type="url" class="url_box" placeholder="Ex: http://www.yoursite.com">
                 <label for="member3">Insert Custom Source</label>
             </div>
             </form>

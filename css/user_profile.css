@@ -270,7 +270,7 @@ display: inline;
     margin-top: 10em;
     border-radius: 2px;
     text-transform: uppercase;
-    z-index: 799;
+    z-index: 1799;
     opacity: 0;
     visibility: hidden;
     -webkit-transition:all 0.2s ease;
