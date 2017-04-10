@@ -164,7 +164,7 @@
                         <footer class="bottom_table">
                         <table id="settings_table">
                             <tr>
-                            <td><a class="change_information_link" href="index.php?action=changePassword">change password</a></td>
+                            <td><a class="change_information_link" href="#">change password</a></td>
                             <td><a class="change_information_link" id="logout_option" href="index.php?action=logout">Logout</a></td>
                             </tr>    
                         </table>
@@ -204,7 +204,7 @@
         
         <div class="sources">
             <h3 class="header_settings">Sources</h3>
-                <ul id="user_sources_list">
+                <ul id="user_sources_list" >
                     <?php foreach($feed_source as $value){ ?>
                             <li class="user_source_list_element" value="<?php echo $value->getSourceName() ?>">
                             <?php echo $value->getSourceName() ?></li>
