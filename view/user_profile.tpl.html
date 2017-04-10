@@ -34,7 +34,7 @@
             <input type="text" placeholder="new password" id="text_field_new_password" class="change_information_text_field"/>    
             <input type="text" placeholder="repeat new password" id="text_field_repeat_new_password" class="change_information_text_field"/>    
             <input type="submit" value="change email" class="change_information_submit_button"/>
-            <p id="user_terms">by submitting these changes you agree to the mindfeed licence agreement</p>
+            <p id="user_terms">by submitting these changes you agree to our licence agreement</p>
         </form>
     </div>
 <!-- Head-Space -->
@@ -72,11 +72,10 @@
                 <div class="wrap">
                     <label class="select_mod">
                     <select name="member1" id="member1">
-                                  <?php
-                                    foreach($feed_source as $key => $value):
-                                        echo '<option value="'.$key.'">'.$value.'</option>'; 
-                                    endforeach;
-                                    ?>
+                        <?php foreach($feed_source as $value){ ?>
+                            <option class="selected_option" value="<?php echo $value->getSourceName() ?>">
+                            <?php echo $value->getSourceName() ?></option> 
+                        <?php } ?>
                     </select>
                     </label>
                     <label for="member1">Choose source</label>
@@ -84,17 +83,12 @@
                     
                 <div class="wrap" id="wrap2">
                     <label class="select_mod">
-                    <select name="member2" id="member2">
-                                  <option value="1">Politics</option>
-                                  <option value="2">Economy</option>
-                                  <option value="3">Technology</option>
-                                  <option value="4">Science</option>
-                                  <option value="5">Chronicle</option>
-                                  <option value="6">Art</option>
-                                  <option value="7">Social</option>
-                                  <option value="8">Travel</option>
-                                  <option value="9">Sport</option>
-                                </select>
+                        <select name="member2" id="member2">
+                            <?php $index = 1; foreach($category_name as $value){ ?>
+                                <option class="selected_option" value="<?php echo $index++ ?>">
+                                <?php echo $value->get_category_name() ?></option> 
+                            <?php } ?>
+                        </select>
                     </label>    
                     <label for="member2">Choose theme</label>
                 </div>
@@ -170,7 +164,7 @@
                         <footer class="bottom_table">
                         <table id="settings_table">
                             <tr>
-                            <td><a class="change_information_link" href="index.php?action=changePassword">change password</a></td>
+                            <td><a class="change_information_link" href="#">change password</a></td>
                             <td><a class="change_information_link" id="logout_option" href="index.php?action=logout">Logout</a></td>
                             </tr>    
                         </table>
@@ -210,10 +204,11 @@
         
         <div class="sources">
             <h3 class="header_settings">Sources</h3>
-                <ul id="user_sources_list">
-                <li class="user_source_list_element">asdf</li>
-                <li class="user_source_list_element">asdf</li>
-                <li class="user_source_list_element">asdf</li>
+                <ul id="user_sources_list" >
+                    <?php foreach($feed_source as $value){ ?>
+                            <li class="user_source_list_element" value="<?php echo $value->getSourceName() ?>">
+                            <?php echo $value->getSourceName() ?></li>
+                    <?php } ?>
                 </ul>
             
             <div id="custom_source">
@@ -224,24 +219,24 @@
                             <tr>
                                 <td>
                                     <div id="first_selection">
-                                    <h5 class="custom_source_header">source</h5>
-                                    <select class="select_box_user_profile" name="set_source_name">
-                                        <?php foreach($feed_source as $value){ ?>
-                                            <option class="selected_option_profile_page" value="<?php echo $value->getSourceName() ?>">
-                                            <?php echo $value->getSourceName() ?></option> 
-                                        <?php } ?>
-                                    </select>
+                                        <h5 class="custom_source_header">source</h5>
+                                        <select class="select_box_user_profile" name="set_source_name">
+                                            <?php foreach($feed_source as $value){ ?>
+                                                <option class="selected_option" value="<?php echo $value->getSourceName() ?>">
+                                                <?php echo $value->getSourceName() ?></option> 
+                                            <?php } ?>
+                                        </select>
                                     </div>
                                 </td>
                                 <td>
                                     <div id="second_selection">
-                                    <h5 class="custom_source_header">category</h5>
-                                    <select class="select_box_user_profile" name="set_category_name">
-                                        <?php foreach($category_name as $value){ ?>
-                                            <option class="selected_option_profile_page" value="<?php echo $value->get_category_name() ?>">
-                                            <?php echo $value->get_category_name() ?></option> 
-                                        <?php } ?>
-                                    </select>
+                                        <h5 class="custom_source_header">category</h5>
+                                        <select class="select_box_user_profile" name="set_category_name">
+                                            <?php $index = 1; foreach($category_name as $value){ ?>
+                                                <option class="selected_option" value="<?php echo $index++ ?>">
+                                                <?php echo $value->get_category_name() ?></option> 
+                                            <?php } ?>
+                                        </select>
                                     </div>
                                 </td>
                             </tr>

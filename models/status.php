@@ -16,7 +16,7 @@ if ($_GET) {
         $user = tb_user::getUserFromId($id);
         
         if (!$user) {
-            header('Location:404.php');
+            header('Location:error_404.php');
         } else {
             if ($eMail == $user->getEmail()) {
                 tb_user::update_user_status(1,$id);
