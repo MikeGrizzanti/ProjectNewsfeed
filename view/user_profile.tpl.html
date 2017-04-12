@@ -66,13 +66,13 @@
             <hr/>
             
             
-            <form method="post" action="index.php?action=main" id="add_feed_box">
+            <form method="post" action="index.php?action=main" id="add_feed_box" name="add_feed_box">
                 <a class="add_feed">ADD FEED +</a>
                 <div class="main_wrapper">
                 <div class="wrap">
                     <label class="select_mod">
                     <select name="member1" id="member1">
-                        <?php foreach($feed_source as $value){ ?>
+                        <?php $index = 1; $foreach($feed_source as $value){ ?>
                             <option class="selected_option" value="<?php echo $value->getSourceName() ?>">
                             <?php echo $value->getSourceName() ?></option> 
                         <?php } ?>

@@ -1,18 +1,25 @@
 $(document).ready(function(e) {
     
-    e.preventDefault();
-    
-    $("#add_feed_box").on("submit",function(){        
+    $("#add_feed_box").on("submit",function(e){        
  
+        e.preventDefault();
+        var data = new FormData();
+        var member2 = document.getElementById("member2");
+        var feed = document.getElementById("add_feed_url");
+        data.append("member2",member2.value);
+        data.append("add_feed",feed.value);
+                    
+
         $.ajax({
             type: "POST",
-            url:"/models/download_feed.inc.php",
-            chache: false,
-            data: $('#add_feed_box').serialize(),
-            //dataType: 'json',
+            url:"models/download_feed.inc.php",
+            data: data,
+            cache: false,
+            contentType: false,
+            processData: false,
             success: function(data){
                console.log('worky');
-               alert(data.mydata); // It should now, worky!
+               console.log(data); // It should now, worky!
             },
             error: function (xhr, ajaxOptions, thrownError, url) { //error
                 console.log(xhr.status);
@@ -20,7 +27,8 @@ $(document).ready(function(e) {
                 console.warn(thrownError);
             },
             complete: function(data){
-               var objStr = JSON.stringify(data);
+                alert(data);
+               var objStr = $.parseJSON(data);
                console.log('complete' + objStr);
                alert(objStr); // It should now, worky!
             }
@@ -29,3 +37,4 @@ $(document).ready(function(e) {
     
 });
 
+ 

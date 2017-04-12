@@ -1,5 +1,7 @@
 <?php
 
+require_once('entities/db.php');
+require_once('entities/tb_source.php');
 
 //decodeHTMLent
         function decodeHtmlEnt($str) {
@@ -30,9 +32,8 @@
             return $ret;
         }
 
-
-if ($_POST) {
-        //curl and header
+if (isset($_POST) ){
+       //curl and header
         //$ch = curl_init();
         if (isset($_POST['add_feed']) && isset($_POST['member2'])) {
             $source = trim($_POST['add_feed']);
@@ -40,6 +41,7 @@ if ($_POST) {
             $_POST['member1'] = NULL;
             
             $headers = get_headers($source, 1);
+            session_start();
         /*curl_setopt($ch, CURLOPT_URL, $source);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
         $data = curl_exec ($ch);
@@ -73,25 +75,38 @@ if ($_POST) {
                 fputs($file, $data);
                 fclose($file);*/
             
-            
-                $sql_source = "INSERT INTO tb_source (source_name, source_path, fk_category_id) VALUES (?,?,?)";
-                $query_source = DB::getDB()->prepare($sql_source);
-                $query_source->execute(array($host_names[1], $source, $theme));
-            
-            
-                $sql_source_id = "SELECT source_id FROM tb_source WHERE source_path LIKE '".$source."'";
-                $query_source_id = DB::getDB()->prepare($sql_source_id);
-                $query_source_id->execute();   
-                $query_source_id->setFetchMode(PDO::FETCH_CLASS, 'tb_source');
-                $fetch_source = $query_source_id->fetch()->getSourceId();
-                
-                //var_dump($query_source_id->fetch()->getSourceId());
-                //echo $_SESSION['id'];
-                      
-                
-                $sql_interest = "INSERT INTO tb_user_interests (fk_user_id, fk_interests_id) VALUES (?,?)";
-                $query_interest = DB::getDB()->prepare($sql_interest);
-                $query_interest->execute(array($_SESSION['id'], $fetch_source));
+                if ($source != tb_source::checkIfSourceExists($source)) {
+                    $sql_source = "INSERT INTO tb_source (source_name, source_path, fk_category_id) VALUES (?,?,?)";
+                    $query_source = DB::getDB()->prepare($sql_source);
+                    $query_source->execute(array($host_names[1], $source, $theme));
+
+
+                    $sql_source_id = "SELECT source_id FROM tb_source WHERE source_path LIKE '".$source."'";
+                    $query_source_id = DB::getDB()->prepare($sql_source_id);
+                    $query_source_id->execute();   
+                    $query_source_id->setFetchMode(PDO::FETCH_CLASS, 'tb_source');
+                    $fetch_source = $query_source_id->fetch()->getSourceId();
+
+                    //var_dump($query_source_id->fetch()->getSourceId());
+                    //echo $_SESSION['id'];
+
+
+                    $sql_interest = "INSERT INTO tb_user_interests (fk_user_id, fk_interests_id) VALUES (?,?)";
+                    $query_interest = DB::getDB()->prepare($sql_interest);
+                    $query_interest->execute(array($_SESSION['id'], $fetch_source));
+                    
+                } 
+                elseif ($source == tb_source::checkIfSourceExists($source)) {
+                    $sql_source_id = "SELECT source_id FROM tb_source WHERE source_path LIKE '".$source."'";
+                    $query_source_id = DB::getDB()->prepare($sql_source_id);
+                    $query_source_id->execute();   
+                    $query_source_id->setFetchMode(PDO::FETCH_CLASS, 'tb_source');
+                    $fetch_source = $query_source_id->fetch()->getSourceId();
+                    
+                    $sql_interest = "INSERT INTO tb_user_interests (fk_user_id, fk_interests_id) VALUES (?,?)";
+                    $query_interest = DB::getDB()->prepare($sql_interest);
+                    $query_interest->execute(array($_SESSION['id'], $fetch_source));
+                }
                 
                 
                 //setup parser
@@ -118,11 +133,8 @@ if ($_POST) {
                                 'image' => $item->image,
                             ];
                             
-                            echo json_encode($feed_attributes['title']);
-                            
-                            
-                            
-                            
+                            echo json_encode($feed_attributes);
+                            //echo '"1":"hallo" ';
                         }
                             $i++;
                 }
@@ -143,8 +155,44 @@ if ($_POST) {
             $source_predefined = trim($_POST['member1']);
             $theme = trim($_POST['member2']);
             $_POST['add_feed'] = NULL;
-                        
+              
+            //echo $source_predefined;
             
+            $sql_source_id = "SELECT source_path FROM tb_source WHERE source_name LIKE '".$source_predefined."' AND fk_category_id =".$theme."";
+            $query_source_id = DB::getDB()->prepare($sql_source_id);
+            $query_source_id->execute();
+            $query_source_id->setFetchMode(PDO::FETCH_CLASS, 'tb_source');
+            $fetch_source = $query_source_id->fetch()->getSourcePath();
+            
+            //print_r($fetch_source);
+            
+            $context  = stream_context_create(array('http' => array('header' => 'Accept: application/xml')));
+            $rss = file_get_contents($fetch_source, true, $context);
+            $rss = simplexml_load_string($rss, null, LIBXML_NOERROR) or die("Error: Cannot create object");
+            
+            $i=0;
+            
+            foreach($rss->channel->item as $item) {
+                        if ($i < 10) { // parse only 100 items
+                            
+                            $feed_attributes = [
+                                'title' => strip_tags(decodeHtmlEnt($item->title)), 
+                                'description' => strip_tags(decodeHtmlEnt($item->description)), 
+                                'author' => $item->author, 
+                                'pubDate' => $item->pubDate,
+                                'guid' => $item->guid,
+                                'image' => $item->image,
+                            ];
+                            
+                            echo json_encode($feed_attributes['title']);
+                            
+                            
+                            
+                            
+                        }
+                            $i++;
+                }
+                
         }
     
 
