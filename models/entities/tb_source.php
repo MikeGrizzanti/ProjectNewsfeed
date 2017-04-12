@@ -45,5 +45,3 @@ class tb_source {
         return $query->fetchAll();
     }
 }
-    
-    

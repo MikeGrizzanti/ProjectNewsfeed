@@ -171,6 +171,14 @@ a:hover {
     padding-left: 1em;
 }
 
+#change_pw_div{
+    background-color: aqua;
+    top: 20em;
+    height: 10em;
+    width: 10em;
+    visibility: hidden;
+    opacity: 0;
+}
 
 .change_information_link {
     font-family: 'Roboto', sans-serif;
