@@ -54,6 +54,13 @@
         $(".change_email_popup").toggleClass("Show_Sidebar");
     });
      
+     //change_pw_div
+     
+      $(".change_information_link").click(function () {
+            alert("hi");
+            $(".change_pw_div").toggleClass("Show_Sidebar");
+      });
+     
     //disble url_box
     $("#member1").click(function () {
         $(this).prop('disabled', false);
