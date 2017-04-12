@@ -44,7 +44,6 @@ class tb_source {
         $query->setFetchMode(PDO::FETCH_CLASS, 'tb_source');
         return $query->fetchAll();
     }
-<<<<<<< HEAD
     
     public static function checkIfSourceExists($source_path) {
         $sql = "SELECT source_path FROM tb_source WHERE source_path = '?';";
@@ -55,8 +54,3 @@ class tb_source {
     }
     
 }
-    
-    
-=======
-}
->>>>>>> 57a0b2ed3f8295f4473027b5d57d2eb93701ea11
