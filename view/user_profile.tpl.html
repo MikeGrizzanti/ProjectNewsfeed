@@ -72,7 +72,7 @@
                 <div class="wrap">
                     <label class="select_mod">
                     <select name="member1" id="member1">
-                        <?php $index = 1; $foreach($feed_source as $value){ ?>
+                        <?php $index = 1; foreach($feed_source as $value){ ?>
                             <option class="selected_option" value="<?php echo $value->getSourceName() ?>">
                             <?php echo $value->getSourceName() ?></option> 
                         <?php } ?>
