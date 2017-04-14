@@ -70,7 +70,6 @@ a:hover {
     display: inline;
     margin-left: 1rem;
     height: 1.5em;
-<<<<<<< HEAD
 }
 
 /* chat_dropdown */
@@ -117,8 +116,6 @@ a:hover {
     font-family: "Roboto", sans-serif;
     display: inline;
     font-size: 0.6em;
-=======
->>>>>>> 11b2e506053066038eb909321e99360257059245
 }
 
 .unread_messages_counter {
