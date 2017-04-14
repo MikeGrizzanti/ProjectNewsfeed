@@ -150,7 +150,8 @@ echo $timediff = abs($time2 -$time1);*/
             $source_predefined = trim($_POST['member1']);
             $theme = trim($_POST['member2']);
             $_POST['add_feed'] = NULL;
-              
+            
+            //session_start();
             //echo $source_predefined;
             
             $sql_source_id = "SELECT source_path FROM tb_source WHERE source_name LIKE '".$source_predefined."' AND fk_category_id =".$theme."";
@@ -189,13 +190,7 @@ echo $timediff = abs($time2 -$time1);*/
                 }
                 
         }
-    
-
-    
-        //curl setup
-
-    
-    
+ 
    } 
 
 		
