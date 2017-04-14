@@ -42,11 +42,6 @@ if (isset($_POST) ){
             
             $headers = get_headers($source, 1);
             session_start();
-        /*curl_setopt($ch, CURLOPT_URL, $source);
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-        $data = curl_exec ($ch);
-        $retcode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-        curl_close ($ch);*/
         
     
         
@@ -64,16 +59,11 @@ if (isset($_POST) ){
         $host_names = explode(".", $host);
     
         //destination setup
-        $destination = "xml_downloads/" . $host_names[1] . ".xml";
         
 
         // URL validations based on $retcode
         if ($headers[0] == "HTTP/1.1 200 OK" || $headers[0] == "HTTP/1.0 200 OK") {
             
-                //exec
-                /*$file = fopen($destination, "w+");
-                fputs($file, $data);
-                fclose($file);*/
             
                 if ($source != tb_source::checkIfSourceExists($source)) {
                     $sql_source = "INSERT INTO tb_source (source_name, source_path, fk_category_id) VALUES (?,?,?)";
@@ -115,11 +105,16 @@ if (isset($_POST) ){
             
                 $context  = stream_context_create(array('http' => array('header' => 'Accept: application/xml')));
                 $rss = file_get_contents($source, true, $context);
-                $rss = simplexml_load_string($rss, null, LIBXML_NOERROR) or die("Error: Cannot create object");
+                $rss = simplexml_load_string($rss, null, LIBXML_NOCDATA) or die("Error: Cannot load feed!");
             
                 $i = 0;
                 /*$sql = "INSERT INTO tb_feed (feed_title, feed_content, feed_author, feed_pubDate, feed_guid, feed_img_path, fk_category_id, fk_source_id) VALUES (?,?,?,?,?,?,?,?)";
                 */
+            
+            
+            /*$time1 =  strtotime('Tue, 28 May 2013 09:31:30 GMT');
+$time2 =  strtotime('Tue, 28 May 2013 09:32:30 GMT');
+echo $timediff = abs($time2 -$time1);*/
             
                  foreach($rss->channel->item as $item) {
                         if ($i < 10) { // parse only 100 items
