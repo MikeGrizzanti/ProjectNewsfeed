@@ -44,7 +44,7 @@
     //article hide
     $(".close_popup").click(function (e) {
         e.preventDefault();
-        $(".article_popup").toggleClass("hide_it");
+        $(".article_popup").toggleClass("article_popup");
         $(".background_article_popup").toggleClass("hide_it");
     });
      

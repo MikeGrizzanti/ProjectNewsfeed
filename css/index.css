@@ -525,12 +525,10 @@ label{
     z-index: 1400;
     opacity: 0.5;
     visibility: hidden;
-    /*
     -webkit-transition:all 0.2s ease;
     -moz-transition:all 0.2s ease;
     -o-transition:all 0.2s ease;
     transition: all 0.2s ease;
-    */
 }
 
 .article_popup {
@@ -546,12 +544,10 @@ label{
     opacity: 0;
     overflow-y: scroll;
     visibility: hidden;
-    /*
     -webkit-transition:all 0.2s ease;
     -moz-transition:all 0.2s ease;
     -o-transition:all 0.2s ease;
     transition: all 0.2s ease;
-    */
 }
 
 #popup_nav {
