@@ -36,7 +36,7 @@ if (isset($_POST) ){
        //curl and header
         //$ch = curl_init();
     
-        print_r($_POST);
+        var_dump($_POST);
     
         if (isset($_POST['add_feed']) && isset($_POST['member2'])) {
             $source = trim($_POST['add_feed']);

@@ -95,26 +95,25 @@
                 <a class="add_feed">ADD FEED +</a>
                 <div class="main_wrapper">
                 <div class="wrap">
-                    <label class="select_mod">
+                    <label class="select_mod"></label>
                     <select name="member1" id="member1">
                                   <?php foreach($feed_source as $value){ ?>
-                                  <option class="selected_option" value="<?php echo $value->getIdFromSource($value) ?>">
-                                      <?php echo $value->getSourceName() ?></option> 
+                                  <option class="selected_option" value="<?php echo $value->getSourceId() ?>"><?php echo $value->getSourceName() ?></option> 
                                     <?php } ?>
                     </select>
-                    </label>
+                    
                     <label for="member1">Choose source</label>
                 </div>
                     
                 <div class="wrap" id="wrap2">
-                    <label class="select_mod">
+                    <label class="select_mod"></label>  
                     <select name="member2" id="member2"> 
                                   <?php $index = 1; foreach($category_name as $value){ ?>
                                   <option class="selected_option" value="<?php echo $index++ ?>">
                                       <?php echo $value->get_category_name() ?></option> 
                                     <?php } ?>
                                 </select>
-                    </label>    
+                     
                     <label for="member2">Choose theme</label>
                 </div>
             </div>

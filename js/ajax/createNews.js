@@ -4,8 +4,10 @@ $(document).ready(function(e) {
  
         e.preventDefault();
         var data = new FormData();
+        var member1 = document.getElementById("member1");
         var member2 = document.getElementById("member2");
         var feed = document.getElementById("add_feed_url");
+        data.append("member1",member1.value);
         data.append("member2",member2.value);
         data.append("add_feed",feed.value);
                     
