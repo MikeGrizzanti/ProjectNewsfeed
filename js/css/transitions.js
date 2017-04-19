@@ -34,17 +34,15 @@
      
      
     //pop-up
-    $("#table_news_cards td").click(function (e) {
-        e.preventDefault();
+    $("#table_news_cards td").click(function () {
         $(".article_popup").toggleClass("Show_Sidebar");
         $(".background_article_popup").toggleClass("show_background");
         
     });
     
     //article hide
-    $(".close_popup").click(function (e) {
-        e.preventDefault();
-        $(".article_popup").toggleClass("article_popup");
+    $(".close_popup_newscard").click(function () {
+        $(".article_popup").hide();
         $(".background_article_popup").toggleClass("hide_it");
     });
      
@@ -54,12 +52,15 @@
         $(".change_email_popup").toggleClass("Show_Sidebar");
     });
      
-     //change_pw_div
-     
-      $(".change_information_link").click(function () {
-            alert("hi");
-            $(".change_pw_div").toggleClass("Show_Sidebar");
+     //change_pw_div show
+      $("#change_password_link").click(function () {
+            $(".change_password_popup").toggleClass("showElement");
       });
+     
+     //change_pw_div hide
+     $(".close_popup").click(function () {
+        $(".change_password_popup").toggleClass("hideElement");
+        });
      
     //disble url_box
     $("#member1").click(function () {

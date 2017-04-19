@@ -1,9 +1,15 @@
 /* Head-Part */
 
 .showElement{
-    visibility: visible;
-    opacity: 1;
+    visibility: visible !important;
+    opacity: 1 !important;
 }
+
+.hideElement{
+    visibility: hidden !important;
+    opacity: 0 !important;
+}
+
 
 .header {
     position: fixed;
