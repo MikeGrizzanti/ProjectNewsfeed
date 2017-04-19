@@ -37,6 +37,15 @@ class tb_source {
         $this->source_path = $source_path;
     }
     
+    public static function getAll() {
+        $sql = "SELECT * FROM tb_source";
+        $query = DB::getDB()->prepare($sql);
+        $query->execute();
+        $query->setFetchMode(PDO::FETCH_CLASS, 'tb_source');
+        return $query->fetchAll();
+    }
+
+
     public static function getNameFromSource() {
         $sql = 'SELECT source_name FROM tb_source;';
         $query = DB::getDB()->prepare($sql);
