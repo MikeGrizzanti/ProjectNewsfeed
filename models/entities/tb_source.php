@@ -53,4 +53,11 @@ class tb_source {
         return $query->fetch();
     }
     
+    public static function getIdFromSource($source) {
+        $sql = "SELECT source_id FROM tb_source WHERE source_name = '?'";
+        $query = DB::getDB()->prepare($sql);
+        $query->execute();
+        $query->setFetchMode(PDO::FETCH_CLASS, 'tb_source');
+        return $query->fetch();
+    }
 }
