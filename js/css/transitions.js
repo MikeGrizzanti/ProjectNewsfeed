@@ -62,7 +62,7 @@
       });
      
     //disble url_box
-    /*$("#member1").click(function () {
+    $("#member1").click(function () {
         $(this).prop('disabled', false);
         $('#add_feed_url').attr('disabled', 'disabled');
     });
@@ -71,5 +71,5 @@
      $("#add_feed_url").click(function () {
         $(this).prop('disabled', false);
        	$('#member1').attr('disabled', 'disabled');
-    });*/
+    });
 });

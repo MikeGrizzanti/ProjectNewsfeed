@@ -38,13 +38,14 @@ if (isset($_POST) ){
     
         var_dump($_POST);
     
-        if (isset($_POST['add_feed']) && isset($_POST['member2'])) {
+        if (isset($_POST['add_feed']) && isset($_POST['member2']) && $_POST['member1'] == "") {
             $source = trim($_POST['add_feed']);
             $theme = trim($_POST['member2']);
             $_POST['member1'] = NULL;
             
             $headers = get_headers($source, 1);
             session_start();
+            echo "hello";
         
     
         
@@ -149,21 +150,23 @@ echo $timediff = abs($time2 -$time1);*/
             
         }
         
-        if (isset($_POST['member1']) && isset($_POST['member2'])){
+        if (isset($_POST['member1']) && isset($_POST['member2']) && $_POST['add_feed'] == ""){
             $source_predefined = trim($_POST['member1']);
             $theme = trim($_POST['member2']);
             $_POST['add_feed'] = NULL;
-            echo "fucknigonogs";
+            print_r($_POST);
+            echo "hello lil niger";
             
             //session_start();
             //echo $source_predefined;
             
-            $sql_source_id = "SELECT source_path FROM tb_source WHERE source_name LIKE '".$source_predefined."' AND fk_category_id =".$theme."";
+            $sql_source_id = "SELECT source_path FROM tb_source WHERE source_id = '".$source_predefined."' AND fk_category_id =".$theme.";";
             $query_source_id = DB::getDB()->prepare($sql_source_id);
             $query_source_id->execute();
             $query_source_id->setFetchMode(PDO::FETCH_CLASS, 'tb_source');
             $fetch_source = $query_source_id->fetch()->getSourcePath();
             
+
             //print_r($fetch_source);
             
             $context  = stream_context_create(array('http' => array('header' => 'Accept: application/xml')));
