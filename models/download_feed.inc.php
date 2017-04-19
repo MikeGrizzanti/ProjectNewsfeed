@@ -35,6 +35,9 @@ require_once('entities/tb_source.php');
 if (isset($_POST) ){
        //curl and header
         //$ch = curl_init();
+    
+        print_r($_POST);
+    
         if (isset($_POST['add_feed']) && isset($_POST['member2'])) {
             $source = trim($_POST['add_feed']);
             $theme = trim($_POST['member2']);
@@ -146,10 +149,11 @@ echo $timediff = abs($time2 -$time1);*/
             
         }
         
-        elseif (isset($_POST['member1']) && isset($_POST['member2'])){
+        if (isset($_POST['member1']) && isset($_POST['member2'])){
             $source_predefined = trim($_POST['member1']);
             $theme = trim($_POST['member2']);
             $_POST['add_feed'] = NULL;
+            echo "fucknigonogs";
             
             //session_start();
             //echo $source_predefined;

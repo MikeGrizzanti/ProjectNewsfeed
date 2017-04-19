@@ -98,7 +98,7 @@
                     <label class="select_mod">
                     <select name="member1" id="member1">
                                   <?php foreach($feed_source as $value){ ?>
-                                  <option class="selected_option" value="<?php echo $value->getSourceName() ?>">
+                                  <option class="selected_option" value="<?php echo $value->getIdFromSource($value) ?>">
                                       <?php echo $value->getSourceName() ?></option> 
                                     <?php } ?>
                     </select>
