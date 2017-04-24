@@ -18,9 +18,10 @@
         <nav id="popup_nav">
             <img src="images/Close_popup.svg" class="close_popup" name="close_popup"/> <!-- JS close popup -->
         </nav>
-        <form class="change_email_form">
-            <input type="text" placeholder="old email" id="text_field_old_email" class="change_information_text_field"/>    
-            <input type="text" placeholder="new email" id="text_field_new_email" class="change_information_text_field"/>    
+        <form method="post" action="index.php?action=changeEmail" class="change_email_form">
+            <input type="text" placeholder="old email" name="text_field_old_email" id="text_field_old_email" class="change_information_text_field"/>    
+            <input type="text" placeholder="new email" name="text_field_new_email" id="text_field_new_email" class="change_information_text_field"/>
+            <input type="text" placeholder="repeat new email" name="text_field_repeat_new_email" id="text_field_repeat_new_email" class="change_information_text_field"/>
             <input type="submit" value="change email" class="change_information_submit_button"/>
             <p id="user_terms">by submitting these changes you agree to the mindfeed licence agreement</p>
         </form>
@@ -29,10 +30,10 @@
         <nav id="popup_nav">
             <img src="images/Close_popup.svg" class="close_popup" name="close_popup"/> <!-- JS close popup -->
         </nav>
-        <form class="change_password_form">
-            <input type="text" placeholder="old password" id="text_field_old_password" class="change_information_text_field"/>    
-            <input type="text" placeholder="new password" id="text_field_new_password" class="change_information_text_field"/>    
-            <input type="text" placeholder="repeat new password" id="text_field_repeat_new_password" class="change_information_text_field"/>    
+        <form method="post" action="index.php?action=changePassword" class="change_password_form">
+            <input type="password" placeholder="old password" name="text_field_old_password" id="text_field_old_password" class="change_information_text_field"/>    
+            <input type="password" placeholder="new password" name="text_field_new_password" id="text_field_new_password" class="change_information_text_field"/>    
+            <input type="password" placeholder="repeat new password" name="text_field_repeat_new_password" id="text_field_repeat_new_password" class="change_information_text_field"/>    
             <input type="submit" value="change email" class="change_information_submit_button"/>
             <p id="user_terms">by submitting these changes you agree to our licence agreement</p>
         </form>
