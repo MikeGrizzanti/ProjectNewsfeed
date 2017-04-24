@@ -1,0 +1,22 @@
+/* Head-Part */
+.header {
+    position: fixed;
+    height: 12em;
+    z-index: 1000;
+    width: 100%;
+    background-color: #000;
+    left: 0; right: 0; top: 0; bottom: 0; 
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+#main_logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2em;
+    height: 6rem;
+}
+
