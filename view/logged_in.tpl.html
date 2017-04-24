@@ -207,16 +207,33 @@
             
             <select id="member_list_dropdown">
                 <option selected disabled hidden="hidden">members</option>
-                <option value="chat_member1">Gölf</option>
-                <option value="chat_member2">Gölf</option>
-                <option value="chat_member3">Gölf</option>
-                <option value="chat_member4">Gölf</option>
-                <option value="chat_member5">Gölf</option>
+                <option value="chat_member1"></option>
+                <option value="chat_member2"></option>
+                <option value="chat_member3"></option>
+                <option value="chat_member4"></option>
+                <option value="chat_member5"></option>
             </select>
             
             <div class="message_box">
-            
+                <div id="message_box_messages_interface">
+                   
+                    <div class="message_box_message">
+                        <h5 class="message_box_username">test_user <p class="message_box_time_stamp"> - time</p></h5>
+                        <p class="message_box_text">asdfasdfadfasdfa sdfasdfasdfasdfasdd fasdfasdfasdfasdf asdfasddfasdfasdfasdfa sdfasdfasdsdfasdf asdfasdfasdfasdf</p>
+                    </div>
+                   
+                    <!-- generate message_box_message for new message -->
+                </div>
+                
+                <div class="message_box_wirte_message">
+                    <form>
+                        <input type="text" class="message_box_text_box" />
+                        <input type="submit" class="message_box_sumbmit_message" value=" " />
+                    </form>
+                </div>
             </div> 
+            
+            
             
             <a class="chat_leave_link"><h7>leave chat</h7></a>
             <a class="chat_report_link"><h7>report</h7></a>

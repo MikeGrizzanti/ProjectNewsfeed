@@ -46,21 +46,25 @@
         $(".background_article_popup").toggleClass("hide_it");
     });
      
-    //change email
-     $("#change_email_link").click(function (e) {
-        e.preventDefault();
-        $(".change_email_popup").toggleClass("Show_Sidebar");
+    //change_email_div show
+    $("#change_email_link").click(function (){
+       $(".change_email_popup").toggleClass("showElement");
+    });
+    
+    //change_email_div hide
+    $(".close_popup").click(function () {
+        $(".change_email_popup").toggleClass("hideElement");
+    });
+    
+    //change_pw_div show
+    $("#change_password_link").click(function () {
+        $(".change_password_popup").toggleClass("showElement");
     });
      
-     //change_pw_div show
-      $("#change_password_link").click(function () {
-            $(".change_password_popup").toggleClass("showElement");
-      });
-     
-     //change_pw_div hide
-     $(".close_popup").click(function () {
+    //change_pw_div hide
+    $(".close_popup").click(function () {
         $(".change_password_popup").toggleClass("hideElement");
-        });
+    });
      
     //disble url_box
     $("#member1").click(function () {

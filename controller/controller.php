@@ -34,12 +34,22 @@ class controller {
 
     public function changeEmail() {
         require_once 'models/change_email.php';
-        $this->addContext("template", "logged_in");
+        $this->addContext("template", "user_profile");
+        $this->addContext("feed_source", $_SESSION['feed_source']);
+        $this->addContext("category_name", $_SESSION['category_name']);
+        if(!$erg){
+            header("Location:index.php?action=login");
+        }
     }
     
     public function changePassword() {
         require_once 'models/change_password.php';
-        $this->addContext("template", "logged_in");
+        $this->addContext("template", "user_profile");
+        $this->addContext("feed_source", $_SESSION['feed_source']);
+        $this->addContext("category_name", $_SESSION['category_name']);
+        if(!$erg){
+            header("Location:index.php?action=login");
+        }
     }
     
     public function logout() {
