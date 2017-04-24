@@ -195,6 +195,18 @@ class tb_user {
         $sql = 'SELECT user_password FROM tb_user WHERE user_id = ?;';
         $query = DB::getDB()->prepare($sql);
         $query->execute(array($id));
+        $query->setFetchMode(PDO::FETCH_CLASS, 'tb_user');
+        $user = $query->fetch();
+        return $user->getPassword();
+    }
+    
+    public static function getOldEmail($id) {
+        $sql = 'SELECT user_email FROM tb_user WHERE user_id = ?;';
+        $query = DB::getDB()->prepare($sql);
+        $query->execute(array($id));
+        $query->setFetchMode(PDO::FETCH_CLASS, 'tb_user');
+        $user = $query->fetch();
+        return $user->getEmail();
     }
     
     public static function changePassword($newPasswordHashed, $id) {
@@ -207,6 +219,14 @@ class tb_user {
         $sql = 'UPDATE tb_user SET user_email = ? WHERE USER_id = ?;';
         $query = DB::getDB()->prepare($sql);
         $query->execute(array($email, $id));
+    }
+    
+    public static function getnewEmail($id) {
+        $sql = "SELECT user_email FROM tb_user WHERE user_id = ?;";
+        $query = DB::getDB()->prepare($sql);
+        $query->execute(array($id));
+        $query->setFetchMode(PDO::FETCH_CLASS, 'tb_user');
+        return $query->fetch();
     }
 }
 
