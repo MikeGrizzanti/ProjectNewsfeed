@@ -522,7 +522,7 @@ label{
     width: 100%;
     left: 0; right: 0; top: 0; bottom: 0;
     background-color: #BDBDBD;
-    z-index: 1400;
+    z-index: 1;
     opacity: 0.5;
     visibility: hidden;
     -webkit-transition:all 0.2s ease;
@@ -540,7 +540,7 @@ label{
     width: 60em;
     margin-left: 10em;
     margin-top: 1.5em;
-    z-index: 1500;
+    z-index: 2;
     opacity: 0;
     overflow-y: scroll;
     visibility: hidden;

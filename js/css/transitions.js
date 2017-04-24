@@ -42,7 +42,7 @@
     
     //article hide
     $(".close_popup_newscard").click(function () {
-        $(".article_popup").hide();
+        $(".article_popup").toggleClass("hide_it");
         $(".background_article_popup").toggleClass("hide_it");
     });
      
