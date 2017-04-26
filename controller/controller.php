@@ -86,12 +86,12 @@ class controller {
     public function user_profile() {
         $erg = is_loggedIn();
         $this->addContext("template", "user_profile");
-        $this->addContext("feed_source", $_SESSION['feed_source']);
+        $this->addContext("feed_source", tb_source::returnOneSourceIfMultiple($_SESSION['feed_source']);
         $this->addContext("category_name", $_SESSION['category_name']);
         if (!$erg) {
             header('Location: index.php?action=login');
         }
-    }
+    } 
     
     public function download_feed() {
         $erg = is_loggedIn();

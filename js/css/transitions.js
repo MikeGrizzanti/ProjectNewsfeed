@@ -1,4 +1,7 @@
- $(document).ready(function() { 
+ $(document).ready(function() {
+     
+     //hide loadbar
+     $(".loader").hide();
     
     //rotate login_div REGISTER
     $("#register_option").click(function(e) {
@@ -22,11 +25,6 @@
     //Open Otions
     $(".top_icon_settings").click(function () {
         $(".top_icon_settings_dropdown").toggleClass("Show_Sidebar");
-    });
-    
-    //open chatbar
-    $(".top_icon_chat").click(function ()   {
-        $("#chat_sidebar").toggleClass("Show_Sidebar");
     });
      
      //Open add feed
@@ -75,11 +73,13 @@
     $("#member1").click(function () {
         $(this).prop('disabled', false);
         $('#add_feed_url').attr('disabled', 'disabled');
+        $("#add_feed_url").val(""); 
     });
     
     //disble source
      $("#add_feed_url").click(function () {
         $(this).prop('disabled', false);
        	$('#member1').attr('disabled', 'disabled');
+         $("#member1").val(""); 
     });
 });

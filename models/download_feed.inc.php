@@ -35,8 +35,9 @@ require_once('entities/tb_source.php');
 if (isset($_POST) ){
        //curl and header
         //$ch = curl_init();
+    
         
-        if (isset($_POST['add_feed']) && isset($_POST['member2'])) {
+        if (isset($_POST['add_feed']) && isset($_POST['member2']) && $_POST['member1'] == "") {
             $source = trim($_POST['add_feed']);
             $theme = trim($_POST['member2']);
             $_POST['member1'] = NULL;
@@ -126,6 +127,7 @@ if (isset($_POST) ){
                                 'pubDate' => strip_tags($item->pubDate),
                                 'guid' => strip_tags($item->guid),
                                 'image' => strip_tags($item->image),
+                                'name' => $host_names,
                             );
                             
                             
@@ -150,10 +152,8 @@ if (isset($_POST) ){
             $source_predefined = trim($_POST['member1']);
             $theme = trim($_POST['member2']);
             $_POST['add_feed'] = NULL;
-            print_r($_POST);
-            echo "hello lil niger";
             
-            //session_start();
+            session_start();
             //echo $source_predefined;
             
             $sql_source_id = "SELECT source_path FROM tb_source WHERE source_id = '".$source_predefined."' AND fk_category_id =".$theme.";";
@@ -163,7 +163,6 @@ if (isset($_POST) ){
             $fetch_source = $query_source_id->fetch()->getSourcePath();
             
 
-            //print_r($fetch_source);
             
             $context  = stream_context_create(array('http' => array('header' => 'Accept: application/xml')));
             $rss = file_get_contents($fetch_source, true, $context);
@@ -181,17 +180,11 @@ if (isset($_POST) ){
                                 'pubDate' => $item->pubDate,
                                 'guid' => $item->guid,
                                 'image' => $item->image,
-                            ];
-                            
-                            echo json_encode($feed_attributes['title']);
-                            
-                            
-                            
-                            
+                            ];  
                         }
                             $i++;
                 }
-                
+               echo json_encode($feed_attributes, JSON_UNESCAPED_SLASHES); 
         }
  
    } 
