@@ -23,6 +23,11 @@
     $(".top_icon_settings").click(function () {
         $(".top_icon_settings_dropdown").toggleClass("Show_Sidebar");
     });
+    
+    //open chatbar
+    $(".top_icon_chat").click(function ()   {
+        $("#chat_sidebar").toggleClass("Show_Sidebar");
+    });
      
      //Open add feed
     $(".add_feed").click(function (e) {

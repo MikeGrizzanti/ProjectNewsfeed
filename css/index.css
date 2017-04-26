@@ -745,6 +745,7 @@ label{
     box-shadow: -3px 0px 5px 0px rgba(0,0,0,0.5);
     
     top: 12em; right: 0; left: auto; bottom: 0;
+    visibility: hidden;
     
 }
 
