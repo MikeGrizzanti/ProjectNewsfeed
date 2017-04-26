@@ -69,4 +69,12 @@ class tb_source {
         $query->setFetchMode(PDO::FETCH_CLASS, 'tb_source');
         return $query->fetch();
     }
+    
+    public static function returnOneSourceIfMultiple($source_name) {
+        $sql = "SELECT DISTINCT source_name FROM tb_source WHERE source_name LIKE ?;";
+        $query = DB::getDB()->prepare($sql);
+        $query->execute();
+        $query->setFetchMode(PDO::FETCH_CLASS, 'tb_source');
+        return $query->fetch();
+    }
 }
