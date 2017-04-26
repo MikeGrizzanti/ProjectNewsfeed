@@ -22,7 +22,7 @@
         $(".sidebar").toggleClass("Show_Sidebar");
     });
     
-    //Open Otions
+    //Open Options
     $(".top_icon_settings").click(function () {
         $(".top_icon_settings_dropdown").toggleClass("Show_Sidebar");
     });
