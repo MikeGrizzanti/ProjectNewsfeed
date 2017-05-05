@@ -27,7 +27,13 @@
         $(".top_icon_settings_dropdown").toggleClass("Show_Sidebar");
     });
      
-     //Open add feed
+    //chat
+    $(".top_icon_chat").click(function (){
+        $(".top_icon_chat_dropdown").toggleClass("Show_Sidebar");
+        $()
+    })
+     
+    //Open add feed
     $(".add_feed").click(function (e) {
         $(".wrap").toggleClass("url_box_show");
         $(".wrap_url_box").toggleClass("url_box_show");
@@ -42,7 +48,7 @@
         $(".background_article_popup").toggleClass("show_background");
         
     });
-    
+     
     //article hide
     $(".close_popup_newscard").click(function () {
         $(".article_popup").toggleClass("hide_it");
