@@ -30,7 +30,6 @@
     //chat
     $(".top_icon_chat").click(function (){
         $(".top_icon_chat_dropdown").toggleClass("Show_Sidebar");
-        $()
     });
      
     //Open add feed
