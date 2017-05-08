@@ -3,7 +3,7 @@
 require_once('entities/db.php');
 require_once('entities/tb_source.php');
 
-        //decodeHTMLent
+//decodeHTMLent
         function decodeHtmlEnt($str) {
             $ret = html_entity_decode($str, ENT_COMPAT, 'UTF-8');
             $p2 = -1;
@@ -32,7 +32,7 @@ require_once('entities/tb_source.php');
             return $ret;
         }
 
-if (isset($_POST)){
+if (isset($_POST) ){
        //curl and header
         //$ch = curl_init();
     
@@ -62,7 +62,7 @@ if (isset($_POST)){
         //destination setup
         
 
-        // URL validations based on $headers
+        // URL validations based on $retcode
         if ($headers[0] == "HTTP/1.1 200 OK" || $headers[0] == "HTTP/1.0 200 OK") {
             
             
@@ -118,7 +118,7 @@ if (isset($_POST)){
                 echo $timediff = abs($time2 -$time1);*/
             
                  foreach($rss->channel->item as $item) {
-                        if ($i < 5) { // parse only 100 items
+                        if ($i < 25) { // parse only 100 items
                             
                             $feed_attributes[] = array(
                                 'title' => strip_tags(decodeHtmlEnt($item->title)), 
@@ -130,7 +130,9 @@ if (isset($_POST)){
                                 'name' => $host_names,
                             );
                             
-                            
+                            $sql = "INSERT INTO tb_feed (feed_title, feed_img_path, fk_category_id, feed_author,feed_pubDate, feed_guid, fk_source_id, feed_content) VALUES (?,?,?,?,?,?,?,?);";
+                            $query = DB::getDB()->prepare($sql);
+                            $query->execute(array(strip_tags(decodeHtmlEnt($item->title)), strip_tags($item->image), $theme, strip_tags($item->author), strip_tags($item->pubDate), strip_tags($item->guid), $fetch_source, strip_tags(decodeHtmlEnt($item->description)),));
                         }
                             $i++;
                 }
