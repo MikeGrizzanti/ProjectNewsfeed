@@ -385,7 +385,6 @@ select{
     margin: 0.4em;
     margin-left: 1.7em;
     margin-top: 0.5em;
-    opacity: 0;
     -webkit-transition:all 0.2s ease;
     -moz-transition:all 0.2s ease;
     -o-transition:all 0.2s ease;
@@ -403,7 +402,7 @@ select{
   float: left;
   margin-top: 0;
   margin-left: 0.7em;
-  opacity: 0;
+  opacity: 1;
   -webkit-transition:all 0.2s ease;
   -moz-transition:all 0.2s ease;
   -o-transition:all 0.2s ease;
@@ -435,7 +434,7 @@ label{
     font-variant: small-caps;
     font-size: 0.6em;
     float: left;
-    opacity: 0;
+    opacity: 1;
     -webkit-transition:all 0.2s ease;
     -moz-transition:all 0.2s ease;
     -o-transition:all 0.2s ease;

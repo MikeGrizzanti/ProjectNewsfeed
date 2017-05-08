@@ -26,20 +26,27 @@
     $(".top_icon_settings").click(function () {
         $(".top_icon_settings_dropdown").toggleClass("Show_Sidebar");
     });
-     
-    //chat
+<<<<<<< HEAD
+    
     //open chatbar
     $(".top_icon_chat").click(function ()   {
         $("#chat_sidebar").toggleClass("Show_Sidebar");
+=======
+     
+    //chat
+    $(".top_icon_chat").click(function (){
+        $(".top_icon_chat_dropdown").toggleClass("Show_Sidebar");
+        $()
+>>>>>>> parent of 555efab... ad
     });
      
     //Open add feed
-    $(".add_feed").click(function (e) {
+    /*$(".add_feed").click(function (e) {
         $(".wrap").toggleClass("url_box_show");
         $(".wrap_url_box").toggleClass("url_box_show");
         $("label").toggleClass("url_box_show");
         $(".url_box").toggleClass("url_box_show");
-    });
+    });*/
      
      
     //pop-up
