@@ -3,7 +3,7 @@
 require_once('entities/db.php');
 require_once('entities/tb_source.php');
 
-//decodeHTMLent
+        //decodeHTMLent
         function decodeHtmlEnt($str) {
             $ret = html_entity_decode($str, ENT_COMPAT, 'UTF-8');
             $p2 = -1;
@@ -32,7 +32,7 @@ require_once('entities/tb_source.php');
             return $ret;
         }
 
-if (isset($_POST) ){
+if (isset($_POST)){
        //curl and header
         //$ch = curl_init();
     
@@ -62,7 +62,7 @@ if (isset($_POST) ){
         //destination setup
         
 
-        // URL validations based on $retcode
+        // URL validations based on $headers
         if ($headers[0] == "HTTP/1.1 200 OK" || $headers[0] == "HTTP/1.0 200 OK") {
             
             
