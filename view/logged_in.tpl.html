@@ -90,43 +90,23 @@
             </div>
             <hr/>
             
+            
             <form method="post" action="index.php?action=download_feed" id="add_feed_box" >
                 <a class="add_feed">ADD FEED +</a>
                 <div class="main_wrapper">
                     <div class="wrap">
                         <label class="select_mod">
                         <select name="member1" id="member1">
--                           <?php foreach($feed_source as $value){ ?>
--                               <option class="selected_option" value="<?php echo $value->getSourceId() ?>">
+                            <?php foreach($feed_source as $value){ ?>
+                                <option class="selected_option" value="<?php echo $value->getSourceId() ?>">
                                     <?php echo $value->getSourceName() ?>
                                 </option> 
--                           <?php } ?>
--                    </select>
+                            <?php } ?>
+                        </select>
                         </label>
                         <label for="member1">Choose source</label>
                     </div>
-            <form method="post" action="index.php?action=download_feed" id="add_feed_box">
-                <a class="add_feed">ADD FEED +</a>
-                <div class="main_wrapper">
-                <div class="wrap">
-                    <label class="select_mod"></label>
-                    <select name="member1" id="member1">
-                                  <?php foreach($feed_source as $value){ ?>
-                                  <option class="selected_option" value="<?php echo $value->getSourceId() ?>"><?php echo $value->getSourceName() ?></option> 
-                                    <?php } ?>
-                    </select>
-                    
-                    <label for="member1">Choose source</label>
-                </div>
-                <div class="wrap_url_box">
-                    <input id="add_feed_url" name="add_feed" type="url" class="url_box" placeholder="Ex: http://www.yoursite.com">
-                    <label for="member3">Insert Custom Source</label>
-                    
-                </div>
-                <input type="submit" class="feed_action_submit" >   
-=======
-                    
-                <div class="wrap" id="wrap2">
+                    <div class="wrap" id="wrap2">
                     <label class="select_mod"></label>  
                     <select name="member2" id="member2"> 
                                   <?php $index = 1; foreach($category_name as $value){ ?>
@@ -137,13 +117,13 @@
                      
                     <label for="member2">Choose theme</label>
                 </div>
-            </div>
-            <div class="wrap_url_box">
-                <input id="add_feed_url" name="add_feed" type="url" class="url_box" placeholder="Ex: http://www.yoursite.com">
-                <label for="member3">Insert Custom Source</label>
-            </div>
-                <input type="submit" class="feed_action_submit" >
->>>>>>> 85c304a5e5b5a01571da034eeeeb607fc366f717
+                </div>
+                <div class="wrap_url_box">
+                    <input id="add_feed_url" name="add_feed" type="url" class="url_box" placeholder="Ex: http://www.yoursite.com">
+                    <label for="member3">Insert Custom Source</label>
+                    
+                </div>
+                <input type="submit" class="feed_action_submit" >   
             </form>
             
         <footer id="sidebar_footer">
