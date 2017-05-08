@@ -133,7 +133,7 @@ if (isset($_POST) ){
                             $sql = "INSERT INTO tb_feed (feed_title, feed_img_path, fk_category_id, feed_author,feed_pubDate, feed_guid, fk_source_id, feed_content) VALUES (?,?,?,?,?,?,?,?);";
                             $query = DB::getDB()->prepare($sql);
                             $query->execute(array(strip_tags(decodeHtmlEnt($item->title)), strip_tags($item->image), $theme, strip_tags($item->author), strip_tags($item->pubDate), strip_tags($item->guid), $fetch_source, strip_tags(decodeHtmlEnt($item->description)),));
-                        }
+                        } 
                             $i++;
                 }
             echo json_encode($feed_attributes, JSON_UNESCAPED_SLASHES);
