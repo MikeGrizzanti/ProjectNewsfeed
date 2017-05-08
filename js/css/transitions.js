@@ -28,8 +28,9 @@
     });
      
     //chat
-    $(".top_icon_chat").click(function (){
-        $(".top_icon_chat_dropdown").toggleClass("Show_Sidebar");
+    //open chatbar
+    $(".top_icon_chat").click(function ()   {
+        $("#chat_sidebar").toggleClass("Show_Sidebar");
     });
      
     //Open add feed
