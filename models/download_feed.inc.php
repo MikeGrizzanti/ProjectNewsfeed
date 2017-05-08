@@ -36,17 +36,14 @@ if (isset($_POST) ){
        //curl and header
         //$ch = curl_init();
     
-        var_dump($_POST);
-    
+        
         if (isset($_POST['add_feed']) && isset($_POST['member2']) && $_POST['member1'] == "") {
             $source = trim($_POST['add_feed']);
             $theme = trim($_POST['member2']);
             $_POST['member1'] = NULL;
             
             $headers = get_headers($source, 1);
-            session_start();
-            echo "hello";
-        
+            session_start();        
     
         
         //XMLReader init
@@ -116,27 +113,28 @@ if (isset($_POST) ){
                 */
             
             
-            /*$time1 =  strtotime('Tue, 28 May 2013 09:31:30 GMT');
-$time2 =  strtotime('Tue, 28 May 2013 09:32:30 GMT');
-echo $timediff = abs($time2 -$time1);*/
+                /*$time1 =  strtotime('Tue, 28 May 2013 09:31:30 GMT');
+                $time2 =  strtotime('Tue, 28 May 2013 09:32:30 GMT');
+                echo $timediff = abs($time2 -$time1);*/
             
                  foreach($rss->channel->item as $item) {
-                        if ($i < 10) { // parse only 100 items
+                        if ($i < 5) { // parse only 100 items
                             
-                            $feed_attributes = [
+                            $feed_attributes[] = array(
                                 'title' => strip_tags(decodeHtmlEnt($item->title)), 
                                 'description' => strip_tags(decodeHtmlEnt($item->description)), 
-                                'author' => $item->author, 
-                                'pubDate' => $item->pubDate,
-                                'guid' => $item->guid,
-                                'image' => $item->image,
-                            ];
+                                'author' => strip_tags($item->author), 
+                                'pubDate' => strip_tags($item->pubDate),
+                                'guid' => strip_tags($item->guid),
+                                'image' => strip_tags($item->image),
+                                'name' => $host_names,
+                            );
                             
-                            echo json_encode($feed_attributes);
-                            //echo '"1":"hallo" ';
+                            
                         }
                             $i++;
                 }
+            echo json_encode($feed_attributes, JSON_UNESCAPED_SLASHES);
         } 
     
         elseif ($headers[0] == "HTTP/1.1 200 OK" || $headers[0] == "HTTP/1.0 200 OK"){
@@ -154,10 +152,8 @@ echo $timediff = abs($time2 -$time1);*/
             $source_predefined = trim($_POST['member1']);
             $theme = trim($_POST['member2']);
             $_POST['add_feed'] = NULL;
-            print_r($_POST);
-            echo "hello lil niger";
             
-            //session_start();
+            session_start();
             //echo $source_predefined;
             
             $sql_source_id = "SELECT source_path FROM tb_source WHERE source_id = '".$source_predefined."' AND fk_category_id =".$theme.";";
@@ -167,7 +163,6 @@ echo $timediff = abs($time2 -$time1);*/
             $fetch_source = $query_source_id->fetch()->getSourcePath();
             
 
-            //print_r($fetch_source);
             
             $context  = stream_context_create(array('http' => array('header' => 'Accept: application/xml')));
             $rss = file_get_contents($fetch_source, true, $context);
@@ -185,17 +180,11 @@ echo $timediff = abs($time2 -$time1);*/
                                 'pubDate' => $item->pubDate,
                                 'guid' => $item->guid,
                                 'image' => $item->image,
-                            ];
-                            
-                            echo json_encode($feed_attributes['title']);
-                            
-                            
-                            
-                            
+                            ];  
                         }
                             $i++;
                 }
-                
+               echo json_encode($feed_attributes, JSON_UNESCAPED_SLASHES); 
         }
  
    } 

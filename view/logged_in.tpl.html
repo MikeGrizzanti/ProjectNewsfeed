@@ -14,25 +14,25 @@
     
     <body>
         
-        <!-- <div class="loader loader--style8" title="7">
-  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24px" height="30px" viewBox="0 0 24 30" style="enable-background:new 0 0 50 50;" xml:space="preserve">
-    <rect x="0" y="5.52299" width="4" height="18.954" fill="#333" opacity="0.2">
+<div class="loader" style="position: center;" title="7">
+  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="50px" height="60px" viewBox="0 0 24 30" style="enable-background:new 0 0 50 50; align-content: center;" xml:space="preserve">
+    <rect x="0" y="5.51759" width="4" height="18.9648" fill="#faaf41" opacity="0.2">
       <animate attributeName="opacity" attributeType="XML" values="0.2; 1; .2" begin="0s" dur="0.6s" repeatCount="indefinite"></animate>
       <animate attributeName="height" attributeType="XML" values="10; 20; 10" begin="0s" dur="0.6s" repeatCount="indefinite"></animate>
       <animate attributeName="y" attributeType="XML" values="10; 5; 10" begin="0s" dur="0.6s" repeatCount="indefinite"></animate>
     </rect>
-    <rect x="8" y="8.02299" width="4" height="13.954" fill="#333" opacity="0.2">
+    <rect x="8" y="8.01759" width="4" height="13.9648" fill="#faaf41" opacity="0.2">
       <animate attributeName="opacity" attributeType="XML" values="0.2; 1; .2" begin="0.15s" dur="0.6s" repeatCount="indefinite"></animate>
       <animate attributeName="height" attributeType="XML" values="10; 20; 10" begin="0.15s" dur="0.6s" repeatCount="indefinite"></animate>
       <animate attributeName="y" attributeType="XML" values="10; 5; 10" begin="0.15s" dur="0.6s" repeatCount="indefinite"></animate>
     </rect>
-    <rect x="16" y="9.47701" width="4" height="11.046" fill="#333" opacity="0.2">
+    <rect x="16" y="9.48241" width="4" height="11.0352" fill="#faaf41" opacity="0.2">
       <animate attributeName="opacity" attributeType="XML" values="0.2; 1; .2" begin="0.3s" dur="0.6s" repeatCount="indefinite"></animate>
       <animate attributeName="height" attributeType="XML" values="10; 20; 10" begin="0.3s" dur="0.6s" repeatCount="indefinite"></animate>
       <animate attributeName="y" attributeType="XML" values="10; 5; 10" begin="0.3s" dur="0.6s" repeatCount="indefinite"></animate>
     </rect>
   </svg>
-</div>-->
+</div>
         
         <!-- PopUp -->
         <div class="background_article_popup"></div>
@@ -158,13 +158,13 @@
             
             <!-- icons -->
             <nav id="top_nav">
-                <img class="top_icon_open_sidebar" src="images/open_sidebar.svg" />
-                <img class="top_icon_close_sidebar" src="images/close_Sidebar.svg" />
+                <a href="#"><img class="top_icon_open_sidebar" src="images/open_sidebar.svg" /></a>
+                <a href="#"><img class="top_icon_close_sidebar" src="images/close_Sidebar.svg" /></a>
                 <input type="search" id="search" placeholder="search" />
                 
                 <div id="top_icon_group">
-                    <img id="top_icon_chat" class="top_icon_chat" src="images/chat.svg" />
-                    <img id="top_icon_settings" class="top_icon_settings"  src="images/settings.svg" />
+                    <a href="#"><img id="top_icon_chat" class="top_icon_chat" src="images/chat.svg" /></a>
+                    <a href="#"><img id="top_icon_settings" class="top_icon_settings" src="images/settings.svg" /></a>
                     <a href="index.php?action=user_profile"><img id="top_icon_profile" class="top_icon_profile" src="images/profile.svg" /></a>
                 </div>
                 <div id="drop_downs">
@@ -172,13 +172,13 @@
                         <div class="dropdown_chat_list">
                             <p class="article_title">asdfas dfasdjklfa jklösdfjk lajkl asdfas dfasdjklfa jklösdfjk lajkl asdfas</p>
                             <br/>
-                            <h7 class="unread_messages_text">unread messages: <p class="unread_messages_counter">X </p></h7> 
+                            <h6 class="unread_messages_text">unread messages: <p class="unread_messages_counter">X </p></h6> 
                         </div>
                         
                         <div class="dropdown_chat_list">
                             <p class="article_title">asdfas dfasdjklfa jklösdfjk lajkl asdfas dfasdjklfa jklösdfjk lajkl asdfas</p>
                             <br/>
-                            <h7 class="unread_messages_text">unread messages: <p class="unread_messages_counter">X </p></h7> 
+                            <h6 class="unread_messages_text">unread messages: <p class="unread_messages_counter">X </p></h6> 
                         </div>
                     </div>
                 
@@ -259,7 +259,7 @@
             
             <table id="table_news_cards">
             <tr> 
-            <td>    
+            <!--<td>    
                 <div class="news_card">
                     <img id="news_card_img" src="#"/><br/>
                     <p id="news_card_text"></p>
@@ -278,71 +278,7 @@
                         </tr>
                     </table>    
                 </div>
-            </td> 
-                
-            <td>
-                 <div class="news_card">
-                    <img id="news_card_img" src="#"/><br/>
-                    <p id="news_card_text"></p>
-                    
-                    <table id="container_table">
-                        <tr>
-                            <td>
-                    <div class="theme_container"><a class="news_card_sublink" href="#"><p class="sublink_text">theme</p></a></div>
-                            </td>
-                            <td>
-                    <div class="source_container"><a class="news_card_sublink" href="#"><p class="sublink_text">source</p></a></div>
-                            </td>
-                            <td>
-                    <div class="active_chats_container"><p class="sublink_text">x Chats</p></div>  
-                            </td>
-                        </tr>
-                    </table>   
-                </div>  
-            </td>
-                
-            <td>
-                 <div class="news_card">
-                    <img id="news_card_img" src="#"/><br/>
-                    <p id="news_card_text"></p>
-                    
-                    <table id="container_table">
-                        <tr>
-                            <td>
-                    <div class="theme_container"><a class="news_card_sublink" href="#"><p class="sublink_text">theme</p></a></div>
-                            </td>
-                            <td>
-                    <div class="source_container"><a class="news_card_sublink" href="#"><p class="sublink_text">source</p></a></div>
-                            </td>
-                            <td>
-                    <div class="active_chats_container"><p class="sublink_text">x Chats</p></div>  
-                            </td>
-                        </tr>
-                    </table>   
-                </div>  
-            </td>
-                
-            <td>
-                 <div class="news_card">
-                    <img id="news_card_img" src="#"/><br/>
-                    <p id="news_card_text"></p>
-                    
-                    <table id="container_table">
-                        <tr>
-                            <td>
-                    <div class="theme_container"><a class="news_card_sublink" href="#"><p class="sublink_text">theme</p></a></div>
-                            </td>
-                            <td>
-                    <div class="source_container"><a class="news_card_sublink" href="#"><p class="sublink_text">source</p></a></div>
-                            </td>
-                            <td>
-                    <div class="active_chats_container"><p class="sublink_text">x Chats</p></div>  
-                            </td>
-                        </tr>
-                    </table>   
-                </div>  
-            </td>
-                
+            </td> --> 
             </tr>    
             </table>
             
