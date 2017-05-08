@@ -9,7 +9,7 @@
     <script type="text/javascript" src="js/css/transitions.js"></script>    
     <link rel="stylesheet" type="text/css" href="css/index.css" />
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
-    <link rel="icon" type="image/svg+xml" href="images/mindfeed_favicon.png" sizes="16x16" />
+    <link rel="icon" type="image/svg+xml" href="images/mindfeed_favicon.svg" sizes="16x16" />
     </head>
     
     <body>
@@ -66,88 +66,90 @@
         <!-- Sidebar -->
         <div class="sidebar">
             <div id="scrol_div">
-                <h3 class="sidebar_header">Interests:</h3>
-                <ul id="sidebar_list_user_interests">
-                    <li><a class="user_interest" href="#">POLITICS</a></li>
-                    <li><a class="user_interest" href="#">ECONOMY</a></li>
-                    <li><a class="user_interest" href="#">TECHNOLOGY</a></li>
-                    <li><a class="user_interest" href="#">SCIENCE</a></li>
-                    <li><a class="user_interest" href="#">CRONICLE</a></li>
-                    <li><a class="user_interest" href="#">ART</a></li>
-                    <li><a class="user_interest" href="#">SOCIAL</a></li>
-                    <li><a class="user_interest" href="#">TRAVEL</a></li>
-                    <li><a class="user_interest" href="#">SPORT</a></li>
-                </ul> 
-                <br/>
-                <h3 class="sidebar_header">Favorites:</h3>
-                <ul id="sidebar_list_user_favorites">
-                    <li><a class="user_interest" href="#">POLITICS</a></li>
-                    <li><a class="user_interest" href="#">ECONOMY</a></li>
-                    <li><a class="user_interest" href="#">TECHNOLOGY</a></li>
-                </ul> 
-                <br/>
+            <h3 class="sidebar_header">Interests:</h3>
+        <ul id="sidebar_list_user_interests">
+            <li><a class="user_interest" href="#">POLITICS</a></li>
+            <li><a class="user_interest" href="#">ECONOMY</a></li>
+            <li><a class="user_interest" href="#">TECHNOLOGY</a></li>
+            <li><a class="user_interest" href="#">SCIENCE</a></li>
+            <li><a class="user_interest" href="#">CRONICLE</a></li>
+            <li><a class="user_interest" href="#">ART</a></li>
+            <li><a class="user_interest" href="#">SOCIAL</a></li>
+            <li><a class="user_interest" href="#">TRAVEL</a></li>
+            <li><a class="user_interest" href="#">SPORT</a></li>
+            </ul> 
+            <br/>
+                
+            <h3 class="sidebar_header">Favorites:</h3>
+            <ul id="sidebar_list_user_favorites">
+            <li><a class="user_interest" href="#"><?php var_dump($_SESSION['id']); ?></a></li>
+            <li><a class="user_interest" href="#">ECONOMY</a></li>
+            <li><a class="user_interest" href="#">TECHNOLOGY</a></li>    
+            </ul> 
+            <br/>
             </div>
             <hr/>
             
             
-            <form method="post" action="index.php?action=main" id="add_feed_box" name="add_feed_box">
+            <form method="post" action="index.php?action=download_feed" id="add_feed_box">
                 <a class="add_feed">ADD FEED +</a>
                 <div class="main_wrapper">
-                    <div class="wrap">
-                        <label class="select_mod">
-                        <select name="member1" id="member1">
-                            <?php $index = 1; foreach($feed_source as $value){ ?>
-                                <option class="selected_option" value="<?php echo $value->getSourceName() ?>">
-                                <?php echo $value->getSourceName() ?></option> 
-                            <?php } ?>
-                        </select>
-                        </label>
-                        <label for="member1">Choose source</label>
-                    </div>
+                <div class="wrap">
+                    <label class="select_mod"></label>
+                    <select name="member1" id="member1">
+                                  <?php foreach($feed_source as $value){ ?>
+                                  <option class="selected_option" value="<?php echo $value->getSourceId() ?>"><?php echo $value->getSourceName() ?></option> 
+                                    <?php } ?>
+                    </select>
                     
-                    <div class="wrap" id="wrap2">
-                        <label class="select_mod">
-                            <select name="member2" id="member2">
-                                <?php $index = 1; foreach($category_name as $value){ ?>
-                                    <option class="selected_option" value="<?php echo $index++ ?>">
-                                    <?php echo $value->get_category_name() ?></option> 
-                                <?php } ?>
-                            </select>
-                        </label>    
-                        <label for="member2">Choose theme</label>
-                    </div>
+                    <label for="member1">Choose source</label>
                 </div>
-                <div class="wrap_url_box">
-                    <input name="add_feed" type="url" class="url_box" placeholder="Ex: http://www.yoursite.com">
-                    <label for="member3">Insert Custom Source</label>
+                    
+                <div class="wrap" id="wrap2">
+                    <label class="select_mod"></label>  
+                    <select name="member2" id="member2"> 
+                                  <?php $index = 1; foreach($category_name as $value){ ?>
+                                  <option class="selected_option" value="<?php echo $index++ ?>">
+                                      <?php echo $value->get_category_name() ?></option> 
+                                    <?php } ?>
+                                </select>
+                     
+                    <label for="member2">Choose theme</label>
                 </div>
+            </div>
+            <div class="wrap_url_box">
+                <input id="add_feed_url" name="add_feed" type="url" class="url_box" placeholder="Ex: http://www.yoursite.com">
+                <label for="member3">Insert Custom Source</label>
+            </div>
+                <input type="submit" class="feed_action_submit" >
             </form>
             
-            <footer id="sidebar_footer">
-                    <hr/>
-                    <div id="social_media_icons_div">
-                        <a href="http://www.facebook.com/profile.php"><img class="social_media_icon" id="first_icon" src="images/socialmedia/facebook.svg"/></a>
-                        <a href="#"><img class="social_media_icon" src="images/socialmedia/twitter.svg"/></a>
-                        <a href="#"><img class="social_media_icon" src="images/socialmedia/google+.svg"/></a>
-                    </div>
-                <br/>
-
-                <nav>
-                    <table id="sidebar_list_footer">
-                        <tr>
-                            <td>
-                                <a class="sidebar_footer_point" href="view/metanav/impressum.tpl.html">Impressum</a>
-                            </td>
-                            <td>
-                                <a class="sidebar_footer_point" href="view/metanav/disclaimer.tpl.html">Privacy</a>
-                            </td>
-                            <td>
-                                <a class="sidebar_footer_point" href="view/metanav/support.tpl.html">Support</a>
-                            </td>
-                        </tr>
-                    </table>
-                </nav>
-            </footer>
+        <footer id="sidebar_footer">
+            <hr/>
+            <div id="social_media_icons_div">
+                <a href="https://www.facebook.com/mindfeedesyes/"><img class="social_media_icon" id="first_icon" src="images/socialmedia/facebook.svg"/></a>
+                <a href="#"><img class="social_media_icon" src="images/socialmedia/twitter.svg"/></a>
+                <a href="#"><img class="social_media_icon" src="images/socialmedia/google+.svg"/></a>
+            </div>
+            <br/>
+            
+            
+            <nav>
+                <table id="sidebar_list_footer">
+                <tr>
+                    <td>
+                    <a class="sidebar_footer_point" href="view/metanav/impressum.tpl.html">Impressum</a>
+                    </td>
+                    <td>
+                    <a class="sidebar_footer_point" href="view/metanav/disclaimer.tpl.html">Privacy</a>
+                    </td>
+                    <td>
+                    <a class="sidebar_footer_point" href="view/metanav/support.tpl.html">Support</a>
+                    </td>
+                </tr>
+                </table>
+            </nav>
+        </footer>
         </div>
         
         <header class="header">
