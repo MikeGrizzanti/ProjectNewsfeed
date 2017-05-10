@@ -101,5 +101,21 @@ class tb_feed {
         $query->setFetchMode(PDO::FETCH_CLASS, 'tb_feed');
         return $query->fetchAll();
     }
+    
+    public static function xy ($user_id) {
+        $sql = "SELECT fk_interests FROM tb_user_interests WHERE fk_user_id = ?";
+        $query1 = DB::getDB()->prepare($sql);
+        $query1->execute(array($feed_source));
+        $query1->setFetchMode(PDO::FETCH_CLASS, 'tb_feed');
+        $query1->fetchAll();
+        
+        foreach ($query1 as $value) {
+            $sql = "SELECT * FROM tb_feed WHERE fk_source_id = ("
+                    . "SELECT fk_interests_id"
+                    . "FROM tb_user_interests"
+                    . "WHERE fk_interests_id = '?' AND fk_user_id = '?'"
+                    . ");";
+        }
+    }
 }
 
