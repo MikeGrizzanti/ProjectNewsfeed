@@ -8,7 +8,6 @@ require_once 'models/entities/tb_groupchatpartecipants.php';
 require_once 'models/entities/tb_message.php';
 require_once 'models/entities/tb_source.php';
 require_once 'models/entities/tb_user.php';
-require_once 'models/entities/tb_user_interests.php';
 //require_once 'models/download_feed.inc.php';
 require_once 'models/phpmailer.php';
 
