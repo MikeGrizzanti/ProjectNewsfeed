@@ -228,13 +228,5 @@ class tb_user {
         $query->setFetchMode(PDO::FETCH_CLASS, 'tb_user');
         return $query->fetch();
     }
-    
-    public static function xy ($user_id) {
-        $sql = "SELECT fk_interests_id FROM tb_user_interests WHERE fk_user_id = ?";
-        $query1 = DB::getDB()->prepare($sql);
-        $query1->execute(array($user_id));
-        $query1->setFetchMode(PDO::FETCH_CLASS, 'tb_user_interests');
-        return $query1->fetchAll();
-    }
 }
 

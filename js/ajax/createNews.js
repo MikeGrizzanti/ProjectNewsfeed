@@ -1,5 +1,7 @@
 $(document).ready(function(e) {
     
+    createNewsOnStart();
+
     $("#add_feed_box").on("submit",function(e){        
  
         e.preventDefault();
@@ -54,5 +56,36 @@ function insert(title, description, author, pubDate, guid, image){
     x.setAttribute('id',elementid);
     x.innerHTML='<div class="news_card"><img id="news_card_img" src="'+ image +'"/><br/><p id="news_card_text">'+ title +'</p><table id="container_table"><tr><td><div class="theme_container"><a class="news_card_sublink" href="#"><p class="sublink_text">theme</p></a></div></td><td><div class="source_container"><a class="news_card_sublink" href="#"><p class="sublink_text">source</p></a></div></td><td><div class="active_chats_container"><p class="sublink_text">x Chats</p></div></td></tr></table> </div> ';
 }
+
+
+
+function createNewsOnStart() {
+            
+            $.ajax({
+                type: "POST",
+                url: 'index.php?loadObject=true',
+                data: true,
+                cache: false,
+                contentType: false,
+                processData: false,
+                success: function(response) {
+                    
+                }, 
+                complete: function(response){
+                    console.log(response);
+                    /*var obj = $.parseJSON(response.responseText);
+                    console.log(obj);
+                    
+                    for (var key in obj) {
+                      if (obj.hasOwnProperty(key)) {
+                          var data2 = JSON.stringify(obj[key]);
+                          var obj2 = $.parseJSON(data2);
+                          console.log(obj2);
+                          
+                      }
+                    }*/
+                }
+            });
+    }
 
  

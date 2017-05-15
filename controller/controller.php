@@ -6,7 +6,7 @@ require_once 'models/functions.inc.php';
 class controller {
     
     private $context = array();
-
+    
     public function run($action){
         $this->$action();
         $this->generatePage($action);
@@ -63,6 +63,7 @@ class controller {
     
     public function main() {
         $erg = is_loggedIn();
+        //$feeds = tb_feed::getFeedFromSourceIds($_SESSION['id']);
         $this->addContext("template", "logged_in");
         $this->addContext("feed_source", $_SESSION['feed_source']);
         $this->addContext("category_name", $_SESSION['category_name']);
@@ -91,6 +92,17 @@ class controller {
         if (!$erg) {
             header('Location: index.php?action=login');
         }
+    }
+    
+    public function print_feeds() {
+        $erg = is_loggedIn();
+        tb_feed::getFeedFromSourceIds($_SESSION['id']);
+        $this->addContext("template", "logged_in");
+        $this->addContext("feed_source", $_SESSION['feed_source']);
+        $this->addContext("category_name", $_SESSION['category_name']);
+         if(!$erg) {
+             header('Location: index.php?action=login');
+         }
     }
     
     public function download_feed() {

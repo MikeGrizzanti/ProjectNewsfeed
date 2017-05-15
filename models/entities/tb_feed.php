@@ -102,19 +102,23 @@ class tb_feed {
         return $query->fetchAll();
     }
     
-    public static function yz ($user_id) {
-        $ciao = tb_user::xy($user_id);
+    public static function getAllFeedsFromSourceId ($source) {
+        $sql = "SELECT * FROM tb_feed WHERE fk_source_id = ?;";
+        $query = DB::getDB()->prepare($sql);
+        $query->execute(array($source->getSourceId()));
+        $query->setFetchMode(PDO::FETCH_CLASS, 'tb_feed');
+        return $query->fetchAll();
+    }
+
+
+    public static function getFeedFromSourceIds ($user_id) {
+        $sources = tb_source::getSourceFromUserID ($user_id);
+        $feeds = array();
+        foreach ($sources as $source) {
+            $feeds[] = tb_feed::getAllFeedsFromSourceId($source);            
+        }
         
-        foreach ($ciao as $value) {
-            
-            return $value[0];
-            
-            /*$sql1 = "SELECT * FROM tb_feed WHERE fk_source_id = (SELECT fk_interests_id FROM tb_user_interests WHERE fk_interests_id = '?' AND fk_user_id = '?');";
-            $query2 = DB::getDB()->prepare($sql1);
-            $query2->execute(array($value[$key], $user_id));
-            $query2->setFetchMode(PDO::FETCH_CLASS, 'tb_feed');
-            $query2->fetchAll();*/
-        }  
+        return $feeds;
     }
 }
 
