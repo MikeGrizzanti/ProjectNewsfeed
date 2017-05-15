@@ -502,7 +502,7 @@ label{
 #email_password {
     height: 10em;
     width: 20em;
-    margin-top: 3em;
+    margin-top: 1em;
     margin-left: 3em;
 }
 
@@ -543,6 +543,7 @@ label{
 
 .sources {
     margin-left: 3em;
+    margin-top: 2em;
 }
 #user_sources_list {
     margin-left: 0;
@@ -667,30 +668,41 @@ label{
 }
 .change_email_popup {
     font-family: 'Open Sans', sans-serif;
-    position: absolute;
-    background-color: #fafafa;
+    position: fixed;
+    background-color: #fff;
     border-radius: 3px;
     height: 13em;
     width: 20em;
     margin-left: 30em;
-    margin-top: 8em;
+    margin-top: 15em;
     z-index: 1500;
     visibility: hidden;
     opacity: 0;
     border: 1px solid #fbb040;
+    
+    -webkit-box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.75);
 }
 
 .close_popup {
     position: relative;
+    padding-left: 1.5em;
+    padding-top: 0.5em;
+    bottom: 0;
 }
 
 #popup_nav {
-    background: #fbb040;   
+    background: #fff;   
 }
 
 .change_email_form {
-    margin-top: 1em;
+    margin-top: 0em;
     margin-left: 1em;
+}
+
+#text_field_old_email {
+    margin-top: 0;
 }
 
 .change_information_text_field {
@@ -699,7 +711,7 @@ label{
     width: 20em;
     border: 1px solid #fbb040;
     border-radius: 2px;
-    margin-top: 1em;
+    margin-top: 0.8em;
     margin-left: 0.8em;
 }
 .change_information_text_field:focus {
@@ -712,12 +724,22 @@ label{
     width: 20em;
     margin-top: 1em;
     margin-left: 0.8em;
+    
+    height: 2em;
+    text-align: center;
+    font-family: "Roboto",sans-serif;
+    color: #fafafa;
+    background-color: #FBB040;
+    border: 0;
+    border-radius: 2px;
+    cursor: pointer;
 }
 
 #user_terms {
     font-size: 0.6em;
     text-align:justify;
-    padding-right: 2em;
+    padding-left: 1em;
+    padding-right: 3em;
 }
 
 
@@ -738,39 +760,30 @@ label{
 .change_password_popup {
     font-family: 'Open Sans', sans-serif;
     position: absolute;
-    background-color: #fafafa;
+    background-color: #fff;
     border-radius: 3px;
     height: 13em;
     width: 20em;
     margin-left: 30em;
-    margin-top: 8em;
+    margin-top: 15em;
     z-index: 1500;
     
     visibility: hidden;
     opacity: 0;
     border: 1px solid #fbb040;
-}
-
-#popup_nav {
-    background: #fbb040;   
+    
+    -webkit-box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.75);
 }
 
 .change_password_form {
-    margin-top: 1em;
+    margin-top: 0em;
     margin-left: 1em;
 }
 
-.change_information_text_field {
-    position: relative;
-    display: block;
-    width: 20em;
-    border: 1px solid #fbb040;
-    border-radius: 2px;
-    margin-top: 1em;
-    margin-left: 0.8em;
-}
-.change_information_text_field:focus {
-    outline: none;
+#text_field_old_password {
+    margin-top: 0;
 }
 
 .change_password_information_submit_button {
@@ -779,12 +792,15 @@ label{
     width: 20em;
     margin-top: 1em;
     margin-left: 0.8em;
-    color: #fff;
-}
-#user_terms {
-    font-size: 0.6em;
-    text-align: justify;
-    padding-right: 2em;
+    
+    height: 2em;
+    text-align: center;
+    font-family: "Roboto",sans-serif;
+    color: #fafafa;
+    background-color: #FBB040;
+    border: 0;
+    border-radius: 2px;
+    cursor: pointer;
 }
 
 /* notification_switch */

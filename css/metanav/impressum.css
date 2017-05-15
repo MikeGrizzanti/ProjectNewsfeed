@@ -27,20 +27,15 @@ a:hover {
 
 #home_button {
     position: absolute;
-    text-decoration: underline;
-    display: block;
-    text-align: center;
     height: 2em;
-    width: 13em;
-    font-family: "Roboto",sans-serif;
-    font-weight: bold;
-    color: #fafafa;
-    background-color: #FBB040;
-    border-color: #FBB040;
-    letter-spacing: 0.1em;
-    margin-left: 2em;
-    margin-bottom: 0;
+    width: 10em;
+    border: 0;
     border-radius: 2px;
+    font-weight: bold;
+    background-color: #fff;
+    color: #fbb040;
+    font-family: 'Roboto',sans-serif;
+    margin-left: 2.5em;
 }
 
 .main_part_impressum {
@@ -62,8 +57,39 @@ p{
 }
 
 .contact_box{
-    border: 1px solid #000;
+    border: 1px solid #fbb040;
     padding: 1em;
     width: 20em;
     margin-bottom: 1em;
+    border-radius: 3px;
+}
+
+.contact_box_header {
+    margin-top: 0;
+    width: 40%;
+    display: inline;
+}
+
+.contact_box_description {
+    width: 60%;
+}
+
+.portrait_member {
+    margin-left: 2em;
+    height: 6em;
+    width: 6em;
+    position: absolute;
+    margin-left: 6em;
+}
+
+#second_row_contact_box {
+    margin-left: 5em;
+}
+
+.email_link {
+    color: #fbb040;
+    text-decoration: none;
+}
+.email_link:hover {
+    text-decoration: underline;
 }
