@@ -670,14 +670,20 @@ label{
     position: absolute;
     background-color: #fafafa;
     border-radius: 3px;
-    height: 20%;
+    height: 13em;
     width: 20em;
     margin-left: 30em;
     margin-top: 8em;
     z-index: 1500;
     visibility: hidden;
     opacity: 0;
+    border: 1px solid #fbb040;
 }
+
+.close_popup {
+    position: relative;
+}
+
 #popup_nav {
     background: #fbb040;   
 }
@@ -699,18 +705,22 @@ label{
 .change_information_text_field:focus {
     outline: none;
 }
-.change_information_submit_button {
+
+.change_email_information_submit_button {
     position: relative;
     display: block;
     width: 20em;
     margin-top: 1em;
     margin-left: 0.8em;
 }
+
 #user_terms {
     font-size: 0.6em;
     text-align:justify;
     padding-right: 2em;
 }
+
+
 
 /* popup change password */ 
 .background_change_information_popup {
@@ -719,7 +729,7 @@ label{
     width: 100%;
     left: 0; right: 0; top: 0; bottom: 0;
     background-color: #bdbdbd;
-    z-index: 1400;
+    z-index: 1500;
     opacity: 0.5;
 
     visibility: hidden;
@@ -730,7 +740,7 @@ label{
     position: absolute;
     background-color: #fafafa;
     border-radius: 3px;
-    height: 25%;
+    height: 13em;
     width: 20em;
     margin-left: 30em;
     margin-top: 8em;
@@ -738,6 +748,7 @@ label{
     
     visibility: hidden;
     opacity: 0;
+    border: 1px solid #fbb040;
 }
 
 #popup_nav {
@@ -761,12 +772,14 @@ label{
 .change_information_text_field:focus {
     outline: none;
 }
-.change_information_submit_button {
+
+.change_password_information_submit_button {
     position: relative;
     display: block;
     width: 20em;
     margin-top: 1em;
     margin-left: 0.8em;
+    color: #fff;
 }
 #user_terms {
     font-size: 0.6em;
