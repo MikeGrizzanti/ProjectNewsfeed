@@ -231,7 +231,7 @@ display: inline;
     background-color: #fbb040;
     float: left;
     margin-left: 1.8em;
-    margin-top: 12.5em;
+    margin-top: 8em;
     border-radius: 2px;
     text-transform: uppercase;
     z-index: 799;
@@ -270,6 +270,19 @@ display: inline;
     height: 8em;
     overflow-y: scroll;
 }
+
+::-webkit-scrollbar {
+    width: 0.8em;
+}
+::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 4px rgba(0,0,0,0.3); 
+        border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        -webkit-box-shadow: inset 0 0 4px rgba(0,0,0,0.5); 
+}
+
 
 #add_feed_url {
     margin-left: 0.1em;
@@ -430,12 +443,12 @@ label{
 }
 
 .social_media_icon {
-    margin-right: 1em;
+    margin-right: 2em;
     height: 2em;
 }
 
 #first_icon {
-    margin-left: 1.5em; 
+    margin-left: 2em; 
 }
 
 #sidebar_footer {
@@ -445,12 +458,22 @@ label{
     margin-bottom: 0;
     margin-top: 1em;
 }
+/*
 #index_sidebar_footer {
     position: relative;
     height: 7em;
     width: 100%;
     margin-bottom: 0;
     margin-top: 6em;
+}*/
+#sidebar_footer_support {
+    margin-left: 2.5em;
+} 
+#sidebar_footer_impressum {
+    margin-left: 1em;
+}
+#sidebar_footer_disclaimer{
+    margin-left: 1.5em;
 }
 
 #sidebar_list_footer{
@@ -562,7 +585,7 @@ label{
     background-color: #FBFBFB;
     position: relative;
     height: auto;
-    top: 12em; right: 0; bottom: 0;left: 0;
+    top: 10em; right: 0; bottom: 0;left: 0;
 }
 
 .confirm_email_div {

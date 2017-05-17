@@ -1,4 +1,4 @@
-<?php
+ <?php
 
 function is_loggedIn() {
     $erg = false;

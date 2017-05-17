@@ -4,7 +4,7 @@ require_once('entities/db.php');
 require_once('entities/tb_source.php');
 
 //decodeHTMLent
-        function decodeHtmlEnt($str) {
+    function decodeHtmlEnt($str) {
             $ret = html_entity_decode($str, ENT_COMPAT, 'UTF-8');
             $p2 = -1;
             for(;;) {
@@ -32,7 +32,7 @@ require_once('entities/tb_source.php');
             return $ret;
         }
 
-if (isset($_POST) ){
+        if (isset($_POST) ){
        //curl and header
         //$ch = curl_init();
     
@@ -190,5 +190,7 @@ if (isset($_POST) ){
         }
  
    } 
+    
+?>
 
 		
