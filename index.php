@@ -15,9 +15,11 @@ require_once 'controller/controller.php';
 
 $action = isset($_GET['action'])?$_GET['action']:'main';
 $controller = new controller();
+
 if(isset($_GET["loadObject"])){
-    //echo 'figga';
-    $controller->print_feeds();
+   
+    $var = $controller->print_feeds();
+
     exit;
 }
 

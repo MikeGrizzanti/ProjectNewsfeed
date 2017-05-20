@@ -106,7 +106,7 @@ class tb_feed {
         $sql = "SELECT * FROM tb_feed WHERE fk_source_id = ?;";
         $query = DB::getDB()->prepare($sql);
         $query->execute(array($source->getSourceId()));
-        $query->setFetchMode(PDO::FETCH_CLASS, 'tb_feed');
+        $query->setFetchMode(PDO::FETCH_CLASS, 'tb_source');
         return $query->fetchAll();
     }
 
@@ -118,7 +118,8 @@ class tb_feed {
             $feeds[] = tb_feed::getAllFeedsFromSourceId($source);            
         }
         
-        return $feeds;
+        echo json_encode(array_values($feeds));
+
     }
 }
 

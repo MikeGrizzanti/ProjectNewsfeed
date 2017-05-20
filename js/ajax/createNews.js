@@ -72,9 +72,9 @@ function createNewsOnStart() {
                     
                 }, 
                 complete: function(response){
-                    console.log(response);
-                    /*var obj = $.parseJSON(response.responseText);
-                    console.log(obj);
+                    //console.log(response.responseText);
+                    var obj = $.parseJSON(response.responseText);
+                    //console.log(obj);
                     
                     for (var key in obj) {
                       if (obj.hasOwnProperty(key)) {
@@ -83,7 +83,7 @@ function createNewsOnStart() {
                           console.log(obj2);
                           
                       }
-                    }*/
+                    }
                 }
             });
     }
