@@ -23,6 +23,14 @@ if(isset($_GET["loadObject"])){
     exit;
 }
 
+if(isset($_GET["loadObjectCategory"])){
+   
+    $var = $controller->filter_category($_GET["loadObjectCategory"]);
+
+    exit;
+}
+
+
 if (method_exists($controller, $action)) {
     $controller->run($action);
 }
