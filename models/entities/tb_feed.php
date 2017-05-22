@@ -109,8 +109,7 @@ class tb_feed {
         $query->setFetchMode(PDO::FETCH_CLASS, 'tb_source');
         return $query->fetchAll();
     }
-
-
+    
     public static function getFeedFromSourceIds ($user_id) {
         $sources = tb_source::getSourceFromUserID ($user_id);
         $feeds = array();
@@ -121,5 +120,27 @@ class tb_feed {
         echo json_encode(array_values($feeds));
 
     }
+    
+    //
+    
+    public static function getAllFeedsFromSourceIdAndCategoryId ($source, $category) {
+        $sql = "SELECT * FROM tb_feed WHERE fk_source_id = ? AND fk_category_id = ?;";
+        $query = DB::getDB()->prepare($sql);
+        $query->execute(array($source->getSourceId(), $category->get_category_Id()));
+        $query->setFetchMode(PDO::FETCH_CLASS, 'tb_source');
+        return $query->fetchAll();
+    }
+    
+    public static function getFeedFromSourceIdsAndCategoryIds ($user_id) {
+        $sources = tb_source::getSourceFromUserID ($user_id);
+        $feeds = array();
+        foreach ($sources as $source) {
+            $feeds[] = tb_feed::getAllFeedsFromSourceIdAndCategoryId($source, $category);            
+        }
+        
+        echo json_encode(array_values($feeds));
+
+    }
+
 }
 

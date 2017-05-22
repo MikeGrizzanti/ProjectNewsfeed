@@ -48,13 +48,25 @@ $(document).ready(function(e) {
     
 });
 
-function insert(title, description, author, pubDate, guid, image){
-    var tabElem = document.getElementById("table_news_cards"); 
-    var row = tabElem.getElementsByTagName("tr")[0];
-    var x = row.insertCell(0);
-    var elementid = document.getElementsByTagName("td").length;
-    x.setAttribute('id',elementid);
-    x.innerHTML='<div class="news_card"><img id="news_card_img" src="'+ image +'"/><br/><p id="news_card_text">'+ title +'</p><table id="container_table"><tr><td><div class="theme_container"><a class="news_card_sublink" href="#"><p class="sublink_text">theme</p></a></div></td><td><div class="source_container"><a class="news_card_sublink" href="#"><p class="sublink_text">source</p></a></div></td><td><div class="active_chats_container"><p class="sublink_text">x Chats</p></div></td></tr></table> </div> ';
+function insert(title, description, author, pubDate, guid, image){ 
+    
+    var htmlOut='<div class="news_card"><img id="news_card_img" src="'+ image +'"/><br/><p id="news_card_text">'+ title +'</p><table id="container_table"><tr><td><div class="theme_container"><a class="news_card_sublink" href="#"><p class="sublink_text">theme</p></a></div></td><td><div class="source_container"><a class="news_card_sublink" href="#"><p class="sublink_text">source</p></a></div></td><td><div class="active_chats_container"><p class="sublink_text">x Chats</p></div></td></tr></table> </div>';
+    
+    
+        /*var str ="";
+
+        for(var i=0;i<20;i++)
+        {
+            str+="<tr>";
+               
+            str+="<td>"+htmlOut+"</td>";
+            
+            str+="</tr>";
+        }*/
+    
+        $("#table_news_cards>tbody>tr:last").after(htmlOut);
+        //$('#table_news_cards').append(str);
+    
 }
 
 
@@ -80,7 +92,17 @@ function createNewsOnStart() {
                       if (obj.hasOwnProperty(key)) {
                           var data2 = JSON.stringify(obj[key]);
                           var obj2 = $.parseJSON(data2);
-                          console.log(obj2);
+                              for (var key in obj2) {
+                              if (obj2.hasOwnProperty(key)) {
+                                  var data3 = JSON.stringify(obj2[key]);
+                                  var obj3 = $.parseJSON(data3);
+                                  var obj3Lenght = Object.keys(obj3).length;
+                                  
+                                  
+                                  insert(obj3.feed_title, obj3.feed_content, obj3.feed_author, obj3.feed_puDate, obj3.feed_guid, obj3.feed_img_path);
+
+                              }
+                            }
                           
                       }
                     }
