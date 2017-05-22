@@ -37,7 +37,7 @@ class tb_category {
         $sql = 'SELECT * FROM tb_category WHERE category_id=?;';
         $query = DB::getDB()->prepare($sql);
         $query->execute(array($id));
-        $query->setFetchMode(PDO::FETCH_CLASS, 'tb_user');
+        $query->setFetchMode(PDO::FETCH_CLASS, 'tb_category');
         return $query->fetch();
     }
     
@@ -49,6 +49,12 @@ class tb_category {
         return $query->fetchAll();
     }
     
-    
+    public static function getIdFromCategoryName($name) {
+        $sql = 'SELECT category_id FROM tb_category WHERE category_name=?;';
+        $query = DB::getDB()->prepare($sql);
+        $query->execute(array($name));
+        $query->setFetchMode(PDO::FETCH_CLASS, 'tb_category');
+        return $query->fetch();
+    }
 }
 
