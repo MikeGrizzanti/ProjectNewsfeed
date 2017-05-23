@@ -5,9 +5,9 @@ $(document).ready(function(e) {
     
     $(".user_interest").on("click", function(e){
             e.preventDefault();
-            var category = $(this).attr("id");
-        
-            createNewsOnCategoryClick(category);
+            var valString = $(this).attr("value");
+            var categoryInt = parseInt(valString);
+            createNewsOnCategoryClick(categoryInt);
     });
     
     
@@ -63,20 +63,7 @@ function insert(title, description, author, pubDate, guid, image){
     
     var htmlOut='<div class="news_card"><img id="news_card_img" src="'+ image +'"/><br/><p id="news_card_text">'+ title +'</p><table id="container_table"><tr><td><div class="theme_container"><a class="news_card_sublink" href="#"><p class="sublink_text">theme</p></a></div></td><td><div class="source_container"><a class="news_card_sublink" href="#"><p class="sublink_text">source</p></a></div></td><td><div class="active_chats_container"><p class="sublink_text">x Chats</p></div></td></tr></table> </div>';
     
-    
-        /*var str ="";
-
-        for(var i=0;i<20;i++)
-        {
-            str+="<tr>";
-               
-            str+="<td>"+htmlOut+"</td>";
-            
-            str+="</tr>";
-        }*/
-    
-        $("#table_news_cards>tbody>tr:last").after(htmlOut);
-        //$('#table_news_cards').append(str);
+$("#table_news_cards>tbody>tr:last").after(htmlOut);
     
 }
 
@@ -118,16 +105,17 @@ function createNewsOnStart() {
                     }
                 }
             });
+    
     } 
     
     
     
-    function createNewsOnCategoryClick(category) {
+    function createNewsOnCategoryClick(category_data) {
     
         $.ajax({
                 type: "POST",
-                url: 'index.php?loadObjectCategory='+category,
-                data: category,
+                url: 'index.php?loadObjectCategory='+category_data,
+                data: category_data,
                 cache: false,
                 contentType: false,
                 processData: false,
@@ -135,6 +123,7 @@ function createNewsOnStart() {
                     
                 }, 
                 complete: function(response){
+                    console.log(response.responseText);
                     var obj = $.parseJSON(response.responseText);
                     
                     for (var key in obj) {

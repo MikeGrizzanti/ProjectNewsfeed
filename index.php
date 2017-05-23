@@ -19,14 +19,12 @@ $controller = new controller();
 if(isset($_GET["loadObject"])){
    
     $var = $controller->print_feeds();
-
     exit;
 }
 
 if(isset($_GET["loadObjectCategory"])){
-   
+    
     $var = $controller->filter_category($_GET["loadObjectCategory"]);
-
     exit;
 }
 

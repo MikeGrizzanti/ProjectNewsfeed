@@ -96,7 +96,8 @@ class controller {
     
     public static function filter_category($category) {
         $erg = is_loggedIn();
-        tb_feed::getAllFeedsFromSourceIdAndCategoryId($_SESSION['id'], $category);
+        tb_feed::getFeedFromSourceIdsAndCategoryIds($_SESSION['id'], $category);
+        exit; //? wieso ist das so? Fehler: using this out of context
         $this->addContext("template", "logged_in");
         $this->addContext("feed_source", $_SESSION['feed_source']);
         $this->addContext("category_name", $_SESSION['category_name']);

@@ -2,8 +2,6 @@
 $_SESSION['feed_source'] = tb_source::getSourceNames();
 $_SESSION['category_name'] = tb_category::getNameFromCategory();
 
-//var_dump($_SESSION);
-
 $user_nickName = "";
 $user_password = "";
 $error = "";

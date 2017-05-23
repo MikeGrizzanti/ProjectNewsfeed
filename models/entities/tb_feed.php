@@ -128,12 +128,12 @@ class tb_feed {
     public static function getAllFeedsFromSourceIdAndCategoryId ($source, $category) {
         $sql = "SELECT * FROM tb_feed WHERE fk_source_id = ? AND fk_category_id = ?;";
         $query = DB::getDB()->prepare($sql);
-        $query->execute(array($source->getSourceId(), $category->get_category_Id()));
+        $query->execute(array($source->getSourceId(), intval($category)));
         $query->setFetchMode(PDO::FETCH_CLASS, 'tb_source');
         return $query->fetchAll();
     }
     
-    public static function getFeedFromSourceIdsAndCategoryIds ($user_id) {
+    public static function getFeedFromSourceIdsAndCategoryIds ($user_id, $category) {
         $sources = tb_source::getSourceFromUserID ($user_id);
         $feeds = array();
         foreach ($sources as $source) {
