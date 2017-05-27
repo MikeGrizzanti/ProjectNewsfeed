@@ -81,6 +81,10 @@
                 <li><a class="user_interest_source" value="<?php echo $value->getSourceName(); ?>"><?php echo $value->getSourceName(); ?></a></li>
             <?php } ?>         
             </ul>                 
+            <?php foreach($feed_source as $key => $value){ ?>
+                <li><a class="user_interest_id" id="<?php echo $value->getSourceName(); ?>"><?php echo $value->getSourceName(); ?></a></li>
+            <?php } ?>
+            </ul> 
             <br/>
             </div>
             <hr/>
