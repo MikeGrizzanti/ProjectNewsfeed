@@ -28,6 +28,12 @@ if(isset($_GET["loadObjectCategory"])){
     exit;
 }
 
+if(isset($_GET["loadObjectSource"])){
+    
+    $var = $controller->filter_source($_GET["loadObjectSource"]);
+    exit;
+}
+
 
 if (method_exists($controller, $action)) {
     $controller->run($action);

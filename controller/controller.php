@@ -36,6 +36,7 @@ class controller {
         require_once 'models/change_email.php';
         $this->addContext("template", "user_profile");
         $this->addContext("feed_source", $_SESSION['feed_source']);
+        $this->addContext("feed_source_id", $_SESSION['feed_source_id']);
         $this->addContext("category_name", $_SESSION['category_name']);
         if(!$erg){
             header("Location:index.php?action=login");
@@ -46,6 +47,7 @@ class controller {
         require_once 'models/change_password.php';
         $this->addContext("template", "user_profile");
         $this->addContext("feed_source", $_SESSION['feed_source']);
+        $this->addContext("feed_source_id", $_SESSION['feed_source_id']);
         $this->addContext("category_name", $_SESSION['category_name']);
         if(!$erg){
             header("Location:index.php?action=login");
@@ -67,6 +69,8 @@ class controller {
         $this->addContext("template", "logged_in");
         $this->addContext("feed_source", $_SESSION['feed_source']);
         $this->addContext("category_name", $_SESSION['category_name']);
+        $this->addContext("feed_source_id", $_SESSION['feed_source_id']);
+
         if(!$erg){
             header("Location:index.php?action=login");
         }
@@ -88,16 +92,28 @@ class controller {
         $erg = is_loggedIn();
         $this->addContext("template", "user_profile");
         $this->addContext("feed_source", $_SESSION['feed_source']);
+        $this->addContext("feed_source_id", $_SESSION['feed_source_id']);
         $this->addContext("category_name", $_SESSION['category_name']);
         if (!$erg) {
             header('Location: index.php?action=login');
         }
     }
     
-    public static function filter_category($category) {
+    public function filter_category($category) {
         $erg = is_loggedIn();
         tb_feed::getFeedFromSourceIdsAndCategoryIds($_SESSION['id'], $category);
-        exit; //? wieso ist das so? Fehler: using this out of context
+        $this->addContext("template", "logged_in");
+        $this->addContext("feed_source", $_SESSION['feed_source']);
+        $this->addContext("feed_source_id", $_SESSION['feed_source_id']);
+        $this->addContext("category_name", $_SESSION['category_name']);
+         if(!$erg) {
+             header('Location: index.php?action=login');
+         }
+    }
+    
+    public function filter_source($source_filter) {
+        $erg = is_loggedIn();
+        tb_feed::getFeedFromDFilterSourceIds($_SESSION['id'], $source_filter);
         $this->addContext("template", "logged_in");
         $this->addContext("feed_source", $_SESSION['feed_source']);
         $this->addContext("category_name", $_SESSION['category_name']);

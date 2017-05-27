@@ -428,7 +428,7 @@ label{
     font-weight: 120;
 }
 
-.user_interest {
+.user_interest, .user_interest_source {
     color: #fafafa;
     font-family: 'Roboto', sans-serif;
     font-weight: bold;

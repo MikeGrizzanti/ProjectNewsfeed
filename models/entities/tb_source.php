@@ -71,7 +71,15 @@ class tb_source {
     }
     
     public static function getSourceNames() {
-        $sql = "SELECT DISTINCT source_name FROM tb_source ORDER BY source_name ASC;";
+        $sql = "SELECT DISTINCT source_name FROM tb_source ORDER BY source_name;";
+        $query = DB::getDB()->prepare($sql);
+        $query->execute();
+        $query->setFetchMode(PDO::FETCH_CLASS, 'tb_source');
+        return $query->fetchAll();
+    }
+    
+    public static function getSourceIds() {
+        $sql = "SELECT source_id FROM tb_source;";
         $query = DB::getDB()->prepare($sql);
         $query->execute();
         $query->setFetchMode(PDO::FETCH_CLASS, 'tb_source');

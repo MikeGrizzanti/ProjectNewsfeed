@@ -125,6 +125,32 @@ class tb_feed {
     
     //
     
+    
+    public static function getAllFeedsFromFilterSourceId ($source_name) {   
+        $sql = "SELECT * FROM tb_feed WHERE fk_source_id IN (
+                    SELECT source_id
+                    FROM tb_source
+                    WHERE source_name LIKE :source_name
+                );";
+        $query = DB::getDB()->prepare($sql);
+        $query->execute(array(':source_name' => $source_name));
+        $query->setFetchMode(PDO::FETCH_CLASS, 'tb_source');
+        return $query->fetchAll();
+    }
+    
+    public static function getFeedFromDFilterSourceIds ($user_id, $source_filter) {
+        $sources = tb_source::getSourceFromUserID ($user_id);
+        $feeds = array();
+        foreach ($sources as $source) {
+            $feeds[] = tb_feed::getAllFeedsFromFilterSourceId($source_filter);            
+        }
+        
+        echo json_encode(array_values($feeds));
+
+    }
+    
+    //
+    
     public static function getAllFeedsFromSourceIdAndCategoryId ($source, $category) {
         $sql = "SELECT * FROM tb_feed WHERE fk_source_id = ? AND fk_category_id = ?;";
         $query = DB::getDB()->prepare($sql);

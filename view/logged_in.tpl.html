@@ -69,18 +69,18 @@
             <h3 class="sidebar_header">Interests:</h3>
         <ul id="sidebar_list_user_interests">
             <?php foreach($category_name as $key => $value){ ?>
-                <li><a class="user_interest" value="<?php echo $key ?>"><?php echo $value->get_category_name(); ?></a></li>
+                <li><a class="user_interest" value="<?php echo $key; ?>"><?php echo $value->get_category_name(); ?></a></li>
             <?php } ?>
 
             </ul> 
             <br/>
                 
-            <h3 class="sidebar_header">Favorites:</h3>
+            <h3 class="sidebar_header">Your Sources:</h3>
             <ul id="sidebar_list_user_favorites">
-            <li><a class="user_interest" href="#">SCIENCE</a></li>
-            <li><a class="user_interest" href="#">ECONOMY</a></li>
-            <li><a class="user_interest" href="#">TECHNOLOGY</a></li>    
-            </ul> 
+            <?php foreach($feed_source as $key => $value) { ?>
+                <li><a class="user_interest_source" value="<?php echo $value->getSourceName(); ?>"><?php echo $value->getSourceName(); ?></a></li>
+            <?php } ?>         
+            </ul>                 
             <br/>
             </div>
             <hr/>
