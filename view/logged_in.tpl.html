@@ -77,9 +77,9 @@
                 
             <h3 class="sidebar_header">Favorites:</h3>
             <ul id="sidebar_list_user_favorites">
-            <li><a class="user_interest" href="#">SCIENCE</a></li>
-            <li><a class="user_interest" href="#">ECONOMY</a></li>
-            <li><a class="user_interest" href="#">TECHNOLOGY</a></li>    
+            <?php foreach($feed_source as $key => $value){ ?>
+                <li><a class="user_interest_id" id="<?php echo $value->getSourceName(); ?>"><?php echo $value->getSourceName(); ?></a></li>
+            <?php } ?>
             </ul> 
             <br/>
             </div>
