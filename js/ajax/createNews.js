@@ -15,7 +15,6 @@ $(document).ready(function(e) {
             e.preventDefault();
             $(".news_card").remove();    
             var valString = $(this).attr("value");
-            console.log(typeof valString);
             createNewsOnSourceClick(valString);
     });
     
