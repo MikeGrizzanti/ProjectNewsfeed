@@ -77,7 +77,7 @@
                 
             <h3 class="sidebar_header">Your Sources:</h3>
             <ul id="sidebar_list_user_favorites">
-            <?php foreach($feed_source as $key => $value) { ?>
+            <?php foreach($feed_source_user as $key => $value) { ?>
                 <li><a class="user_interest_source" value="<?php echo $value->getSourceName(); ?>"><?php echo $value->getSourceName(); ?></a></li>
             <?php } ?>         
             </ul>                 

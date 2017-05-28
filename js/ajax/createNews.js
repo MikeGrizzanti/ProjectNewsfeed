@@ -55,7 +55,7 @@ $(document).ready(function(e) {
                   if (obj.hasOwnProperty(key)) {
                       var data2 = JSON.stringify(obj[key]);
                       var obj2 = $.parseJSON(data2);
-                      console.log(obj2.title);
+                      console.log(obj2.description);
                       insert(obj2.title, obj2.description, obj2.author, obj2.pubDate, obj2.guid, obj2.image);
                   }
                 }
@@ -85,7 +85,7 @@ function createNewsOnStart() {
                     
                 }, 
                 complete: function(response){
-                    //console.log(response.responseText);
+                    console.log(response.responseText);
                     var obj = $.parseJSON(response.responseText);
                     //console.log(obj);
                     
