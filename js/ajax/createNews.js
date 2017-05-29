@@ -70,7 +70,12 @@ function insert(title, description, author, pubDate, guid, image){
     
 var htmlOut='<div class="news_card"><img id="news_card_img" src="'+ image +'"/><br/><p id="news_card_text">'+ title +'</p><table id="container_table"><tr><td><div class="theme_container"><a class="news_card_sublink" href="#"><p class="sublink_text">theme</p></a></div></td><td><div class="source_container"><a class="news_card_sublink" href="#"><p class="sublink_text">source</p></a></div></td><td><div class="active_chats_container"><p class="sublink_text">x Chats</p></div></td></tr></table> </div>';
     
-$("#table_news_cards>tbody>tr:last").after(htmlOut);   
+$("#table_news_cards>tbody>tr:last").after(htmlOut);
+    
+        $( ".news_card" ).each(function( i ) {
+            document.querySelector('.news_card #news_card_text').innerText = truncateText('.news_card #news_card_text', 60);
+        });
+
 }
 
 
@@ -192,5 +197,15 @@ function createNewsOnSourceClick(source_data) {
                 }
             });
         
+}
+
+function truncateText(selector, maxLength) {
+    var element = document.querySelector(selector),
+        truncated = element.innerText;
+
+    if (truncated.length > maxLength) {
+        truncated = truncated.substr(0,maxLength) + '...';
     }
+    return truncated;
+}
     
