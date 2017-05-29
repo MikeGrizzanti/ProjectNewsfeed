@@ -150,37 +150,71 @@ require_once('entities/tb_source.php');
             $_POST['add_feed'] = NULL;
             
             session_start();
-            echo json_encode("here");
             
-            $sql_source_id = "SELECT source_path FROM tb_source WHERE source_id = ? AND fk_category_id =?;";
+            
+            $sql = "SELECT * FROM tb_feed WHERE fk_source_id IN (
+                    SELECT source_id
+                    FROM tb_source
+                    WHERE source_name LIKE :source_name
+                );";
+            $query = DB::getDB()->prepare($sql);
+            $query->execute(array(':source_name' => $source_predefined));
+            $query->setFetchMode(PDO::FETCH_CLASS, 'tb_source');
+            $feed_attributes = $query->fetchAll();
+            echo json_encode($feed_attributes, JSON_UNESCAPED_SLASHES);
+            
+            
+            /*$sql_source_id = "SELECT source_path FROM tb_source WHERE source_name LIKE :source_name AND fk_category_id = :source_theme;";
             $query_source_id = DB::getDB()->prepare($sql_source_id);
-            $query_source_id->execute(array($source_predefined, $theme));
+            $query_source_id->execute(array(':source_name' => $source_predefined, ':source_theme' => $theme));
             $query_source_id->setFetchMode(PDO::FETCH_CLASS, 'tb_source');
-            $fetch_source = $query_source_id->fetchAll();
-            
-
+            $fetch_source = $query_source_id->fetch()->getSourcePath();
+            $fetch_source_id = $query_source_id->fetch()->getSourceId();
             
             $context  = stream_context_create(array('http' => array('header' => 'Accept: application/xml')));
             $rss = file_get_contents($fetch_source, true, $context);
-            $rss = simplexml_load_string($rss, null, LIBXML_NOERROR) or die("Error: Cannot create object");
+            $rss = simplexml_load_string($rss, null, LIBXML_NOCDATA) or die("Error: Cannot load feed!");
             
-            $i=0;
+                $i = 0;*/
+                
+                /*$time1 =  strtotime('Tue, 28 May 2013 09:31:30 GMT');
+                $time2 =  strtotime('Tue, 28 May 2013 09:32:30 GMT');
+                echo $timediff = abs($time2 -$time1);*/
             
-            foreach($rss->channel->item as $item) {
-                        if ($i < 10) { // parse only 100 items
+                 /*foreach($rss->channel->item as $item) {
+                        if ($i < 25) { // parse only 100 items
                             
-                            $feed_attributes = [
+                            $feed_attributes[] = array(
                                 'title' => strip_tags(decodeHtmlEnt($item->title)), 
                                 'description' => strip_tags(decodeHtmlEnt($item->description)), 
-                                'author' => $item->author, 
-                                'pubDate' => $item->pubDate,
-                                'guid' => $item->guid,
-                                'image' => $item->image,
-                            ];  
-                        }
+                                'author' => strip_tags($item->author), 
+                                'pubDate' => strip_tags($item->pubDate),
+                                'guid' => strip_tags($item->guid),
+                                'image' => strip_tags($item->image),
+                                //'name' => $host_names,
+                            );
+                            
+                        } 
                             $i++;
                 }
-               echo json_encode($feed_attributes, JSON_UNESCAPED_SLASHES); 
+            echo json_encode($feed_attributes, JSON_UNESCAPED_SLASHES);
+            
+            */
+            
+            $sql_source_id = "SELECT source_id FROM tb_source WHERE source_name LIKE :source_name AND fk_category_id = :source_theme;";
+            $query_source_id = DB::getDB()->prepare($sql_source_id);
+            $query_source_id->execute(array(':source_name' => $source_predefined, ':source_theme' => $theme));
+            $query_source_id->setFetchMode(PDO::FETCH_CLASS, 'tb_source');
+            $fetch_source_id = $query_source_id->fetch()->getSourceId();
+            
+            //echo json_encode(print_r($fetch_source_id));
+            
+            
+            $sql_interest = "INSERT INTO tb_user_interests (fk_user_id, fk_interests_id) VALUES (?,?)";
+            $query_interest = DB::getDB()->prepare($sql_interest);
+            $query_interest->execute(array($_SESSION['id'], $fetch_source_id));
+            
+             
         }
  
    } 

@@ -1,5 +1,5 @@
 <?php
-$_SESSION['feed_source'] = tb_source::getSourceNames();
+$_SESSION['feed_source'] = tb_source::getAll();
 $_SESSION['category_name'] = tb_category::getNameFromCategory();
 
 $user_nickName = "";

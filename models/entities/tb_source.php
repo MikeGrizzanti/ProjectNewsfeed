@@ -80,7 +80,7 @@ class tb_source {
     
     
     public static function getSourceNamesOfUser($user_id) {
-        $sql = "SELECT source_name FROM tb_source WHERE source_id IN (SELECT fk_interests_id FROM tb_user_interests WHERE fk_user_id = ?);";
+        $sql = "SELECT DISTINCT source_name FROM tb_source WHERE source_id IN (SELECT fk_interests_id FROM tb_user_interests WHERE fk_user_id = ?);";
         $query = DB::getDB()->prepare($sql);
         $query->execute(array($user_id));
         $query->setFetchMode(PDO::FETCH_CLASS, 'tb_source');

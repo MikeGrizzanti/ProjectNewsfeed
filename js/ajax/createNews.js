@@ -29,8 +29,8 @@ $(document).ready(function(e) {
         data.append("member1",member1.value);
         data.append("member2",member2.value);
         data.append("add_feed",feed.value);
-         
-
+        
+        
         $.ajax({
             type: "POST",
             url:"models/download_feed.inc.php",
@@ -51,13 +51,22 @@ $(document).ready(function(e) {
             },
             complete: function(data){
                 console.log(data.responseText);
+               
                 var obj = $.parseJSON(data.responseText);
+                
                 for (var key in obj) {
                   if (obj.hasOwnProperty(key)) {
                       var data2 = JSON.stringify(obj[key]);
                       var obj2 = $.parseJSON(data2);
-                      console.log(obj2.description);
-                      insert(obj2.title, obj2.description, obj2.author, obj2.pubDate, obj2.guid, obj2.image);
+                                            
+                      if($("#member1 option:selected").text().trim() == ""){
+                          insert(obj2.title, obj2.description, obj2.author, obj2.pubDate, obj2.guid, obj2.image);
+                      }
+                      
+                      else if ($("#member1 option:selected").text().trim() !== null){
+                          insert(obj2.feed_title, obj2.feed_description, obj2.feed_author, obj2.feed_pubDate, obj2.feed_guid, obj2.feed_image);
+                      }
+                      
                   }
                 }
             }
