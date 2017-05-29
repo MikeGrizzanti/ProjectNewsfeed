@@ -591,8 +591,9 @@ label{
 .confirm_email_div {
     width: 99%;
     margin-left: auto;
+    margin-top: 3em;
     margin-right: auto;
-    height: 2em;
+    height: 1.5em;
     background-color: #FBB040;
     align-content: center;
 }
@@ -602,7 +603,7 @@ label{
     height: 1em;
     width: auto;
     margin-left: 49em;
-    
+    margin-top: 0.2em;
 }
 
 #confirm_warning {
