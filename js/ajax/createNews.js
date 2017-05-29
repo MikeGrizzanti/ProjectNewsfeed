@@ -50,6 +50,7 @@ $(document).ready(function(e) {
                 alert("There has been a problem while parsing the feed: " + thrownError);
             },
             complete: function(data){
+                console.log(data.responseText);
                 var obj = $.parseJSON(data.responseText);
                 for (var key in obj) {
                   if (obj.hasOwnProperty(key)) {

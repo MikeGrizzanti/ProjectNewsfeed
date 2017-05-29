@@ -78,9 +78,6 @@ require_once('entities/tb_source.php');
                     $query_source_id->setFetchMode(PDO::FETCH_CLASS, 'tb_source');
                     $fetch_source = $query_source_id->fetch()->getSourceId();
 
-                    //var_dump($query_source_id->fetch()->getSourceId());
-                    //echo $_SESSION['id'];
-
 
                     $sql_interest = "INSERT INTO tb_user_interests (fk_user_id, fk_interests_id) VALUES (?,?)";
                     $query_interest = DB::getDB()->prepare($sql_interest);
@@ -109,10 +106,7 @@ require_once('entities/tb_source.php');
                 $rss = simplexml_load_string($rss, null, LIBXML_NOCDATA) or die("Error: Cannot load feed!");
             
                 $i = 0;
-                /*$sql = "INSERT INTO tb_feed (feed_title, feed_content, feed_author, feed_pubDate, feed_guid, feed_img_path, fk_category_id, fk_source_id) VALUES (?,?,?,?,?,?,?,?)";
-                */
-            
-            
+                
                 /*$time1 =  strtotime('Tue, 28 May 2013 09:31:30 GMT');
                 $time2 =  strtotime('Tue, 28 May 2013 09:32:30 GMT');
                 echo $timediff = abs($time2 -$time1);*/
@@ -156,13 +150,13 @@ require_once('entities/tb_source.php');
             $_POST['add_feed'] = NULL;
             
             session_start();
-            //echo $source_predefined;
+            echo json_encode("here");
             
-            $sql_source_id = "SELECT source_path FROM tb_source WHERE source_id = '".$source_predefined."' AND fk_category_id =".$theme.";";
+            $sql_source_id = "SELECT source_path FROM tb_source WHERE source_id = ? AND fk_category_id =?;";
             $query_source_id = DB::getDB()->prepare($sql_source_id);
-            $query_source_id->execute();
+            $query_source_id->execute(array($source_predefined, $theme));
             $query_source_id->setFetchMode(PDO::FETCH_CLASS, 'tb_source');
-            $fetch_source = $query_source_id->fetch()->getSourcePath();
+            $fetch_source = $query_source_id->fetchAll();
             
 
             
