@@ -231,7 +231,7 @@ display: inline;
     background-color: #fbb040;
     float: left;
     margin-left: 1.8em;
-    margin-top: 8em;
+    margin-top: 10em;
     border-radius: 2px;
     text-transform: uppercase;
     z-index: 799;
@@ -591,8 +591,9 @@ label{
 .confirm_email_div {
     width: 99%;
     margin-left: auto;
+    margin-top: 3em;
     margin-right: auto;
-    height: 2em;
+    height: 1.5em;
     background-color: #FBB040;
     align-content: center;
 }
@@ -602,7 +603,7 @@ label{
     height: 1em;
     width: auto;
     margin-left: 49em;
-    
+    margin-top: 0.2em;
 }
 
 #confirm_warning {
@@ -621,7 +622,7 @@ label{
     display: table;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 5em;
+    margin-top: 1em;
 }
 .news_card {
     width: 18em;
