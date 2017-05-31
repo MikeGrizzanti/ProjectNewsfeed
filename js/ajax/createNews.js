@@ -115,7 +115,7 @@ function createNewsOnStart() {
                                   var obj3Lenght = Object.keys(obj3).length;
                                   
                                   
-                                  insert(obj3.feed_title, obj3.feed_content, obj3.feed_author, obj3.feed_puDate, obj3.feed_guid, obj3.feed_img_path);
+                                  insert(obj3.feed_title, obj3.feed_content, obj3.feed_author, obj3.feed_pubDate, obj3.feed_guid, obj3.feed_img_path);
 
                               }
                             }
@@ -155,7 +155,7 @@ function createNewsOnStart() {
                                   var obj3Lenght = Object.keys(obj3).length;
                                   
                                   
-                                  insert(obj3.feed_title, obj3.feed_content, obj3.feed_author, obj3.feed_puDate, obj3.feed_guid, obj3.feed_img_path);
+                                  insert(obj3.feed_title, obj3.feed_content, obj3.feed_author, obj3.feed_pubDate, obj3.feed_guid, obj3.feed_img_path);
 
                               }
                             }
