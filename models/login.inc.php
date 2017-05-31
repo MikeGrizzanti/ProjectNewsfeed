@@ -16,7 +16,7 @@ if ($_POST) {
         } else {
             $erg = tb_user::checkLogin($user_nickName, $user_password);
             if ($erg == null) 
-                $error = "Wrong username and/or password";
+                header ("Location:index.php?action=login");
             else {
                 $_SESSION['id'] = $erg->getId();
                 $_SESSION['email'] = $erg->getEmail();
