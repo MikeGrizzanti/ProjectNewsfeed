@@ -5,3 +5,6 @@ $data = trim($_POST['newsCardId']);
 tb_groupchat::createInstance($data);
 
 
+
+
+
