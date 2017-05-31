@@ -77,7 +77,7 @@ $(document).ready(function(e) {
 
 function insert(title, description, author, pubDate, guid, image){ 
     
-var htmlOut='<div class="news_card"><img id="news_card_img" src="'+ image +'"/><br/><p id="news_card_text">'+ title +'</p><table id="container_table"><tr><td><div class="theme_container"><a class="news_card_sublink" href="#"><p class="sublink_text">theme</p></a></div></td><td><div class="source_container"><a class="news_card_sublink" href="#"><p class="sublink_text">source</p></a></div></td><td><div class="active_chats_container"><p class="sublink_text" id="'+ guid + " " + pubDate +'">x Chats</p></div></td></tr></table> </div>';
+var htmlOut='<div class="news_card"><img id="news_card_img" src="'+ image +'"/><br/><p id="news_card_text">'+ title +'</p><table id="container_table"><tr><td><div class="theme_container"><a class="news_card_sublink" href="#"><p class="sublink_text">theme</p></a></div></td><td><div class="source_container"><a class="news_card_sublink" href="#"><p class="sublink_text">source</p></a></div></td><td><div class="active_chats_container" id="'+ guid + " " + pubDate +'"><p class="sublink_text">x Chats</p></div></td></tr></table> </div>';
     
 $("#table_news_cards>tbody>tr:last").after(htmlOut);
     
