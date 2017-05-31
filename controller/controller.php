@@ -147,6 +147,7 @@ class controller {
          }
         
     }
+    
     private function generatePage($template){
         extract($this->context);
         require_once 'view/'.$template.".tpl.html";
