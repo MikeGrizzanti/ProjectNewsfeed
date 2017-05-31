@@ -64,7 +64,7 @@ $(document).ready(function(e) {
                       }
                       
                       else if ($("#member1 option:selected").text().trim() !== null){
-                          insert(obj2.feed_title, obj2.feed_description, obj2.feed_author, obj2.feed_pubDate, obj2.feed_guid, obj2.feed_image);
+                          insert(obj2.feed_title, obj2.feed_description, obj2.feed_author, obj2.feed_pubdate, obj2.feed_guid, obj2.feed_image);
                       }
                       
                   }
@@ -115,7 +115,7 @@ function createNewsOnStart() {
                                   var obj3Lenght = Object.keys(obj3).length;
                                   
                                   
-                                  insert(obj3.feed_title, obj3.feed_content, obj3.feed_author, obj3.feed_pubDate, obj3.feed_guid, obj3.feed_img_path);
+                                  insert(obj3.feed_title, obj3.feed_content, obj3.feed_author, obj3.feed_pubdate, obj3.feed_guid, obj3.feed_img_path);
 
                               }
                             }
@@ -155,7 +155,7 @@ function createNewsOnStart() {
                                   var obj3Lenght = Object.keys(obj3).length;
                                   
                                   
-                                  insert(obj3.feed_title, obj3.feed_content, obj3.feed_author, obj3.feed_pubDate, obj3.feed_guid, obj3.feed_img_path);
+                                  insert(obj3.feed_title, obj3.feed_content, obj3.feed_author, obj3.feed_pubdate, obj3.feed_guid, obj3.feed_img_path);
 
                               }
                             }
@@ -196,7 +196,7 @@ function createNewsOnSourceClick(source_data) {
                                   var obj3Lenght = Object.keys(obj3).length;
                                   
                                   
-                                  insert(obj3.feed_title, obj3.feed_content, obj3.feed_author, obj3.feed_puDate, obj3.feed_guid, obj3.feed_img_path);
+                                  insert(obj3.feed_title, obj3.feed_content, obj3.feed_author, obj3.feed_pubdate, obj3.feed_guid, obj3.feed_img_path);
 
                               }
                             }
