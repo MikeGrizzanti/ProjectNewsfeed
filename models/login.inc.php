@@ -15,8 +15,10 @@ if ($_POST) {
             $error = "Empty username and/or password";
         } else {
             $erg = tb_user::checkLogin($user_nickName, $user_password);
-            if ($erg == null) 
+            if ($erg == null) {
+                $error = NULL;
                 header ("Location:index.php?action=login");
+            }
             else {
                 $_SESSION['id'] = $erg->getId();
                 $_SESSION['email'] = $erg->getEmail();
