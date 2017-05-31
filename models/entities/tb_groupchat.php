@@ -53,5 +53,13 @@ class tb_groupChat {
         $query->setFetchMode(PDO::FETCH_CLASS, 'tb_groupchat');
         return $query->fetch();
     }
-}
+    
+    public function createInstance($name) {
+        $sql = 'INSERT INTO tb_groupchat (groupchat_name, groupchat_maxpartecipants) VALUES (?,5)';
+        $query = DB::getDB()->prepare($sql);
+        $query->execute(array($name, $time));
+        $query->setFetchMode(PDO::FETCH_CLASS, 'tb_groupchat');
+        return $query->fetch();
+    }
 
+}
