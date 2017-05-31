@@ -12,13 +12,11 @@ if ($_POST) {
         $user_password = trim($_POST['text_field_password']);
         
         if (empty($user_nickName) || empty($user_password)) {
-            $error = NULL;
+            $error = "Empty username and/or password";
         } else {
             $erg = tb_user::checkLogin($user_nickName, $user_password);
-            if ($erg == null) {
-                $error = NULL;
-                header ("Location:index.php?action=login");
-            }
+            if ($erg == null) 
+                $error = "Wrong username and/or password";
             else {
                 $_SESSION['id'] = $erg->getId();
                 $_SESSION['email'] = $erg->getEmail();
