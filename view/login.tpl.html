@@ -90,20 +90,52 @@
                                 
                                 <?php if ($error != NULL) { ?>
                                     <style>
-                                        #main_logo {
-                                            position: relative;
-                                            width: 20%;
-                                            height: auto;
-                                            margin-top: 9em;
-                                            margin-left: auto;
-                                            margin-right: auto;
-                                        }
                                         #text_field_nickname {
                                             border: 1px solid red;
                                         }
                                         #text_field_password {
                                             border: 1px solid red;
                                         }
+                                        
+                                        /* Desktops and laptops ----------- */
+                                        @media only screen and (min-width: 1024px) and (max-device-height: 1280px) {
+                                            #main_logo{
+                                                width: 25%;
+                                                height: auto;
+                                                margin-top: 9em;
+                                                margin-left: auto;
+                                                margin-right: auto;
+                                            }
+
+                                            #subtitle {
+                                                font-size: 100%;
+                                                width: 100%;
+                                                margin-left: auto;
+                                                margin-right: auto;
+                                            }
+
+                                            .login_form {
+                                                height: 18em;
+                                            }
+                                        } 
+
+                                        /* Large screens ----------- */
+                                        @media only screen and (min-device-width: 1920px) and (max-device-height: 1080px) {
+                                          #main_logo{
+                                              position: relative;
+                                                width: 25%;
+                                                height: auto;
+                                                margin-top: 12em;
+                                                margin-left: auto;
+                                                margin-right: auto;
+                                            }
+
+                                            #subtitle {
+                                                font-size: 100%;
+                                                width: 100%;
+                                                margin-left: auto;
+                                                margin-right: auto;
+                                            }
                                     </style>    
                                 <?php } ?>  
                                 

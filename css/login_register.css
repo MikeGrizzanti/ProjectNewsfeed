@@ -1179,7 +1179,7 @@ hr {
     #main_logo{
         width: 25%;
         height: auto;
-        margin-top: 10em;
+        margin-top: 9em;
         margin-left: auto;
         margin-right: auto;
     }
@@ -1200,9 +1200,9 @@ hr {
 @media only screen and (min-device-width: 1920px) and (max-device-height: 1080px) {
   #main_logo{
       position: relative;
-        width: 20%;
+        width: 25%;
         height: auto;
-        margin-top: 9em;
+        margin-top: 12em;
         margin-left: auto;
         margin-right: auto;
     }
