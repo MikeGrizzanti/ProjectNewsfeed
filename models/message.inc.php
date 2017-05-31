@@ -3,13 +3,12 @@
 $message_text = "";
 $message_timestamp = time();
 $user_id = $_SESSION['id'];
-tb_message::getUserIdFromCategory($_SESSION['category_id']);
 $error = "";
 $erg = "";
 
 if ($_POST) {
-    if (isset($_POST['chat_text_box'])) {
-        $message_text = trim($_POST['chat_text_box']);
+    if (isset($_POST['message_box_text_box'])) {
+        $message_text = trim($_POST['message_box_text_box']);
         
         if (empty($message_text)) {
             $error = 'Nothing to send';
