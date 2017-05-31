@@ -12,7 +12,7 @@ if ($_POST) {
         $user_password = trim($_POST['text_field_password']);
         
         if (empty($user_nickName) || empty($user_password)) {
-            $error = "Empty username and/or password";
+            $error = NULL;
         } else {
             $erg = tb_user::checkLogin($user_nickName, $user_password);
             if ($erg == null) {
