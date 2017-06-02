@@ -656,6 +656,8 @@ label{
     padding-bottom: 0.5em;
     margin-bottom: 0;
     border-bottom: 1.5px solid #000;
+    min-height: 3em;
+    max-height: 3em;
 }
 
 #container_table {
@@ -686,6 +688,10 @@ label{
     font-size: 0.8em;
     color: #faaf41;
     text-align-last: right;
+}
+.active_chats_container:hover {
+    cursor: pointer;
+    text-decoration: underline;
 }
 
 .news_card_sublink{
@@ -938,6 +944,18 @@ label{
         padding-left: 0em;
         margin: 0;
         margin-top: 0.5em;
+    }
+    
+    #top_icon_group {
+        margin-left: 21em;
+    }
+    
+    .news_card {
+        margin: 0.5em
+    }
+    
+    #table_news_cards {
+        margin-left: 9em;
     }
 }
 
