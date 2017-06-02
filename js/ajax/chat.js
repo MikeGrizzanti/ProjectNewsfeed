@@ -1,12 +1,19 @@
 $(document).ready(function(e) {
     
-    $(".active_chats_container").on("click", function(e){
+    console.log("here m8");
+    
+    $("#container_table>tbody>tr").click(function(e){
+        //e.preventDefault();
+        console.log("here 2 m8");
+        var data = new FormData();
         var newsCardId = $(this).attr("id");
+        data.append("data",newsCardId);
         
-        $.ajax({
+        
+        /*$.ajax({
             type: "POST",
             url:"models/instanceGroupchat.inc.php",
-            data: newsCardId,
+            data: data,
             cache: false,
             contentType: false,
             processData: false,
@@ -25,7 +32,7 @@ $(document).ready(function(e) {
                 console.log(data.responseText);
 
             }
-        }); 
+        });*/
     });
     
 });

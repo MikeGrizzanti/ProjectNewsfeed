@@ -1,7 +1,13 @@
 <?php
 require_once 'models/entities/tb_groupchat.php';
 
-$data = trim($_POST['newsCardId']);
-tb_groupchat::createInstance($data);
+if (isset($_POST)){
+    $data = trim($_POST['data']);
+    tb_groupchat::createInstance($data);
+
+
+    echo json_encode("here");
+
+}
 
 
